@@ -1,8 +1,8 @@
 name: Update Mixer-Cup Data
 
 on:
-  schedule:
-    - cron: '*/15 * * * *'
+  repository_dispatch:
+    types: [run_scraper]
   workflow_dispatch:
 
 permissions:
