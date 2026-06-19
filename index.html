@@ -3,132 +3,204 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mixer Cup — Teams</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg:#080c14; --sur:#0f1520; --card:#131c2e; --brd:#1e2d45;
-  --acc:#3b82f6; --acc2:#06b6d4; --tx:#e2e8f0; --mt:#4a5c78;
-  --gr:#22d3a5;  --gold:#f59e0b; --red:#f43f5e; --purple:#a78bfa;
+  --bg:#0a0b0e; --sur:#101218; --card:#14161d; --card-h:#191c24;
+  --brd:#23262f; --brd-soft:#1b1e26;
+  --tx:#edeef2; --mt:#787f8c;
+  /* gold kept ONLY for ratings */
+  --gold:#d4af37; --gold-soft:rgba(212,175,55,.12);
+  /* emerald accent (everything else) */
+  --em:#1fae84; --em-d:#147a5c; --em-soft:rgba(31,174,132,.12);
+  --gr:#3ecf8e; --red:#ef5f6b; --blue:#6aa0ff; --purple:#a78bfa;
 }
 * { box-sizing:border-box; margin:0; padding:0 }
-body { background:var(--bg); color:var(--tx); font-family:'Space Grotesk',sans-serif; min-height:100vh }
-header { padding:24px 40px 16px; background:linear-gradient(180deg,#0a1628,var(--bg)); border-bottom:1px solid var(--brd) }
-h1 { font-size:24px; font-weight:700; margin-bottom:3px;
-     background:linear-gradient(90deg,#60a5fa,#06b6d4);
-     -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text }
-.sub { color:var(--mt); font-size:11px }
-.topbar { display:flex; align-items:center; gap:14px; flex-wrap:wrap;
-          padding:10px 40px; background:var(--sur); border-bottom:1px solid var(--brd) }
-.st  { display:flex; align-items:baseline; gap:4px }
-.sn  { font-size:20px; font-weight:700; color:var(--acc2); font-family:'JetBrains Mono',monospace }
-.sl2 { font-size:10px; text-transform:uppercase; letter-spacing:1px; color:var(--mt) }
-.sep { color:var(--brd) }
+html { background:var(--bg); scroll-behavior:smooth }
+@media (prefers-reduced-motion:reduce) { * { animation:none !important; transition:none !important } }
+body { background:
+        radial-gradient(900px 500px at 50% -200px, rgba(31,174,132,.06), transparent 70%),
+        var(--bg);
+       color:var(--tx); font-family:'Sora',sans-serif; min-height:100vh;
+       -webkit-font-smoothing:antialiased }
+
+/* ---------- header ---------- */
+header { padding:26px 28px 18px; max-width:920px; margin:0 auto }
+.brand { display:flex; align-items:center; gap:12px }
+.logo { width:38px; height:38px; border-radius:10px; flex-shrink:0; object-fit:cover;
+        border:1px solid var(--em-d);
+        box-shadow:0 4px 14px rgba(31,174,132,.22) }
+h1 { font-size:21px; font-weight:700; letter-spacing:-.02em; line-height:1 }
+.sub { color:var(--mt); font-size:11px; margin-top:3px; letter-spacing:.02em }
+.gold-tx { color:var(--em) }
+
+/* ---------- topbar ---------- */
+.topbar { max-width:920px; margin:0 auto; display:flex; align-items:center;
+          gap:16px; flex-wrap:wrap; padding:12px 28px 0 }
+.stats { display:flex; align-items:center; gap:18px }
+.st  { display:flex; flex-direction:column; gap:1px }
+.sn  { font-size:17px; font-weight:700; color:var(--tx); font-family:'JetBrains Mono',monospace; line-height:1 }
+.sl2 { font-size:9.5px; text-transform:uppercase; letter-spacing:1.4px; color:var(--mt) }
 .controls { margin-left:auto; display:flex; gap:6px; align-items:center; flex-wrap:wrap }
 input { background:var(--card); border:1px solid var(--brd); color:var(--tx);
-        font-family:'Space Grotesk',sans-serif; font-size:13px; padding:6px 12px;
-        border-radius:7px; width:220px; outline:none; transition:border-color .2s }
-input:focus { border-color:var(--acc) }
+        font-family:'Sora',sans-serif; font-size:13px; padding:8px 13px;
+        border-radius:9px; width:220px; outline:none; transition:border-color .2s, box-shadow .2s }
+input::placeholder { color:var(--mt) }
+input:focus { border-color:var(--em-d); box-shadow:0 0 0 3px var(--em-soft) }
 .sbtn { background:var(--card); border:1px solid var(--brd); color:var(--mt);
-        font-family:'Space Grotesk',sans-serif; font-size:12px; padding:6px 11px;
-        border-radius:7px; cursor:pointer; transition:all .2s; white-space:nowrap }
-.sbtn:hover, .sbtn.active { background:rgba(59,130,246,.15); border-color:var(--acc); color:var(--acc2) }
-.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(480px,1fr));
-        gap:14px; padding:18px 40px }
-.card { background:var(--card); border:1px solid var(--brd); border-radius:11px;
-        overflow:hidden; transition:border-color .2s, box-shadow .2s }
-.card:hover { border-color:rgba(59,130,246,.4); box-shadow:0 0 16px rgba(59,130,246,.08) }
-.ch { display:flex; align-items:center; gap:8px; padding:11px 15px;
-      background:linear-gradient(135deg,rgba(59,130,246,.09),rgba(6,182,212,.04));
-      border-bottom:1px solid var(--brd) }
-.tn   { font-weight:700; font-size:13px; color:#93c5fd; flex:1 }
-.trat { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--gold);
-        background:rgba(245,158,11,.1); border:1px solid rgba(245,158,11,.2);
-        padding:2px 7px; border-radius:20px }
-.cnt  { font-size:10px; font-weight:700; padding:2px 7px; border-radius:20px;
-        font-family:'JetBrains Mono',monospace;
-        background:rgba(6,182,212,.12); color:var(--acc2); border:1px solid rgba(6,182,212,.25) }
-.site-link { color:var(--mt); text-decoration:none; font-size:11px; padding:3px 8px;
-             border:1px solid var(--brd); border-radius:5px; transition:all .2s }
-.site-link:hover { color:var(--acc2); border-color:var(--acc2) }
-table { width:100%; border-collapse:collapse }
-thead th { font-size:10px; text-transform:uppercase; letter-spacing:1px; color:var(--mt);
-           padding:5px 15px; text-align:left; border-bottom:1px solid var(--brd) }
-.pr td { padding:9px 15px; border-bottom:1px solid rgba(30,45,69,.5); vertical-align:middle }
+        font-family:'Sora',sans-serif; font-size:12px; font-weight:500; padding:8px 13px;
+        border-radius:9px; cursor:pointer; transition:all .25s ease; white-space:nowrap }
+.sbtn:hover { color:var(--tx); border-color:#33363f }
+.sbtn.active { background:var(--em-soft); border-color:rgba(31,174,132,.45); color:var(--em) }
+#updated { font-size:10px; color:var(--mt); margin-left:2px }
+
+/* ---------- list ---------- */
+.list { max-width:920px; margin:0 auto; padding:18px 28px 8px;
+        display:flex; flex-direction:column; gap:8px }
+
+.card { background:var(--card); border:1px solid var(--brd-soft); border-radius:12px;
+        overflow:hidden;
+        transition:border-color .3s ease, background .3s ease, opacity .35s ease, transform .35s ease;
+        animation:cardIn .4s cubic-bezier(.22,.61,.36,1) both }
+.card:hover { border-color:var(--brd) }
+.card.open { border-color:rgba(31,174,132,.32); background:var(--card-h) }
+.card.hiding { opacity:0; transform:translateY(-6px) scale(.985) }
+
+@keyframes cardIn { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:none } }
+
+/* header row (clickable) */
+.ch { display:flex; align-items:center; gap:13px; padding:13px 16px; cursor:pointer;
+      user-select:none; transition:background .25s ease }
+.rank { width:30px; height:30px; border-radius:50%; flex-shrink:0;
+        display:flex; align-items:center; justify-content:center;
+        font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700;
+        background:var(--em-soft); color:var(--em);
+        border:1px solid rgba(31,174,132,.32) }
+.card:nth-child(1) .rank, .rank.r1 {
+        background:linear-gradient(140deg,var(--em),var(--em-d)); color:#04140f; border-color:transparent;
+        box-shadow:0 3px 10px rgba(31,174,132,.32) }
+.tn   { font-weight:600; font-size:14px; color:var(--tx); flex:1; min-width:0;
+        white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+.wl   { font-family:'JetBrains Mono',monospace; font-size:11px; flex-shrink:0; letter-spacing:.02em }
+.w    { color:var(--gr) } .l { color:var(--red) }
+.trat { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--gold);
+        background:var(--gold-soft); border:1px solid rgba(212,175,55,.22);
+        padding:3px 9px; border-radius:20px; flex-shrink:0 }
+.chev { color:var(--mt); flex-shrink:0; display:flex;
+        transition:transform .4s cubic-bezier(.22,.61,.36,1), color .3s ease }
+.card.open .chev { transform:rotate(180deg); color:var(--em) }
+
+/* expandable body */
+.body { display:grid; grid-template-rows:0fr; opacity:0;
+        transition:grid-template-rows .4s cubic-bezier(.22,.61,.36,1), opacity .3s ease }
+.card.open .body { grid-template-rows:1fr; opacity:1 }
+.body-inner { overflow:hidden }
+
+table { width:100%; border-collapse:collapse; table-layout:auto }
+thead th { font-size:9.5px; text-transform:uppercase; letter-spacing:1.2px; color:var(--mt);
+           padding:8px 16px; text-align:left; border-top:1px solid var(--brd-soft);
+           border-bottom:1px solid var(--brd-soft); font-weight:600 }
+thead th.r { text-align:right }
+.pr td { padding:9px 16px; border-bottom:1px solid var(--brd-soft); vertical-align:middle;
+         transition:background .25s ease }
 .pr:last-child td { border-bottom:none }
-.pr:hover td { background:rgba(59,130,246,.04) }
-.nk  { font-weight:600; font-size:13px; color:var(--tx) }
-.sid { font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--acc2) }
-.rat { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--gold);
-       text-align:right; white-space:nowrap }
-.plnks { display:flex; gap:5px; margin-top:4px; flex-wrap:wrap }
-.plnk  { display:inline-flex; align-items:center; gap:3px; font-size:10.5px;
-         text-decoration:none; padding:3px 8px; border-radius:5px; transition:all .2s;
-         border:1px solid; white-space:nowrap; font-weight:500 }
-.plnk.steam    { color:#4db8ff; border-color:rgba(77,184,255,.3); background:rgba(77,184,255,.06) }
-.plnk.steam:hover { background:rgba(77,184,255,.15); border-color:rgba(77,184,255,.6) }
-.plnk.dotabuff { color:var(--purple); border-color:rgba(167,139,250,.3); background:rgba(167,139,250,.06) }
-.plnk.dotabuff:hover { background:rgba(167,139,250,.15); border-color:rgba(167,139,250,.6) }
+.pr:hover td { background:rgba(31,174,132,.04) }
+.pnum { color:var(--mt); font-family:'JetBrains Mono',monospace; font-size:11px; width:18px }
+.nk  { font-weight:500; font-size:13px; color:var(--tx) }
+.sid { font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--blue); display:block }
 .no-sid { color:var(--mt); font-size:11px }
-.place { font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700;
-         color:var(--gold); background:rgba(245,158,11,.12); border:1px solid rgba(245,158,11,.25);
-         padding:2px 8px; border-radius:6px; flex-shrink:0 }
-.wl { font-family:'JetBrains Mono',monospace; font-size:11px; flex-shrink:0 }
-.w  { color:var(--gr) }
-.l  { color:var(--red) }
-.lb-rank { display:block; font-family:'JetBrains Mono',monospace; font-size:10px;
-           color:var(--purple); margin-top:2px }
+.rat { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--gold);
+       text-align:right; white-space:nowrap; font-weight:500 }
+.plnks { display:flex; gap:6px; margin-top:5px; flex-wrap:wrap }
+.plnk  { display:inline-flex; align-items:center; gap:4px; font-size:10.5px;
+         text-decoration:none; padding:3px 9px; border-radius:6px; transition:all .2s;
+         border:1px solid; white-space:nowrap; font-weight:500 }
+.plnk.steam    { color:var(--blue); border-color:rgba(106,160,255,.28); background:rgba(106,160,255,.06) }
+.plnk.steam:hover { background:rgba(106,160,255,.15); border-color:rgba(106,160,255,.6) }
+.plnk.dotabuff { color:var(--purple); border-color:rgba(167,139,250,.28); background:rgba(167,139,250,.06) }
+.plnk.dotabuff:hover { background:rgba(167,139,250,.15); border-color:rgba(167,139,250,.6) }
+.site-link { color:var(--mt); text-decoration:none; font-size:11px; padding:6px 14px 16px;
+             display:inline-flex; align-items:center; gap:5px; transition:color .2s; font-weight:500 }
+.site-link:hover { color:var(--em) }
+
 .hidden { display:none !important }
 .loading, .error { text-align:center; padding:60px 20px; color:var(--mt); font-size:14px }
 .error { color:var(--red) }
-footer { text-align:center; padding:16px; color:var(--mt); font-size:11px;
-         border-top:1px solid var(--brd); margin-top:4px }
-footer a { color:var(--acc); text-decoration:none }
-#updated { font-size:10px; color:var(--mt); margin-left:8px }
+
+/* ---------- footer ---------- */
+footer { max-width:920px; margin:24px auto 0; padding:22px 28px 32px;
+         border-top:1px solid var(--brd-soft); text-align:center }
+.discord { display:inline-flex; align-items:center; gap:10px; text-decoration:none;
+           background:var(--card); border:1px solid var(--brd); border-radius:11px;
+           padding:11px 18px; transition:all .2s }
+.discord:hover { border-color:var(--blue); background:rgba(106,160,255,.06) }
+.discord svg { color:#5865F2; flex-shrink:0 }
+.discord .dl { text-align:left; line-height:1.25 }
+.discord .dt { font-size:9.5px; text-transform:uppercase; letter-spacing:1.2px; color:var(--mt) }
+.discord .dn { font-size:14px; font-weight:600; color:var(--tx) }
+.f-link { display:block; margin-top:14px; color:var(--mt); text-decoration:none; font-size:11px }
+.f-link:hover { color:var(--em) }
+
 @media (max-width:600px) {
-  .grid { grid-template-columns:1fr; padding:10px }
-  header, .topbar { padding-left:14px; padding-right:14px }
-  input { width:150px } .controls { margin-left:0; width:100% }
+  header, .topbar, .list, footer { padding-left:14px; padding-right:14px }
+  input { width:100%; flex:1 } .controls { margin-left:0; width:100% }
+  .trat { display:none }
 }
 </style>
 </head><body>
 
 <header>
-  <h1>Mixer Cup — Teams & Players</h1>
-  <div class="sub">mixer-cup.gg · active-tour <span id="updated"></span></div>
+  <div class="brand">
+    <img class="logo" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo_2026-06-20_02-46-46-XPYlSubbR58RDRV3yeuio8jA3lgT41.jpg" alt="Mixer Cup logo">
+    <div>
+      <h1>Mixer Cup <span class="gold-tx">Teams</span></h1>
+      <div class="sub">mixer-cup.gg · active tour<span id="updated"></span></div>
+    </div>
+  </div>
 </header>
 
 <div class="topbar">
-  <div class="st"><span class="sn" id="s-t">—</span><span class="sl2">Команд</span></div>
-  <span class="sep">|</span>
-  <div class="st"><span class="sn" id="s-p">—</span><span class="sl2">Игроков</span></div>
-  <span class="sep">|</span>
-  <div class="st"><span class="sn" id="s-i">—</span><span class="sl2">Steam ID</span></div>
+  <div class="stats">
+    <div class="st"><span class="sn" id="s-t">—</span><span class="sl2">Команд</span></div>
+    <div class="st"><span class="sn" id="s-p">—</span><span class="sl2">Игроков</span></div>
+    <div class="st"><span class="sn" id="s-i">—</span><span class="sl2">Steam ID</span></div>
+  </div>
   <div class="controls">
-    <input type="text" id="q" placeholder="Поиск по нику, команде, Steam ID…" oninput="go()">
+    <input type="text" id="q" placeholder="Поиск по нику, команде, Steam ID…" oninput="filter()">
     <button class="sbtn active" id="btn-site"   onclick="setSort('site')">По сайту</button>
     <button class="sbtn"        id="btn-rating" onclick="setSort('rating')">По рейтингу ↓</button>
   </div>
 </div>
 
-<div class="grid" id="grid">
+<div class="list" id="grid">
   <div class="loading">Загружаем данные…</div>
 </div>
 
 <footer>
-  <a href="https://mixer-cup.gg/ru/active-tour" target="_blank">mixer-cup.gg/ru/active-tour</a>
+  <a class="discord" href="https://discord.gg/coworq" target="_blank" rel="noopener">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.317 4.369A19.79 19.79 0 0 0 15.885 3c-.21.375-.45.88-.617 1.28a18.27 18.27 0 0 0-5.539 0C9.563 3.88 9.314 3.375 9.103 3a19.74 19.74 0 0 0-4.435 1.369C1.86 8.59 1.094 12.7 1.476 16.751A19.9 19.9 0 0 0 7.51 19.8c.488-.667.922-1.376 1.296-2.121-.713-.27-1.396-.603-2.04-.99.171-.126.339-.257.5-.392 3.927 1.838 8.18 1.838 12.06 0 .164.135.331.266.5.392-.645.387-1.33.72-2.043.99.375.745.808 1.454 1.296 2.121a19.84 19.84 0 0 0 6.038-3.049c.448-4.69-.766-8.766-3.21-12.382ZM8.02 14.331c-1.182 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.955 2.418-2.157 2.418Zm7.96 0c-1.182 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/>
+    </svg>
+    <span class="dl">
+      <span class="dt">Обратная связь</span>
+      <span class="dn">discord.gg/coworq</span>
+    </span>
+  </a>
+  <a class="f-link" href="https://mixer-cup.gg/ru/active-tour" target="_blank" rel="noopener">mixer-cup.gg/ru/active-tour</a>
 </footer>
 
 <script>
 let TEAMS = [];
 let sortMode = 'site';
+let lastHash = '';
 
 function fmt(n) { return n != null ? Number(n).toLocaleString('ru-RU') : '—' }
 
-function renderCard(t) {
+function renderCard(t, rank) {
   const pl = t.players || [];
   let rows = '';
 
-  pl.forEach(p => {
+  pl.forEach((p, i) => {
     const nick = (p.nickname || '—').replace(/</g, '&lt;');
     const sid  = p.steam_id || '';
     const rat  = p.rating != null ? fmt(p.rating) : '—';
@@ -137,32 +209,28 @@ function renderCard(t) {
       ? `<span class="sid">${sid}</span>`
       : '<span class="no-sid">нет данных</span>';
 
-    const lbRank = p.leaderboard_rank != null
-      ? `<span class="lb-rank" title="Leaderboard rank">#${p.leaderboard_rank}</span>`
-      : '';
-
     const links = sid ? `
       <div class="plnks">
-        <a href="${p.steam_url}"    target="_blank" class="plnk steam">🎮 Steam</a>
-        <a href="${p.dotabuff_url}" target="_blank" class="plnk dotabuff">📊 Dotabuff</a>
+        <a href="${p.steam_url}"    target="_blank" rel="noopener" class="plnk steam">Steam</a>
+        <a href="${p.dotabuff_url}" target="_blank" rel="noopener" class="plnk dotabuff">Dotabuff</a>
       </div>` : '';
 
     rows += `<tr class="pr">
+      <td class="pnum">${i + 1}</td>
       <td class="nk">${nick}</td>
       <td>${sidCell}${links}</td>
-      <td class="rat">${rat}${lbRank}</td>
+      <td class="rat">${rat}</td>
     </tr>`;
   });
 
   if (!rows) {
-    rows = '<tr><td colspan="3" style="color:var(--mt);text-align:center;padding:14px;font-size:12px">Нет данных</td></tr>';
+    rows = '<tr><td colspan="4" style="color:var(--mt);text-align:center;padding:14px;font-size:12px">Нет данных</td></tr>';
   }
 
   const trat = t.team_rating
     ? `<span class="trat">Σ ${fmt(t.team_rating)}</span>`
     : '';
 
-  const placeStr = t.place != null ? `<span class="place">#${t.place}</span>` : '';
   const wl = (t.games_won != null && t.games_lost != null)
     ? `<span class="wl"><span class="w">${t.games_won}W</span> <span class="l">${t.games_lost}L</span></span>`
     : '';
@@ -170,44 +238,68 @@ function renderCard(t) {
   const srch = [t.name, ...pl.map(p => (p.nickname||'') + (p.steam_id||''))].join(' ').toLowerCase();
 
   return `
-<div class="card" data-s="${srch}" data-d="${t.dom_order}" data-r="${t.team_rating||0}">
-  <div class="ch">
-    ${placeStr}
+<div class="card" data-s="${srch}">
+  <div class="ch" onclick="toggleCard(this)">
+    <span class="rank ${rank === 1 ? 'r1' : ''}">${rank}</span>
     <span class="tn">${t.name}</span>
     ${wl}
     ${trat}
-    <span class="cnt">${pl.length}</span>
-    <a href="${t.url}" target="_blank" class="site-link">mixer-cup ↗</a>
+    <span class="chev">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </span>
   </div>
-  <table>
-    <thead><tr>
-      <th>Ник</th>
-      <th>Steam ID / Ссылки</th>
-      <th style="text-align:right">Рейтинг · LB</th>
-    </tr></thead>
-    <tbody>${rows}</tbody>
-  </table>
+  <div class="body"><div class="body-inner">
+    <table>
+      <thead><tr>
+        <th>#</th>
+        <th>Ник</th>
+        <th>Steam ID / Ссылки</th>
+        <th class="r">Рейтинг</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <a href="${t.url}" target="_blank" rel="noopener" class="site-link">Открыть на mixer-cup ↗</a>
+  </div></div>
 </div>`;
 }
 
+function toggleCard(headerEl) {
+  headerEl.parentElement.classList.toggle('open');
+}
+
+// Полностью перестраивает список (загрузка данных + смена сортировки)
 function go() {
-  const q = document.getElementById('q').value.toLowerCase().trim();
   let data = [...TEAMS];
 
   if (sortMode === 'site') data.sort((a,b) => a.dom_order - b.dom_order);
   else                     data.sort((a,b) => (b.team_rating||0) - (a.team_rating||0));
 
   const grid = document.getElementById('grid');
-  grid.innerHTML = data.map(t => renderCard(t)).join('');
+  grid.innerHTML = data.map((t, i) => renderCard(t, i + 1)).join('');
 
-  if (q) {
-    grid.querySelectorAll('.card').forEach(c => {
-      c.classList.toggle('hidden', !c.dataset.s.includes(q));
-    });
-  }
+  // лёгкая каскадная анимация появления
+  grid.querySelectorAll('.card').forEach((c, i) => {
+    c.style.animationDelay = Math.min(i * 28, 320) + 'ms';
+  });
+
+  filter(); // применяем текущий поиск без пересоздания DOM
+}
+
+// Только показывает/скрывает карточки — без пересоздания списка (плавно)
+function filter() {
+  const q = document.getElementById('q').value.toLowerCase().trim();
+  const grid = document.getElementById('grid');
+
+  grid.querySelectorAll('.card').forEach(c => {
+    const match = !q || c.dataset.s.includes(q);
+    c.classList.toggle('hidden', !match);
+    if (match && q) c.classList.add('open');        // авто-раскрытие найденных
+    else if (!q) c.classList.remove('open');         // сброс при пустом поиске
+  });
 }
 
 function setSort(m) {
+  if (m === sortMode) return;
   sortMode = m;
   document.querySelectorAll('.sbtn').forEach(b => b.classList.remove('active'));
   document.getElementById('btn-' + m).classList.add('active');
@@ -230,7 +322,6 @@ async function loadData() {
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
     const json = await resp.json();
 
-    // Поддержка двух форматов: {updated_at, teams: [...]} или просто [...]
     TEAMS = Array.isArray(json) ? json : (json.teams || []);
     const updatedAt = Array.isArray(json) ? null : json.updated_at;
 
@@ -239,15 +330,40 @@ async function loadData() {
     document.getElementById('s-p').textContent = TEAMS.reduce((a,t)=>a+(t.players||[]).length, 0);
     document.getElementById('s-i').textContent = TEAMS.reduce((a,t)=>a+(t.players||[]).filter(p=>p.steam_id).length, 0);
 
-    go();
+    // перестраиваем список только если данные реально изменились,
+    // чтобы автообновление не дёргало раскрытые карточки
+    const hash = JSON.stringify(TEAMS);
+    if (hash !== lastHash) {
+      lastHash = hash;
+      go();
+    }
   } catch (e) {
-    document.getElementById('grid').innerHTML =
-      `<div class="error">Не удалось загрузить teams_data.json<br><small>${e.message}</small></div>`;
+    const isFile = location.protocol === 'file:';
+    const grid = document.getElementById('grid');
+    if (isFile) {
+      grid.innerHTML = `
+        <div class="error" style="text-align:left;max-width:560px;margin:0 auto">
+          <div style="font-size:15px;font-weight:600;color:var(--em);margin-bottom:10px;text-align:center">
+            Файл открыт напрямую с диска (file://)
+          </div>
+          <div style="color:var(--mt);font-size:13px;line-height:1.7">
+            Браузер блокирует загрузку <code style="color:var(--blue)">teams_data.json</code> при открытии HTML двойным кликом.
+            Запусти локальный сервер в той же папке, где лежат <b>index.html</b> и <b>teams_data.json</b>:
+            <div style="background:var(--card);border:1px solid var(--brd);border-radius:8px;padding:12px 14px;margin:12px 0;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--tx)">
+              python -m http.server 8000
+            </div>
+            Затем открой <code style="color:var(--blue)">http://localhost:8000</code> в браузере.<br><br>
+            На хостинге (GitHub Pages и т.п.) всё работает без этого.
+          </div>
+        </div>`;
+    } else {
+      grid.innerHTML =
+        `<div class="error">Не удалось загрузить teams_data.json<br><small>${e.message}</small></div>`;
+    }
   }
 }
 
 loadData();
-// Автообновление каждые 5 минут без перезагрузки страницы
 setInterval(loadData, 5 * 60 * 1000);
 </script>
 </body></html>
