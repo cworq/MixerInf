@@ -2,12 +2,11 @@ name: Update Mixer-Cup Data
 
 on:
   schedule:
-    # Каждые 15 минут. Если репо приватный — смотри комментарий в README про лимиты.
     - cron: '*/15 * * * *'
-  workflow_dispatch:  # позволяет запустить вручную кнопкой на GitHub
+  workflow_dispatch:
 
 permissions:
-  contents: write  # нужно чтобы workflow мог делать git push
+  contents: write
 
 jobs:
   scrape:
