@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-19T23:32:58.515558+00:00",
+  "updated_at": "2026-06-19T23:48:03.110898+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -161,10 +161,63 @@
       ]
     },
     {
+      "name": "Team da baby",
+      "url": "https://mixer-cup.gg/ru/team/09185f2b-2df0-4bac-841e-e340cab4b73a",
+      "uuid": "09185f2b-2df0-4bac-841e-e340cab4b73a",
+      "dom_order": 3,
+      "team_rating": 41760,
+      "place": null,
+      "games_won": 7,
+      "games_lost": 3,
+      "games_total": 10,
+      "players": [
+        {
+          "nickname": "Ne_SahaR0K",
+          "steam_id": "76561198987798273",
+          "steam_url": "https://steamcommunity.com/profiles/76561198987798273",
+          "dotabuff_url": "https://www.dotabuff.com/players/1027532545/heroes",
+          "rating": 12018,
+          "leaderboard_rank": 1015
+        },
+        {
+          "nickname": "прав тот кто добр",
+          "steam_id": "76561198091305787",
+          "steam_url": "https://steamcommunity.com/profiles/76561198091305787",
+          "dotabuff_url": "https://www.dotabuff.com/players/131040059/heroes",
+          "rating": 14909,
+          "leaderboard_rank": 246
+        },
+        {
+          "nickname": "King Kong 1982",
+          "steam_id": "76561198735437571",
+          "steam_url": "https://steamcommunity.com/profiles/76561198735437571",
+          "dotabuff_url": "https://www.dotabuff.com/players/775171843/heroes",
+          "rating": 2667,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "mirrors demo",
+          "steam_id": "76561198449833895",
+          "steam_url": "https://steamcommunity.com/profiles/76561198449833895",
+          "dotabuff_url": "https://www.dotabuff.com/players/489568167/heroes",
+          "rating": 6789,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "da baby",
+          "steam_id": "76561198984474251",
+          "steam_url": "https://steamcommunity.com/profiles/76561198984474251",
+          "dotabuff_url": "https://www.dotabuff.com/players/1024208523/heroes",
+          "rating": 5377,
+          "leaderboard_rank": null
+        }
+      ]
+    },
+    {
       "name": "Team .//Kr3m1k0X",
       "url": "https://mixer-cup.gg/ru/team/2aa8251b-4454-4058-b70a-405723435f10",
       "uuid": "2aa8251b-4454-4058-b70a-405723435f10",
-      "dom_order": 3,
+      "dom_order": 4,
       "team_rating": 41548,
       "place": null,
       "games_won": 6,
@@ -217,7 +270,7 @@
       "name": "Team ejovik",
       "url": "https://mixer-cup.gg/ru/team/65302445-e437-42ff-b303-29a397f127c0",
       "uuid": "65302445-e437-42ff-b303-29a397f127c0",
-      "dom_order": 4,
+      "dom_order": 5,
       "team_rating": 40432,
       "place": null,
       "games_won": 6,
@@ -270,7 +323,7 @@
       "name": "Team Egoists.",
       "url": "https://mixer-cup.gg/ru/team/84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
       "uuid": "84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
-      "dom_order": 5,
+      "dom_order": 6,
       "team_rating": 41829,
       "place": null,
       "games_won": 6,
@@ -315,59 +368,6 @@
           "steam_url": "https://steamcommunity.com/profiles/76561198844403387",
           "dotabuff_url": "https://www.dotabuff.com/players/884137659/heroes",
           "rating": 6096,
-          "leaderboard_rank": null
-        }
-      ]
-    },
-    {
-      "name": "Team da baby",
-      "url": "https://mixer-cup.gg/ru/team/09185f2b-2df0-4bac-841e-e340cab4b73a",
-      "uuid": "09185f2b-2df0-4bac-841e-e340cab4b73a",
-      "dom_order": 6,
-      "team_rating": 41760,
-      "place": null,
-      "games_won": 6,
-      "games_lost": 3,
-      "games_total": 9,
-      "players": [
-        {
-          "nickname": "Ne_SahaR0K",
-          "steam_id": "76561198987798273",
-          "steam_url": "https://steamcommunity.com/profiles/76561198987798273",
-          "dotabuff_url": "https://www.dotabuff.com/players/1027532545/heroes",
-          "rating": 12018,
-          "leaderboard_rank": 1015
-        },
-        {
-          "nickname": "прав тот кто добр",
-          "steam_id": "76561198091305787",
-          "steam_url": "https://steamcommunity.com/profiles/76561198091305787",
-          "dotabuff_url": "https://www.dotabuff.com/players/131040059/heroes",
-          "rating": 14909,
-          "leaderboard_rank": 246
-        },
-        {
-          "nickname": "King Kong 1982",
-          "steam_id": "76561198735437571",
-          "steam_url": "https://steamcommunity.com/profiles/76561198735437571",
-          "dotabuff_url": "https://www.dotabuff.com/players/775171843/heroes",
-          "rating": 2667,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "mirrors demo",
-          "steam_id": "76561198449833895",
-          "steam_url": "https://steamcommunity.com/profiles/76561198449833895",
-          "dotabuff_url": "https://www.dotabuff.com/players/489568167/heroes",
-          "rating": 6789,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "da baby",
-          "steam_id": "76561198984474251",
-          "steam_url": "https://steamcommunity.com/profiles/76561198984474251",
-          "dotabuff_url": "https://www.dotabuff.com/players/1024208523/heroes",
-          "rating": 5377,
           "leaderboard_rank": null
         }
       ]
@@ -433,8 +433,8 @@
       "team_rating": 40493,
       "place": null,
       "games_won": 5,
-      "games_lost": 4,
-      "games_total": 9,
+      "games_lost": 5,
+      "games_total": 10,
       "players": [
         {
           "nickname": "rusky",
