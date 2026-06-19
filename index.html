@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mixer Cup — Teams</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#080c14; --sur:#0f1520; --card:#131c2e; --brd:#1e2d45;
+  --acc:#3b82f6; --acc2:#06b6d4; --tx:#e2e8f0; --mt:#4a5c78;
+  --gr:#22d3a5;  --gold:#f59e0b; --red:#f43f5e; --purple:#a78bfa;
+}
+* { box-sizing:border-box; margin:0; padding:0 }
+body { background:var(--bg); color:var(--tx); font-family:'Space Grotesk',sans-serif; min-height:100vh }
+header { padding:24px 40px 16px; background:linear-gradient(180deg,#0a1628,var(--bg)); border-bottom:1px solid var(--brd) }
+h1 { font-size:24px; font-weight:700; margin-bottom:3px;
+     background:linear-gradient(90deg,#60a5fa,#06b6d4);
+     -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text }
+.sub { color:var(--mt); font-size:11px }
+.topbar { display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+          padding:10px 40px; background:var(--sur); border-bottom:1px solid var(--brd) }
+.st  { display:flex; align-items:baseline; gap:4px }
+.sn  { font-size:20px; font-weight:700; color:var(--acc2); font-family:'JetBrains Mono',monospace }
+.sl2 { font-size:10px; text-transform:uppercase; letter-spacing:1px; color:var(--mt) }
+.sep { color:var(--brd) }
+.controls { margin-left:auto; display:flex; gap:6px; align-items:center; flex-wrap:wrap }
+input { background:var(--card); border:1px solid var(--brd); color:var(--tx);
+        font-family:'Space Grotesk',sans-serif; font-size:13px; padding:6px 12px;
+        border-radius:7px; width:220px; outline:none; transition:border-color .2s }
+input:focus { border-color:var(--acc) }
+.sbtn { background:var(--card); border:1px solid var(--brd); color:var(--mt);
+        font-family:'Space Grotesk',sans-serif; font-size:12px; padding:6px 11px;
+        border-radius:7px; cursor:pointer; transition:all .2s; white-space:nowrap }
+.sbtn:hover, .sbtn.active { background:rgba(59,130,246,.15); border-color:var(--acc); color:var(--acc2) }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(480px,1fr));
+        gap:14px; padding:18px 40px }
+.card { background:var(--card); border:1px solid var(--brd); border-radius:11px;
+        overflow:hidden; transition:border-color .2s, box-shadow .2s }
+.card:hover { border-color:rgba(59,130,246,.4); box-shadow:0 0 16px rgba(59,130,246,.08) }
+.ch { display:flex; align-items:center; gap:8px; padding:11px 15px;
+      background:linear-gradient(135deg,rgba(59,130,246,.09),rgba(6,182,212,.04));
+      border-bottom:1px solid var(--brd) }
+.tn   { font-weight:700; font-size:13px; color:#93c5fd; flex:1 }
+.trat { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--gold);
+        background:rgba(245,158,11,.1); border:1px solid rgba(245,158,11,.2);
+        padding:2px 7px; border-radius:20px }
+.cnt  { font-size:10px; font-weight:700; padding:2px 7px; border-radius:20px;
+        font-family:'JetBrains Mono',monospace;
+        background:rgba(6,182,212,.12); color:var(--acc2); border:1px solid rgba(6,182,212,.25) }
+.site-link { color:var(--mt); text-decoration:none; font-size:11px; padding:3px 8px;
+             border:1px solid var(--brd); border-radius:5px; transition:all .2s }
+.site-link:hover { color:var(--acc2); border-color:var(--acc2) }
+table { width:100%; border-collapse:collapse }
+thead th { font-size:10px; text-transform:uppercase; letter-spacing:1px; color:var(--mt);
+           padding:5px 15px; text-align:left; border-bottom:1px solid var(--brd) }
+.pr td { padding:9px 15px; border-bottom:1px solid rgba(30,45,69,.5); vertical-align:middle }
+.pr:last-child td { border-bottom:none }
+.pr:hover td { background:rgba(59,130,246,.04) }
+.nk  { font-weight:600; font-size:13px; color:var(--tx) }
+.sid { font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--acc2) }
+.rat { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--gold);
+       text-align:right; white-space:nowrap }
+.plnks { display:flex; gap:5px; margin-top:4px; flex-wrap:wrap }
+.plnk  { display:inline-flex; align-items:center; gap:3px; font-size:10.5px;
+         text-decoration:none; padding:3px 8px; border-radius:5px; transition:all .2s;
+         border:1px solid; white-space:nowrap; font-weight:500 }
+.plnk.steam    { color:#4db8ff; border-color:rgba(77,184,255,.3); background:rgba(77,184,255,.06) }
+.plnk.steam:hover { background:rgba(77,184,255,.15); border-color:rgba(77,184,255,.6) }
+.plnk.dotabuff { color:var(--purple); border-color:rgba(167,139,250,.3); background:rgba(167,139,250,.06) }
+.plnk.dotabuff:hover { background:rgba(167,139,250,.15); border-color:rgba(167,139,250,.6) }
+.no-sid { color:var(--mt); font-size:11px }
+.place { font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700;
+         color:var(--gold); background:rgba(245,158,11,.12); border:1px solid rgba(245,158,11,.25);
+         padding:2px 8px; border-radius:6px; flex-shrink:0 }
+.wl { font-family:'JetBrains Mono',monospace; font-size:11px; flex-shrink:0 }
+.w  { color:var(--gr) }
+.l  { color:var(--red) }
+.lb-rank { display:block; font-family:'JetBrains Mono',monospace; font-size:10px;
+           color:var(--purple); margin-top:2px }
+.hidden { display:none !important }
+.loading, .error { text-align:center; padding:60px 20px; color:var(--mt); font-size:14px }
+.error { color:var(--red) }
+footer { text-align:center; padding:16px; color:var(--mt); font-size:11px;
+         border-top:1px solid var(--brd); margin-top:4px }
+footer a { color:var(--acc); text-decoration:none }
+#updated { font-size:10px; color:var(--mt); margin-left:8px }
+@media (max-width:600px) {
+  .grid { grid-template-columns:1fr; padding:10px }
+  header, .topbar { padding-left:14px; padding-right:14px }
+  input { width:150px } .controls { margin-left:0; width:100% }
+}
+</style>
+</head><body>
+
+<header>
+  <h1>Mixer Cup — Teams & Players</h1>
+  <div class="sub">mixer-cup.gg · active-tour <span id="updated"></span></div>
+</header>
+
+<div class="topbar">
+  <div class="st"><span class="sn" id="s-t">—</span><span class="sl2">Команд</span></div>
+  <span class="sep">|</span>
+  <div class="st"><span class="sn" id="s-p">—</span><span class="sl2">Игроков</span></div>
+  <span class="sep">|</span>
+  <div class="st"><span class="sn" id="s-i">—</span><span class="sl2">Steam ID</span></div>
+  <div class="controls">
+    <input type="text" id="q" placeholder="Поиск по нику, команде, Steam ID…" oninput="go()">
+    <button class="sbtn active" id="btn-site"   onclick="setSort('site')">По сайту</button>
+    <button class="sbtn"        id="btn-rating" onclick="setSort('rating')">По рейтингу ↓</button>
+  </div>
+</div>
+
+<div class="grid" id="grid">
+  <div class="loading">Загружаем данные…</div>
+</div>
+
+<footer>
+  <a href="https://mixer-cup.gg/ru/active-tour" target="_blank">mixer-cup.gg/ru/active-tour</a>
+</footer>
+
+<script>
+let TEAMS = [];
+let sortMode = 'site';
+
+function fmt(n) { return n != null ? Number(n).toLocaleString('ru-RU') : '—' }
+
+function renderCard(t) {
+  const pl = t.players || [];
+  let rows = '';
+
+  pl.forEach(p => {
+    const nick = (p.nickname || '—').replace(/</g, '&lt;');
+    const sid  = p.steam_id || '';
+    const rat  = p.rating != null ? fmt(p.rating) : '—';
+
+    const sidCell = sid
+      ? `<span class="sid">${sid}</span>`
+      : '<span class="no-sid">нет данных</span>';
+
+    const lbRank = p.leaderboard_rank != null
+      ? `<span class="lb-rank" title="Leaderboard rank">#${p.leaderboard_rank}</span>`
+      : '';
+
+    const links = sid ? `
+      <div class="plnks">
+        <a href="${p.steam_url}"    target="_blank" class="plnk steam">🎮 Steam</a>
+        <a href="${p.dotabuff_url}" target="_blank" class="plnk dotabuff">📊 Dotabuff</a>
+      </div>` : '';
+
+    rows += `<tr class="pr">
+      <td class="nk">${nick}</td>
+      <td>${sidCell}${links}</td>
+      <td class="rat">${rat}${lbRank}</td>
+    </tr>`;
+  });
+
+  if (!rows) {
+    rows = '<tr><td colspan="3" style="color:var(--mt);text-align:center;padding:14px;font-size:12px">Нет данных</td></tr>';
+  }
+
+  const trat = t.team_rating
+    ? `<span class="trat">Σ ${fmt(t.team_rating)}</span>`
+    : '';
+
+  const placeStr = t.place != null ? `<span class="place">#${t.place}</span>` : '';
+  const wl = (t.games_won != null && t.games_lost != null)
+    ? `<span class="wl"><span class="w">${t.games_won}W</span> <span class="l">${t.games_lost}L</span></span>`
+    : '';
+
+  const srch = [t.name, ...pl.map(p => (p.nickname||'') + (p.steam_id||''))].join(' ').toLowerCase();
+
+  return `
+<div class="card" data-s="${srch}" data-d="${t.dom_order}" data-r="${t.team_rating||0}">
+  <div class="ch">
+    ${placeStr}
+    <span class="tn">${t.name}</span>
+    ${wl}
+    ${trat}
+    <span class="cnt">${pl.length}</span>
+    <a href="${t.url}" target="_blank" class="site-link">mixer-cup ↗</a>
+  </div>
+  <table>
+    <thead><tr>
+      <th>Ник</th>
+      <th>Steam ID / Ссылки</th>
+      <th style="text-align:right">Рейтинг · LB</th>
+    </tr></thead>
+    <tbody>${rows}</tbody>
+  </table>
+</div>`;
+}
+
+function go() {
+  const q = document.getElementById('q').value.toLowerCase().trim();
+  let data = [...TEAMS];
+
+  if (sortMode === 'site') data.sort((a,b) => a.dom_order - b.dom_order);
+  else                     data.sort((a,b) => (b.team_rating||0) - (a.team_rating||0));
+
+  const grid = document.getElementById('grid');
+  grid.innerHTML = data.map(t => renderCard(t)).join('');
+
+  if (q) {
+    grid.querySelectorAll('.card').forEach(c => {
+      c.classList.toggle('hidden', !c.dataset.s.includes(q));
+    });
+  }
+}
+
+function setSort(m) {
+  sortMode = m;
+  document.querySelectorAll('.sbtn').forEach(b => b.classList.remove('active'));
+  document.getElementById('btn-' + m).classList.add('active');
+  go();
+}
+
+function formatUpdatedAt(iso) {
+  if (!iso) return '';
+  try {
+    const d = new Date(iso);
+    return ' · обновлено ' + d.toLocaleString('ru-RU', {
+      day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
+    });
+  } catch { return ''; }
+}
+
+async function loadData() {
+  try {
+    const resp = await fetch('teams_data.json?t=' + Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const json = await resp.json();
+
+    // Поддержка двух форматов: {updated_at, teams: [...]} или просто [...]
+    TEAMS = Array.isArray(json) ? json : (json.teams || []);
+    const updatedAt = Array.isArray(json) ? null : json.updated_at;
+
+    document.getElementById('updated').textContent = formatUpdatedAt(updatedAt);
+    document.getElementById('s-t').textContent = TEAMS.length;
+    document.getElementById('s-p').textContent = TEAMS.reduce((a,t)=>a+(t.players||[]).length, 0);
+    document.getElementById('s-i').textContent = TEAMS.reduce((a,t)=>a+(t.players||[]).filter(p=>p.steam_id).length, 0);
+
+    go();
+  } catch (e) {
+    document.getElementById('grid').innerHTML =
+      `<div class="error">Не удалось загрузить teams_data.json<br><small>${e.message}</small></div>`;
+  }
+}
+
+loadData();
+// Автообновление каждые 5 минут без перезагрузки страницы
+setInterval(loadData, 5 * 60 * 1000);
+</script>
+</body></html>
