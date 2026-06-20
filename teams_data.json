@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T21:48:01.116193+00:00",
+  "updated_at": "2026-06-20T22:03:09.592371+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -638,63 +638,10 @@
       ]
     },
     {
-      "name": "Team Hermoso Ángel",
-      "url": "https://mixer-cup.gg/ru/team/34a79c0c-0885-4515-82a9-5fe840d6ed93",
-      "uuid": "34a79c0c-0885-4515-82a9-5fe840d6ed93",
-      "dom_order": 12,
-      "team_rating": 38582,
-      "place": null,
-      "games_won": 5,
-      "games_lost": 6,
-      "games_total": 11,
-      "players": [
-        {
-          "nickname": "Милана",
-          "steam_id": "76561199023389449",
-          "steam_url": "https://steamcommunity.com/profiles/76561199023389449",
-          "dotabuff_url": "https://www.dotabuff.com/players/1063123721/heroes",
-          "rating": 5270,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "слабые молитесь",
-          "steam_id": "76561198417565001",
-          "steam_url": "https://steamcommunity.com/profiles/76561198417565001",
-          "dotabuff_url": "https://www.dotabuff.com/players/457299273/heroes",
-          "rating": 4801,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Hermoso Ángel",
-          "steam_id": "76561198129184051",
-          "steam_url": "https://steamcommunity.com/profiles/76561198129184051",
-          "dotabuff_url": "https://www.dotabuff.com/players/168918323/heroes",
-          "rating": 10337,
-          "leaderboard_rank": 3826
-        },
-        {
-          "nickname": "марта",
-          "steam_id": "76561199633714955",
-          "steam_url": "https://steamcommunity.com/profiles/76561199633714955",
-          "dotabuff_url": "https://www.dotabuff.com/players/1673449227/heroes",
-          "rating": 8158,
-          "leaderboard_rank": 2000
-        },
-        {
-          "nickname": "игра в dota: запустить",
-          "steam_id": "76561198166392142",
-          "steam_url": "https://steamcommunity.com/profiles/76561198166392142",
-          "dotabuff_url": "https://www.dotabuff.com/players/206126414/heroes",
-          "rating": 10016,
-          "leaderboard_rank": 2508
-        }
-      ]
-    },
-    {
       "name": "Team nolovedeepweb",
       "url": "https://mixer-cup.gg/ru/team/eba112df-5662-4c9f-a1e5-8fc86ad239b2",
       "uuid": "eba112df-5662-4c9f-a1e5-8fc86ad239b2",
-      "dom_order": 13,
+      "dom_order": 12,
       "team_rating": 41545,
       "place": null,
       "games_won": 5,
@@ -744,63 +691,10 @@
       ]
     },
     {
-      "name": "Team эмоцuu_хорошue",
-      "url": "https://mixer-cup.gg/ru/team/36b250ac-063f-4e20-97ff-a86dc54b7494",
-      "uuid": "36b250ac-063f-4e20-97ff-a86dc54b7494",
-      "dom_order": 14,
-      "team_rating": 43254,
-      "place": null,
-      "games_won": 5,
-      "games_lost": 6,
-      "games_total": 11,
-      "players": [
-        {
-          "nickname": "эмоцuu_хорошue",
-          "steam_id": "76561198874721957",
-          "steam_url": "https://steamcommunity.com/profiles/76561198874721957",
-          "dotabuff_url": "https://www.dotabuff.com/players/914456229/heroes",
-          "rating": 9797,
-          "leaderboard_rank": 3052
-        },
-        {
-          "nickname": "escanore",
-          "steam_id": "76561198199130509",
-          "steam_url": "https://steamcommunity.com/profiles/76561198199130509",
-          "dotabuff_url": "https://www.dotabuff.com/players/238864781/heroes",
-          "rating": 5642,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "дочь кухни",
-          "steam_id": "76561198288341788",
-          "steam_url": "https://steamcommunity.com/profiles/76561198288341788",
-          "dotabuff_url": "https://www.dotabuff.com/players/328076060/heroes",
-          "rating": 3244,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Meadow",
-          "steam_id": "76561198342019362",
-          "steam_url": "https://steamcommunity.com/profiles/76561198342019362",
-          "dotabuff_url": "https://www.dotabuff.com/players/381753634/heroes",
-          "rating": 11252,
-          "leaderboard_rank": 1534
-        },
-        {
-          "nickname": "mvssive attvck",
-          "steam_id": "76561198797302829",
-          "steam_url": "https://steamcommunity.com/profiles/76561198797302829",
-          "dotabuff_url": "https://www.dotabuff.com/players/837037101/heroes",
-          "rating": 13319,
-          "leaderboard_rank": 573
-        }
-      ]
-    },
-    {
       "name": "Team tron fan$",
       "url": "https://mixer-cup.gg/ru/team/b7b956c0-28af-4978-998c-4bd952462a62",
       "uuid": "b7b956c0-28af-4978-998c-4bd952462a62",
-      "dom_order": 15,
+      "dom_order": 13,
       "team_rating": 41059,
       "place": null,
       "games_won": 5,
@@ -850,10 +744,169 @@
       ]
     },
     {
+      "name": "Team a",
+      "url": "https://mixer-cup.gg/ru/team/e932bb96-146d-4b0c-b2e9-d069606b2d95",
+      "uuid": "e932bb96-146d-4b0c-b2e9-d069606b2d95",
+      "dom_order": 14,
+      "team_rating": 41887,
+      "place": null,
+      "games_won": 5,
+      "games_lost": 6,
+      "games_total": 11,
+      "players": [
+        {
+          "nickname": "базутчик",
+          "steam_id": "76561198077055868",
+          "steam_url": "https://steamcommunity.com/profiles/76561198077055868",
+          "dotabuff_url": "https://www.dotabuff.com/players/116790140/heroes",
+          "rating": 3662,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "a",
+          "steam_id": "76561198175377311",
+          "steam_url": "https://steamcommunity.com/profiles/76561198175377311",
+          "dotabuff_url": "https://www.dotabuff.com/players/215111583/heroes",
+          "rating": 9476,
+          "leaderboard_rank": 2351
+        },
+        {
+          "nickname": "TlakEEE",
+          "steam_id": "76561198971660817",
+          "steam_url": "https://steamcommunity.com/profiles/76561198971660817",
+          "dotabuff_url": "https://www.dotabuff.com/players/1011395089/heroes",
+          "rating": 8006,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "SvEtK@_Воин",
+          "steam_id": "76561198858303058",
+          "steam_url": "https://steamcommunity.com/profiles/76561198858303058",
+          "dotabuff_url": "https://www.dotabuff.com/players/898037330/heroes",
+          "rating": 11343,
+          "leaderboard_rank": 1501
+        },
+        {
+          "nickname": "барб0$",
+          "steam_id": "76561198294031677",
+          "steam_url": "https://steamcommunity.com/profiles/76561198294031677",
+          "dotabuff_url": "https://www.dotabuff.com/players/333765949/heroes",
+          "rating": 9400,
+          "leaderboard_rank": 3700
+        }
+      ]
+    },
+    {
+      "name": "Team Hermoso Ángel",
+      "url": "https://mixer-cup.gg/ru/team/34a79c0c-0885-4515-82a9-5fe840d6ed93",
+      "uuid": "34a79c0c-0885-4515-82a9-5fe840d6ed93",
+      "dom_order": 15,
+      "team_rating": 38582,
+      "place": null,
+      "games_won": 5,
+      "games_lost": 6,
+      "games_total": 11,
+      "players": [
+        {
+          "nickname": "Милана",
+          "steam_id": "76561199023389449",
+          "steam_url": "https://steamcommunity.com/profiles/76561199023389449",
+          "dotabuff_url": "https://www.dotabuff.com/players/1063123721/heroes",
+          "rating": 5270,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "слабые молитесь",
+          "steam_id": "76561198417565001",
+          "steam_url": "https://steamcommunity.com/profiles/76561198417565001",
+          "dotabuff_url": "https://www.dotabuff.com/players/457299273/heroes",
+          "rating": 4801,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Hermoso Ángel",
+          "steam_id": "76561198129184051",
+          "steam_url": "https://steamcommunity.com/profiles/76561198129184051",
+          "dotabuff_url": "https://www.dotabuff.com/players/168918323/heroes",
+          "rating": 10337,
+          "leaderboard_rank": 3826
+        },
+        {
+          "nickname": "марта",
+          "steam_id": "76561199633714955",
+          "steam_url": "https://steamcommunity.com/profiles/76561199633714955",
+          "dotabuff_url": "https://www.dotabuff.com/players/1673449227/heroes",
+          "rating": 8158,
+          "leaderboard_rank": 2000
+        },
+        {
+          "nickname": "игра в dota: запустить",
+          "steam_id": "76561198166392142",
+          "steam_url": "https://steamcommunity.com/profiles/76561198166392142",
+          "dotabuff_url": "https://www.dotabuff.com/players/206126414/heroes",
+          "rating": 10016,
+          "leaderboard_rank": 2508
+        }
+      ]
+    },
+    {
+      "name": "Team эмоцuu_хорошue",
+      "url": "https://mixer-cup.gg/ru/team/36b250ac-063f-4e20-97ff-a86dc54b7494",
+      "uuid": "36b250ac-063f-4e20-97ff-a86dc54b7494",
+      "dom_order": 16,
+      "team_rating": 43254,
+      "place": null,
+      "games_won": 5,
+      "games_lost": 6,
+      "games_total": 11,
+      "players": [
+        {
+          "nickname": "эмоцuu_хорошue",
+          "steam_id": "76561198874721957",
+          "steam_url": "https://steamcommunity.com/profiles/76561198874721957",
+          "dotabuff_url": "https://www.dotabuff.com/players/914456229/heroes",
+          "rating": 9797,
+          "leaderboard_rank": 3052
+        },
+        {
+          "nickname": "escanore",
+          "steam_id": "76561198199130509",
+          "steam_url": "https://steamcommunity.com/profiles/76561198199130509",
+          "dotabuff_url": "https://www.dotabuff.com/players/238864781/heroes",
+          "rating": 5642,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "дочь кухни",
+          "steam_id": "76561198288341788",
+          "steam_url": "https://steamcommunity.com/profiles/76561198288341788",
+          "dotabuff_url": "https://www.dotabuff.com/players/328076060/heroes",
+          "rating": 3244,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Meadow",
+          "steam_id": "76561198342019362",
+          "steam_url": "https://steamcommunity.com/profiles/76561198342019362",
+          "dotabuff_url": "https://www.dotabuff.com/players/381753634/heroes",
+          "rating": 11252,
+          "leaderboard_rank": 1534
+        },
+        {
+          "nickname": "mvssive attvck",
+          "steam_id": "76561198797302829",
+          "steam_url": "https://steamcommunity.com/profiles/76561198797302829",
+          "dotabuff_url": "https://www.dotabuff.com/players/837037101/heroes",
+          "rating": 13319,
+          "leaderboard_rank": 573
+        }
+      ]
+    },
+    {
       "name": "Team МС ОТПУСК",
       "url": "https://mixer-cup.gg/ru/team/457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
       "uuid": "457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
-      "dom_order": 16,
+      "dom_order": 17,
       "team_rating": 39467,
       "place": null,
       "games_won": 4,
@@ -906,12 +959,12 @@
       "name": "Team newmasksametask",
       "url": "https://mixer-cup.gg/ru/team/0c6770ed-239a-44ad-a743-86f95d6ac425",
       "uuid": "0c6770ed-239a-44ad-a743-86f95d6ac425",
-      "dom_order": 17,
+      "dom_order": 18,
       "team_rating": 41018,
       "place": null,
       "games_won": 4,
-      "games_lost": 6,
-      "games_total": 10,
+      "games_lost": 7,
+      "games_total": 11,
       "players": [
         {
           "nickname": "97 день без тян",
@@ -959,7 +1012,7 @@
       "name": "Team Blue Death",
       "url": "https://mixer-cup.gg/ru/team/6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
       "uuid": "6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
-      "dom_order": 18,
+      "dom_order": 19,
       "team_rating": 42283,
       "place": null,
       "games_won": 4,
@@ -1005,59 +1058,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/272852308/heroes",
           "rating": 9059,
           "leaderboard_rank": 4640
-        }
-      ]
-    },
-    {
-      "name": "Team a",
-      "url": "https://mixer-cup.gg/ru/team/e932bb96-146d-4b0c-b2e9-d069606b2d95",
-      "uuid": "e932bb96-146d-4b0c-b2e9-d069606b2d95",
-      "dom_order": 19,
-      "team_rating": 41887,
-      "place": null,
-      "games_won": 4,
-      "games_lost": 6,
-      "games_total": 10,
-      "players": [
-        {
-          "nickname": "базутчик",
-          "steam_id": "76561198077055868",
-          "steam_url": "https://steamcommunity.com/profiles/76561198077055868",
-          "dotabuff_url": "https://www.dotabuff.com/players/116790140/heroes",
-          "rating": 3662,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "a",
-          "steam_id": "76561198175377311",
-          "steam_url": "https://steamcommunity.com/profiles/76561198175377311",
-          "dotabuff_url": "https://www.dotabuff.com/players/215111583/heroes",
-          "rating": 9476,
-          "leaderboard_rank": 2351
-        },
-        {
-          "nickname": "TlakEEE",
-          "steam_id": "76561198971660817",
-          "steam_url": "https://steamcommunity.com/profiles/76561198971660817",
-          "dotabuff_url": "https://www.dotabuff.com/players/1011395089/heroes",
-          "rating": 8006,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "SvEtK@_Воин",
-          "steam_id": "76561198858303058",
-          "steam_url": "https://steamcommunity.com/profiles/76561198858303058",
-          "dotabuff_url": "https://www.dotabuff.com/players/898037330/heroes",
-          "rating": 11343,
-          "leaderboard_rank": 1501
-        },
-        {
-          "nickname": "барб0$",
-          "steam_id": "76561198294031677",
-          "steam_url": "https://steamcommunity.com/profiles/76561198294031677",
-          "dotabuff_url": "https://www.dotabuff.com/players/333765949/heroes",
-          "rating": 9400,
-          "leaderboard_rank": 3700
         }
       ]
     },
