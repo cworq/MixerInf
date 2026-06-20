@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T17:17:59.977593+00:00",
+  "updated_at": "2026-06-20T17:33:03.355543+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -592,8 +592,8 @@
       "team_rating": 40493,
       "place": null,
       "games_won": 5,
-      "games_lost": 5,
-      "games_total": 10,
+      "games_lost": 6,
+      "games_total": 11,
       "players": [
         {
           "nickname": "rusky",
@@ -1068,9 +1068,9 @@
       "dom_order": 20,
       "team_rating": 39093,
       "place": null,
-      "games_won": 3,
+      "games_won": 4,
       "games_lost": 7,
-      "games_total": 10,
+      "games_total": 11,
       "players": [
         {
           "nickname": "infinity 5$",
