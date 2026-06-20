@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T10:18:03.853296+00:00",
+  "updated_at": "2026-06-20T10:33:06.283124+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -143,12 +143,12 @@
           "leaderboard_rank": null
         },
         {
-          "nickname": "моя цель - гарем на миксеркапе",
+          "nickname": "не игрок",
           "steam_id": "76561198082087496",
           "steam_url": "https://steamcommunity.com/profiles/76561198082087496",
           "dotabuff_url": "https://www.dotabuff.com/players/121821768/heroes",
           "rating": 13336,
-          "leaderboard_rank": 570
+          "leaderboard_rank": 571
         },
         {
           "nickname": "девочка (ищу друзей)",
@@ -1225,7 +1225,7 @@
       "url": "https://mixer-cup.gg/ru/team/da78442a-014e-4b8d-936e-e3ef0be9f3af",
       "uuid": "da78442a-014e-4b8d-936e-e3ef0be9f3af",
       "dom_order": 23,
-      "team_rating": 37003,
+      "team_rating": 43635,
       "place": null,
       "games_won": 1,
       "games_lost": 9,
@@ -1240,20 +1240,20 @@
           "leaderboard_rank": null
         },
         {
-          "nickname": "tv/capusta233",
-          "steam_id": "76561198795632642",
-          "steam_url": "https://steamcommunity.com/profiles/76561198795632642",
-          "dotabuff_url": "https://www.dotabuff.com/players/835366914/heroes",
-          "rating": 7668,
-          "leaderboard_rank": null
-        },
-        {
           "nickname": "RR.COBRA",
           "steam_id": "76561198114775466",
           "steam_url": "https://steamcommunity.com/profiles/76561198114775466",
           "dotabuff_url": "https://www.dotabuff.com/players/154509738/heroes",
           "rating": 13670,
           "leaderboard_rank": 618
+        },
+        {
+          "nickname": "maloydotos",
+          "steam_id": "76561199040188819",
+          "steam_url": "https://steamcommunity.com/profiles/76561199040188819",
+          "dotabuff_url": "https://www.dotabuff.com/players/1079923091/heroes",
+          "rating": 14300,
+          "leaderboard_rank": 351
         },
         {
           "nickname": "Roland",
