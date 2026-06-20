@@ -1,11 +1,64 @@
 {
-  "updated_at": "2026-06-20T05:18:12.513432+00:00",
+  "updated_at": "2026-06-20T05:32:51.266825+00:00",
   "teams": [
+    {
+      "name": "Team Ascetic",
+      "url": "https://mixer-cup.gg/ru/team/a0ca1d57-00fe-4820-9cf4-8c6f85e9d715",
+      "uuid": "a0ca1d57-00fe-4820-9cf4-8c6f85e9d715",
+      "dom_order": 0,
+      "team_rating": 41177,
+      "place": null,
+      "games_won": 10,
+      "games_lost": 0,
+      "games_total": 10,
+      "players": [
+        {
+          "nickname": "Gelendvagen",
+          "steam_id": "76561198187631874",
+          "steam_url": "https://steamcommunity.com/profiles/76561198187631874",
+          "dotabuff_url": "https://www.dotabuff.com/players/227366146/heroes",
+          "rating": 3122,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Ascetic",
+          "steam_id": "76561198320444839",
+          "steam_url": "https://steamcommunity.com/profiles/76561198320444839",
+          "dotabuff_url": "https://www.dotabuff.com/players/360179111/heroes",
+          "rating": 6362,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Shodaime",
+          "steam_id": "76561199130942974",
+          "steam_url": "https://steamcommunity.com/profiles/76561199130942974",
+          "dotabuff_url": "https://www.dotabuff.com/players/1170677246/heroes",
+          "rating": 8399,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Magisk D USH",
+          "steam_id": "76561198078685044",
+          "steam_url": "https://steamcommunity.com/profiles/76561198078685044",
+          "dotabuff_url": "https://www.dotabuff.com/players/118419316/heroes",
+          "rating": 13298,
+          "leaderboard_rank": 521
+        },
+        {
+          "nickname": "15ibm",
+          "steam_id": "76561198344430230",
+          "steam_url": "https://steamcommunity.com/profiles/76561198344430230",
+          "dotabuff_url": "https://www.dotabuff.com/players/384164502/heroes",
+          "rating": 9996,
+          "leaderboard_rank": 1980
+        }
+      ]
+    },
     {
       "name": "Team ca",
       "url": "https://mixer-cup.gg/ru/team/9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
       "uuid": "9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
-      "dom_order": 0,
+      "dom_order": 1,
       "team_rating": 42286,
       "place": null,
       "games_won": 9,
@@ -51,59 +104,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/367669332/heroes",
           "rating": 9343,
           "leaderboard_rank": 3529
-        }
-      ]
-    },
-    {
-      "name": "Team Ascetic",
-      "url": "https://mixer-cup.gg/ru/team/a0ca1d57-00fe-4820-9cf4-8c6f85e9d715",
-      "uuid": "a0ca1d57-00fe-4820-9cf4-8c6f85e9d715",
-      "dom_order": 1,
-      "team_rating": 41177,
-      "place": null,
-      "games_won": 9,
-      "games_lost": 0,
-      "games_total": 9,
-      "players": [
-        {
-          "nickname": "Gelendvagen",
-          "steam_id": "76561198187631874",
-          "steam_url": "https://steamcommunity.com/profiles/76561198187631874",
-          "dotabuff_url": "https://www.dotabuff.com/players/227366146/heroes",
-          "rating": 3122,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Ascetic",
-          "steam_id": "76561198320444839",
-          "steam_url": "https://steamcommunity.com/profiles/76561198320444839",
-          "dotabuff_url": "https://www.dotabuff.com/players/360179111/heroes",
-          "rating": 6362,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Shodaime",
-          "steam_id": "76561199130942974",
-          "steam_url": "https://steamcommunity.com/profiles/76561199130942974",
-          "dotabuff_url": "https://www.dotabuff.com/players/1170677246/heroes",
-          "rating": 8399,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Magisk D USH",
-          "steam_id": "76561198078685044",
-          "steam_url": "https://steamcommunity.com/profiles/76561198078685044",
-          "dotabuff_url": "https://www.dotabuff.com/players/118419316/heroes",
-          "rating": 13298,
-          "leaderboard_rank": 521
-        },
-        {
-          "nickname": "15ibm",
-          "steam_id": "76561198344430230",
-          "steam_url": "https://steamcommunity.com/profiles/76561198344430230",
-          "dotabuff_url": "https://www.dotabuff.com/players/384164502/heroes",
-          "rating": 9996,
-          "leaderboard_rank": 1980
         }
       ]
     },
@@ -910,8 +910,8 @@
       "team_rating": 41887,
       "place": null,
       "games_won": 4,
-      "games_lost": 5,
-      "games_total": 9,
+      "games_lost": 6,
+      "games_total": 10,
       "players": [
         {
           "nickname": "базутчик",
