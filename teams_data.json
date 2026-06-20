@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T08:03:05.803383+00:00",
+  "updated_at": "2026-06-20T08:17:58.250814+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -161,10 +161,63 @@
       ]
     },
     {
+      "name": "Team Egoists.",
+      "url": "https://mixer-cup.gg/ru/team/84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
+      "uuid": "84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
+      "dom_order": 3,
+      "team_rating": 41829,
+      "place": null,
+      "games_won": 7,
+      "games_lost": 4,
+      "games_total": 11,
+      "players": [
+        {
+          "nickname": "новый год",
+          "steam_id": "76561198143776914",
+          "steam_url": "https://steamcommunity.com/profiles/76561198143776914",
+          "dotabuff_url": "https://www.dotabuff.com/players/183511186/heroes",
+          "rating": 11600,
+          "leaderboard_rank": 1327
+        },
+        {
+          "nickname": "FearOfGod",
+          "steam_id": "76561199565082129",
+          "steam_url": "https://steamcommunity.com/profiles/76561199565082129",
+          "dotabuff_url": "https://www.dotabuff.com/players/1604816401/heroes",
+          "rating": 8300,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "godspeedyoublackemperor",
+          "steam_id": "76561198194603426",
+          "steam_url": "https://steamcommunity.com/profiles/76561198194603426",
+          "dotabuff_url": "https://www.dotabuff.com/players/234337698/heroes",
+          "rating": 7406,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "AMON",
+          "steam_id": "76561198202680946",
+          "steam_url": "https://steamcommunity.com/profiles/76561198202680946",
+          "dotabuff_url": "https://www.dotabuff.com/players/242415218/heroes",
+          "rating": 8427,
+          "leaderboard_rank": 5000
+        },
+        {
+          "nickname": "the chase",
+          "steam_id": "76561198844403387",
+          "steam_url": "https://steamcommunity.com/profiles/76561198844403387",
+          "dotabuff_url": "https://www.dotabuff.com/players/884137659/heroes",
+          "rating": 6096,
+          "leaderboard_rank": null
+        }
+      ]
+    },
+    {
       "name": "Team da baby",
       "url": "https://mixer-cup.gg/ru/team/09185f2b-2df0-4bac-841e-e340cab4b73a",
       "uuid": "09185f2b-2df0-4bac-841e-e340cab4b73a",
-      "dom_order": 3,
+      "dom_order": 4,
       "team_rating": 41760,
       "place": null,
       "games_won": 7,
@@ -217,7 +270,7 @@
       "name": "Team .//Kr3m1k0X",
       "url": "https://mixer-cup.gg/ru/team/2aa8251b-4454-4058-b70a-405723435f10",
       "uuid": "2aa8251b-4454-4058-b70a-405723435f10",
-      "dom_order": 4,
+      "dom_order": 5,
       "team_rating": 41548,
       "place": null,
       "games_won": 6,
@@ -270,7 +323,7 @@
       "name": "Team ejovik",
       "url": "https://mixer-cup.gg/ru/team/65302445-e437-42ff-b303-29a397f127c0",
       "uuid": "65302445-e437-42ff-b303-29a397f127c0",
-      "dom_order": 5,
+      "dom_order": 6,
       "team_rating": 40432,
       "place": null,
       "games_won": 6,
@@ -316,59 +369,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/1050218588/heroes",
           "rating": 13288,
           "leaderboard_rank": 551
-        }
-      ]
-    },
-    {
-      "name": "Team Egoists.",
-      "url": "https://mixer-cup.gg/ru/team/84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
-      "uuid": "84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
-      "dom_order": 6,
-      "team_rating": 41829,
-      "place": null,
-      "games_won": 6,
-      "games_lost": 4,
-      "games_total": 10,
-      "players": [
-        {
-          "nickname": "новый год",
-          "steam_id": "76561198143776914",
-          "steam_url": "https://steamcommunity.com/profiles/76561198143776914",
-          "dotabuff_url": "https://www.dotabuff.com/players/183511186/heroes",
-          "rating": 11600,
-          "leaderboard_rank": 1327
-        },
-        {
-          "nickname": "FearOfGod",
-          "steam_id": "76561199565082129",
-          "steam_url": "https://steamcommunity.com/profiles/76561199565082129",
-          "dotabuff_url": "https://www.dotabuff.com/players/1604816401/heroes",
-          "rating": 8300,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "godspeedyoublackemperor",
-          "steam_id": "76561198194603426",
-          "steam_url": "https://steamcommunity.com/profiles/76561198194603426",
-          "dotabuff_url": "https://www.dotabuff.com/players/234337698/heroes",
-          "rating": 7406,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "AMON",
-          "steam_id": "76561198202680946",
-          "steam_url": "https://steamcommunity.com/profiles/76561198202680946",
-          "dotabuff_url": "https://www.dotabuff.com/players/242415218/heroes",
-          "rating": 8427,
-          "leaderboard_rank": 5000
-        },
-        {
-          "nickname": "the chase",
-          "steam_id": "76561198844403387",
-          "steam_url": "https://steamcommunity.com/profiles/76561198844403387",
-          "dotabuff_url": "https://www.dotabuff.com/players/884137659/heroes",
-          "rating": 6096,
-          "leaderboard_rank": null
         }
       ]
     },
@@ -910,8 +910,8 @@
       "team_rating": 42283,
       "place": null,
       "games_won": 4,
-      "games_lost": 6,
-      "games_total": 10,
+      "games_lost": 7,
+      "games_total": 11,
       "players": [
         {
           "nickname": "Daisyke Narotan",
