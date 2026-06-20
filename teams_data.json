@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T14:03:18.436613+00:00",
+  "updated_at": "2026-06-20T14:17:59.640436+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -433,8 +433,8 @@
       "team_rating": 41038,
       "place": null,
       "games_won": 6,
-      "games_lost": 4,
-      "games_total": 10,
+      "games_lost": 5,
+      "games_total": 11,
       "players": [
         {
           "nickname": "one punch",
@@ -850,10 +850,63 @@
       ]
     },
     {
+      "name": "Team МС ОТПУСК",
+      "url": "https://mixer-cup.gg/ru/team/457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
+      "uuid": "457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
+      "dom_order": 16,
+      "team_rating": 39467,
+      "place": null,
+      "games_won": 4,
+      "games_lost": 7,
+      "games_total": 11,
+      "players": [
+        {
+          "nickname": "󠁳⁧⁧ 󠁳",
+          "steam_id": "76561199034600254",
+          "steam_url": "https://steamcommunity.com/profiles/76561199034600254",
+          "dotabuff_url": "https://www.dotabuff.com/players/1074334526/heroes",
+          "rating": 9466,
+          "leaderboard_rank": 3664
+        },
+        {
+          "nickname": "Torpeda",
+          "steam_id": "76561198084463058",
+          "steam_url": "https://steamcommunity.com/profiles/76561198084463058",
+          "dotabuff_url": "https://www.dotabuff.com/players/124197330/heroes",
+          "rating": 3952,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "LinkOvO",
+          "steam_id": "76561198125733871",
+          "steam_url": "https://steamcommunity.com/profiles/76561198125733871",
+          "dotabuff_url": "https://www.dotabuff.com/players/165468143/heroes",
+          "rating": 7420,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "МС ОТПУСК",
+          "steam_id": "76561198362876872",
+          "steam_url": "https://steamcommunity.com/profiles/76561198362876872",
+          "dotabuff_url": "https://www.dotabuff.com/players/402611144/heroes",
+          "rating": 13692,
+          "leaderboard_rank": 480
+        },
+        {
+          "nickname": "Я с утра напален",
+          "steam_id": "76561199124361987",
+          "steam_url": "https://steamcommunity.com/profiles/76561199124361987",
+          "dotabuff_url": "https://www.dotabuff.com/players/1164096259/heroes",
+          "rating": 4937,
+          "leaderboard_rank": null
+        }
+      ]
+    },
+    {
       "name": "Team newmasksametask",
       "url": "https://mixer-cup.gg/ru/team/0c6770ed-239a-44ad-a743-86f95d6ac425",
       "uuid": "0c6770ed-239a-44ad-a743-86f95d6ac425",
-      "dom_order": 16,
+      "dom_order": 17,
       "team_rating": 41018,
       "place": null,
       "games_won": 4,
@@ -906,7 +959,7 @@
       "name": "Team Blue Death",
       "url": "https://mixer-cup.gg/ru/team/6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
       "uuid": "6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
-      "dom_order": 17,
+      "dom_order": 18,
       "team_rating": 42283,
       "place": null,
       "games_won": 4,
@@ -959,7 +1012,7 @@
       "name": "Team a",
       "url": "https://mixer-cup.gg/ru/team/e932bb96-146d-4b0c-b2e9-d069606b2d95",
       "uuid": "e932bb96-146d-4b0c-b2e9-d069606b2d95",
-      "dom_order": 18,
+      "dom_order": 19,
       "team_rating": 41887,
       "place": null,
       "games_won": 4,
@@ -1005,59 +1058,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/333765949/heroes",
           "rating": 9400,
           "leaderboard_rank": 3700
-        }
-      ]
-    },
-    {
-      "name": "Team МС ОТПУСК",
-      "url": "https://mixer-cup.gg/ru/team/457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
-      "uuid": "457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
-      "dom_order": 19,
-      "team_rating": 39467,
-      "place": null,
-      "games_won": 3,
-      "games_lost": 7,
-      "games_total": 10,
-      "players": [
-        {
-          "nickname": "󠁳⁧⁧ 󠁳",
-          "steam_id": "76561199034600254",
-          "steam_url": "https://steamcommunity.com/profiles/76561199034600254",
-          "dotabuff_url": "https://www.dotabuff.com/players/1074334526/heroes",
-          "rating": 9466,
-          "leaderboard_rank": 3664
-        },
-        {
-          "nickname": "Torpeda",
-          "steam_id": "76561198084463058",
-          "steam_url": "https://steamcommunity.com/profiles/76561198084463058",
-          "dotabuff_url": "https://www.dotabuff.com/players/124197330/heroes",
-          "rating": 3952,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "LinkOvO",
-          "steam_id": "76561198125733871",
-          "steam_url": "https://steamcommunity.com/profiles/76561198125733871",
-          "dotabuff_url": "https://www.dotabuff.com/players/165468143/heroes",
-          "rating": 7420,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "МС ОТПУСК",
-          "steam_id": "76561198362876872",
-          "steam_url": "https://steamcommunity.com/profiles/76561198362876872",
-          "dotabuff_url": "https://www.dotabuff.com/players/402611144/heroes",
-          "rating": 13692,
-          "leaderboard_rank": 480
-        },
-        {
-          "nickname": "Я с утра напален",
-          "steam_id": "76561199124361987",
-          "steam_url": "https://steamcommunity.com/profiles/76561199124361987",
-          "dotabuff_url": "https://www.dotabuff.com/players/1164096259/heroes",
-          "rating": 4937,
-          "leaderboard_rank": null
         }
       ]
     },
