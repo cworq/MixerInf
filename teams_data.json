@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T04:03:01.522978+00:00",
+  "updated_at": "2026-06-20T04:17:51.205367+00:00",
   "teams": [
     {
       "name": "Team ca",
@@ -907,7 +907,7 @@
       "url": "https://mixer-cup.gg/ru/team/e932bb96-146d-4b0c-b2e9-d069606b2d95",
       "uuid": "e932bb96-146d-4b0c-b2e9-d069606b2d95",
       "dom_order": 17,
-      "team_rating": 24481,
+      "team_rating": 41887,
       "place": null,
       "games_won": 4,
       "games_lost": 5,
@@ -930,12 +930,28 @@
           "leaderboard_rank": 2351
         },
         {
+          "nickname": "TlakEEE",
+          "steam_id": "76561198971660817",
+          "steam_url": "https://steamcommunity.com/profiles/76561198971660817",
+          "dotabuff_url": "https://www.dotabuff.com/players/1011395089/heroes",
+          "rating": 8006,
+          "leaderboard_rank": null
+        },
+        {
           "nickname": "SvEtK@_Воин",
           "steam_id": "76561198858303058",
           "steam_url": "https://steamcommunity.com/profiles/76561198858303058",
           "dotabuff_url": "https://www.dotabuff.com/players/898037330/heroes",
           "rating": 11343,
           "leaderboard_rank": 1501
+        },
+        {
+          "nickname": "барб0$",
+          "steam_id": "76561198294031677",
+          "steam_url": "https://steamcommunity.com/profiles/76561198294031677",
+          "dotabuff_url": "https://www.dotabuff.com/players/333765949/heroes",
+          "rating": 9400,
+          "leaderboard_rank": 3700
         }
       ]
     },
