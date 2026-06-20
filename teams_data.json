@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T02:32:52.939102+00:00",
+  "updated_at": "2026-06-20T02:47:54.926767+00:00",
   "teams": [
     {
       "name": "Team ca",
@@ -1172,7 +1172,7 @@
       "url": "https://mixer-cup.gg/ru/team/1a733066-a688-4f3d-b110-4956cf06c3c7",
       "uuid": "1a733066-a688-4f3d-b110-4956cf06c3c7",
       "dom_order": 22,
-      "team_rating": 44038,
+      "team_rating": 44156,
       "place": null,
       "games_won": 2,
       "games_lost": 7,
@@ -1211,11 +1211,11 @@
           "leaderboard_rank": 1117
         },
         {
-          "nickname": "MAMA",
-          "steam_id": "76561199025807065",
-          "steam_url": "https://steamcommunity.com/profiles/76561199025807065",
-          "dotabuff_url": "https://www.dotabuff.com/players/1065541337/heroes",
-          "rating": 3105,
+          "nickname": "Morphling",
+          "steam_id": "76561198331635927",
+          "steam_url": "https://steamcommunity.com/profiles/76561198331635927",
+          "dotabuff_url": "https://www.dotabuff.com/players/371370199/heroes",
+          "rating": 3223,
           "leaderboard_rank": null
         }
       ]
