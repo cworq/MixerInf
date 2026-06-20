@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T14:17:59.640436+00:00",
+  "updated_at": "2026-06-20T14:33:17.956861+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1119,20 +1119,12 @@
       "url": "https://mixer-cup.gg/ru/team/6d56cfea-5732-4472-b0a2-93c9e8bb186a",
       "uuid": "6d56cfea-5732-4472-b0a2-93c9e8bb186a",
       "dom_order": 21,
-      "team_rating": 43387,
+      "team_rating": 42857,
       "place": null,
       "games_won": 3,
       "games_lost": 7,
       "games_total": 10,
       "players": [
-        {
-          "nickname": "ocean of lights",
-          "steam_id": "76561198202147153",
-          "steam_url": "https://steamcommunity.com/profiles/76561198202147153",
-          "dotabuff_url": "https://www.dotabuff.com/players/241881425/heroes",
-          "rating": 12017,
-          "leaderboard_rank": 1094
-        },
         {
           "nickname": "Sunny",
           "steam_id": "76561198803698099",
@@ -1158,12 +1150,20 @@
           "leaderboard_rank": 3839
         },
         {
-          "nickname": "Yan0z",
-          "steam_id": "76561198077732347",
-          "steam_url": "https://steamcommunity.com/profiles/76561198077732347",
-          "dotabuff_url": "https://www.dotabuff.com/players/117466619/heroes",
-          "rating": 5016,
+          "nickname": "justcalm (try pma)",
+          "steam_id": "76561198171792731",
+          "steam_url": "https://steamcommunity.com/profiles/76561198171792731",
+          "dotabuff_url": "https://www.dotabuff.com/players/211527003/heroes",
+          "rating": 5789,
           "leaderboard_rank": null
+        },
+        {
+          "nickname": "тяжело быть богом",
+          "steam_id": "76561199012827290",
+          "steam_url": "https://steamcommunity.com/profiles/76561199012827290",
+          "dotabuff_url": "https://www.dotabuff.com/players/1052561562/heroes",
+          "rating": 10714,
+          "leaderboard_rank": 1992
         }
       ]
     },
