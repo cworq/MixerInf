@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T07:47:50.355548+00:00",
+  "updated_at": "2026-06-21T08:03:00.255163+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -589,12 +589,20 @@
       "url": "https://mixer-cup.gg/ru/team/9f541f83-481b-433e-b5c4-db7d3b41629b",
       "uuid": "9f541f83-481b-433e-b5c4-db7d3b41629b",
       "dom_order": 11,
-      "team_rating": 40493,
+      "team_rating": 41435,
       "place": null,
       "games_won": 5,
       "games_lost": 6,
       "games_total": 11,
       "players": [
+        {
+          "nickname": "Мракобесик",
+          "steam_id": "76561199165708900",
+          "steam_url": "https://steamcommunity.com/profiles/76561199165708900",
+          "dotabuff_url": "https://www.dotabuff.com/players/1205443172/heroes",
+          "rating": 6988,
+          "leaderboard_rank": null
+        },
         {
           "nickname": "rusky",
           "steam_id": "76561198253856930",
@@ -617,14 +625,6 @@
           "steam_url": "https://steamcommunity.com/profiles/76561199492367633",
           "dotabuff_url": "https://www.dotabuff.com/players/1532101905/heroes",
           "rating": 5020,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "BackStab",
-          "steam_id": "76561198155690228",
-          "steam_url": "https://steamcommunity.com/profiles/76561198155690228",
-          "dotabuff_url": "https://www.dotabuff.com/players/195424500/heroes",
-          "rating": 6046,
           "leaderboard_rank": null
         },
         {
