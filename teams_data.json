@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T17:18:01.386940+00:00",
+  "updated_at": "2026-06-21T17:33:07.543998+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1225,7 +1225,7 @@
       "url": "https://mixer-cup.gg/ru/team/da78442a-014e-4b8d-936e-e3ef0be9f3af",
       "uuid": "da78442a-014e-4b8d-936e-e3ef0be9f3af",
       "dom_order": 23,
-      "team_rating": 43635,
+      "team_rating": 42337,
       "place": null,
       "games_won": 1,
       "games_lost": 11,
@@ -1238,14 +1238,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/1181158168/heroes",
           "rating": 2309,
           "leaderboard_rank": null
-        },
-        {
-          "nickname": "RR.COBRA",
-          "steam_id": "76561198114775466",
-          "steam_url": "https://steamcommunity.com/profiles/76561198114775466",
-          "dotabuff_url": "https://www.dotabuff.com/players/154509738/heroes",
-          "rating": 13670,
-          "leaderboard_rank": 618
         },
         {
           "nickname": "maloydotos",
@@ -1262,6 +1254,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/141203838/heroes",
           "rating": 8201,
           "leaderboard_rank": null
+        },
+        {
+          "nickname": "Übermensch",
+          "steam_id": "76561198200543727",
+          "steam_url": "https://steamcommunity.com/profiles/76561198200543727",
+          "dotabuff_url": "https://www.dotabuff.com/players/240277999/heroes",
+          "rating": 12372,
+          "leaderboard_rank": 825
         },
         {
           "nickname": "malark",
