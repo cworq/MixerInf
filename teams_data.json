@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T18:32:58.306013+00:00",
+  "updated_at": "2026-06-21T18:47:51.073898+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -854,7 +854,7 @@
       "url": "https://mixer-cup.gg/ru/team/b9854156-4f46-440d-92fe-741e16437f7e",
       "uuid": "b9854156-4f46-440d-92fe-741e16437f7e",
       "dom_order": 16,
-      "team_rating": 39093,
+      "team_rating": 40088,
       "place": null,
       "games_won": 5,
       "games_lost": 7,
@@ -885,12 +885,12 @@
           "leaderboard_rank": null
         },
         {
-          "nickname": "опять меняю номера",
-          "steam_id": "76561198149583385",
-          "steam_url": "https://steamcommunity.com/profiles/76561198149583385",
-          "dotabuff_url": "https://www.dotabuff.com/players/189317657/heroes",
-          "rating": 13318,
-          "leaderboard_rank": 602
+          "nickname": "fam0us",
+          "steam_id": "76561198159117298",
+          "steam_url": "https://steamcommunity.com/profiles/76561198159117298",
+          "dotabuff_url": "https://www.dotabuff.com/players/198851570/heroes",
+          "rating": 14313,
+          "leaderboard_rank": 371
         },
         {
           "nickname": "jiskyn",
