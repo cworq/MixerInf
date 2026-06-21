@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T14:47:58.753932+00:00",
+  "updated_at": "2026-06-21T15:03:08.097390+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1066,26 +1066,26 @@
       "url": "https://mixer-cup.gg/ru/team/6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
       "uuid": "6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
       "dom_order": 20,
-      "team_rating": 42283,
+      "team_rating": 42099,
       "place": null,
       "games_won": 4,
       "games_lost": 8,
       "games_total": 12,
       "players": [
         {
+          "nickname": "счастье",
+          "steam_id": "76561198360312044",
+          "steam_url": "https://steamcommunity.com/profiles/76561198360312044",
+          "dotabuff_url": "https://www.dotabuff.com/players/400046316/heroes",
+          "rating": 6670,
+          "leaderboard_rank": null
+        },
+        {
           "nickname": "Daisyke Narotan",
           "steam_id": "76561198130520207",
           "steam_url": "https://steamcommunity.com/profiles/76561198130520207",
           "dotabuff_url": "https://www.dotabuff.com/players/170254479/heroes",
           "rating": 7900,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "vank jr.",
-          "steam_id": "76561198264849995",
-          "steam_url": "https://steamcommunity.com/profiles/76561198264849995",
-          "dotabuff_url": "https://www.dotabuff.com/players/304584267/heroes",
-          "rating": 6854,
           "leaderboard_rank": null
         },
         {
