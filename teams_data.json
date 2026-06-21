@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T05:32:59.478284+00:00",
+  "updated_at": "2026-06-21T05:47:45.015675+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1119,7 +1119,7 @@
       "url": "https://mixer-cup.gg/ru/team/6d56cfea-5732-4472-b0a2-93c9e8bb186a",
       "uuid": "6d56cfea-5732-4472-b0a2-93c9e8bb186a",
       "dom_order": 21,
-      "team_rating": 42857,
+      "team_rating": 39095,
       "place": null,
       "games_won": 3,
       "games_lost": 8,
@@ -1132,14 +1132,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/843432371/heroes",
           "rating": 3250,
           "leaderboard_rank": null
-        },
-        {
-          "nickname": "wvnnvcry",
-          "steam_id": "76561198304654751",
-          "steam_url": "https://steamcommunity.com/profiles/76561198304654751",
-          "dotabuff_url": "https://www.dotabuff.com/players/344389023/heroes",
-          "rating": 12700,
-          "leaderboard_rank": 693
         },
         {
           "nickname": "rom4ik44",
@@ -1164,6 +1156,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/1052561562/heroes",
           "rating": 10714,
           "leaderboard_rank": 1992
+        },
+        {
+          "nickname": "yett",
+          "steam_id": "76561198134277012",
+          "steam_url": "https://steamcommunity.com/profiles/76561198134277012",
+          "dotabuff_url": "https://www.dotabuff.com/players/174011284/heroes",
+          "rating": 8938,
+          "leaderboard_rank": 4390
         }
       ]
     },
