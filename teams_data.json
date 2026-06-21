@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T09:03:01.861174+00:00",
+  "updated_at": "2026-06-21T09:17:51.100123+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -59,20 +59,12 @@
       "url": "https://mixer-cup.gg/ru/team/9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
       "uuid": "9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
       "dom_order": 1,
-      "team_rating": 42286,
+      "team_rating": 42865,
       "place": null,
       "games_won": 10,
       "games_lost": 1,
       "games_total": 11,
       "players": [
-        {
-          "nickname": "pocky boy",
-          "steam_id": "76561199634197434",
-          "steam_url": "https://steamcommunity.com/profiles/76561199634197434",
-          "dotabuff_url": "https://www.dotabuff.com/players/1673931706/heroes",
-          "rating": 10385,
-          "leaderboard_rank": 1964
-        },
         {
           "nickname": "0000",
           "steam_id": "76561198806133687",
@@ -104,6 +96,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/367669332/heroes",
           "rating": 9343,
           "leaderboard_rank": 3529
+        },
+        {
+          "nickname": "Have a Nice Life",
+          "steam_id": "76561198092290729",
+          "steam_url": "https://steamcommunity.com/profiles/76561198092290729",
+          "dotabuff_url": "https://www.dotabuff.com/players/132025001/heroes",
+          "rating": 10964,
+          "leaderboard_rank": 1725
         }
       ]
     },
