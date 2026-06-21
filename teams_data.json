@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T22:47:54.137639+00:00",
+  "updated_at": "2026-06-21T23:03:03.186919+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -589,20 +589,12 @@
       "url": "https://mixer-cup.gg/ru/team/3414fa11-5d58-4283-b428-a15228ce73f7",
       "uuid": "3414fa11-5d58-4283-b428-a15228ce73f7",
       "dom_order": 11,
-      "team_rating": 42359,
+      "team_rating": 41202,
       "place": null,
       "games_won": 6,
       "games_lost": 6,
       "games_total": 12,
       "players": [
-        {
-          "nickname": "herons",
-          "steam_id": "76561199221003691",
-          "steam_url": "https://steamcommunity.com/profiles/76561199221003691",
-          "dotabuff_url": "https://www.dotabuff.com/players/1260737963/heroes",
-          "rating": 10892,
-          "leaderboard_rank": 1713
-        },
         {
           "nickname": "Egoist",
           "steam_id": "76561198084366021",
@@ -634,6 +626,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/929328318/heroes",
           "rating": 4784,
           "leaderboard_rank": null
+        },
+        {
+          "nickname": ".13seven",
+          "steam_id": "76561198140938180",
+          "steam_url": "https://steamcommunity.com/profiles/76561198140938180",
+          "dotabuff_url": "https://www.dotabuff.com/players/180672452/heroes",
+          "rating": 9735,
+          "leaderboard_rank": 2504
         }
       ]
     },
