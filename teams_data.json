@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T06:47:58.673514+00:00",
+  "updated_at": "2026-06-21T07:03:06.375916+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -430,7 +430,7 @@
       "url": "https://mixer-cup.gg/ru/team/2aa8251b-4454-4058-b70a-405723435f10",
       "uuid": "2aa8251b-4454-4058-b70a-405723435f10",
       "dom_order": 8,
-      "team_rating": 41548,
+      "team_rating": 43331,
       "place": null,
       "games_won": 6,
       "games_lost": 5,
@@ -469,12 +469,12 @@
           "leaderboard_rank": 4824
         },
         {
-          "nickname": "shinigami",
-          "steam_id": "76561198153698063",
-          "steam_url": "https://steamcommunity.com/profiles/76561198153698063",
-          "dotabuff_url": "https://www.dotabuff.com/players/193432335/heroes",
-          "rating": 11639,
-          "leaderboard_rank": 1257
+          "nickname": "󠀡󠀡",
+          "steam_id": "76561198135354515",
+          "steam_url": "https://steamcommunity.com/profiles/76561198135354515",
+          "dotabuff_url": "https://www.dotabuff.com/players/175088787/heroes",
+          "rating": 13422,
+          "leaderboard_rank": 469
         }
       ]
     },
@@ -907,7 +907,7 @@
       "url": "https://mixer-cup.gg/ru/team/34a79c0c-0885-4515-82a9-5fe840d6ed93",
       "uuid": "34a79c0c-0885-4515-82a9-5fe840d6ed93",
       "dom_order": 17,
-      "team_rating": 38582,
+      "team_rating": 41857,
       "place": null,
       "games_won": 5,
       "games_lost": 6,
@@ -922,20 +922,20 @@
           "leaderboard_rank": null
         },
         {
-          "nickname": "слабые молитесь",
-          "steam_id": "76561198417565001",
-          "steam_url": "https://steamcommunity.com/profiles/76561198417565001",
-          "dotabuff_url": "https://www.dotabuff.com/players/457299273/heroes",
-          "rating": 4801,
-          "leaderboard_rank": null
+          "nickname": "♛тесная поляна♛",
+          "steam_id": "76561198359811955",
+          "steam_url": "https://steamcommunity.com/profiles/76561198359811955",
+          "dotabuff_url": "https://www.dotabuff.com/players/399546227/heroes",
+          "rating": 11085,
+          "leaderboard_rank": 1575
         },
         {
-          "nickname": "Hermoso Ángel",
-          "steam_id": "76561198129184051",
-          "steam_url": "https://steamcommunity.com/profiles/76561198129184051",
-          "dotabuff_url": "https://www.dotabuff.com/players/168918323/heroes",
-          "rating": 10337,
-          "leaderboard_rank": 3826
+          "nickname": "KATEIN",
+          "steam_id": "76561198971197830",
+          "steam_url": "https://steamcommunity.com/profiles/76561198971197830",
+          "dotabuff_url": "https://www.dotabuff.com/players/1010932102/heroes",
+          "rating": 7328,
+          "leaderboard_rank": null
         },
         {
           "nickname": "марта",
