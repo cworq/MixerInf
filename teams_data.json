@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T04:17:58.789043+00:00",
+  "updated_at": "2026-06-21T04:33:06.222754+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -483,27 +483,19 @@
       "url": "https://mixer-cup.gg/ru/team/65302445-e437-42ff-b303-29a397f127c0",
       "uuid": "65302445-e437-42ff-b303-29a397f127c0",
       "dom_order": 9,
-      "team_rating": 41038,
+      "team_rating": 43549,
       "place": null,
       "games_won": 6,
       "games_lost": 5,
       "games_total": 11,
       "players": [
         {
-          "nickname": "one punch",
-          "steam_id": "76561199061208572",
-          "steam_url": "https://steamcommunity.com/profiles/76561199061208572",
-          "dotabuff_url": "https://www.dotabuff.com/players/1100942844/heroes",
-          "rating": 5250,
+          "nickname": "Redhardt",
+          "steam_id": "76561198437976750",
+          "steam_url": "https://steamcommunity.com/profiles/76561198437976750",
+          "dotabuff_url": "https://www.dotabuff.com/players/477711022/heroes",
+          "rating": 8600,
           "leaderboard_rank": null
-        },
-        {
-          "nickname": "sweets holic",
-          "steam_id": "76561198985533598",
-          "steam_url": "https://steamcommunity.com/profiles/76561198985533598",
-          "dotabuff_url": "https://www.dotabuff.com/players/1025267870/heroes",
-          "rating": 13894,
-          "leaderboard_rank": 411
         },
         {
           "nickname": "оптимус (pr1me)",
@@ -528,6 +520,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/156210243/heroes",
           "rating": 8547,
           "leaderboard_rank": null
+        },
+        {
+          "nickname": "B3SHA",
+          "steam_id": "76561199042157320",
+          "steam_url": "https://steamcommunity.com/profiles/76561199042157320",
+          "dotabuff_url": "https://www.dotabuff.com/players/1081891592/heroes",
+          "rating": 13055,
+          "leaderboard_rank": 665
         }
       ]
     },
