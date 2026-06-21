@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T10:03:07.500078+00:00",
+  "updated_at": "2026-06-21T10:17:47.440495+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -642,7 +642,7 @@
       "url": "https://mixer-cup.gg/ru/team/eba112df-5662-4c9f-a1e5-8fc86ad239b2",
       "uuid": "eba112df-5662-4c9f-a1e5-8fc86ad239b2",
       "dom_order": 12,
-      "team_rating": 41545,
+      "team_rating": 41331,
       "place": null,
       "games_won": 5,
       "games_lost": 6,
@@ -655,14 +655,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/635198320/heroes",
           "rating": 6467,
           "leaderboard_rank": 4863
-        },
-        {
-          "nickname": "最悪の敵",
-          "steam_id": "76561199634245691",
-          "steam_url": "https://steamcommunity.com/profiles/76561199634245691",
-          "dotabuff_url": "https://www.dotabuff.com/players/1673979963/heroes",
-          "rating": 8832,
-          "leaderboard_rank": 4532
         },
         {
           "nickname": "bobby fischer",
@@ -687,6 +679,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/1094753666/heroes",
           "rating": 12568,
           "leaderboard_rank": 799
+        },
+        {
+          "nickname": "Infinity",
+          "steam_id": "76561198131662856",
+          "steam_url": "https://steamcommunity.com/profiles/76561198131662856",
+          "dotabuff_url": "https://www.dotabuff.com/players/171397128/heroes",
+          "rating": 8618,
+          "leaderboard_rank": 3427
         }
       ]
     },
@@ -1013,7 +1013,7 @@
       "url": "https://mixer-cup.gg/ru/team/0c6770ed-239a-44ad-a743-86f95d6ac425",
       "uuid": "0c6770ed-239a-44ad-a743-86f95d6ac425",
       "dom_order": 19,
-      "team_rating": 41018,
+      "team_rating": 41939,
       "place": null,
       "games_won": 4,
       "games_lost": 7,
@@ -1026,14 +1026,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/397203366/heroes",
           "rating": 5409,
           "leaderboard_rank": null
-        },
-        {
-          "nickname": "newmasksametask",
-          "steam_id": "76561199140576023",
-          "steam_url": "https://steamcommunity.com/profiles/76561199140576023",
-          "dotabuff_url": "https://www.dotabuff.com/players/1180310295/heroes",
-          "rating": 10031,
-          "leaderboard_rank": 2499
         },
         {
           "nickname": "Габор реальный че",
@@ -1050,6 +1042,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/295651818/heroes",
           "rating": 10883,
           "leaderboard_rank": 1526
+        },
+        {
+          "nickname": "Илья Сергеевич",
+          "steam_id": "76561198423289968",
+          "steam_url": "https://steamcommunity.com/profiles/76561198423289968",
+          "dotabuff_url": "https://www.dotabuff.com/players/463024240/heroes",
+          "rating": 10952,
+          "leaderboard_rank": 1791
         },
         {
           "nickname": "yj_gang",
