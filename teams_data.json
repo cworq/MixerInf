@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T03:03:05.159179+00:00",
+  "updated_at": "2026-06-22T03:17:55.084419+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1115,63 +1115,10 @@
       ]
     },
     {
-      "name": "Team худший тысячник",
-      "url": "https://mixer-cup.gg/ru/team/6d56cfea-5732-4472-b0a2-93c9e8bb186a",
-      "uuid": "6d56cfea-5732-4472-b0a2-93c9e8bb186a",
-      "dom_order": 21,
-      "team_rating": 39805,
-      "place": null,
-      "games_won": 3,
-      "games_lost": 10,
-      "games_total": 13,
-      "players": [
-        {
-          "nickname": "Sunny",
-          "steam_id": "76561198803698099",
-          "steam_url": "https://steamcommunity.com/profiles/76561198803698099",
-          "dotabuff_url": "https://www.dotabuff.com/players/843432371/heroes",
-          "rating": 3250,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "rom4ik44",
-          "steam_id": "76561199515050150",
-          "steam_url": "https://steamcommunity.com/profiles/76561199515050150",
-          "dotabuff_url": "https://www.dotabuff.com/players/1554784422/heroes",
-          "rating": 10404,
-          "leaderboard_rank": 3839
-        },
-        {
-          "nickname": "justcalm (try pma)",
-          "steam_id": "76561198171792731",
-          "steam_url": "https://steamcommunity.com/profiles/76561198171792731",
-          "dotabuff_url": "https://www.dotabuff.com/players/211527003/heroes",
-          "rating": 5789,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "тяжело быть богом",
-          "steam_id": "76561199012827290",
-          "steam_url": "https://steamcommunity.com/profiles/76561199012827290",
-          "dotabuff_url": "https://www.dotabuff.com/players/1052561562/heroes",
-          "rating": 10714,
-          "leaderboard_rank": 1992
-        },
-        {
-          "nickname": "tired",
-          "steam_id": "76561198061378414",
-          "steam_url": "https://steamcommunity.com/profiles/76561198061378414",
-          "dotabuff_url": "https://www.dotabuff.com/players/101112686/heroes",
-          "rating": 9648,
-          "leaderboard_rank": 3284
-        }
-      ]
-    },
-    {
       "name": "Team mvssive attvck",
       "url": "https://mixer-cup.gg/ru/team/1a733066-a688-4f3d-b110-4956cf06c3c7",
       "uuid": "1a733066-a688-4f3d-b110-4956cf06c3c7",
-      "dom_order": 22,
+      "dom_order": 21,
       "team_rating": 44156,
       "place": null,
       "games_won": 3,
@@ -1217,6 +1164,59 @@
           "dotabuff_url": "https://www.dotabuff.com/players/371370199/heroes",
           "rating": 3223,
           "leaderboard_rank": null
+        }
+      ]
+    },
+    {
+      "name": "Team худший тысячник",
+      "url": "https://mixer-cup.gg/ru/team/6d56cfea-5732-4472-b0a2-93c9e8bb186a",
+      "uuid": "6d56cfea-5732-4472-b0a2-93c9e8bb186a",
+      "dom_order": 22,
+      "team_rating": 39805,
+      "place": null,
+      "games_won": 3,
+      "games_lost": 10,
+      "games_total": 13,
+      "players": [
+        {
+          "nickname": "Sunny",
+          "steam_id": "76561198803698099",
+          "steam_url": "https://steamcommunity.com/profiles/76561198803698099",
+          "dotabuff_url": "https://www.dotabuff.com/players/843432371/heroes",
+          "rating": 3250,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "rom4ik44",
+          "steam_id": "76561199515050150",
+          "steam_url": "https://steamcommunity.com/profiles/76561199515050150",
+          "dotabuff_url": "https://www.dotabuff.com/players/1554784422/heroes",
+          "rating": 10404,
+          "leaderboard_rank": 3839
+        },
+        {
+          "nickname": "justcalm (try pma)",
+          "steam_id": "76561198171792731",
+          "steam_url": "https://steamcommunity.com/profiles/76561198171792731",
+          "dotabuff_url": "https://www.dotabuff.com/players/211527003/heroes",
+          "rating": 5789,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "тяжело быть богом",
+          "steam_id": "76561199012827290",
+          "steam_url": "https://steamcommunity.com/profiles/76561199012827290",
+          "dotabuff_url": "https://www.dotabuff.com/players/1052561562/heroes",
+          "rating": 10714,
+          "leaderboard_rank": 1992
+        },
+        {
+          "nickname": "tired",
+          "steam_id": "76561198061378414",
+          "steam_url": "https://steamcommunity.com/profiles/76561198061378414",
+          "dotabuff_url": "https://www.dotabuff.com/players/101112686/heroes",
+          "rating": 9648,
+          "leaderboard_rank": 3284
         }
       ]
     },
