@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T18:03:20.518296+00:00",
+  "updated_at": "2026-06-22T18:18:08.228146+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -61,9 +61,9 @@
       "dom_order": 1,
       "team_rating": 42865,
       "place": null,
-      "games_won": 11,
+      "games_won": 12,
       "games_lost": 2,
-      "games_total": 13,
+      "games_total": 14,
       "players": [
         {
           "nickname": "0000",
@@ -914,10 +914,10 @@
       "games_total": 14,
       "players": [
         {
-          "nickname": "Чзх",
-          "steam_id": "76561199034600254",
-          "steam_url": "https://steamcommunity.com/profiles/76561199034600254",
-          "dotabuff_url": "https://www.dotabuff.com/players/1074334526/heroes",
+          "nickname": "123",
+          "steam_id": null,
+          "steam_url": "",
+          "dotabuff_url": "",
           "rating": 9466,
           "leaderboard_rank": 3505
         },
@@ -1069,8 +1069,8 @@
       "team_rating": 41331,
       "place": null,
       "games_won": 5,
-      "games_lost": 8,
-      "games_total": 13,
+      "games_lost": 9,
+      "games_total": 14,
       "players": [
         {
           "nickname": "tyzya01",
