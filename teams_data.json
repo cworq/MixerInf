@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T12:33:12.554324+00:00",
+  "updated_at": "2026-06-22T12:47:57.108381+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -483,7 +483,7 @@
       "url": "https://mixer-cup.gg/ru/team/65302445-e437-42ff-b303-29a397f127c0",
       "uuid": "65302445-e437-42ff-b303-29a397f127c0",
       "dom_order": 9,
-      "team_rating": 43549,
+      "team_rating": 42472,
       "place": null,
       "games_won": 7,
       "games_lost": 6,
@@ -498,12 +498,12 @@
           "leaderboard_rank": null
         },
         {
-          "nickname": "оптимус (pr1me)",
-          "steam_id": "76561198161587402",
-          "steam_url": "https://steamcommunity.com/profiles/76561198161587402",
-          "dotabuff_url": "https://www.dotabuff.com/players/201321674/heroes",
-          "rating": 10500,
-          "leaderboard_rank": 3181
+          "nickname": "amiri jeans",
+          "steam_id": "76561199513056344",
+          "steam_url": "https://steamcommunity.com/profiles/76561199513056344",
+          "dotabuff_url": "https://www.dotabuff.com/players/1552790616/heroes",
+          "rating": 9423,
+          "leaderboard_rank": 3883
         },
         {
           "nickname": "KillEvaPls",
