@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T14:03:10.664919+00:00",
+  "updated_at": "2026-06-22T14:18:03.527109+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1172,7 +1172,7 @@
       "url": "https://mixer-cup.gg/ru/team/6d56cfea-5732-4472-b0a2-93c9e8bb186a",
       "uuid": "6d56cfea-5732-4472-b0a2-93c9e8bb186a",
       "dom_order": 22,
-      "team_rating": 39805,
+      "team_rating": 41312,
       "place": null,
       "games_won": 3,
       "games_lost": 10,
@@ -1187,6 +1187,14 @@
           "leaderboard_rank": null
         },
         {
+          "nickname": "худший тысячник",
+          "steam_id": "76561198364917154",
+          "steam_url": "https://steamcommunity.com/profiles/76561198364917154",
+          "dotabuff_url": "https://www.dotabuff.com/players/404651426/heroes",
+          "rating": 11510,
+          "leaderboard_rank": 1396
+        },
+        {
           "nickname": "rom4ik44",
           "steam_id": "76561199515050150",
           "steam_url": "https://steamcommunity.com/profiles/76561199515050150",
@@ -1195,20 +1203,12 @@
           "leaderboard_rank": 3839
         },
         {
-          "nickname": "justcalm (try pma)",
-          "steam_id": "76561198171792731",
-          "steam_url": "https://steamcommunity.com/profiles/76561198171792731",
-          "dotabuff_url": "https://www.dotabuff.com/players/211527003/heroes",
-          "rating": 5789,
+          "nickname": "школьник",
+          "steam_id": "76561198826061478",
+          "steam_url": "https://steamcommunity.com/profiles/76561198826061478",
+          "dotabuff_url": "https://www.dotabuff.com/players/865795750/heroes",
+          "rating": 6500,
           "leaderboard_rank": null
-        },
-        {
-          "nickname": "тяжело быть богом",
-          "steam_id": "76561199012827290",
-          "steam_url": "https://steamcommunity.com/profiles/76561199012827290",
-          "dotabuff_url": "https://www.dotabuff.com/players/1052561562/heroes",
-          "rating": 10714,
-          "leaderboard_rank": 1992
         },
         {
           "nickname": "tired",
