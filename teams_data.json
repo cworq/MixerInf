@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T18:33:21.439835+00:00",
+  "updated_at": "2026-06-22T18:48:02.253517+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -915,9 +915,9 @@
       "players": [
         {
           "nickname": "123",
-          "steam_id": null,
-          "steam_url": "",
-          "dotabuff_url": "",
+          "steam_id": "76561199034600254",
+          "steam_url": "https://steamcommunity.com/profiles/76561199034600254",
+          "dotabuff_url": "https://www.dotabuff.com/players/1074334526/heroes",
           "rating": 9466,
           "leaderboard_rank": 3505
         },
