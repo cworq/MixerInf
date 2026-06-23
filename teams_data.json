@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23T11:17:51.628322+00:00",
+  "updated_at": "2026-06-23T11:33:12.325482+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -59,7 +59,7 @@
       "url": "https://mixer-cup.gg/ru/team/9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
       "uuid": "9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
       "dom_order": 1,
-      "team_rating": 42865,
+      "team_rating": 37219,
       "place": null,
       "games_won": 13,
       "games_lost": 2,
@@ -71,14 +71,6 @@
           "steam_url": "https://steamcommunity.com/profiles/76561198806133687",
           "dotabuff_url": "https://www.dotabuff.com/players/845867959/heroes",
           "rating": 4712,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "свирепый_боец",
-          "steam_id": "76561198282381441",
-          "steam_url": "https://steamcommunity.com/profiles/76561198282381441",
-          "dotabuff_url": "https://www.dotabuff.com/players/322115713/heroes",
-          "rating": 5646,
           "leaderboard_rank": null
         },
         {
@@ -112,7 +104,7 @@
       "url": "https://mixer-cup.gg/ru/team/09185f2b-2df0-4bac-841e-e340cab4b73a",
       "uuid": "09185f2b-2df0-4bac-841e-e340cab4b73a",
       "dom_order": 2,
-      "team_rating": 41760,
+      "team_rating": 36383,
       "place": null,
       "games_won": 13,
       "games_lost": 3,
@@ -148,14 +140,6 @@
           "steam_url": "https://steamcommunity.com/profiles/76561198449833895",
           "dotabuff_url": "https://www.dotabuff.com/players/489568167/heroes",
           "rating": 6789,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "da baby",
-          "steam_id": "76561198984474251",
-          "steam_url": "https://steamcommunity.com/profiles/76561198984474251",
-          "dotabuff_url": "https://www.dotabuff.com/players/1024208523/heroes",
-          "rating": 5377,
           "leaderboard_rank": null
         }
       ]
@@ -748,20 +732,12 @@
       "url": "https://mixer-cup.gg/ru/team/b9854156-4f46-440d-92fe-741e16437f7e",
       "uuid": "b9854156-4f46-440d-92fe-741e16437f7e",
       "dom_order": 14,
-      "team_rating": 40088,
+      "team_rating": 32325,
       "place": null,
       "games_won": 7,
       "games_lost": 8,
       "games_total": 15,
       "players": [
-        {
-          "nickname": "infinity 5$",
-          "steam_id": "76561199810141475",
-          "steam_url": "https://steamcommunity.com/profiles/76561199810141475",
-          "dotabuff_url": "https://www.dotabuff.com/players/1849875747/heroes",
-          "rating": 7763,
-          "leaderboard_rank": null
-        },
         {
           "nickname": "grind season",
           "steam_id": "76561199091341473",
