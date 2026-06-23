@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23T03:03:03.549130+00:00",
+  "updated_at": "2026-06-23T03:17:47.504684+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -857,8 +857,8 @@
       "team_rating": 43059,
       "place": null,
       "games_won": 6,
-      "games_lost": 8,
-      "games_total": 14,
+      "games_lost": 9,
+      "games_total": 15,
       "players": [
         {
           "nickname": "Porshen",
@@ -1227,9 +1227,9 @@
       "dom_order": 23,
       "team_rating": 42337,
       "place": null,
-      "games_won": 1,
+      "games_won": 2,
       "games_lost": 13,
-      "games_total": 14,
+      "games_total": 15,
       "players": [
         {
           "nickname": "P. jimmy",
