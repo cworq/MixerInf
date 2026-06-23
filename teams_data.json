@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23T10:48:08.824571+00:00",
+  "updated_at": "2026-06-23T11:03:27.047023+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -165,12 +165,20 @@
       "url": "https://mixer-cup.gg/ru/team/95d713a5-26f4-46ad-bb9d-d8a8813a8f8a",
       "uuid": "95d713a5-26f4-46ad-bb9d-d8a8813a8f8a",
       "dom_order": 3,
-      "team_rating": 40960,
+      "team_rating": 41699,
       "place": null,
       "games_won": 10,
       "games_lost": 5,
       "games_total": 15,
       "players": [
+        {
+          "nickname": "дешевые драмы",
+          "steam_id": "76561198240966472",
+          "steam_url": "https://steamcommunity.com/profiles/76561198240966472",
+          "dotabuff_url": "https://www.dotabuff.com/players/280700744/heroes",
+          "rating": 8514,
+          "leaderboard_rank": null
+        },
         {
           "nickname": "антиваня крип",
           "steam_id": "76561198818187765",
@@ -194,14 +202,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/331079131/heroes",
           "rating": 8295,
           "leaderboard_rank": 4822
-        },
-        {
-          "nickname": "Чемпион",
-          "steam_id": "76561198970114604",
-          "steam_url": "https://steamcommunity.com/profiles/76561198970114604",
-          "dotabuff_url": "https://www.dotabuff.com/players/1009848876/heroes",
-          "rating": 7775,
-          "leaderboard_rank": null
         },
         {
           "nickname": "девочка (ищу друзей)",
