@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23T07:03:13.235463+00:00",
+  "updated_at": "2026-06-23T07:18:00.072142+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1066,19 +1066,19 @@
       "url": "https://mixer-cup.gg/ru/team/eba112df-5662-4c9f-a1e5-8fc86ad239b2",
       "uuid": "eba112df-5662-4c9f-a1e5-8fc86ad239b2",
       "dom_order": 20,
-      "team_rating": 41331,
+      "team_rating": 42029,
       "place": null,
       "games_won": 5,
       "games_lost": 9,
       "games_total": 14,
       "players": [
         {
-          "nickname": "tyzya01",
-          "steam_id": "76561198595464048",
-          "steam_url": "https://steamcommunity.com/profiles/76561198595464048",
-          "dotabuff_url": "https://www.dotabuff.com/players/635198320/heroes",
-          "rating": 6467,
-          "leaderboard_rank": 4863
+          "nickname": "pocky boy",
+          "steam_id": "76561199634197434",
+          "steam_url": "https://steamcommunity.com/profiles/76561199634197434",
+          "dotabuff_url": "https://www.dotabuff.com/players/1673931706/heroes",
+          "rating": 10385,
+          "leaderboard_rank": 1964
         },
         {
           "nickname": "bobby fischer",
@@ -1087,14 +1087,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/481170906/heroes",
           "rating": 4717,
           "leaderboard_rank": null
-        },
-        {
-          "nickname": "isa",
-          "steam_id": "76561199108688541",
-          "steam_url": "https://steamcommunity.com/profiles/76561199108688541",
-          "dotabuff_url": "https://www.dotabuff.com/players/1148422813/heroes",
-          "rating": 8961,
-          "leaderboard_rank": 4490
         },
         {
           "nickname": "2faced",
@@ -1111,6 +1103,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/171397128/heroes",
           "rating": 8618,
           "leaderboard_rank": 3427
+        },
+        {
+          "nickname": "Titan777",
+          "steam_id": "76561198343870208",
+          "steam_url": "https://steamcommunity.com/profiles/76561198343870208",
+          "dotabuff_url": "https://www.dotabuff.com/players/383604480/heroes",
+          "rating": 5741,
+          "leaderboard_rank": null
         }
       ]
     },
