@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23T17:03:17.298259+00:00",
+  "updated_at": "2026-06-23T17:17:48.113387+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -516,10 +516,63 @@
       ]
     },
     {
+      "name": "Team Blue Death",
+      "url": "https://mixer-cup.gg/ru/team/6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
+      "uuid": "6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
+      "dom_order": 10,
+      "team_rating": 42099,
+      "place": null,
+      "games_won": 8,
+      "games_lost": 8,
+      "games_total": 16,
+      "players": [
+        {
+          "nickname": "счастье",
+          "steam_id": "76561198360312044",
+          "steam_url": "https://steamcommunity.com/profiles/76561198360312044",
+          "dotabuff_url": "https://www.dotabuff.com/players/400046316/heroes",
+          "rating": 6670,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Daisyke Narotan",
+          "steam_id": "76561198130520207",
+          "steam_url": "https://steamcommunity.com/profiles/76561198130520207",
+          "dotabuff_url": "https://www.dotabuff.com/players/170254479/heroes",
+          "rating": 7900,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Sovenok",
+          "steam_id": "76561198081737824",
+          "steam_url": "https://steamcommunity.com/profiles/76561198081737824",
+          "dotabuff_url": "https://www.dotabuff.com/players/121472096/heroes",
+          "rating": 13611,
+          "leaderboard_rank": 527
+        },
+        {
+          "nickname": "Hur4ik",
+          "steam_id": "76561198875077356",
+          "steam_url": "https://steamcommunity.com/profiles/76561198875077356",
+          "dotabuff_url": "https://www.dotabuff.com/players/914811628/heroes",
+          "rating": 4859,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "axaxaxaKatana",
+          "steam_id": "76561198233118036",
+          "steam_url": "https://steamcommunity.com/profiles/76561198233118036",
+          "dotabuff_url": "https://www.dotabuff.com/players/272852308/heroes",
+          "rating": 9059,
+          "leaderboard_rank": 4640
+        }
+      ]
+    },
+    {
       "name": "Team Максим Чигур",
       "url": "https://mixer-cup.gg/ru/team/b9854156-4f46-440d-92fe-741e16437f7e",
       "uuid": "b9854156-4f46-440d-92fe-741e16437f7e",
-      "dom_order": 10,
+      "dom_order": 11,
       "team_rating": 43418,
       "place": null,
       "games_won": 8,
@@ -572,7 +625,7 @@
       "name": "Team Ты тильтуешь под мой смех",
       "url": "https://mixer-cup.gg/ru/team/499543d5-be83-4b4f-a485-c59c402a6584",
       "uuid": "499543d5-be83-4b4f-a485-c59c402a6584",
-      "dom_order": 11,
+      "dom_order": 12,
       "team_rating": 42361,
       "place": null,
       "games_won": 7,
@@ -625,7 +678,7 @@
       "name": "Team tron fan$",
       "url": "https://mixer-cup.gg/ru/team/b7b956c0-28af-4978-998c-4bd952462a62",
       "uuid": "b7b956c0-28af-4978-998c-4bd952462a62",
-      "dom_order": 12,
+      "dom_order": 13,
       "team_rating": 41059,
       "place": null,
       "games_won": 7,
@@ -675,116 +728,10 @@
       ]
     },
     {
-      "name": "Team Blue Death",
-      "url": "https://mixer-cup.gg/ru/team/6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
-      "uuid": "6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
-      "dom_order": 13,
-      "team_rating": 42099,
-      "place": null,
-      "games_won": 7,
-      "games_lost": 8,
-      "games_total": 15,
-      "players": [
-        {
-          "nickname": "счастье",
-          "steam_id": "76561198360312044",
-          "steam_url": "https://steamcommunity.com/profiles/76561198360312044",
-          "dotabuff_url": "https://www.dotabuff.com/players/400046316/heroes",
-          "rating": 6670,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Daisyke Narotan",
-          "steam_id": "76561198130520207",
-          "steam_url": "https://steamcommunity.com/profiles/76561198130520207",
-          "dotabuff_url": "https://www.dotabuff.com/players/170254479/heroes",
-          "rating": 7900,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Sovenok",
-          "steam_id": "76561198081737824",
-          "steam_url": "https://steamcommunity.com/profiles/76561198081737824",
-          "dotabuff_url": "https://www.dotabuff.com/players/121472096/heroes",
-          "rating": 13611,
-          "leaderboard_rank": 527
-        },
-        {
-          "nickname": "Hur4ik",
-          "steam_id": "76561198875077356",
-          "steam_url": "https://steamcommunity.com/profiles/76561198875077356",
-          "dotabuff_url": "https://www.dotabuff.com/players/914811628/heroes",
-          "rating": 4859,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "axaxaxaKatana",
-          "steam_id": "76561198233118036",
-          "steam_url": "https://steamcommunity.com/profiles/76561198233118036",
-          "dotabuff_url": "https://www.dotabuff.com/players/272852308/heroes",
-          "rating": 9059,
-          "leaderboard_rank": 4640
-        }
-      ]
-    },
-    {
-      "name": "Team newmasksametask",
-      "url": "https://mixer-cup.gg/ru/team/0c6770ed-239a-44ad-a743-86f95d6ac425",
-      "uuid": "0c6770ed-239a-44ad-a743-86f95d6ac425",
-      "dom_order": 14,
-      "team_rating": 43747,
-      "place": null,
-      "games_won": 7,
-      "games_lost": 8,
-      "games_total": 15,
-      "players": [
-        {
-          "nickname": "97 день без тян",
-          "steam_id": "76561198357469094",
-          "steam_url": "https://steamcommunity.com/profiles/76561198357469094",
-          "dotabuff_url": "https://www.dotabuff.com/players/397203366/heroes",
-          "rating": 5409,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Габор реальный че",
-          "steam_id": "76561199237159366",
-          "steam_url": "https://steamcommunity.com/profiles/76561199237159366",
-          "dotabuff_url": "https://www.dotabuff.com/players/1276893638/heroes",
-          "rating": 9322,
-          "leaderboard_rank": 3989
-        },
-        {
-          "nickname": "russianmafiaextra",
-          "steam_id": "76561198255917546",
-          "steam_url": "https://steamcommunity.com/profiles/76561198255917546",
-          "dotabuff_url": "https://www.dotabuff.com/players/295651818/heroes",
-          "rating": 10883,
-          "leaderboard_rank": 1526
-        },
-        {
-          "nickname": "Илья Сергеевич",
-          "steam_id": "76561198423289968",
-          "steam_url": "https://steamcommunity.com/profiles/76561198423289968",
-          "dotabuff_url": "https://www.dotabuff.com/players/463024240/heroes",
-          "rating": 12760,
-          "leaderboard_rank": 744
-        },
-        {
-          "nickname": "yj_gang",
-          "steam_id": "76561198867494427",
-          "steam_url": "https://steamcommunity.com/profiles/76561198867494427",
-          "dotabuff_url": "https://www.dotabuff.com/players/907228699/heroes",
-          "rating": 5373,
-          "leaderboard_rank": null
-        }
-      ]
-    },
-    {
       "name": "Team МС ОТПУСК",
       "url": "https://mixer-cup.gg/ru/team/457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
       "uuid": "457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
-      "dom_order": 15,
+      "dom_order": 14,
       "team_rating": 41148,
       "place": null,
       "games_won": 7,
@@ -834,6 +781,59 @@
       ]
     },
     {
+      "name": "Team newmasksametask",
+      "url": "https://mixer-cup.gg/ru/team/0c6770ed-239a-44ad-a743-86f95d6ac425",
+      "uuid": "0c6770ed-239a-44ad-a743-86f95d6ac425",
+      "dom_order": 15,
+      "team_rating": 43747,
+      "place": null,
+      "games_won": 7,
+      "games_lost": 8,
+      "games_total": 15,
+      "players": [
+        {
+          "nickname": "97 день без тян",
+          "steam_id": "76561198357469094",
+          "steam_url": "https://steamcommunity.com/profiles/76561198357469094",
+          "dotabuff_url": "https://www.dotabuff.com/players/397203366/heroes",
+          "rating": 5409,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Габор реальный че",
+          "steam_id": "76561199237159366",
+          "steam_url": "https://steamcommunity.com/profiles/76561199237159366",
+          "dotabuff_url": "https://www.dotabuff.com/players/1276893638/heroes",
+          "rating": 9322,
+          "leaderboard_rank": 3989
+        },
+        {
+          "nickname": "russianmafiaextra",
+          "steam_id": "76561198255917546",
+          "steam_url": "https://steamcommunity.com/profiles/76561198255917546",
+          "dotabuff_url": "https://www.dotabuff.com/players/295651818/heroes",
+          "rating": 10883,
+          "leaderboard_rank": 1526
+        },
+        {
+          "nickname": "Илья Сергеевич",
+          "steam_id": "76561198423289968",
+          "steam_url": "https://steamcommunity.com/profiles/76561198423289968",
+          "dotabuff_url": "https://www.dotabuff.com/players/463024240/heroes",
+          "rating": 12760,
+          "leaderboard_rank": 744
+        },
+        {
+          "nickname": "yj_gang",
+          "steam_id": "76561198867494427",
+          "steam_url": "https://steamcommunity.com/profiles/76561198867494427",
+          "dotabuff_url": "https://www.dotabuff.com/players/907228699/heroes",
+          "rating": 5373,
+          "leaderboard_rank": null
+        }
+      ]
+    },
+    {
       "name": "Team Egoist",
       "url": "https://mixer-cup.gg/ru/team/3414fa11-5d58-4283-b428-a15228ce73f7",
       "uuid": "3414fa11-5d58-4283-b428-a15228ce73f7",
@@ -841,8 +841,8 @@
       "team_rating": 42784,
       "place": null,
       "games_won": 6,
-      "games_lost": 9,
-      "games_total": 15,
+      "games_lost": 10,
+      "games_total": 16,
       "players": [
         {
           "nickname": "ocean of lights",
