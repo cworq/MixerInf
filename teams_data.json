@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23T23:17:47.996434+00:00",
+  "updated_at": "2026-06-23T23:33:14.739890+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -61,9 +61,9 @@
       "dom_order": 1,
       "team_rating": 42519,
       "place": null,
-      "games_won": 13,
+      "games_won": 14,
       "games_lost": 2,
-      "games_total": 15,
+      "games_total": 16,
       "players": [
         {
           "nickname": "0000",
@@ -899,7 +899,7 @@
       "url": "https://mixer-cup.gg/ru/team/9f541f83-481b-433e-b5c4-db7d3b41629b",
       "uuid": "9f541f83-481b-433e-b5c4-db7d3b41629b",
       "dom_order": 17,
-      "team_rating": 41435,
+      "team_rating": 42150,
       "place": null,
       "games_won": 6,
       "games_lost": 9,
@@ -930,11 +930,11 @@
           "leaderboard_rank": null
         },
         {
-          "nickname": "summer dreams",
-          "steam_id": "76561199492367633",
-          "steam_url": "https://steamcommunity.com/profiles/76561199492367633",
-          "dotabuff_url": "https://www.dotabuff.com/players/1532101905/heroes",
-          "rating": 5020,
+          "nickname": "gachi fighter",
+          "steam_id": "76561198075549501",
+          "steam_url": "https://steamcommunity.com/profiles/76561198075549501",
+          "dotabuff_url": "https://www.dotabuff.com/players/115283773/heroes",
+          "rating": 5735,
           "leaderboard_rank": null
         },
         {
@@ -1220,8 +1220,8 @@
       "team_rating": 41312,
       "place": null,
       "games_won": 3,
-      "games_lost": 12,
-      "games_total": 15,
+      "games_lost": 13,
+      "games_total": 16,
       "players": [
         {
           "nickname": "Sunny",
