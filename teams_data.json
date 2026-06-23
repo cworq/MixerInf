@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23T05:47:52.278703+00:00",
+  "updated_at": "2026-06-23T06:03:12.342198+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1119,7 +1119,7 @@
       "url": "https://mixer-cup.gg/ru/team/1a733066-a688-4f3d-b110-4956cf06c3c7",
       "uuid": "1a733066-a688-4f3d-b110-4956cf06c3c7",
       "dom_order": 21,
-      "team_rating": 45433,
+      "team_rating": 43390,
       "place": null,
       "games_won": 3,
       "games_lost": 11,
@@ -1150,20 +1150,20 @@
           "leaderboard_rank": 354
         },
         {
-          "nickname": "Season 9",
-          "steam_id": "76561199663876999",
-          "steam_url": "https://steamcommunity.com/profiles/76561199663876999",
-          "dotabuff_url": "https://www.dotabuff.com/players/1703611271/heroes",
-          "rating": 9516,
-          "leaderboard_rank": 3485
-        },
-        {
           "nickname": "Брайтон- 1.0",
           "steam_id": "76561198136285549",
           "steam_url": "https://steamcommunity.com/profiles/76561198136285549",
           "dotabuff_url": "https://www.dotabuff.com/players/176019821/heroes",
           "rating": 12000,
           "leaderboard_rank": 1117
+        },
+        {
+          "nickname": "dakabi",
+          "steam_id": "76561198198393483",
+          "steam_url": "https://steamcommunity.com/profiles/76561198198393483",
+          "dotabuff_url": "https://www.dotabuff.com/players/238127755/heroes",
+          "rating": 7473,
+          "leaderboard_rank": null
         }
       ]
     },
@@ -1203,7 +1203,7 @@
           "leaderboard_rank": 3839
         },
         {
-          "nickname": "школьник",
+          "nickname": "король драконов",
           "steam_id": "76561198826061478",
           "steam_url": "https://steamcommunity.com/profiles/76561198826061478",
           "dotabuff_url": "https://www.dotabuff.com/players/865795750/heroes",
