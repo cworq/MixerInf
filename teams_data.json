@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23T20:33:02.131286+00:00",
+  "updated_at": "2026-06-23T20:47:58.572085+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1103,19 +1103,19 @@
       "url": "https://mixer-cup.gg/ru/team/eba112df-5662-4c9f-a1e5-8fc86ad239b2",
       "uuid": "eba112df-5662-4c9f-a1e5-8fc86ad239b2",
       "dom_order": 21,
-      "team_rating": 42029,
+      "team_rating": 43060,
       "place": null,
       "games_won": 5,
       "games_lost": 10,
       "games_total": 15,
       "players": [
         {
-          "nickname": "pocky boy",
-          "steam_id": "76561199634197434",
-          "steam_url": "https://steamcommunity.com/profiles/76561199634197434",
-          "dotabuff_url": "https://www.dotabuff.com/players/1673931706/heroes",
-          "rating": 10385,
-          "leaderboard_rank": 1964
+          "nickname": "HundredOnRed",
+          "steam_id": "76561198309245335",
+          "steam_url": "https://steamcommunity.com/profiles/76561198309245335",
+          "dotabuff_url": "https://www.dotabuff.com/players/348979607/heroes",
+          "rating": 11416,
+          "leaderboard_rank": 1394
         },
         {
           "nickname": "bobby fischer",
