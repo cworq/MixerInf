@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23T16:03:25.109080+00:00",
+  "updated_at": "2026-06-23T16:18:03.295257+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -838,19 +838,19 @@
       "url": "https://mixer-cup.gg/ru/team/3414fa11-5d58-4283-b428-a15228ce73f7",
       "uuid": "3414fa11-5d58-4283-b428-a15228ce73f7",
       "dom_order": 16,
-      "team_rating": 43229,
+      "team_rating": 42784,
       "place": null,
       "games_won": 6,
       "games_lost": 9,
       "games_total": 15,
       "players": [
         {
-          "nickname": "for the love of the game",
-          "steam_id": "76561198110619973",
-          "steam_url": "https://steamcommunity.com/profiles/76561198110619973",
-          "dotabuff_url": "https://www.dotabuff.com/players/150354245/heroes",
-          "rating": 12462,
-          "leaderboard_rank": 796
+          "nickname": "ocean of lights",
+          "steam_id": "76561198202147153",
+          "steam_url": "https://steamcommunity.com/profiles/76561198202147153",
+          "dotabuff_url": "https://www.dotabuff.com/players/241881425/heroes",
+          "rating": 12017,
+          "leaderboard_rank": 1094
         },
         {
           "nickname": "Egoist",
