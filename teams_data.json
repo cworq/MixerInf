@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23T12:03:23.313053+00:00",
+  "updated_at": "2026-06-23T12:18:08.215077+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -732,12 +732,20 @@
       "url": "https://mixer-cup.gg/ru/team/b9854156-4f46-440d-92fe-741e16437f7e",
       "uuid": "b9854156-4f46-440d-92fe-741e16437f7e",
       "dom_order": 14,
-      "team_rating": 32325,
+      "team_rating": 43418,
       "place": null,
       "games_won": 7,
       "games_lost": 8,
       "games_total": 15,
       "players": [
+        {
+          "nickname": "misolo3 - smurf",
+          "steam_id": "76561198316120508",
+          "steam_url": "https://steamcommunity.com/profiles/76561198316120508",
+          "dotabuff_url": "https://www.dotabuff.com/players/355854780/heroes",
+          "rating": 11093,
+          "leaderboard_rank": 1478
+        },
         {
           "nickname": "grind season",
           "steam_id": "76561199091341473",
