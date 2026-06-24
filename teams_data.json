@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T06:18:02.775974+00:00",
+  "updated_at": "2026-06-24T06:33:00.778047+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -854,7 +854,7 @@
       "url": "https://mixer-cup.gg/ru/team/3414fa11-5d58-4283-b428-a15228ce73f7",
       "uuid": "3414fa11-5d58-4283-b428-a15228ce73f7",
       "dom_order": 16,
-      "team_rating": 42784,
+      "team_rating": 42234,
       "place": null,
       "games_won": 6,
       "games_lost": 10,
@@ -877,20 +877,20 @@
           "leaderboard_rank": 1173
         },
         {
-          "nickname": "mir ist so kalt",
-          "steam_id": "76561198337588836",
-          "steam_url": "https://steamcommunity.com/profiles/76561198337588836",
-          "dotabuff_url": "https://www.dotabuff.com/players/377323108/heroes",
-          "rating": 9150,
-          "leaderboard_rank": 4299
-        },
-        {
           "nickname": "afka",
           "steam_id": "76561198157515295",
           "steam_url": "https://steamcommunity.com/profiles/76561198157515295",
           "dotabuff_url": "https://www.dotabuff.com/players/197249567/heroes",
           "rating": 4962,
           "leaderboard_rank": null
+        },
+        {
+          "nickname": "творог💀",
+          "steam_id": "76561198394229941",
+          "steam_url": "https://steamcommunity.com/profiles/76561198394229941",
+          "dotabuff_url": "https://www.dotabuff.com/players/433964213/heroes",
+          "rating": 8600,
+          "leaderboard_rank": 5000
         },
         {
           "nickname": "MashPot",
