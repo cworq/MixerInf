@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T10:03:17.182186+00:00",
+  "updated_at": "2026-06-24T10:17:51.386148+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -112,7 +112,7 @@
       "url": "https://mixer-cup.gg/ru/team/9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
       "uuid": "9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
       "dom_order": 2,
-      "team_rating": 42519,
+      "team_rating": 30319,
       "place": null,
       "games_won": 14,
       "games_lost": 2,
@@ -125,14 +125,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/845867959/heroes",
           "rating": 4712,
           "leaderboard_rank": null
-        },
-        {
-          "nickname": "ca",
-          "steam_id": "76561198107881381",
-          "steam_url": "https://steamcommunity.com/profiles/76561198107881381",
-          "dotabuff_url": "https://www.dotabuff.com/players/147615653/heroes",
-          "rating": 12200,
-          "leaderboard_rank": 1189
         },
         {
           "nickname": "f33lth1srAin",
