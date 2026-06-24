@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T09:47:46.364495+00:00",
+  "updated_at": "2026-06-24T10:03:17.182186+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1119,7 +1119,7 @@
       "url": "https://mixer-cup.gg/ru/team/1a733066-a688-4f3d-b110-4956cf06c3c7",
       "uuid": "1a733066-a688-4f3d-b110-4956cf06c3c7",
       "dom_order": 21,
-      "team_rating": 43390,
+      "team_rating": 42211,
       "place": null,
       "games_won": 5,
       "games_lost": 11,
@@ -1142,12 +1142,20 @@
           "leaderboard_rank": null
         },
         {
-          "nickname": "mw",
-          "steam_id": "76561198365765353",
-          "steam_url": "https://steamcommunity.com/profiles/76561198365765353",
-          "dotabuff_url": "https://www.dotabuff.com/players/405499625/heroes",
-          "rating": 14306,
-          "leaderboard_rank": 354
+          "nickname": "Юра Борисов Back To Business",
+          "steam_id": "76561198145153786",
+          "steam_url": "https://steamcommunity.com/profiles/76561198145153786",
+          "dotabuff_url": "https://www.dotabuff.com/players/184888058/heroes",
+          "rating": 11700,
+          "leaderboard_rank": 1100
+        },
+        {
+          "nickname": "wh0~",
+          "steam_id": "76561198201410283",
+          "steam_url": "https://steamcommunity.com/profiles/76561198201410283",
+          "dotabuff_url": "https://www.dotabuff.com/players/241144555/heroes",
+          "rating": 8900,
+          "leaderboard_rank": 4105
         },
         {
           "nickname": "Брайтон- 1.0",
@@ -1156,14 +1164,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/176019821/heroes",
           "rating": 12000,
           "leaderboard_rank": 1117
-        },
-        {
-          "nickname": "dakabi",
-          "steam_id": "76561198198393483",
-          "steam_url": "https://steamcommunity.com/profiles/76561198198393483",
-          "dotabuff_url": "https://www.dotabuff.com/players/238127755/heroes",
-          "rating": 7473,
-          "leaderboard_rank": null
         }
       ]
     },
