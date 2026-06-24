@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T15:18:08.007426+00:00",
+  "updated_at": "2026-06-24T15:33:15.529296+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -377,7 +377,7 @@
       "url": "https://mixer-cup.gg/ru/team/84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
       "uuid": "84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
       "dom_order": 7,
-      "team_rating": 40982,
+      "team_rating": 42422,
       "place": null,
       "games_won": 9,
       "games_lost": 8,
@@ -389,14 +389,6 @@
           "steam_url": "https://steamcommunity.com/profiles/76561199565082129",
           "dotabuff_url": "https://www.dotabuff.com/players/1604816401/heroes",
           "rating": 8300,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "godspeedyoublackemperor",
-          "steam_id": "76561198194603426",
-          "steam_url": "https://steamcommunity.com/profiles/76561198194603426",
-          "dotabuff_url": "https://www.dotabuff.com/players/234337698/heroes",
-          "rating": 7406,
           "leaderboard_rank": null
         },
         {
@@ -414,6 +406,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/242415218/heroes",
           "rating": 8427,
           "leaderboard_rank": 5000
+        },
+        {
+          "nickname": "Салливан",
+          "steam_id": "76561198176077674",
+          "steam_url": "https://steamcommunity.com/profiles/76561198176077674",
+          "dotabuff_url": "https://www.dotabuff.com/players/215811946/heroes",
+          "rating": 8846,
+          "leaderboard_rank": null
         },
         {
           "nickname": "the chase",
