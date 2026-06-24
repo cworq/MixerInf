@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T20:03:22.109644+00:00",
+  "updated_at": "2026-06-24T20:18:00.678343+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -539,8 +539,8 @@
       "team_rating": 41148,
       "place": null,
       "games_won": 8,
-      "games_lost": 9,
-      "games_total": 17,
+      "games_lost": 10,
+      "games_total": 18,
       "players": [
         {
           "nickname": "123",
@@ -797,10 +797,63 @@
       ]
     },
     {
+      "name": "Team Egoist",
+      "url": "https://mixer-cup.gg/ru/team/3414fa11-5d58-4283-b428-a15228ce73f7",
+      "uuid": "3414fa11-5d58-4283-b428-a15228ce73f7",
+      "dom_order": 15,
+      "team_rating": 42234,
+      "place": null,
+      "games_won": 7,
+      "games_lost": 11,
+      "games_total": 18,
+      "players": [
+        {
+          "nickname": "ocean of lights",
+          "steam_id": "76561198202147153",
+          "steam_url": "https://steamcommunity.com/profiles/76561198202147153",
+          "dotabuff_url": "https://www.dotabuff.com/players/241881425/heroes",
+          "rating": 12017,
+          "leaderboard_rank": 1094
+        },
+        {
+          "nickname": "Egoist",
+          "steam_id": "76561198084366021",
+          "steam_url": "https://steamcommunity.com/profiles/76561198084366021",
+          "dotabuff_url": "https://www.dotabuff.com/players/124100293/heroes",
+          "rating": 11871,
+          "leaderboard_rank": 1173
+        },
+        {
+          "nickname": "afka",
+          "steam_id": "76561198157515295",
+          "steam_url": "https://steamcommunity.com/profiles/76561198157515295",
+          "dotabuff_url": "https://www.dotabuff.com/players/197249567/heroes",
+          "rating": 4962,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "творог💀",
+          "steam_id": "76561198394229941",
+          "steam_url": "https://steamcommunity.com/profiles/76561198394229941",
+          "dotabuff_url": "https://www.dotabuff.com/players/433964213/heroes",
+          "rating": 8600,
+          "leaderboard_rank": 5000
+        },
+        {
+          "nickname": "MashPot",
+          "steam_id": "76561198889594046",
+          "steam_url": "https://steamcommunity.com/profiles/76561198889594046",
+          "dotabuff_url": "https://www.dotabuff.com/players/929328318/heroes",
+          "rating": 4784,
+          "leaderboard_rank": null
+        }
+      ]
+    },
+    {
       "name": "Team РАЧОК 67",
       "url": "https://mixer-cup.gg/ru/team/9f541f83-481b-433e-b5c4-db7d3b41629b",
       "uuid": "9f541f83-481b-433e-b5c4-db7d3b41629b",
-      "dom_order": 15,
+      "dom_order": 16,
       "team_rating": 42150,
       "place": null,
       "games_won": 7,
@@ -853,7 +906,7 @@
       "name": "Team nolovedeepweb",
       "url": "https://mixer-cup.gg/ru/team/eba112df-5662-4c9f-a1e5-8fc86ad239b2",
       "uuid": "eba112df-5662-4c9f-a1e5-8fc86ad239b2",
-      "dom_order": 16,
+      "dom_order": 17,
       "team_rating": 43857,
       "place": null,
       "games_won": 7,
@@ -906,7 +959,7 @@
       "name": "Team tron fan$",
       "url": "https://mixer-cup.gg/ru/team/b7b956c0-28af-4978-998c-4bd952462a62",
       "uuid": "b7b956c0-28af-4978-998c-4bd952462a62",
-      "dom_order": 17,
+      "dom_order": 18,
       "team_rating": 41059,
       "place": null,
       "games_won": 7,
@@ -959,7 +1012,7 @@
       "name": "Team Hermoso Ángel",
       "url": "https://mixer-cup.gg/ru/team/34a79c0c-0885-4515-82a9-5fe840d6ed93",
       "uuid": "34a79c0c-0885-4515-82a9-5fe840d6ed93",
-      "dom_order": 18,
+      "dom_order": 19,
       "team_rating": 41144,
       "place": null,
       "games_won": 6,
@@ -1005,59 +1058,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/206126414/heroes",
           "rating": 10016,
           "leaderboard_rank": 2508
-        }
-      ]
-    },
-    {
-      "name": "Team Egoist",
-      "url": "https://mixer-cup.gg/ru/team/3414fa11-5d58-4283-b428-a15228ce73f7",
-      "uuid": "3414fa11-5d58-4283-b428-a15228ce73f7",
-      "dom_order": 19,
-      "team_rating": 42234,
-      "place": null,
-      "games_won": 6,
-      "games_lost": 11,
-      "games_total": 17,
-      "players": [
-        {
-          "nickname": "ocean of lights",
-          "steam_id": "76561198202147153",
-          "steam_url": "https://steamcommunity.com/profiles/76561198202147153",
-          "dotabuff_url": "https://www.dotabuff.com/players/241881425/heroes",
-          "rating": 12017,
-          "leaderboard_rank": 1094
-        },
-        {
-          "nickname": "Egoist",
-          "steam_id": "76561198084366021",
-          "steam_url": "https://steamcommunity.com/profiles/76561198084366021",
-          "dotabuff_url": "https://www.dotabuff.com/players/124100293/heroes",
-          "rating": 11871,
-          "leaderboard_rank": 1173
-        },
-        {
-          "nickname": "afka",
-          "steam_id": "76561198157515295",
-          "steam_url": "https://steamcommunity.com/profiles/76561198157515295",
-          "dotabuff_url": "https://www.dotabuff.com/players/197249567/heroes",
-          "rating": 4962,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "творог💀",
-          "steam_id": "76561198394229941",
-          "steam_url": "https://steamcommunity.com/profiles/76561198394229941",
-          "dotabuff_url": "https://www.dotabuff.com/players/433964213/heroes",
-          "rating": 8600,
-          "leaderboard_rank": 5000
-        },
-        {
-          "nickname": "MashPot",
-          "steam_id": "76561198889594046",
-          "steam_url": "https://steamcommunity.com/profiles/76561198889594046",
-          "dotabuff_url": "https://www.dotabuff.com/players/929328318/heroes",
-          "rating": 4784,
-          "leaderboard_rank": null
         }
       ]
     },
