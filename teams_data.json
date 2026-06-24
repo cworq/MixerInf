@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T01:03:06.001534+00:00",
+  "updated_at": "2026-06-24T01:17:50.635281+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -153,10 +153,63 @@
       ]
     },
     {
+      "name": "Team .//Kr3m1k0X",
+      "url": "https://mixer-cup.gg/ru/team/2aa8251b-4454-4058-b70a-405723435f10",
+      "uuid": "2aa8251b-4454-4058-b70a-405723435f10",
+      "dom_order": 3,
+      "team_rating": 44205,
+      "place": null,
+      "games_won": 11,
+      "games_lost": 5,
+      "games_total": 16,
+      "players": [
+        {
+          "nickname": "xNova mentality",
+          "steam_id": "76561198160062731",
+          "steam_url": "https://steamcommunity.com/profiles/76561198160062731",
+          "dotabuff_url": "https://www.dotabuff.com/players/199797003/heroes",
+          "rating": 10012,
+          "leaderboard_rank": 2500
+        },
+        {
+          "nickname": "Muyi",
+          "steam_id": "76561198997120212",
+          "steam_url": "https://steamcommunity.com/profiles/76561198997120212",
+          "dotabuff_url": "https://www.dotabuff.com/players/1036854484/heroes",
+          "rating": 6584,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Xyxy#Я  буду вас тра",
+          "steam_id": "76561198137935193",
+          "steam_url": "https://steamcommunity.com/profiles/76561198137935193",
+          "dotabuff_url": "https://www.dotabuff.com/players/177669465/heroes",
+          "rating": 8141,
+          "leaderboard_rank": 4824
+        },
+        {
+          "nickname": "BackStab",
+          "steam_id": "76561198155690228",
+          "steam_url": "https://steamcommunity.com/profiles/76561198155690228",
+          "dotabuff_url": "https://www.dotabuff.com/players/195424500/heroes",
+          "rating": 6046,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "󠀡󠀡",
+          "steam_id": "76561198135354515",
+          "steam_url": "https://steamcommunity.com/profiles/76561198135354515",
+          "dotabuff_url": "https://www.dotabuff.com/players/175088787/heroes",
+          "rating": 13422,
+          "leaderboard_rank": 469
+        }
+      ]
+    },
+    {
       "name": "Team otd",
       "url": "https://mixer-cup.gg/ru/team/fbfe177a-e260-48e9-9224-a87c4f916ab6",
       "uuid": "fbfe177a-e260-48e9-9224-a87c4f916ab6",
-      "dom_order": 3,
+      "dom_order": 4,
       "team_rating": 40831,
       "place": null,
       "games_won": 10,
@@ -209,13 +262,21 @@
       "name": "Team tempest",
       "url": "https://mixer-cup.gg/ru/team/95d713a5-26f4-46ad-bb9d-d8a8813a8f8a",
       "uuid": "95d713a5-26f4-46ad-bb9d-d8a8813a8f8a",
-      "dom_order": 4,
-      "team_rating": 41699,
+      "dom_order": 5,
+      "team_rating": 40873,
       "place": null,
       "games_won": 10,
       "games_lost": 6,
       "games_total": 16,
       "players": [
+        {
+          "nickname": "for the love of the game",
+          "steam_id": "76561198110619973",
+          "steam_url": "https://steamcommunity.com/profiles/76561198110619973",
+          "dotabuff_url": "https://www.dotabuff.com/players/150354245/heroes",
+          "rating": 12462,
+          "leaderboard_rank": 796
+        },
         {
           "nickname": "дешевые драмы",
           "steam_id": "76561198240966472",
@@ -231,14 +292,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/857922037/heroes",
           "rating": 2932,
           "leaderboard_rank": null
-        },
-        {
-          "nickname": "Sky-Rzn",
-          "steam_id": "76561199010484316",
-          "steam_url": "https://steamcommunity.com/profiles/76561199010484316",
-          "dotabuff_url": "https://www.dotabuff.com/players/1050218588/heroes",
-          "rating": 13288,
-          "leaderboard_rank": 551
         },
         {
           "nickname": "Hollow_skies37",
@@ -262,7 +315,7 @@
       "name": "Team R3/D",
       "url": "https://mixer-cup.gg/ru/team/3ff4bb5e-11c6-4cbf-9a08-b3e4b3419eb5",
       "uuid": "3ff4bb5e-11c6-4cbf-9a08-b3e4b3419eb5",
-      "dom_order": 5,
+      "dom_order": 6,
       "team_rating": 41475,
       "place": null,
       "games_won": 10,
@@ -312,77 +365,16 @@
       ]
     },
     {
-      "name": "Team .//Kr3m1k0X",
-      "url": "https://mixer-cup.gg/ru/team/2aa8251b-4454-4058-b70a-405723435f10",
-      "uuid": "2aa8251b-4454-4058-b70a-405723435f10",
-      "dom_order": 6,
-      "team_rating": 44205,
-      "place": null,
-      "games_won": 11,
-      "games_lost": 5,
-      "games_total": 16,
-      "players": [
-        {
-          "nickname": "xNova mentality",
-          "steam_id": "76561198160062731",
-          "steam_url": "https://steamcommunity.com/profiles/76561198160062731",
-          "dotabuff_url": "https://www.dotabuff.com/players/199797003/heroes",
-          "rating": 10012,
-          "leaderboard_rank": 2500
-        },
-        {
-          "nickname": "Muyi",
-          "steam_id": "76561198997120212",
-          "steam_url": "https://steamcommunity.com/profiles/76561198997120212",
-          "dotabuff_url": "https://www.dotabuff.com/players/1036854484/heroes",
-          "rating": 6584,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Xyxy#Я  буду вас тра",
-          "steam_id": "76561198137935193",
-          "steam_url": "https://steamcommunity.com/profiles/76561198137935193",
-          "dotabuff_url": "https://www.dotabuff.com/players/177669465/heroes",
-          "rating": 8141,
-          "leaderboard_rank": 4824
-        },
-        {
-          "nickname": "BackStab",
-          "steam_id": "76561198155690228",
-          "steam_url": "https://steamcommunity.com/profiles/76561198155690228",
-          "dotabuff_url": "https://www.dotabuff.com/players/195424500/heroes",
-          "rating": 6046,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "󠀡󠀡",
-          "steam_id": "76561198135354515",
-          "steam_url": "https://steamcommunity.com/profiles/76561198135354515",
-          "dotabuff_url": "https://www.dotabuff.com/players/175088787/heroes",
-          "rating": 13422,
-          "leaderboard_rank": 469
-        }
-      ]
-    },
-    {
       "name": "Team Egoists.",
       "url": "https://mixer-cup.gg/ru/team/84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
       "uuid": "84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
       "dom_order": 7,
-      "team_rating": 41829,
+      "team_rating": 40982,
       "place": null,
       "games_won": 9,
       "games_lost": 7,
       "games_total": 16,
       "players": [
-        {
-          "nickname": "новый год",
-          "steam_id": "76561198143776914",
-          "steam_url": "https://steamcommunity.com/profiles/76561198143776914",
-          "dotabuff_url": "https://www.dotabuff.com/players/183511186/heroes",
-          "rating": 11600,
-          "leaderboard_rank": 1327
-        },
         {
           "nickname": "FearOfGod",
           "steam_id": "76561199565082129",
@@ -398,6 +390,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/234337698/heroes",
           "rating": 7406,
           "leaderboard_rank": null
+        },
+        {
+          "nickname": "ugly god",
+          "steam_id": "76561198897782500",
+          "steam_url": "https://steamcommunity.com/profiles/76561198897782500",
+          "dotabuff_url": "https://www.dotabuff.com/players/937516772/heroes",
+          "rating": 10753,
+          "leaderboard_rank": 1984
         },
         {
           "nickname": "AMON",
