@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T13:47:53.410894+00:00",
+  "updated_at": "2026-06-24T14:03:24.235940+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1015,9 +1015,9 @@
       "dom_order": 19,
       "team_rating": 42150,
       "place": null,
-      "games_won": 6,
+      "games_won": 7,
       "games_lost": 10,
-      "games_total": 16,
+      "games_total": 17,
       "players": [
         {
           "nickname": "Мракобесик",
