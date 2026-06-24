@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T07:33:15.204263+00:00",
+  "updated_at": "2026-06-24T07:47:54.172830+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1066,7 +1066,7 @@
       "url": "https://mixer-cup.gg/ru/team/36b250ac-063f-4e20-97ff-a86dc54b7494",
       "uuid": "36b250ac-063f-4e20-97ff-a86dc54b7494",
       "dom_order": 20,
-      "team_rating": 42743,
+      "team_rating": 43233,
       "place": null,
       "games_won": 5,
       "games_lost": 11,
@@ -1097,20 +1097,20 @@
           "leaderboard_rank": 740
         },
         {
+          "nickname": "разум улья",
+          "steam_id": "76561198190499006",
+          "steam_url": "https://steamcommunity.com/profiles/76561198190499006",
+          "dotabuff_url": "https://www.dotabuff.com/players/230233278/heroes",
+          "rating": 6490,
+          "leaderboard_rank": null
+        },
+        {
           "nickname": "Meadow",
           "steam_id": "76561198342019362",
           "steam_url": "https://steamcommunity.com/profiles/76561198342019362",
           "dotabuff_url": "https://www.dotabuff.com/players/381753634/heroes",
           "rating": 11252,
           "leaderboard_rank": 1534
-        },
-        {
-          "nickname": "tempest",
-          "steam_id": "76561198084552728",
-          "steam_url": "https://steamcommunity.com/profiles/76561198084552728",
-          "dotabuff_url": "https://www.dotabuff.com/players/124287000/heroes",
-          "rating": 6000,
-          "leaderboard_rank": null
         }
       ]
     },
