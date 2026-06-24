@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T22:48:00.549279+00:00",
+  "updated_at": "2026-06-24T23:03:04.689045+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1066,7 +1066,7 @@
       "url": "https://mixer-cup.gg/ru/team/1a733066-a688-4f3d-b110-4956cf06c3c7",
       "uuid": "1a733066-a688-4f3d-b110-4956cf06c3c7",
       "dom_order": 20,
-      "team_rating": 42211,
+      "team_rating": 41980,
       "place": null,
       "games_won": 6,
       "games_lost": 11,
@@ -1081,14 +1081,6 @@
           "leaderboard_rank": null
         },
         {
-          "nickname": "Be kind",
-          "steam_id": "76561199046755780",
-          "steam_url": "https://steamcommunity.com/profiles/76561199046755780",
-          "dotabuff_url": "https://www.dotabuff.com/players/1086490052/heroes",
-          "rating": 4500,
-          "leaderboard_rank": null
-        },
-        {
           "nickname": "Юра Борисов Back To Business",
           "steam_id": "76561198145153786",
           "steam_url": "https://steamcommunity.com/profiles/76561198145153786",
@@ -1097,12 +1089,12 @@
           "leaderboard_rank": 1100
         },
         {
-          "nickname": "wh0~",
-          "steam_id": "76561198201410283",
-          "steam_url": "https://steamcommunity.com/profiles/76561198201410283",
-          "dotabuff_url": "https://www.dotabuff.com/players/241144555/heroes",
-          "rating": 8900,
-          "leaderboard_rank": 4105
+          "nickname": "最悪の敵",
+          "steam_id": "76561199634245691",
+          "steam_url": "https://steamcommunity.com/profiles/76561199634245691",
+          "dotabuff_url": "https://www.dotabuff.com/players/1673979963/heroes",
+          "rating": 8832,
+          "leaderboard_rank": 4532
         },
         {
           "nickname": "Брайтон- 1.0",
@@ -1111,6 +1103,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/176019821/heroes",
           "rating": 12000,
           "leaderboard_rank": 1117
+        },
+        {
+          "nickname": "блемб",
+          "steam_id": "76561198335936362",
+          "steam_url": "https://steamcommunity.com/profiles/76561198335936362",
+          "dotabuff_url": "https://www.dotabuff.com/players/375670634/heroes",
+          "rating": 4337,
+          "leaderboard_rank": null
         }
       ]
     },
