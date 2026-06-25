@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T07:48:05.208320+00:00",
+  "updated_at": "2026-06-25T08:03:11.097129+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -380,8 +380,8 @@
       "team_rating": 42422,
       "place": null,
       "games_won": 10,
-      "games_lost": 8,
-      "games_total": 18,
+      "games_lost": 9,
+      "games_total": 19,
       "players": [
         {
           "nickname": "FearOfGod",
@@ -1009,10 +1009,63 @@
       ]
     },
     {
+      "name": "Team Hermoso Ángel",
+      "url": "https://mixer-cup.gg/ru/team/34a79c0c-0885-4515-82a9-5fe840d6ed93",
+      "uuid": "34a79c0c-0885-4515-82a9-5fe840d6ed93",
+      "dom_order": 19,
+      "team_rating": 41144,
+      "place": null,
+      "games_won": 7,
+      "games_lost": 12,
+      "games_total": 19,
+      "players": [
+        {
+          "nickname": "♛тесная поляна♛",
+          "steam_id": "76561198359811955",
+          "steam_url": "https://steamcommunity.com/profiles/76561198359811955",
+          "dotabuff_url": "https://www.dotabuff.com/players/399546227/heroes",
+          "rating": 11085,
+          "leaderboard_rank": 1575
+        },
+        {
+          "nickname": "SamSai",
+          "steam_id": "76561198128459102",
+          "steam_url": "https://steamcommunity.com/profiles/76561198128459102",
+          "dotabuff_url": "https://www.dotabuff.com/players/168193374/heroes",
+          "rating": 5390,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "марта",
+          "steam_id": "76561199633714955",
+          "steam_url": "https://steamcommunity.com/profiles/76561199633714955",
+          "dotabuff_url": "https://www.dotabuff.com/players/1673449227/heroes",
+          "rating": 8158,
+          "leaderboard_rank": 2000
+        },
+        {
+          "nickname": "Vimz",
+          "steam_id": "76561198816387434",
+          "steam_url": "https://steamcommunity.com/profiles/76561198816387434",
+          "dotabuff_url": "https://www.dotabuff.com/players/856121706/heroes",
+          "rating": 6495,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "игра в dota: запустить",
+          "steam_id": "76561198166392142",
+          "steam_url": "https://steamcommunity.com/profiles/76561198166392142",
+          "dotabuff_url": "https://www.dotabuff.com/players/206126414/heroes",
+          "rating": 10016,
+          "leaderboard_rank": 2508
+        }
+      ]
+    },
+    {
       "name": "Team mvssive attvck",
       "url": "https://mixer-cup.gg/ru/team/1a733066-a688-4f3d-b110-4956cf06c3c7",
       "uuid": "1a733066-a688-4f3d-b110-4956cf06c3c7",
-      "dom_order": 19,
+      "dom_order": 20,
       "team_rating": 41980,
       "place": null,
       "games_won": 7,
@@ -1058,59 +1111,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/375670634/heroes",
           "rating": 4337,
           "leaderboard_rank": null
-        }
-      ]
-    },
-    {
-      "name": "Team Hermoso Ángel",
-      "url": "https://mixer-cup.gg/ru/team/34a79c0c-0885-4515-82a9-5fe840d6ed93",
-      "uuid": "34a79c0c-0885-4515-82a9-5fe840d6ed93",
-      "dom_order": 20,
-      "team_rating": 41144,
-      "place": null,
-      "games_won": 6,
-      "games_lost": 12,
-      "games_total": 18,
-      "players": [
-        {
-          "nickname": "♛тесная поляна♛",
-          "steam_id": "76561198359811955",
-          "steam_url": "https://steamcommunity.com/profiles/76561198359811955",
-          "dotabuff_url": "https://www.dotabuff.com/players/399546227/heroes",
-          "rating": 11085,
-          "leaderboard_rank": 1575
-        },
-        {
-          "nickname": "SamSai",
-          "steam_id": "76561198128459102",
-          "steam_url": "https://steamcommunity.com/profiles/76561198128459102",
-          "dotabuff_url": "https://www.dotabuff.com/players/168193374/heroes",
-          "rating": 5390,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "марта",
-          "steam_id": "76561199633714955",
-          "steam_url": "https://steamcommunity.com/profiles/76561199633714955",
-          "dotabuff_url": "https://www.dotabuff.com/players/1673449227/heroes",
-          "rating": 8158,
-          "leaderboard_rank": 2000
-        },
-        {
-          "nickname": "Vimz",
-          "steam_id": "76561198816387434",
-          "steam_url": "https://steamcommunity.com/profiles/76561198816387434",
-          "dotabuff_url": "https://www.dotabuff.com/players/856121706/heroes",
-          "rating": 6495,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "игра в dota: запустить",
-          "steam_id": "76561198166392142",
-          "steam_url": "https://steamcommunity.com/profiles/76561198166392142",
-          "dotabuff_url": "https://www.dotabuff.com/players/206126414/heroes",
-          "rating": 10016,
-          "leaderboard_rank": 2508
         }
       ]
     },
