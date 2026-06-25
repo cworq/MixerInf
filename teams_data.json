@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T10:03:05.229858+00:00",
+  "updated_at": "2026-06-25T10:17:59.742217+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -167,9 +167,9 @@
       "dom_order": 3,
       "team_rating": 40873,
       "place": null,
-      "games_won": 12,
+      "games_won": 13,
       "games_lost": 6,
-      "games_total": 18,
+      "games_total": 19,
       "players": [
         {
           "nickname": "for the love of the game",
@@ -857,8 +857,8 @@
       "team_rating": 42234,
       "place": null,
       "games_won": 7,
-      "games_lost": 11,
-      "games_total": 18,
+      "games_lost": 12,
+      "games_total": 19,
       "players": [
         {
           "nickname": "ocean of lights",
