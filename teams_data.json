@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T17:52:27.368468+00:00",
+  "updated_at": "2026-06-25T18:03:14.768990+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -324,7 +324,7 @@
       "url": "https://mixer-cup.gg/ru/team/3ff4bb5e-11c6-4cbf-9a08-b3e4b3419eb5",
       "uuid": "3ff4bb5e-11c6-4cbf-9a08-b3e4b3419eb5",
       "dom_order": 6,
-      "team_rating": 42425,
+      "team_rating": 42917,
       "place": null,
       "games_won": 11,
       "games_lost": 7,
@@ -339,19 +339,19 @@
           "leaderboard_rank": 741
         },
         {
+          "nickname": "godspeedyoublackemperor",
+          "steam_id": "76561198194603426",
+          "steam_url": "https://steamcommunity.com/profiles/76561198194603426",
+          "dotabuff_url": "https://www.dotabuff.com/players/234337698/heroes",
+          "rating": 7406,
+          "leaderboard_rank": null
+        },
+        {
           "nickname": "poetess",
           "steam_id": "76561198235041968",
           "steam_url": "https://steamcommunity.com/profiles/76561198235041968",
           "dotabuff_url": "https://www.dotabuff.com/players/274776240/heroes",
           "rating": 5960,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "burya",
-          "steam_id": "76561198271047494",
-          "steam_url": "https://steamcommunity.com/profiles/76561198271047494",
-          "dotabuff_url": "https://www.dotabuff.com/players/310781766/heroes",
-          "rating": 6914,
           "leaderboard_rank": null
         },
         {
