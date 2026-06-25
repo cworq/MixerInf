@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T04:33:03.177150+00:00",
+  "updated_at": "2026-06-25T04:47:56.659376+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -324,12 +324,28 @@
       "url": "https://mixer-cup.gg/ru/team/2aa8251b-4454-4058-b70a-405723435f10",
       "uuid": "2aa8251b-4454-4058-b70a-405723435f10",
       "dom_order": 6,
-      "team_rating": 30783,
+      "team_rating": 41702,
       "place": null,
       "games_won": 11,
       "games_lost": 6,
       "games_total": 17,
       "players": [
+        {
+          "nickname": "Я с утра напален",
+          "steam_id": "76561199124361987",
+          "steam_url": "https://steamcommunity.com/profiles/76561199124361987",
+          "dotabuff_url": "https://www.dotabuff.com/players/1164096259/heroes",
+          "rating": 4937,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "h4rd l1n3 3nj0y3r",
+          "steam_id": "76561199015097134",
+          "steam_url": "https://steamcommunity.com/profiles/76561199015097134",
+          "dotabuff_url": "https://www.dotabuff.com/players/1054831406/heroes",
+          "rating": 5294,
+          "leaderboard_rank": null
+        },
         {
           "nickname": "xNova mentality",
           "steam_id": "76561198160062731",
@@ -337,14 +353,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/199797003/heroes",
           "rating": 10012,
           "leaderboard_rank": 2500
-        },
-        {
-          "nickname": "Muyi",
-          "steam_id": "76561198997120212",
-          "steam_url": "https://steamcommunity.com/profiles/76561198997120212",
-          "dotabuff_url": "https://www.dotabuff.com/players/1036854484/heroes",
-          "rating": 6584,
-          "leaderboard_rank": null
         },
         {
           "nickname": "Xyxy#Я  буду вас тра",
@@ -355,12 +363,12 @@
           "leaderboard_rank": 4824
         },
         {
-          "nickname": "BackStab",
-          "steam_id": "76561198155690228",
-          "steam_url": "https://steamcommunity.com/profiles/76561198155690228",
-          "dotabuff_url": "https://www.dotabuff.com/players/195424500/heroes",
-          "rating": 6046,
-          "leaderboard_rank": null
+          "nickname": "опять меняю номера",
+          "steam_id": "76561198149583385",
+          "steam_url": "https://steamcommunity.com/profiles/76561198149583385",
+          "dotabuff_url": "https://www.dotabuff.com/players/189317657/heroes",
+          "rating": 13318,
+          "leaderboard_rank": 602
         }
       ]
     },
