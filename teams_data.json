@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T13:03:21.820095+00:00",
+  "updated_at": "2026-06-25T13:18:15.223758+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -960,7 +960,7 @@
       "url": "https://mixer-cup.gg/ru/team/b7b956c0-28af-4978-998c-4bd952462a62",
       "uuid": "b7b956c0-28af-4978-998c-4bd952462a62",
       "dom_order": 18,
-      "team_rating": 41059,
+      "team_rating": 42347,
       "place": null,
       "games_won": 7,
       "games_lost": 11,
@@ -975,20 +975,20 @@
           "leaderboard_rank": 845
         },
         {
+          "nickname": "Porshen",
+          "steam_id": "76561198239125122",
+          "steam_url": "https://steamcommunity.com/profiles/76561198239125122",
+          "dotabuff_url": "https://www.dotabuff.com/players/278859394/heroes",
+          "rating": 11707,
+          "leaderboard_rank": 1147
+        },
+        {
           "nickname": "фил в боттегах",
           "steam_id": "76561198308972935",
           "steam_url": "https://steamcommunity.com/profiles/76561198308972935",
           "dotabuff_url": "https://www.dotabuff.com/players/348707207/heroes",
           "rating": 9024,
           "leaderboard_rank": null
-        },
-        {
-          "nickname": "๋фил",
-          "steam_id": "76561199234721781",
-          "steam_url": "https://steamcommunity.com/profiles/76561199234721781",
-          "dotabuff_url": "https://www.dotabuff.com/players/1274456053/heroes",
-          "rating": 10419,
-          "leaderboard_rank": 2258
         },
         {
           "nickname": "ksiafil07",
