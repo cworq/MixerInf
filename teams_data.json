@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T04:17:55.629108+00:00",
+  "updated_at": "2026-06-25T04:33:03.177150+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -324,7 +324,7 @@
       "url": "https://mixer-cup.gg/ru/team/2aa8251b-4454-4058-b70a-405723435f10",
       "uuid": "2aa8251b-4454-4058-b70a-405723435f10",
       "dom_order": 6,
-      "team_rating": 44205,
+      "team_rating": 30783,
       "place": null,
       "games_won": 11,
       "games_lost": 6,
@@ -361,14 +361,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/195424500/heroes",
           "rating": 6046,
           "leaderboard_rank": null
-        },
-        {
-          "nickname": "󠀡󠀡",
-          "steam_id": "76561198135354515",
-          "steam_url": "https://steamcommunity.com/profiles/76561198135354515",
-          "dotabuff_url": "https://www.dotabuff.com/players/175088787/heroes",
-          "rating": 13422,
-          "leaderboard_rank": 399
         }
       ]
     },
@@ -910,8 +902,8 @@
       "team_rating": 42150,
       "place": null,
       "games_won": 7,
-      "games_lost": 10,
-      "games_total": 17,
+      "games_lost": 11,
+      "games_total": 18,
       "players": [
         {
           "nickname": "Мракобесик",
@@ -1168,10 +1160,63 @@
       ]
     },
     {
+      "name": "Team malark",
+      "url": "https://mixer-cup.gg/ru/team/da78442a-014e-4b8d-936e-e3ef0be9f3af",
+      "uuid": "da78442a-014e-4b8d-936e-e3ef0be9f3af",
+      "dom_order": 22,
+      "team_rating": 42337,
+      "place": null,
+      "games_won": 4,
+      "games_lost": 14,
+      "games_total": 18,
+      "players": [
+        {
+          "nickname": "P. jimmy",
+          "steam_id": "76561199141423896",
+          "steam_url": "https://steamcommunity.com/profiles/76561199141423896",
+          "dotabuff_url": "https://www.dotabuff.com/players/1181158168/heroes",
+          "rating": 2309,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "maloydotos",
+          "steam_id": "76561199040188819",
+          "steam_url": "https://steamcommunity.com/profiles/76561199040188819",
+          "dotabuff_url": "https://www.dotabuff.com/players/1079923091/heroes",
+          "rating": 14300,
+          "leaderboard_rank": 351
+        },
+        {
+          "nickname": "Roland",
+          "steam_id": "76561198101469566",
+          "steam_url": "https://steamcommunity.com/profiles/76561198101469566",
+          "dotabuff_url": "https://www.dotabuff.com/players/141203838/heroes",
+          "rating": 8201,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Übermensch",
+          "steam_id": "76561198200543727",
+          "steam_url": "https://steamcommunity.com/profiles/76561198200543727",
+          "dotabuff_url": "https://www.dotabuff.com/players/240277999/heroes",
+          "rating": 12372,
+          "leaderboard_rank": 825
+        },
+        {
+          "nickname": "malark",
+          "steam_id": "76561198999968918",
+          "steam_url": "https://steamcommunity.com/profiles/76561198999968918",
+          "dotabuff_url": "https://www.dotabuff.com/players/1039703190/heroes",
+          "rating": 5155,
+          "leaderboard_rank": null
+        }
+      ]
+    },
+    {
       "name": "Team худший тысячник",
       "url": "https://mixer-cup.gg/ru/team/6d56cfea-5732-4472-b0a2-93c9e8bb186a",
       "uuid": "6d56cfea-5732-4472-b0a2-93c9e8bb186a",
-      "dom_order": 22,
+      "dom_order": 23,
       "team_rating": 41312,
       "place": null,
       "games_won": 4,
@@ -1217,59 +1262,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/101112686/heroes",
           "rating": 9648,
           "leaderboard_rank": 3284
-        }
-      ]
-    },
-    {
-      "name": "Team malark",
-      "url": "https://mixer-cup.gg/ru/team/da78442a-014e-4b8d-936e-e3ef0be9f3af",
-      "uuid": "da78442a-014e-4b8d-936e-e3ef0be9f3af",
-      "dom_order": 23,
-      "team_rating": 42337,
-      "place": null,
-      "games_won": 3,
-      "games_lost": 14,
-      "games_total": 17,
-      "players": [
-        {
-          "nickname": "P. jimmy",
-          "steam_id": "76561199141423896",
-          "steam_url": "https://steamcommunity.com/profiles/76561199141423896",
-          "dotabuff_url": "https://www.dotabuff.com/players/1181158168/heroes",
-          "rating": 2309,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "maloydotos",
-          "steam_id": "76561199040188819",
-          "steam_url": "https://steamcommunity.com/profiles/76561199040188819",
-          "dotabuff_url": "https://www.dotabuff.com/players/1079923091/heroes",
-          "rating": 14300,
-          "leaderboard_rank": 351
-        },
-        {
-          "nickname": "Roland",
-          "steam_id": "76561198101469566",
-          "steam_url": "https://steamcommunity.com/profiles/76561198101469566",
-          "dotabuff_url": "https://www.dotabuff.com/players/141203838/heroes",
-          "rating": 8201,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Übermensch",
-          "steam_id": "76561198200543727",
-          "steam_url": "https://steamcommunity.com/profiles/76561198200543727",
-          "dotabuff_url": "https://www.dotabuff.com/players/240277999/heroes",
-          "rating": 12372,
-          "leaderboard_rank": 825
-        },
-        {
-          "nickname": "malark",
-          "steam_id": "76561198999968918",
-          "steam_url": "https://steamcommunity.com/profiles/76561198999968918",
-          "dotabuff_url": "https://www.dotabuff.com/players/1039703190/heroes",
-          "rating": 5155,
-          "leaderboard_rank": null
         }
       ]
     }
