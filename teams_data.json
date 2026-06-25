@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T16:18:04.100559+00:00",
+  "updated_at": "2026-06-25T16:33:14.322614+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1122,8 +1122,8 @@
       "team_rating": 43233,
       "place": null,
       "games_won": 5,
-      "games_lost": 13,
-      "games_total": 18,
+      "games_lost": 14,
+      "games_total": 19,
       "players": [
         {
           "nickname": "эмоцuu_хорошue",
