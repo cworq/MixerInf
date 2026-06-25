@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T15:32:55.392739+00:00",
+  "updated_at": "2026-06-25T15:47:45.319069+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -585,63 +585,10 @@
       ]
     },
     {
-      "name": "Team Blue Death",
-      "url": "https://mixer-cup.gg/ru/team/6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
-      "uuid": "6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
-      "dom_order": 11,
-      "team_rating": 43199,
-      "place": null,
-      "games_won": 9,
-      "games_lost": 9,
-      "games_total": 18,
-      "players": [
-        {
-          "nickname": "счастье",
-          "steam_id": "76561198360312044",
-          "steam_url": "https://steamcommunity.com/profiles/76561198360312044",
-          "dotabuff_url": "https://www.dotabuff.com/players/400046316/heroes",
-          "rating": 6670,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Daisyke Narotan",
-          "steam_id": "76561198130520207",
-          "steam_url": "https://steamcommunity.com/profiles/76561198130520207",
-          "dotabuff_url": "https://www.dotabuff.com/players/170254479/heroes",
-          "rating": 9000,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Sovenok",
-          "steam_id": "76561198081737824",
-          "steam_url": "https://steamcommunity.com/profiles/76561198081737824",
-          "dotabuff_url": "https://www.dotabuff.com/players/121472096/heroes",
-          "rating": 13611,
-          "leaderboard_rank": 527
-        },
-        {
-          "nickname": "Hur4ik",
-          "steam_id": "76561198875077356",
-          "steam_url": "https://steamcommunity.com/profiles/76561198875077356",
-          "dotabuff_url": "https://www.dotabuff.com/players/914811628/heroes",
-          "rating": 4859,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "axaxaxaKatana",
-          "steam_id": "76561198233118036",
-          "steam_url": "https://steamcommunity.com/profiles/76561198233118036",
-          "dotabuff_url": "https://www.dotabuff.com/players/272852308/heroes",
-          "rating": 9059,
-          "leaderboard_rank": 4640
-        }
-      ]
-    },
-    {
       "name": "Team nolovedeepweb",
       "url": "https://mixer-cup.gg/ru/team/eba112df-5662-4c9f-a1e5-8fc86ad239b2",
       "uuid": "eba112df-5662-4c9f-a1e5-8fc86ad239b2",
-      "dom_order": 12,
+      "dom_order": 11,
       "team_rating": 43857,
       "place": null,
       "games_won": 9,
@@ -687,6 +634,59 @@
           "dotabuff_url": "https://www.dotabuff.com/players/383604480/heroes",
           "rating": 5741,
           "leaderboard_rank": null
+        }
+      ]
+    },
+    {
+      "name": "Team Blue Death",
+      "url": "https://mixer-cup.gg/ru/team/6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
+      "uuid": "6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
+      "dom_order": 12,
+      "team_rating": 43199,
+      "place": null,
+      "games_won": 9,
+      "games_lost": 9,
+      "games_total": 18,
+      "players": [
+        {
+          "nickname": "счастье",
+          "steam_id": "76561198360312044",
+          "steam_url": "https://steamcommunity.com/profiles/76561198360312044",
+          "dotabuff_url": "https://www.dotabuff.com/players/400046316/heroes",
+          "rating": 6670,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Daisyke Narotan",
+          "steam_id": "76561198130520207",
+          "steam_url": "https://steamcommunity.com/profiles/76561198130520207",
+          "dotabuff_url": "https://www.dotabuff.com/players/170254479/heroes",
+          "rating": 9000,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Sovenok",
+          "steam_id": "76561198081737824",
+          "steam_url": "https://steamcommunity.com/profiles/76561198081737824",
+          "dotabuff_url": "https://www.dotabuff.com/players/121472096/heroes",
+          "rating": 13611,
+          "leaderboard_rank": 527
+        },
+        {
+          "nickname": "Hur4ik",
+          "steam_id": "76561198875077356",
+          "steam_url": "https://steamcommunity.com/profiles/76561198875077356",
+          "dotabuff_url": "https://www.dotabuff.com/players/914811628/heroes",
+          "rating": 4859,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "axaxaxaKatana",
+          "steam_id": "76561198233118036",
+          "steam_url": "https://steamcommunity.com/profiles/76561198233118036",
+          "dotabuff_url": "https://www.dotabuff.com/players/272852308/heroes",
+          "rating": 9059,
+          "leaderboard_rank": 4640
         }
       ]
     },
