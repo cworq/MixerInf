@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T01:33:02.443123+00:00",
+  "updated_at": "2026-06-25T01:47:59.428394+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -59,7 +59,7 @@
       "url": "https://mixer-cup.gg/ru/team/9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
       "uuid": "9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
       "dom_order": 1,
-      "team_rating": 42881,
+      "team_rating": 40306,
       "place": null,
       "games_won": 14,
       "games_lost": 3,
@@ -74,12 +74,12 @@
           "leaderboard_rank": null
         },
         {
-          "nickname": "f33lth1srAin",
-          "steam_id": "76561198327935060",
-          "steam_url": "https://steamcommunity.com/profiles/76561198327935060",
-          "dotabuff_url": "https://www.dotabuff.com/players/367669332/heroes",
-          "rating": 9343,
-          "leaderboard_rank": 3529
+          "nickname": "No play, just sound that shines",
+          "steam_id": "76561198105440325",
+          "steam_url": "https://steamcommunity.com/profiles/76561198105440325",
+          "dotabuff_url": "https://www.dotabuff.com/players/145174597/heroes",
+          "rating": 6768,
+          "leaderboard_rank": null
         },
         {
           "nickname": "Xenos",
@@ -377,7 +377,7 @@
       "url": "https://mixer-cup.gg/ru/team/3ff4bb5e-11c6-4cbf-9a08-b3e4b3419eb5",
       "uuid": "3ff4bb5e-11c6-4cbf-9a08-b3e4b3419eb5",
       "dom_order": 7,
-      "team_rating": 41475,
+      "team_rating": 42425,
       "place": null,
       "games_won": 10,
       "games_lost": 7,
@@ -416,11 +416,11 @@
           "leaderboard_rank": 1619
         },
         {
-          "nickname": "Kaoru",
-          "steam_id": "76561199701194567",
-          "steam_url": "https://steamcommunity.com/profiles/76561199701194567",
-          "dotabuff_url": "https://www.dotabuff.com/players/1740928839/heroes",
-          "rating": 4709,
+          "nickname": "True Adam",
+          "steam_id": "76561198298252275",
+          "steam_url": "https://steamcommunity.com/profiles/76561198298252275",
+          "dotabuff_url": "https://www.dotabuff.com/players/337986547/heroes",
+          "rating": 5659,
           "leaderboard_rank": null
         }
       ]
