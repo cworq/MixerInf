@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T16:33:14.322614+00:00",
+  "updated_at": "2026-06-25T16:47:49.474632+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -55,10 +55,63 @@
       ]
     },
     {
+      "name": "Team ca",
+      "url": "https://mixer-cup.gg/ru/team/9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
+      "uuid": "9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
+      "dom_order": 1,
+      "team_rating": 40306,
+      "place": null,
+      "games_won": 15,
+      "games_lost": 4,
+      "games_total": 19,
+      "players": [
+        {
+          "nickname": "0000",
+          "steam_id": "76561198806133687",
+          "steam_url": "https://steamcommunity.com/profiles/76561198806133687",
+          "dotabuff_url": "https://www.dotabuff.com/players/845867959/heroes",
+          "rating": 4712,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "No play, just sound that shines",
+          "steam_id": "76561198105440325",
+          "steam_url": "https://steamcommunity.com/profiles/76561198105440325",
+          "dotabuff_url": "https://www.dotabuff.com/players/145174597/heroes",
+          "rating": 6768,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Xenos",
+          "steam_id": "76561198283166751",
+          "steam_url": "https://steamcommunity.com/profiles/76561198283166751",
+          "dotabuff_url": "https://www.dotabuff.com/players/322901023/heroes",
+          "rating": 12562,
+          "leaderboard_rank": 781
+        },
+        {
+          "nickname": "NewMe",
+          "steam_id": "76561198309635610",
+          "steam_url": "https://steamcommunity.com/profiles/76561198309635610",
+          "dotabuff_url": "https://www.dotabuff.com/players/349369882/heroes",
+          "rating": 5300,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Have a Nice Life",
+          "steam_id": "76561198092290729",
+          "steam_url": "https://steamcommunity.com/profiles/76561198092290729",
+          "dotabuff_url": "https://www.dotabuff.com/players/132025001/heroes",
+          "rating": 10964,
+          "leaderboard_rank": 1725
+        }
+      ]
+    },
+    {
       "name": "Team da baby",
       "url": "https://mixer-cup.gg/ru/team/09185f2b-2df0-4bac-841e-e340cab4b73a",
       "uuid": "09185f2b-2df0-4bac-841e-e340cab4b73a",
-      "dom_order": 1,
+      "dom_order": 2,
       "team_rating": 42272,
       "place": null,
       "games_won": 15,
@@ -104,59 +157,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/490177764/heroes",
           "rating": 5889,
           "leaderboard_rank": null
-        }
-      ]
-    },
-    {
-      "name": "Team ca",
-      "url": "https://mixer-cup.gg/ru/team/9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
-      "uuid": "9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
-      "dom_order": 2,
-      "team_rating": 40306,
-      "place": null,
-      "games_won": 14,
-      "games_lost": 4,
-      "games_total": 18,
-      "players": [
-        {
-          "nickname": "0000",
-          "steam_id": "76561198806133687",
-          "steam_url": "https://steamcommunity.com/profiles/76561198806133687",
-          "dotabuff_url": "https://www.dotabuff.com/players/845867959/heroes",
-          "rating": 4712,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "No play, just sound that shines",
-          "steam_id": "76561198105440325",
-          "steam_url": "https://steamcommunity.com/profiles/76561198105440325",
-          "dotabuff_url": "https://www.dotabuff.com/players/145174597/heroes",
-          "rating": 6768,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Xenos",
-          "steam_id": "76561198283166751",
-          "steam_url": "https://steamcommunity.com/profiles/76561198283166751",
-          "dotabuff_url": "https://www.dotabuff.com/players/322901023/heroes",
-          "rating": 12562,
-          "leaderboard_rank": 781
-        },
-        {
-          "nickname": "NewMe",
-          "steam_id": "76561198309635610",
-          "steam_url": "https://steamcommunity.com/profiles/76561198309635610",
-          "dotabuff_url": "https://www.dotabuff.com/players/349369882/heroes",
-          "rating": 5300,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Have a Nice Life",
-          "steam_id": "76561198092290729",
-          "steam_url": "https://steamcommunity.com/profiles/76561198092290729",
-          "dotabuff_url": "https://www.dotabuff.com/players/132025001/heroes",
-          "rating": 10964,
-          "leaderboard_rank": 1725
         }
       ]
     },
