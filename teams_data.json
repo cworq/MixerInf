@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-26T21:32:54.273574+00:00",
+  "updated_at": "2026-06-26T21:47:49.615763+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -271,7 +271,7 @@
       "url": "https://mixer-cup.gg/ru/team/2aa8251b-4454-4058-b70a-405723435f10",
       "uuid": "2aa8251b-4454-4058-b70a-405723435f10",
       "dom_order": 5,
-      "team_rating": 41702,
+      "team_rating": 41672,
       "place": null,
       "games_won": 12,
       "games_lost": 8,
@@ -302,20 +302,20 @@
           "leaderboard_rank": 2500
         },
         {
+          "nickname": "Sky-Rzn",
+          "steam_id": "76561199010484316",
+          "steam_url": "https://steamcommunity.com/profiles/76561199010484316",
+          "dotabuff_url": "https://www.dotabuff.com/players/1050218588/heroes",
+          "rating": 13288,
+          "leaderboard_rank": 551
+        },
+        {
           "nickname": "Xyxy#Я  буду вас тра",
           "steam_id": "76561198137935193",
           "steam_url": "https://steamcommunity.com/profiles/76561198137935193",
           "dotabuff_url": "https://www.dotabuff.com/players/177669465/heroes",
           "rating": 8141,
           "leaderboard_rank": 4824
-        },
-        {
-          "nickname": "опять меняю номера",
-          "steam_id": "76561198149583385",
-          "steam_url": "https://steamcommunity.com/profiles/76561198149583385",
-          "dotabuff_url": "https://www.dotabuff.com/players/189317657/heroes",
-          "rating": 13318,
-          "leaderboard_rank": 602
         }
       ]
     },
