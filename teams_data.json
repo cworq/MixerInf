@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-26T07:03:14.543691+00:00",
+  "updated_at": "2026-06-26T07:17:58.356954+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -960,12 +960,20 @@
       "url": "https://mixer-cup.gg/ru/team/9f541f83-481b-433e-b5c4-db7d3b41629b",
       "uuid": "9f541f83-481b-433e-b5c4-db7d3b41629b",
       "dom_order": 18,
-      "team_rating": 42150,
+      "team_rating": 42743,
       "place": null,
       "games_won": 8,
       "games_lost": 11,
       "games_total": 19,
       "players": [
+        {
+          "nickname": "Eliseev",
+          "steam_id": "76561198051928894",
+          "steam_url": "https://steamcommunity.com/profiles/76561198051928894",
+          "dotabuff_url": "https://www.dotabuff.com/players/91663166/heroes",
+          "rating": 13427,
+          "leaderboard_rank": 496
+        },
         {
           "nickname": "Мракобесик",
           "steam_id": "76561199165708900",
@@ -973,14 +981,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/1205443172/heroes",
           "rating": 6988,
           "leaderboard_rank": null
-        },
-        {
-          "nickname": "rusky",
-          "steam_id": "76561198253856930",
-          "steam_url": "https://steamcommunity.com/profiles/76561198253856930",
-          "dotabuff_url": "https://www.dotabuff.com/players/293591202/heroes",
-          "rating": 12834,
-          "leaderboard_rank": 688
         },
         {
           "nickname": "родился попердели умер",
