@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-26T18:47:47.972136+00:00",
+  "updated_at": "2026-06-26T19:03:11.721578+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -59,20 +59,12 @@
       "url": "https://mixer-cup.gg/ru/team/09185f2b-2df0-4bac-841e-e340cab4b73a",
       "uuid": "09185f2b-2df0-4bac-841e-e340cab4b73a",
       "dom_order": 1,
-      "team_rating": 42272,
+      "team_rating": 43573,
       "place": null,
       "games_won": 16,
       "games_lost": 4,
       "games_total": 20,
       "players": [
-        {
-          "nickname": "Ne_SahaR0K",
-          "steam_id": "76561198987798273",
-          "steam_url": "https://steamcommunity.com/profiles/76561198987798273",
-          "dotabuff_url": "https://www.dotabuff.com/players/1027532545/heroes",
-          "rating": 12018,
-          "leaderboard_rank": 1015
-        },
         {
           "nickname": "прав тот кто добр",
           "steam_id": "76561198091305787",
@@ -104,6 +96,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/490177764/heroes",
           "rating": 5889,
           "leaderboard_rank": null
+        },
+        {
+          "nickname": "mvssive attvck",
+          "steam_id": "76561198797302829",
+          "steam_url": "https://steamcommunity.com/profiles/76561198797302829",
+          "dotabuff_url": "https://www.dotabuff.com/players/837037101/heroes",
+          "rating": 13319,
+          "leaderboard_rank": 573
         }
       ]
     },
@@ -112,7 +112,7 @@
       "url": "https://mixer-cup.gg/ru/team/9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
       "uuid": "9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
       "dom_order": 2,
-      "team_rating": 41783,
+      "team_rating": 42376,
       "place": null,
       "games_won": 15,
       "games_lost": 5,
@@ -135,11 +135,11 @@
           "leaderboard_rank": null
         },
         {
-          "nickname": "Negative hero",
-          "steam_id": "76561199030891004",
-          "steam_url": "https://steamcommunity.com/profiles/76561199030891004",
-          "dotabuff_url": "https://www.dotabuff.com/players/1070625276/heroes",
-          "rating": 4803,
+          "nickname": "Король/принц88",
+          "steam_id": "76561198864400645",
+          "steam_url": "https://steamcommunity.com/profiles/76561198864400645",
+          "dotabuff_url": "https://www.dotabuff.com/players/904134917/heroes",
+          "rating": 5396,
           "leaderboard_rank": null
         },
         {
