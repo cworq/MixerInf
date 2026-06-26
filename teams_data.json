@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-26T20:03:02.499285+00:00",
+  "updated_at": "2026-06-26T20:18:00.029745+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -907,7 +907,7 @@
       "url": "https://mixer-cup.gg/ru/team/457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
       "uuid": "457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
       "dom_order": 17,
-      "team_rating": 41713,
+      "team_rating": 43285,
       "place": null,
       "games_won": 8,
       "games_lost": 12,
@@ -922,11 +922,19 @@
           "leaderboard_rank": 2499
         },
         {
-          "nickname": "Torpeda",
-          "steam_id": "76561198084463058",
-          "steam_url": "https://steamcommunity.com/profiles/76561198084463058",
-          "dotabuff_url": "https://www.dotabuff.com/players/124197330/heroes",
-          "rating": 3952,
+          "nickname": "ДрачоМен",
+          "steam_id": "76561199094568334",
+          "steam_url": "https://steamcommunity.com/profiles/76561199094568334",
+          "dotabuff_url": "https://www.dotabuff.com/players/1134302606/heroes",
+          "rating": 4405,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "This_Gleb",
+          "steam_id": "76561199029490221",
+          "steam_url": "https://steamcommunity.com/profiles/76561199029490221",
+          "dotabuff_url": "https://www.dotabuff.com/players/1069224493/heroes",
+          "rating": 7737,
           "leaderboard_rank": null
         },
         {
@@ -944,14 +952,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/402611144/heroes",
           "rating": 13692,
           "leaderboard_rank": 480
-        },
-        {
-          "nickname": "жопастый бачира pr",
-          "steam_id": "76561198247769002",
-          "steam_url": "https://steamcommunity.com/profiles/76561198247769002",
-          "dotabuff_url": "https://www.dotabuff.com/players/287503274/heroes",
-          "rating": 6618,
-          "leaderboard_rank": 4857
         }
       ]
     },
