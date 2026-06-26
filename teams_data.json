@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-26T16:47:46.182672+00:00",
+  "updated_at": "2026-06-26T17:03:03.406144+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -907,20 +907,12 @@
       "url": "https://mixer-cup.gg/ru/team/b9854156-4f46-440d-92fe-741e16437f7e",
       "uuid": "b9854156-4f46-440d-92fe-741e16437f7e",
       "dom_order": 17,
-      "team_rating": 43070,
+      "team_rating": 42477,
       "place": null,
       "games_won": 8,
       "games_lost": 12,
       "games_total": 20,
       "players": [
-        {
-          "nickname": "misolo3 - smurf",
-          "steam_id": "76561198316120508",
-          "steam_url": "https://steamcommunity.com/profiles/76561198316120508",
-          "dotabuff_url": "https://www.dotabuff.com/players/355854780/heroes",
-          "rating": 11093,
-          "leaderboard_rank": 1478
-        },
         {
           "nickname": "grind season",
           "steam_id": "76561199091341473",
@@ -936,6 +928,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/1199282005/heroes",
           "rating": 6138,
           "leaderboard_rank": null
+        },
+        {
+          "nickname": "оптимус (pr1me)",
+          "steam_id": "76561198161587402",
+          "steam_url": "https://steamcommunity.com/profiles/76561198161587402",
+          "dotabuff_url": "https://www.dotabuff.com/players/201321674/heroes",
+          "rating": 10500,
+          "leaderboard_rank": 3181
         },
         {
           "nickname": "fam0us",
