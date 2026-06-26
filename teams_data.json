@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T23:47:48.040271+00:00",
+  "updated_at": "2026-06-26T00:02:59.637913+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -797,63 +797,10 @@
       ]
     },
     {
-      "name": "Team РАЧОК 67",
-      "url": "https://mixer-cup.gg/ru/team/9f541f83-481b-433e-b5c4-db7d3b41629b",
-      "uuid": "9f541f83-481b-433e-b5c4-db7d3b41629b",
-      "dom_order": 15,
-      "team_rating": 42150,
-      "place": null,
-      "games_won": 8,
-      "games_lost": 11,
-      "games_total": 19,
-      "players": [
-        {
-          "nickname": "Мракобесик",
-          "steam_id": "76561199165708900",
-          "steam_url": "https://steamcommunity.com/profiles/76561199165708900",
-          "dotabuff_url": "https://www.dotabuff.com/players/1205443172/heroes",
-          "rating": 6988,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "rusky",
-          "steam_id": "76561198253856930",
-          "steam_url": "https://steamcommunity.com/profiles/76561198253856930",
-          "dotabuff_url": "https://www.dotabuff.com/players/293591202/heroes",
-          "rating": 12834,
-          "leaderboard_rank": 688
-        },
-        {
-          "nickname": "родился попердели умер",
-          "steam_id": "76561198206602505",
-          "steam_url": "https://steamcommunity.com/profiles/76561198206602505",
-          "dotabuff_url": "https://www.dotabuff.com/players/246336777/heroes",
-          "rating": 6093,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "gachi fighter",
-          "steam_id": "76561198075549501",
-          "steam_url": "https://steamcommunity.com/profiles/76561198075549501",
-          "dotabuff_url": "https://www.dotabuff.com/players/115283773/heroes",
-          "rating": 5735,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "ESCAPE",
-          "steam_id": "76561198802083793",
-          "steam_url": "https://steamcommunity.com/profiles/76561198802083793",
-          "dotabuff_url": "https://www.dotabuff.com/players/841818065/heroes",
-          "rating": 10500,
-          "leaderboard_rank": 2009
-        }
-      ]
-    },
-    {
       "name": "Team tron fan$",
       "url": "https://mixer-cup.gg/ru/team/b7b956c0-28af-4978-998c-4bd952462a62",
       "uuid": "b7b956c0-28af-4978-998c-4bd952462a62",
-      "dom_order": 16,
+      "dom_order": 15,
       "team_rating": 42347,
       "place": null,
       "games_won": 8,
@@ -906,7 +853,7 @@
       "name": "Team МС ОТПУСК",
       "url": "https://mixer-cup.gg/ru/team/457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
       "uuid": "457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
-      "dom_order": 17,
+      "dom_order": 16,
       "team_rating": 42182,
       "place": null,
       "games_won": 8,
@@ -956,15 +903,68 @@
       ]
     },
     {
+      "name": "Team РАЧОК 67",
+      "url": "https://mixer-cup.gg/ru/team/9f541f83-481b-433e-b5c4-db7d3b41629b",
+      "uuid": "9f541f83-481b-433e-b5c4-db7d3b41629b",
+      "dom_order": 17,
+      "team_rating": 42150,
+      "place": null,
+      "games_won": 8,
+      "games_lost": 11,
+      "games_total": 19,
+      "players": [
+        {
+          "nickname": "Мракобесик",
+          "steam_id": "76561199165708900",
+          "steam_url": "https://steamcommunity.com/profiles/76561199165708900",
+          "dotabuff_url": "https://www.dotabuff.com/players/1205443172/heroes",
+          "rating": 6988,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "rusky",
+          "steam_id": "76561198253856930",
+          "steam_url": "https://steamcommunity.com/profiles/76561198253856930",
+          "dotabuff_url": "https://www.dotabuff.com/players/293591202/heroes",
+          "rating": 12834,
+          "leaderboard_rank": 688
+        },
+        {
+          "nickname": "родился попердели умер",
+          "steam_id": "76561198206602505",
+          "steam_url": "https://steamcommunity.com/profiles/76561198206602505",
+          "dotabuff_url": "https://www.dotabuff.com/players/246336777/heroes",
+          "rating": 6093,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "gachi fighter",
+          "steam_id": "76561198075549501",
+          "steam_url": "https://steamcommunity.com/profiles/76561198075549501",
+          "dotabuff_url": "https://www.dotabuff.com/players/115283773/heroes",
+          "rating": 5735,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "ESCAPE",
+          "steam_id": "76561198802083793",
+          "steam_url": "https://steamcommunity.com/profiles/76561198802083793",
+          "dotabuff_url": "https://www.dotabuff.com/players/841818065/heroes",
+          "rating": 10500,
+          "leaderboard_rank": 2009
+        }
+      ]
+    },
+    {
       "name": "Team Hermoso Ángel",
       "url": "https://mixer-cup.gg/ru/team/34a79c0c-0885-4515-82a9-5fe840d6ed93",
       "uuid": "34a79c0c-0885-4515-82a9-5fe840d6ed93",
       "dom_order": 18,
       "team_rating": 41144,
       "place": null,
-      "games_won": 7,
+      "games_won": 8,
       "games_lost": 12,
-      "games_total": 19,
+      "games_total": 20,
       "players": [
         {
           "nickname": "♛тесная поляна♛",
@@ -1016,8 +1016,8 @@
       "team_rating": 41817,
       "place": null,
       "games_won": 7,
-      "games_lost": 12,
-      "games_total": 19,
+      "games_lost": 13,
+      "games_total": 20,
       "players": [
         {
           "nickname": "новый год",
