@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-26T05:18:01.478518+00:00",
+  "updated_at": "2026-06-26T05:32:53.470409+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -538,9 +538,9 @@
       "dom_order": 10,
       "team_rating": 43857,
       "place": null,
-      "games_won": 9,
+      "games_won": 10,
       "games_lost": 10,
-      "games_total": 19,
+      "games_total": 20,
       "players": [
         {
           "nickname": "ultra c",
@@ -854,19 +854,19 @@
       "url": "https://mixer-cup.gg/ru/team/457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
       "uuid": "457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
       "dom_order": 16,
-      "team_rating": 42182,
+      "team_rating": 41713,
       "place": null,
       "games_won": 8,
-      "games_lost": 11,
-      "games_total": 19,
+      "games_lost": 12,
+      "games_total": 20,
       "players": [
         {
-          "nickname": "angel grove",
-          "steam_id": "76561198971875850",
-          "steam_url": "https://steamcommunity.com/profiles/76561198971875850",
-          "dotabuff_url": "https://www.dotabuff.com/players/1011610122/heroes",
-          "rating": 10500,
-          "leaderboard_rank": 2027
+          "nickname": "newmasksametask",
+          "steam_id": "76561199140576023",
+          "steam_url": "https://steamcommunity.com/profiles/76561199140576023",
+          "dotabuff_url": "https://www.dotabuff.com/players/1180310295/heroes",
+          "rating": 10031,
+          "leaderboard_rank": 2499
         },
         {
           "nickname": "Torpeda",
