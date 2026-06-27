@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T07:32:59.821265+00:00",
+  "updated_at": "2026-06-27T07:48:00.796512+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -642,7 +642,7 @@
       "url": "https://mixer-cup.gg/ru/team/eba112df-5662-4c9f-a1e5-8fc86ad239b2",
       "uuid": "eba112df-5662-4c9f-a1e5-8fc86ad239b2",
       "dom_order": 12,
-      "team_rating": 43857,
+      "team_rating": 40646,
       "place": null,
       "games_won": 10,
       "games_lost": 11,
@@ -673,19 +673,19 @@
           "leaderboard_rank": 799
         },
         {
-          "nickname": "Infinity",
-          "steam_id": "76561198131662856",
-          "steam_url": "https://steamcommunity.com/profiles/76561198131662856",
-          "dotabuff_url": "https://www.dotabuff.com/players/171397128/heroes",
-          "rating": 8618,
-          "leaderboard_rank": 3427
-        },
-        {
           "nickname": "Titan777",
           "steam_id": "76561198343870208",
           "steam_url": "https://steamcommunity.com/profiles/76561198343870208",
           "dotabuff_url": "https://www.dotabuff.com/players/383604480/heroes",
           "rating": 5741,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "viva la soslo.",
+          "steam_id": "76561198114227978",
+          "steam_url": "https://steamcommunity.com/profiles/76561198114227978",
+          "dotabuff_url": "https://www.dotabuff.com/players/153962250/heroes",
+          "rating": 5407,
           "leaderboard_rank": null
         }
       ]
@@ -960,7 +960,7 @@
       "url": "https://mixer-cup.gg/ru/team/34a79c0c-0885-4515-82a9-5fe840d6ed93",
       "uuid": "34a79c0c-0885-4515-82a9-5fe840d6ed93",
       "dom_order": 18,
-      "team_rating": 41144,
+      "team_rating": 42760,
       "place": null,
       "games_won": 8,
       "games_lost": 13,
@@ -973,14 +973,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/399546227/heroes",
           "rating": 11085,
           "leaderboard_rank": 1575
-        },
-        {
-          "nickname": "SamSai",
-          "steam_id": "76561198128459102",
-          "steam_url": "https://steamcommunity.com/profiles/76561198128459102",
-          "dotabuff_url": "https://www.dotabuff.com/players/168193374/heroes",
-          "rating": 5390,
-          "leaderboard_rank": null
         },
         {
           "nickname": "марта",
@@ -1005,6 +997,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/206126414/heroes",
           "rating": 10016,
           "leaderboard_rank": 2508
+        },
+        {
+          "nickname": "dos mil estrellas",
+          "steam_id": "76561198931302616",
+          "steam_url": "https://steamcommunity.com/profiles/76561198931302616",
+          "dotabuff_url": "https://www.dotabuff.com/players/971036888/heroes",
+          "rating": 7006,
+          "leaderboard_rank": null
         }
       ]
     },
