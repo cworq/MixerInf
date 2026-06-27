@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T07:17:56.665265+00:00",
+  "updated_at": "2026-06-27T07:32:59.821265+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -8,9 +8,9 @@
       "dom_order": 0,
       "team_rating": 41177,
       "place": null,
-      "games_won": 19,
+      "games_won": 20,
       "games_lost": 2,
-      "games_total": 21,
+      "games_total": 22,
       "players": [
         {
           "nickname": "Gelendvagen",
@@ -1069,8 +1069,8 @@
       "team_rating": 37281,
       "place": null,
       "games_won": 7,
-      "games_lost": 14,
-      "games_total": 21,
+      "games_lost": 15,
+      "games_total": 22,
       "players": [
         {
           "nickname": "филдейм",
