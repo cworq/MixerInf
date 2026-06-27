@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T04:47:52.017663+00:00",
+  "updated_at": "2026-06-27T05:03:15.594546+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1013,20 +1013,12 @@
       "url": "https://mixer-cup.gg/ru/team/3414fa11-5d58-4283-b428-a15228ce73f7",
       "uuid": "3414fa11-5d58-4283-b428-a15228ce73f7",
       "dom_order": 19,
-      "team_rating": 42405,
+      "team_rating": 41889,
       "place": null,
       "games_won": 7,
       "games_lost": 14,
       "games_total": 21,
       "players": [
-        {
-          "nickname": "филдейм",
-          "steam_id": "76561198287409533",
-          "steam_url": "https://steamcommunity.com/profiles/76561198287409533",
-          "dotabuff_url": "https://www.dotabuff.com/players/327143805/heroes",
-          "rating": 12534,
-          "leaderboard_rank": 845
-        },
         {
           "nickname": "новый год",
           "steam_id": "76561198143776914",
@@ -1034,6 +1026,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/183511186/heroes",
           "rating": 11600,
           "leaderboard_rank": 1327
+        },
+        {
+          "nickname": "Ne_SahaR0K",
+          "steam_id": "76561198987798273",
+          "steam_url": "https://steamcommunity.com/profiles/76561198987798273",
+          "dotabuff_url": "https://www.dotabuff.com/players/1027532545/heroes",
+          "rating": 12018,
+          "leaderboard_rank": 1015
         },
         {
           "nickname": "afka",
