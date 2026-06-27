@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T10:18:03.188699+00:00",
+  "updated_at": "2026-06-27T10:33:02.651476+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -165,20 +165,12 @@
       "url": "https://mixer-cup.gg/ru/team/95d713a5-26f4-46ad-bb9d-d8a8813a8f8a",
       "uuid": "95d713a5-26f4-46ad-bb9d-d8a8813a8f8a",
       "dom_order": 3,
-      "team_rating": 40873,
+      "team_rating": 41054,
       "place": null,
       "games_won": 14,
       "games_lost": 7,
       "games_total": 21,
       "players": [
-        {
-          "nickname": "for the love of the game",
-          "steam_id": "76561198110619973",
-          "steam_url": "https://steamcommunity.com/profiles/76561198110619973",
-          "dotabuff_url": "https://www.dotabuff.com/players/150354245/heroes",
-          "rating": 12462,
-          "leaderboard_rank": 796
-        },
         {
           "nickname": "дешевые драмы",
           "steam_id": "76561198240966472",
@@ -196,12 +188,20 @@
           "leaderboard_rank": null
         },
         {
-          "nickname": "Hollow_skies37",
-          "steam_id": "76561198291344859",
-          "steam_url": "https://steamcommunity.com/profiles/76561198291344859",
-          "dotabuff_url": "https://www.dotabuff.com/players/331079131/heroes",
-          "rating": 8295,
-          "leaderboard_rank": 4822
+          "nickname": "Брайтон- 1.0",
+          "steam_id": "76561198136285549",
+          "steam_url": "https://steamcommunity.com/profiles/76561198136285549",
+          "dotabuff_url": "https://www.dotabuff.com/players/176019821/heroes",
+          "rating": 12000,
+          "leaderboard_rank": 1117
+        },
+        {
+          "nickname": "yett",
+          "steam_id": "76561198134277012",
+          "steam_url": "https://steamcommunity.com/profiles/76561198134277012",
+          "dotabuff_url": "https://www.dotabuff.com/players/174011284/heroes",
+          "rating": 8938,
+          "leaderboard_rank": 4390
         },
         {
           "nickname": "девочка (ищу друзей)",
@@ -642,7 +642,7 @@
       "url": "https://mixer-cup.gg/ru/team/9f541f83-481b-433e-b5c4-db7d3b41629b",
       "uuid": "9f541f83-481b-433e-b5c4-db7d3b41629b",
       "dom_order": 12,
-      "team_rating": 42743,
+      "team_rating": 43423,
       "place": null,
       "games_won": 10,
       "games_lost": 11,
@@ -657,11 +657,11 @@
           "leaderboard_rank": 496
         },
         {
-          "nickname": "Мракобесик",
-          "steam_id": "76561199165708900",
-          "steam_url": "https://steamcommunity.com/profiles/76561199165708900",
-          "dotabuff_url": "https://www.dotabuff.com/players/1205443172/heroes",
-          "rating": 6988,
+          "nickname": "tv/capusta233",
+          "steam_id": "76561198795632642",
+          "steam_url": "https://steamcommunity.com/profiles/76561198795632642",
+          "dotabuff_url": "https://www.dotabuff.com/players/835366914/heroes",
+          "rating": 7668,
           "leaderboard_rank": null
         },
         {
