@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T02:03:02.617951+00:00",
+  "updated_at": "2026-06-27T02:17:51.502298+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -218,7 +218,7 @@
       "url": "https://mixer-cup.gg/ru/team/3ff4bb5e-11c6-4cbf-9a08-b3e4b3419eb5",
       "uuid": "3ff4bb5e-11c6-4cbf-9a08-b3e4b3419eb5",
       "dom_order": 4,
-      "team_rating": 42917,
+      "team_rating": 43286,
       "place": null,
       "games_won": 13,
       "games_lost": 7,
@@ -231,14 +231,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/347445342/heroes",
           "rating": 12700,
           "leaderboard_rank": 741
-        },
-        {
-          "nickname": "godspeedyoublackemperor",
-          "steam_id": "76561198194603426",
-          "steam_url": "https://steamcommunity.com/profiles/76561198194603426",
-          "dotabuff_url": "https://www.dotabuff.com/players/234337698/heroes",
-          "rating": 7406,
-          "leaderboard_rank": null
         },
         {
           "nickname": "poetess",
@@ -255,6 +247,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/203367056/heroes",
           "rating": 11192,
           "leaderboard_rank": 1619
+        },
+        {
+          "nickname": "Чемпион",
+          "steam_id": "76561198970114604",
+          "steam_url": "https://steamcommunity.com/profiles/76561198970114604",
+          "dotabuff_url": "https://www.dotabuff.com/players/1009848876/heroes",
+          "rating": 7775,
+          "leaderboard_rank": null
         },
         {
           "nickname": "True Adam",
@@ -711,9 +711,9 @@
         },
         {
           "nickname": "целуй мои боттеги",
-          "steam_id": null,
-          "steam_url": "",
-          "dotabuff_url": "",
+          "steam_id": "76561198308972935",
+          "steam_url": "https://steamcommunity.com/profiles/76561198308972935",
+          "dotabuff_url": "https://www.dotabuff.com/players/348707207/heroes",
           "rating": 9024,
           "leaderboard_rank": 3969
         },
