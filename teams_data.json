@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T18:32:56.933043+00:00",
+  "updated_at": "2026-06-27T18:47:58.260927+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -161,10 +161,63 @@
       ]
     },
     {
+      "name": "Team R3/D",
+      "url": "https://mixer-cup.gg/ru/team/3ff4bb5e-11c6-4cbf-9a08-b3e4b3419eb5",
+      "uuid": "3ff4bb5e-11c6-4cbf-9a08-b3e4b3419eb5",
+      "dom_order": 3,
+      "team_rating": 43286,
+      "place": null,
+      "games_won": 15,
+      "games_lost": 7,
+      "games_total": 22,
+      "players": [
+        {
+          "nickname": "R3.mem8er",
+          "steam_id": "76561198307711070",
+          "steam_url": "https://steamcommunity.com/profiles/76561198307711070",
+          "dotabuff_url": "https://www.dotabuff.com/players/347445342/heroes",
+          "rating": 12700,
+          "leaderboard_rank": 741
+        },
+        {
+          "nickname": "poetess",
+          "steam_id": "76561198235041968",
+          "steam_url": "https://steamcommunity.com/profiles/76561198235041968",
+          "dotabuff_url": "https://www.dotabuff.com/players/274776240/heroes",
+          "rating": 5960,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "afterdeath type",
+          "steam_id": "76561198163632784",
+          "steam_url": "https://steamcommunity.com/profiles/76561198163632784",
+          "dotabuff_url": "https://www.dotabuff.com/players/203367056/heroes",
+          "rating": 11192,
+          "leaderboard_rank": 1619
+        },
+        {
+          "nickname": "Чемпион",
+          "steam_id": "76561198970114604",
+          "steam_url": "https://steamcommunity.com/profiles/76561198970114604",
+          "dotabuff_url": "https://www.dotabuff.com/players/1009848876/heroes",
+          "rating": 7775,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "True Adam",
+          "steam_id": "76561198298252275",
+          "steam_url": "https://steamcommunity.com/profiles/76561198298252275",
+          "dotabuff_url": "https://www.dotabuff.com/players/337986547/heroes",
+          "rating": 5659,
+          "leaderboard_rank": null
+        }
+      ]
+    },
+    {
       "name": "Team tempest",
       "url": "https://mixer-cup.gg/ru/team/95d713a5-26f4-46ad-bb9d-d8a8813a8f8a",
       "uuid": "95d713a5-26f4-46ad-bb9d-d8a8813a8f8a",
-      "dom_order": 3,
+      "dom_order": 4,
       "team_rating": 41054,
       "place": null,
       "games_won": 14,
@@ -210,59 +263,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/1588864682/heroes",
           "rating": 8670,
           "leaderboard_rank": 3349
-        }
-      ]
-    },
-    {
-      "name": "Team R3/D",
-      "url": "https://mixer-cup.gg/ru/team/3ff4bb5e-11c6-4cbf-9a08-b3e4b3419eb5",
-      "uuid": "3ff4bb5e-11c6-4cbf-9a08-b3e4b3419eb5",
-      "dom_order": 4,
-      "team_rating": 43286,
-      "place": null,
-      "games_won": 14,
-      "games_lost": 7,
-      "games_total": 21,
-      "players": [
-        {
-          "nickname": "R3.mem8er",
-          "steam_id": "76561198307711070",
-          "steam_url": "https://steamcommunity.com/profiles/76561198307711070",
-          "dotabuff_url": "https://www.dotabuff.com/players/347445342/heroes",
-          "rating": 12700,
-          "leaderboard_rank": 741
-        },
-        {
-          "nickname": "poetess",
-          "steam_id": "76561198235041968",
-          "steam_url": "https://steamcommunity.com/profiles/76561198235041968",
-          "dotabuff_url": "https://www.dotabuff.com/players/274776240/heroes",
-          "rating": 5960,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "afterdeath type",
-          "steam_id": "76561198163632784",
-          "steam_url": "https://steamcommunity.com/profiles/76561198163632784",
-          "dotabuff_url": "https://www.dotabuff.com/players/203367056/heroes",
-          "rating": 11192,
-          "leaderboard_rank": 1619
-        },
-        {
-          "nickname": "Чемпион",
-          "steam_id": "76561198970114604",
-          "steam_url": "https://steamcommunity.com/profiles/76561198970114604",
-          "dotabuff_url": "https://www.dotabuff.com/players/1009848876/heroes",
-          "rating": 7775,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "True Adam",
-          "steam_id": "76561198298252275",
-          "steam_url": "https://steamcommunity.com/profiles/76561198298252275",
-          "dotabuff_url": "https://www.dotabuff.com/players/337986547/heroes",
-          "rating": 5659,
-          "leaderboard_rank": null
         }
       ]
     },
@@ -377,12 +377,20 @@
       "url": "https://mixer-cup.gg/ru/team/84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
       "uuid": "84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
       "dom_order": 7,
-      "team_rating": 42422,
+      "team_rating": 42169,
       "place": null,
       "games_won": 12,
       "games_lost": 10,
       "games_total": 22,
       "players": [
+        {
+          "nickname": "angel grove",
+          "steam_id": "76561198971875850",
+          "steam_url": "https://steamcommunity.com/profiles/76561198971875850",
+          "dotabuff_url": "https://www.dotabuff.com/players/1011610122/heroes",
+          "rating": 10500,
+          "leaderboard_rank": 2027
+        },
         {
           "nickname": "FearOfGod",
           "steam_id": "76561199565082129",
@@ -390,14 +398,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/1604816401/heroes",
           "rating": 8300,
           "leaderboard_rank": null
-        },
-        {
-          "nickname": "melwis",
-          "steam_id": "76561198897782500",
-          "steam_url": "https://steamcommunity.com/profiles/76561198897782500",
-          "dotabuff_url": "https://www.dotabuff.com/players/937516772/heroes",
-          "rating": 10753,
-          "leaderboard_rank": 1984
         },
         {
           "nickname": "AMON",
