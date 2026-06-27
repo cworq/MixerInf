@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T21:03:12.148958+00:00",
+  "updated_at": "2026-06-27T21:17:53.764804+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1009,63 +1009,10 @@
       ]
     },
     {
-      "name": "Team Egoist",
-      "url": "https://mixer-cup.gg/ru/team/3414fa11-5d58-4283-b428-a15228ce73f7",
-      "uuid": "3414fa11-5d58-4283-b428-a15228ce73f7",
-      "dom_order": 19,
-      "team_rating": 41889,
-      "place": null,
-      "games_won": 7,
-      "games_lost": 15,
-      "games_total": 22,
-      "players": [
-        {
-          "nickname": "новый год",
-          "steam_id": "76561198143776914",
-          "steam_url": "https://steamcommunity.com/profiles/76561198143776914",
-          "dotabuff_url": "https://www.dotabuff.com/players/183511186/heroes",
-          "rating": 11600,
-          "leaderboard_rank": 1327
-        },
-        {
-          "nickname": "Ne_SahaR0K",
-          "steam_id": "76561198987798273",
-          "steam_url": "https://steamcommunity.com/profiles/76561198987798273",
-          "dotabuff_url": "https://www.dotabuff.com/players/1027532545/heroes",
-          "rating": 12018,
-          "leaderboard_rank": 1015
-        },
-        {
-          "nickname": "afka",
-          "steam_id": "76561198157515295",
-          "steam_url": "https://steamcommunity.com/profiles/76561198157515295",
-          "dotabuff_url": "https://www.dotabuff.com/players/197249567/heroes",
-          "rating": 4962,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "творог💀",
-          "steam_id": "76561198394229941",
-          "steam_url": "https://steamcommunity.com/profiles/76561198394229941",
-          "dotabuff_url": "https://www.dotabuff.com/players/433964213/heroes",
-          "rating": 8600,
-          "leaderboard_rank": 5000
-        },
-        {
-          "nickname": "Kaoru",
-          "steam_id": "76561199701194567",
-          "steam_url": "https://steamcommunity.com/profiles/76561199701194567",
-          "dotabuff_url": "https://www.dotabuff.com/players/1740928839/heroes",
-          "rating": 4709,
-          "leaderboard_rank": null
-        }
-      ]
-    },
-    {
       "name": "Team mvssive attvck",
       "url": "https://mixer-cup.gg/ru/team/1a733066-a688-4f3d-b110-4956cf06c3c7",
       "uuid": "1a733066-a688-4f3d-b110-4956cf06c3c7",
-      "dom_order": 20,
+      "dom_order": 19,
       "team_rating": 37281,
       "place": null,
       "games_won": 8,
@@ -1110,6 +1057,59 @@
           "steam_url": "https://steamcommunity.com/profiles/76561198335936362",
           "dotabuff_url": "https://www.dotabuff.com/players/375670634/heroes",
           "rating": 4337,
+          "leaderboard_rank": null
+        }
+      ]
+    },
+    {
+      "name": "Team Egoist",
+      "url": "https://mixer-cup.gg/ru/team/3414fa11-5d58-4283-b428-a15228ce73f7",
+      "uuid": "3414fa11-5d58-4283-b428-a15228ce73f7",
+      "dom_order": 20,
+      "team_rating": 40784,
+      "place": null,
+      "games_won": 7,
+      "games_lost": 15,
+      "games_total": 22,
+      "players": [
+        {
+          "nickname": "новый год",
+          "steam_id": "76561198143776914",
+          "steam_url": "https://steamcommunity.com/profiles/76561198143776914",
+          "dotabuff_url": "https://www.dotabuff.com/players/183511186/heroes",
+          "rating": 11600,
+          "leaderboard_rank": 1327
+        },
+        {
+          "nickname": "afka",
+          "steam_id": "76561198157515295",
+          "steam_url": "https://steamcommunity.com/profiles/76561198157515295",
+          "dotabuff_url": "https://www.dotabuff.com/players/197249567/heroes",
+          "rating": 4962,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "творог💀",
+          "steam_id": "76561198394229941",
+          "steam_url": "https://steamcommunity.com/profiles/76561198394229941",
+          "dotabuff_url": "https://www.dotabuff.com/players/433964213/heroes",
+          "rating": 8600,
+          "leaderboard_rank": 5000
+        },
+        {
+          "nickname": "gaunts orb and cute are pdfs",
+          "steam_id": "76561198299621829",
+          "steam_url": "https://steamcommunity.com/profiles/76561198299621829",
+          "dotabuff_url": "https://www.dotabuff.com/players/339356101/heroes",
+          "rating": 10913,
+          "leaderboard_rank": 1717
+        },
+        {
+          "nickname": "Kaoru",
+          "steam_id": "76561199701194567",
+          "steam_url": "https://steamcommunity.com/profiles/76561199701194567",
+          "dotabuff_url": "https://www.dotabuff.com/players/1740928839/heroes",
+          "rating": 4709,
           "leaderboard_rank": null
         }
       ]
