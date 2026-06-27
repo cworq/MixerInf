@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T15:03:18.210144+00:00",
+  "updated_at": "2026-06-27T15:17:45.389035+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -691,24 +691,69 @@
       ]
     },
     {
+      "name": "Team ejovik",
+      "url": "https://mixer-cup.gg/ru/team/65302445-e437-42ff-b303-29a397f127c0",
+      "uuid": "65302445-e437-42ff-b303-29a397f127c0",
+      "dom_order": 13,
+      "team_rating": 43325,
+      "place": null,
+      "games_won": 10,
+      "games_lost": 12,
+      "games_total": 22,
+      "players": [
+        {
+          "nickname": "Redhardt",
+          "steam_id": "76561198437976750",
+          "steam_url": "https://steamcommunity.com/profiles/76561198437976750",
+          "dotabuff_url": "https://www.dotabuff.com/players/477711022/heroes",
+          "rating": 8600,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "amiri jeans",
+          "steam_id": "76561199513056344",
+          "steam_url": "https://steamcommunity.com/profiles/76561199513056344",
+          "dotabuff_url": "https://www.dotabuff.com/players/1552790616/heroes",
+          "rating": 9423,
+          "leaderboard_rank": 3883
+        },
+        {
+          "nickname": "KillEvaPls",
+          "steam_id": "76561199176154913",
+          "steam_url": "https://steamcommunity.com/profiles/76561199176154913",
+          "dotabuff_url": "https://www.dotabuff.com/players/1215889185/heroes",
+          "rating": 2847,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "B3SHA",
+          "steam_id": "76561199042157320",
+          "steam_url": "https://steamcommunity.com/profiles/76561199042157320",
+          "dotabuff_url": "https://www.dotabuff.com/players/1081891592/heroes",
+          "rating": 13055,
+          "leaderboard_rank": 665
+        },
+        {
+          "nickname": "Doppo Orochi aura farming",
+          "steam_id": "76561198143013120",
+          "steam_url": "https://steamcommunity.com/profiles/76561198143013120",
+          "dotabuff_url": "https://www.dotabuff.com/players/182747392/heroes",
+          "rating": 9400,
+          "leaderboard_rank": 3652
+        }
+      ]
+    },
+    {
       "name": "Team tron fan$",
       "url": "https://mixer-cup.gg/ru/team/b7b956c0-28af-4978-998c-4bd952462a62",
       "uuid": "b7b956c0-28af-4978-998c-4bd952462a62",
-      "dom_order": 13,
-      "team_rating": 42647,
+      "dom_order": 14,
+      "team_rating": 41140,
       "place": null,
       "games_won": 10,
-      "games_lost": 11,
-      "games_total": 21,
+      "games_lost": 12,
+      "games_total": 22,
       "players": [
-        {
-          "nickname": "Porshen",
-          "steam_id": "76561198239125122",
-          "steam_url": "https://steamcommunity.com/profiles/76561198239125122",
-          "dotabuff_url": "https://www.dotabuff.com/players/278859394/heroes",
-          "rating": 11707,
-          "leaderboard_rank": 1147
-        },
         {
           "nickname": "целуй мои боттеги",
           "steam_id": "76561198308972935",
@@ -724,6 +769,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/293591202/heroes",
           "rating": 12834,
           "leaderboard_rank": 688
+        },
+        {
+          "nickname": "bloodiceq",
+          "steam_id": "76561198324550369",
+          "steam_url": "https://steamcommunity.com/profiles/76561198324550369",
+          "dotabuff_url": "https://www.dotabuff.com/players/364284641/heroes",
+          "rating": 10200,
+          "leaderboard_rank": 2400
         },
         {
           "nickname": "ksiafil07",
@@ -747,7 +800,7 @@
       "name": "Team Blue Death",
       "url": "https://mixer-cup.gg/ru/team/6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
       "uuid": "6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
-      "dom_order": 14,
+      "dom_order": 15,
       "team_rating": 42597,
       "place": null,
       "games_won": 10,
@@ -793,59 +846,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/185078449/heroes",
           "rating": 4793,
           "leaderboard_rank": null
-        }
-      ]
-    },
-    {
-      "name": "Team ejovik",
-      "url": "https://mixer-cup.gg/ru/team/65302445-e437-42ff-b303-29a397f127c0",
-      "uuid": "65302445-e437-42ff-b303-29a397f127c0",
-      "dom_order": 15,
-      "team_rating": 43325,
-      "place": null,
-      "games_won": 9,
-      "games_lost": 12,
-      "games_total": 21,
-      "players": [
-        {
-          "nickname": "Redhardt",
-          "steam_id": "76561198437976750",
-          "steam_url": "https://steamcommunity.com/profiles/76561198437976750",
-          "dotabuff_url": "https://www.dotabuff.com/players/477711022/heroes",
-          "rating": 8600,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "amiri jeans",
-          "steam_id": "76561199513056344",
-          "steam_url": "https://steamcommunity.com/profiles/76561199513056344",
-          "dotabuff_url": "https://www.dotabuff.com/players/1552790616/heroes",
-          "rating": 9423,
-          "leaderboard_rank": 3883
-        },
-        {
-          "nickname": "KillEvaPls",
-          "steam_id": "76561199176154913",
-          "steam_url": "https://steamcommunity.com/profiles/76561199176154913",
-          "dotabuff_url": "https://www.dotabuff.com/players/1215889185/heroes",
-          "rating": 2847,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "B3SHA",
-          "steam_id": "76561199042157320",
-          "steam_url": "https://steamcommunity.com/profiles/76561199042157320",
-          "dotabuff_url": "https://www.dotabuff.com/players/1081891592/heroes",
-          "rating": 13055,
-          "leaderboard_rank": 665
-        },
-        {
-          "nickname": "Doppo Orochi aura farming",
-          "steam_id": "76561198143013120",
-          "steam_url": "https://steamcommunity.com/profiles/76561198143013120",
-          "dotabuff_url": "https://www.dotabuff.com/players/182747392/heroes",
-          "rating": 9400,
-          "leaderboard_rank": 3652
         }
       ]
     },
