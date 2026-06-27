@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T09:02:59.731459+00:00",
+  "updated_at": "2026-06-27T09:17:50.437337+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -112,7 +112,7 @@
       "url": "https://mixer-cup.gg/ru/team/9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
       "uuid": "9074b54f-bf37-497a-8dc2-f2f3fc5be43d",
       "dom_order": 2,
-      "team_rating": 42376,
+      "team_rating": 42755,
       "place": null,
       "games_won": 15,
       "games_lost": 6,
@@ -135,6 +135,14 @@
           "leaderboard_rank": null
         },
         {
+          "nickname": "SvEtK@_Воин",
+          "steam_id": "76561198858303058",
+          "steam_url": "https://steamcommunity.com/profiles/76561198858303058",
+          "dotabuff_url": "https://www.dotabuff.com/players/898037330/heroes",
+          "rating": 11343,
+          "leaderboard_rank": 1501
+        },
+        {
           "nickname": "Король/принц88",
           "steam_id": "76561198864400645",
           "steam_url": "https://steamcommunity.com/profiles/76561198864400645",
@@ -149,14 +157,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/322901023/heroes",
           "rating": 12562,
           "leaderboard_rank": 781
-        },
-        {
-          "nickname": "Have a Nice Life",
-          "steam_id": "76561198092290729",
-          "steam_url": "https://steamcommunity.com/profiles/76561198092290729",
-          "dotabuff_url": "https://www.dotabuff.com/players/132025001/heroes",
-          "rating": 10964,
-          "leaderboard_rank": 1725
         }
       ]
     },
