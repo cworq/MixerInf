@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T00:47:58.399381+00:00",
+  "updated_at": "2026-06-27T01:03:03.153865+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -748,7 +748,7 @@
       "url": "https://mixer-cup.gg/ru/team/6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
       "uuid": "6c6b0d8a-efa6-43f7-90f7-dd92b06d5e09",
       "dom_order": 14,
-      "team_rating": 43031,
+      "team_rating": 42597,
       "place": null,
       "games_won": 10,
       "games_lost": 10,
@@ -760,14 +760,6 @@
           "steam_url": "https://steamcommunity.com/profiles/76561198360312044",
           "dotabuff_url": "https://www.dotabuff.com/players/400046316/heroes",
           "rating": 6670,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "g0d c0mpl3x",
-          "steam_id": "76561199225678627",
-          "steam_url": "https://steamcommunity.com/profiles/76561199225678627",
-          "dotabuff_url": "https://www.dotabuff.com/players/1265412899/heroes",
-          "rating": 4691,
           "leaderboard_rank": null
         },
         {
@@ -787,12 +779,20 @@
           "leaderboard_rank": 527
         },
         {
-          "nickname": "axaxaxaKatana",
-          "steam_id": "76561198233118036",
-          "steam_url": "https://steamcommunity.com/profiles/76561198233118036",
-          "dotabuff_url": "https://www.dotabuff.com/players/272852308/heroes",
-          "rating": 9059,
-          "leaderboard_rank": 4640
+          "nickname": "Shidou",
+          "steam_id": "76561198272298496",
+          "steam_url": "https://steamcommunity.com/profiles/76561198272298496",
+          "dotabuff_url": "https://www.dotabuff.com/players/312032768/heroes",
+          "rating": 8523,
+          "leaderboard_rank": 4974
+        },
+        {
+          "nickname": "ломка",
+          "steam_id": "76561198145344177",
+          "steam_url": "https://steamcommunity.com/profiles/76561198145344177",
+          "dotabuff_url": "https://www.dotabuff.com/players/185078449/heroes",
+          "rating": 4793,
+          "leaderboard_rank": null
         }
       ]
     },
