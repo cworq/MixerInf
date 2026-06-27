@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T10:03:05.145436+00:00",
+  "updated_at": "2026-06-27T10:18:03.188699+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -114,9 +114,9 @@
       "dom_order": 2,
       "team_rating": 42755,
       "place": null,
-      "games_won": 15,
+      "games_won": 16,
       "games_lost": 6,
-      "games_total": 21,
+      "games_total": 22,
       "players": [
         {
           "nickname": "XoXo",
