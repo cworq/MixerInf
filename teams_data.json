@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T09:48:00.462482+00:00",
+  "updated_at": "2026-06-27T10:03:05.145436+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -857,8 +857,8 @@
       "team_rating": 43111,
       "place": null,
       "games_won": 9,
-      "games_lost": 12,
-      "games_total": 21,
+      "games_lost": 13,
+      "games_total": 22,
       "players": [
         {
           "nickname": "grind season",
