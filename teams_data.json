@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28T03:03:22.692589+00:00",
+  "updated_at": "2026-06-28T03:18:07.426064+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -695,12 +695,20 @@
       "url": "https://mixer-cup.gg/ru/team/65302445-e437-42ff-b303-29a397f127c0",
       "uuid": "65302445-e437-42ff-b303-29a397f127c0",
       "dom_order": 13,
-      "team_rating": 43325,
+      "team_rating": 44051,
       "place": null,
       "games_won": 10,
       "games_lost": 12,
       "games_total": 22,
       "players": [
+        {
+          "nickname": "Egoist",
+          "steam_id": "76561198084366021",
+          "steam_url": "https://steamcommunity.com/profiles/76561198084366021",
+          "dotabuff_url": "https://www.dotabuff.com/players/124100293/heroes",
+          "rating": 11871,
+          "leaderboard_rank": 1173
+        },
         {
           "nickname": "Redhardt",
           "steam_id": "76561198437976750",
@@ -710,28 +718,12 @@
           "leaderboard_rank": null
         },
         {
-          "nickname": "amiri jeans",
-          "steam_id": "76561199513056344",
-          "steam_url": "https://steamcommunity.com/profiles/76561199513056344",
-          "dotabuff_url": "https://www.dotabuff.com/players/1552790616/heroes",
-          "rating": 9423,
-          "leaderboard_rank": 3883
-        },
-        {
-          "nickname": "KillEvaPls",
-          "steam_id": "76561199176154913",
-          "steam_url": "https://steamcommunity.com/profiles/76561199176154913",
-          "dotabuff_url": "https://www.dotabuff.com/players/1215889185/heroes",
-          "rating": 2847,
+          "nickname": "xal1K",
+          "steam_id": "76561199017012044",
+          "steam_url": "https://steamcommunity.com/profiles/76561199017012044",
+          "dotabuff_url": "https://www.dotabuff.com/players/1056746316/heroes",
+          "rating": 4664,
           "leaderboard_rank": null
-        },
-        {
-          "nickname": "B3SHA",
-          "steam_id": "76561199042157320",
-          "steam_url": "https://steamcommunity.com/profiles/76561199042157320",
-          "dotabuff_url": "https://www.dotabuff.com/players/1081891592/heroes",
-          "rating": 13055,
-          "leaderboard_rank": 665
         },
         {
           "nickname": "Doppo Orochi aura farming",
@@ -740,6 +732,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/182747392/heroes",
           "rating": 9400,
           "leaderboard_rank": 3652
+        },
+        {
+          "nickname": "Season 9",
+          "steam_id": "76561199663876999",
+          "steam_url": "https://steamcommunity.com/profiles/76561199663876999",
+          "dotabuff_url": "https://www.dotabuff.com/players/1703611271/heroes",
+          "rating": 9516,
+          "leaderboard_rank": 3485
         }
       ]
     },
