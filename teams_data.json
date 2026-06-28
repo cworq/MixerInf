@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28T01:33:00.481102+00:00",
+  "updated_at": "2026-06-28T01:47:54.705326+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -327,8 +327,8 @@
       "team_rating": 42398,
       "place": null,
       "games_won": 12,
-      "games_lost": 10,
-      "games_total": 22,
+      "games_lost": 11,
+      "games_total": 23,
       "players": [
         {
           "nickname": "Hermoso Ángel",
@@ -856,9 +856,9 @@
       "dom_order": 16,
       "team_rating": 43111,
       "place": null,
-      "games_won": 9,
+      "games_won": 10,
       "games_lost": 13,
-      "games_total": 22,
+      "games_total": 23,
       "players": [
         {
           "nickname": "grind season",
