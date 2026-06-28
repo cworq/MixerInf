@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28T08:18:07.221112+00:00",
+  "updated_at": "2026-06-28T08:32:58.683167+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -1119,20 +1119,12 @@
       "url": "https://mixer-cup.gg/ru/team/36b250ac-063f-4e20-97ff-a86dc54b7494",
       "uuid": "36b250ac-063f-4e20-97ff-a86dc54b7494",
       "dom_order": 21,
-      "team_rating": 43233,
+      "team_rating": 41950,
       "place": null,
       "games_won": 7,
       "games_lost": 15,
       "games_total": 22,
       "players": [
-        {
-          "nickname": "эмоцuu_хорошue",
-          "steam_id": "76561198874721957",
-          "steam_url": "https://steamcommunity.com/profiles/76561198874721957",
-          "dotabuff_url": "https://www.dotabuff.com/players/914456229/heroes",
-          "rating": 9797,
-          "leaderboard_rank": 3052
-        },
         {
           "nickname": "дочь кухни",
           "steam_id": "76561198288341788",
@@ -1148,6 +1140,14 @@
           "dotabuff_url": "https://www.dotabuff.com/players/188529105/heroes",
           "rating": 12450,
           "leaderboard_rank": 740
+        },
+        {
+          "nickname": "дешевые драмы",
+          "steam_id": "76561198240966472",
+          "steam_url": "https://steamcommunity.com/profiles/76561198240966472",
+          "dotabuff_url": "https://www.dotabuff.com/players/280700744/heroes",
+          "rating": 8514,
+          "leaderboard_rank": null
         },
         {
           "nickname": "разум улья",
