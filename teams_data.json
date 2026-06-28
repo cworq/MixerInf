@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28T08:03:02.777169+00:00",
+  "updated_at": "2026-06-28T08:18:07.221112+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -221,8 +221,8 @@
       "team_rating": 43286,
       "place": null,
       "games_won": 15,
-      "games_lost": 7,
-      "games_total": 22,
+      "games_lost": 8,
+      "games_total": 23,
       "players": [
         {
           "nickname": "R3.mem8er",
@@ -373,10 +373,63 @@
       ]
     },
     {
+      "name": "Team otd",
+      "url": "https://mixer-cup.gg/ru/team/fbfe177a-e260-48e9-9224-a87c4f916ab6",
+      "uuid": "fbfe177a-e260-48e9-9224-a87c4f916ab6",
+      "dom_order": 7,
+      "team_rating": 43552,
+      "place": null,
+      "games_won": 12,
+      "games_lost": 11,
+      "games_total": 23,
+      "players": [
+        {
+          "nickname": "слабые молитесь",
+          "steam_id": "76561198417565001",
+          "steam_url": "https://steamcommunity.com/profiles/76561198417565001",
+          "dotabuff_url": "https://www.dotabuff.com/players/457299273/heroes",
+          "rating": 4801,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "болячка",
+          "steam_id": "76561198833740467",
+          "steam_url": "https://steamcommunity.com/profiles/76561198833740467",
+          "dotabuff_url": "https://www.dotabuff.com/players/873474739/heroes",
+          "rating": 7813,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "Clackson",
+          "steam_id": "76561198058748606",
+          "steam_url": "https://steamcommunity.com/profiles/76561198058748606",
+          "dotabuff_url": "https://www.dotabuff.com/players/98482878/heroes",
+          "rating": 14469,
+          "leaderboard_rank": 337
+        },
+        {
+          "nickname": "Rafael",
+          "steam_id": "76561199800790043",
+          "steam_url": "https://steamcommunity.com/profiles/76561199800790043",
+          "dotabuff_url": "https://www.dotabuff.com/players/1840524315/heroes",
+          "rating": 3414,
+          "leaderboard_rank": null
+        },
+        {
+          "nickname": "B3SHA",
+          "steam_id": "76561199042157320",
+          "steam_url": "https://steamcommunity.com/profiles/76561199042157320",
+          "dotabuff_url": "https://www.dotabuff.com/players/1081891592/heroes",
+          "rating": 13055,
+          "leaderboard_rank": 665
+        }
+      ]
+    },
+    {
       "name": "Team .//Kr3m1k0X",
       "url": "https://mixer-cup.gg/ru/team/2aa8251b-4454-4058-b70a-405723435f10",
       "uuid": "2aa8251b-4454-4058-b70a-405723435f10",
-      "dom_order": 7,
+      "dom_order": 8,
       "team_rating": 42398,
       "place": null,
       "games_won": 12,
@@ -429,7 +482,7 @@
       "name": "Team Egoists.",
       "url": "https://mixer-cup.gg/ru/team/84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
       "uuid": "84af492f-7829-4fc9-87fd-a3fc8da0ecb6",
-      "dom_order": 8,
+      "dom_order": 9,
       "team_rating": 42169,
       "place": null,
       "games_won": 12,
@@ -482,7 +535,7 @@
       "name": "Team newmasksametask",
       "url": "https://mixer-cup.gg/ru/team/0c6770ed-239a-44ad-a743-86f95d6ac425",
       "uuid": "0c6770ed-239a-44ad-a743-86f95d6ac425",
-      "dom_order": 9,
+      "dom_order": 10,
       "team_rating": 43747,
       "place": null,
       "games_won": 11,
@@ -535,7 +588,7 @@
       "name": "Team РАЧОК 67",
       "url": "https://mixer-cup.gg/ru/team/9f541f83-481b-433e-b5c4-db7d3b41629b",
       "uuid": "9f541f83-481b-433e-b5c4-db7d3b41629b",
-      "dom_order": 10,
+      "dom_order": 11,
       "team_rating": 43423,
       "place": null,
       "games_won": 11,
@@ -588,7 +641,7 @@
       "name": "Team nolovedeepweb",
       "url": "https://mixer-cup.gg/ru/team/eba112df-5662-4c9f-a1e5-8fc86ad239b2",
       "uuid": "eba112df-5662-4c9f-a1e5-8fc86ad239b2",
-      "dom_order": 11,
+      "dom_order": 12,
       "team_rating": 40646,
       "place": null,
       "games_won": 11,
@@ -634,59 +687,6 @@
           "dotabuff_url": "https://www.dotabuff.com/players/153962250/heroes",
           "rating": 5407,
           "leaderboard_rank": null
-        }
-      ]
-    },
-    {
-      "name": "Team otd",
-      "url": "https://mixer-cup.gg/ru/team/fbfe177a-e260-48e9-9224-a87c4f916ab6",
-      "uuid": "fbfe177a-e260-48e9-9224-a87c4f916ab6",
-      "dom_order": 12,
-      "team_rating": 43552,
-      "place": null,
-      "games_won": 11,
-      "games_lost": 11,
-      "games_total": 22,
-      "players": [
-        {
-          "nickname": "слабые молитесь",
-          "steam_id": "76561198417565001",
-          "steam_url": "https://steamcommunity.com/profiles/76561198417565001",
-          "dotabuff_url": "https://www.dotabuff.com/players/457299273/heroes",
-          "rating": 4801,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "болячка",
-          "steam_id": "76561198833740467",
-          "steam_url": "https://steamcommunity.com/profiles/76561198833740467",
-          "dotabuff_url": "https://www.dotabuff.com/players/873474739/heroes",
-          "rating": 7813,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "Clackson",
-          "steam_id": "76561198058748606",
-          "steam_url": "https://steamcommunity.com/profiles/76561198058748606",
-          "dotabuff_url": "https://www.dotabuff.com/players/98482878/heroes",
-          "rating": 14469,
-          "leaderboard_rank": 337
-        },
-        {
-          "nickname": "Rafael",
-          "steam_id": "76561199800790043",
-          "steam_url": "https://steamcommunity.com/profiles/76561199800790043",
-          "dotabuff_url": "https://www.dotabuff.com/players/1840524315/heroes",
-          "rating": 3414,
-          "leaderboard_rank": null
-        },
-        {
-          "nickname": "B3SHA",
-          "steam_id": "76561199042157320",
-          "steam_url": "https://steamcommunity.com/profiles/76561199042157320",
-          "dotabuff_url": "https://www.dotabuff.com/players/1081891592/heroes",
-          "rating": 13055,
-          "leaderboard_rank": 665
         }
       ]
     },
