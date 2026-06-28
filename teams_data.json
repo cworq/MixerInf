@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28T04:32:56.590535+00:00",
+  "updated_at": "2026-06-28T04:48:03.987989+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -430,7 +430,7 @@
       "url": "https://mixer-cup.gg/ru/team/499543d5-be83-4b4f-a485-c59c402a6584",
       "uuid": "499543d5-be83-4b4f-a485-c59c402a6584",
       "dom_order": 8,
-      "team_rating": 42361,
+      "team_rating": 40276,
       "place": null,
       "games_won": 12,
       "games_lost": 10,
@@ -453,12 +453,12 @@
           "leaderboard_rank": 757
         },
         {
-          "nickname": "Ты тильтуешь под мой смех",
-          "steam_id": "76561198306136083",
-          "steam_url": "https://steamcommunity.com/profiles/76561198306136083",
-          "dotabuff_url": "https://www.dotabuff.com/players/345870355/heroes",
-          "rating": 8970,
-          "leaderboard_rank": 3712
+          "nickname": "amdmc",
+          "steam_id": "76561198995759029",
+          "steam_url": "https://steamcommunity.com/profiles/76561198995759029",
+          "dotabuff_url": "https://www.dotabuff.com/players/1035493301/heroes",
+          "rating": 6885,
+          "leaderboard_rank": null
         },
         {
           "nickname": "lil 17th",
@@ -1013,19 +1013,19 @@
       "url": "https://mixer-cup.gg/ru/team/457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
       "uuid": "457cc3d3-f0ed-43b2-b4f9-9f860131cf0a",
       "dom_order": 19,
-      "team_rating": 43285,
+      "team_rating": 40271,
       "place": null,
       "games_won": 8,
       "games_lost": 14,
       "games_total": 22,
       "players": [
         {
-          "nickname": "newmasksametask",
-          "steam_id": "76561199140576023",
-          "steam_url": "https://steamcommunity.com/profiles/76561199140576023",
-          "dotabuff_url": "https://www.dotabuff.com/players/1180310295/heroes",
-          "rating": 10031,
-          "leaderboard_rank": 2499
+          "nickname": "TaWy_nUBo_go_D0ma",
+          "steam_id": "76561198397845709",
+          "steam_url": "https://steamcommunity.com/profiles/76561198397845709",
+          "dotabuff_url": "https://www.dotabuff.com/players/437579981/heroes",
+          "rating": 7017,
+          "leaderboard_rank": null
         },
         {
           "nickname": "ДрачоМен",
