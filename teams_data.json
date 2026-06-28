@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28T00:47:48.442297+00:00",
+  "updated_at": "2026-06-28T01:03:10.431778+00:00",
   "teams": [
     {
       "name": "Team Ascetic",
@@ -324,12 +324,20 @@
       "url": "https://mixer-cup.gg/ru/team/2aa8251b-4454-4058-b70a-405723435f10",
       "uuid": "2aa8251b-4454-4058-b70a-405723435f10",
       "dom_order": 6,
-      "team_rating": 41672,
+      "team_rating": 42398,
       "place": null,
       "games_won": 12,
       "games_lost": 10,
       "games_total": 22,
       "players": [
+        {
+          "nickname": "Hermoso Ángel",
+          "steam_id": "76561198129184051",
+          "steam_url": "https://steamcommunity.com/profiles/76561198129184051",
+          "dotabuff_url": "https://www.dotabuff.com/players/168918323/heroes",
+          "rating": 10337,
+          "leaderboard_rank": 2745
+        },
         {
           "nickname": "Я с утра напален",
           "steam_id": "76561199124361987",
@@ -355,20 +363,12 @@
           "leaderboard_rank": 2500
         },
         {
-          "nickname": "Sky-Rzn",
-          "steam_id": "76561199010484316",
-          "steam_url": "https://steamcommunity.com/profiles/76561199010484316",
-          "dotabuff_url": "https://www.dotabuff.com/players/1050218588/heroes",
-          "rating": 13288,
-          "leaderboard_rank": 551
-        },
-        {
-          "nickname": "Xyxy#Я  буду вас тра",
-          "steam_id": "76561198137935193",
-          "steam_url": "https://steamcommunity.com/profiles/76561198137935193",
-          "dotabuff_url": "https://www.dotabuff.com/players/177669465/heroes",
-          "rating": 8141,
-          "leaderboard_rank": 4824
+          "nickname": "dream666",
+          "steam_id": "76561199629252901",
+          "steam_url": "https://steamcommunity.com/profiles/76561199629252901",
+          "dotabuff_url": "https://www.dotabuff.com/players/1668987173/heroes",
+          "rating": 11818,
+          "leaderboard_rank": 1078
         }
       ]
     },
