@@ -257,10 +257,14 @@ async def main():
 
         await browser.close()
 
-    # Добавляем timestamp последнего обновления
+    # Добавляем timestamp — всегда меняется, поэтому git всегда делает commit
+    import os
     from datetime import datetime, timezone
+    now = datetime.now(timezone.utc)
     output = {
-        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "updated_at": now.isoformat(),
+        "updated_ts": int(now.timestamp()),  # unix timestamp — гарантированно меняется
+        "run_number": os.environ.get("GITHUB_RUN_NUMBER", "local"),
         "teams": all_teams,
     }
 
