@@ -92,10 +92,13 @@ async def scrape_team(page, team):
             except: pass
     page.on("response", on_resp)
     try:
-        await page.goto(team["url"], wait_until="networkidle", timeout=25000)
-        await page.wait_for_timeout(2000)
+        await page.goto(team["url"], wait_until="networkidle", timeout=35000)
+        # Extra wait for CI runners (slower than local machine)
+        await page.wait_for_timeout(4000)
     except Exception as e:
         log(f"goto error: {e}")
+    # Give pending XHR/fetch calls a bit more time to complete
+    await page.wait_for_timeout(1500)
     page.remove_listener("response", on_resp)
 
     for body in fresh:
@@ -103,6 +106,8 @@ async def scrape_team(page, team):
         if players:
             log(f"API: {len(players)} players")
             return api_name or team["name"], players, team_info
+
+    # Try __NEXT_DATA__
     try:
         nd = await page.evaluate("""
             () => { const e = document.getElementById('__NEXT_DATA__');
@@ -113,7 +118,33 @@ async def scrape_team(page, team):
             if players:
                 return api_name or team["name"], players, team_info
     except: pass
-    log("no players found")
+
+    # No data found - retry once with longer wait
+    log("no players found, retrying...")
+    await page.wait_for_timeout(5000)
+    fresh2 = []
+    async def on_resp2(resp):
+        ct = resp.headers.get("content-type", "")
+        if ("json" in ct and resp.status == 200
+                and "mixer-cup" in resp.url
+                and "yandex" not in resp.url):
+            try: fresh2.append(await resp.json())
+            except: pass
+    page.on("response", on_resp2)
+    try:
+        await page.goto(team["url"], wait_until="networkidle", timeout=35000)
+        await page.wait_for_timeout(5000)
+    except Exception as e:
+        log(f"retry goto error: {e}")
+    page.remove_listener("response", on_resp2)
+
+    for body in fresh2:
+        api_name, players, team_info = parse_team_api(body)
+        if players:
+            log(f"API (retry): {len(players)} players")
+            return api_name or team["name"], players, team_info
+
+    log("no players found after retry")
     return team["name"], [], {}
 
 
@@ -178,12 +209,34 @@ async def main():
         for i, t in enumerate(teams, 1):
             print(f"  {i:2}. {t['clean_name']}", flush=True)
 
+        # Загружаем старые данные как fallback если парсинг вернул пустых игроков
+        existing_by_uuid = {}
+        if Path(OUTPUT_FILE).exists():
+            try:
+                old_json = json.loads(Path(OUTPUT_FILE).read_text(encoding="utf-8"))
+                old_teams = old_json.get("teams", []) if isinstance(old_json, dict) else old_json
+                existing_by_uuid = {t["uuid"]: t for t in old_teams if t.get("uuid")}
+                log(f"Fallback cache: {len(existing_by_uuid)} teams loaded")
+            except: pass
+
         print(f"\n[2/2] Парсим страницы команд...", flush=True)
         for i, team in enumerate(teams, 1):
             print(f"\n  [{i:2}/{len(teams)}] {team['clean_name']}", flush=True)
             api_name, players, team_info = await scrape_team(page, team)
             display_name = api_name if api_name else team["clean_name"]
-            team_rating  = sum(p["rating"] for p in players if p.get("rating")) or 0
+
+            # Если игроки не найдены — берём старые данные
+            if not players and team["uuid"] in existing_by_uuid:
+                cached = existing_by_uuid[team["uuid"]]
+                players = cached.get("players", [])
+                if not team_info.get("place"):
+                    team_info["place"]       = cached.get("place")
+                    team_info["games_won"]   = cached.get("games_won")
+                    team_info["games_lost"]  = cached.get("games_lost")
+                    team_info["games_total"] = cached.get("games_total")
+                log(f"Used cached data: {len(players)} players")
+
+            team_rating = sum(p["rating"] for p in players if p.get("rating")) or 0
 
             all_teams.append({
                 "name":        display_name,
@@ -220,4 +273,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.run(main()) 
+    asyncio.run(main())
