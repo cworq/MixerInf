@@ -2,15 +2,13 @@
 """
 mixer-cup.gg Parser — GitHub Actions version (headless)
 - Парсит команды: названия, игроков, Steam ID, рейтинги, место в турнире
-- Сохраняет ТОЛЬКО teams_data.json (HTML — отдельный статический файл index.html,
-  который сам подгружает этот JSON через fetch)
-
-Запуск (локально или в CI): python scraper.py
+- Сохраняет ТОЛЬКО teams_data.json
 """
 
 import asyncio, json, re, os
 from pathlib import Path
 from playwright.async_api import async_playwright
+from playwright_stealth import stealth_async
 
 OUTPUT_FILE = "teams_data.json"
 
@@ -120,12 +118,16 @@ async def main():
     print("=" * 50, flush=True)
     all_teams = []
 
-    # Читаем куки из секретов GitHub
-    my_cookie_raw = os.environ.get("MIXER_COOKIE", "")
+    # 1. Считываем и жестко очищаем куки
+    my_cookie_raw = os.environ.get("MIXER_COOKIE", "").strip()
+    
     if not my_cookie_raw:
         print("⚠️ ВНИМАНИЕ: Секрет MIXER_COOKIE пустой! Проверь настройки GitHub Secrets.", flush=True)
     else:
-        print("✅ Секрет MIXER_COOKIE найден, пытаюсь применить...", flush=True)
+        # Если случайно скопировал со словом "Cookie:" - скрипт сам это исправит
+        if my_cookie_raw.lower().startswith("cookie:"):
+            my_cookie_raw = re.sub(r'(?i)^cookie:\s*', '', my_cookie_raw)
+        print(f"✅ Секрет MIXER_COOKIE найден (начинается с: {my_cookie_raw[:10]}...). Применяю...", flush=True)
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(
@@ -136,13 +138,21 @@ async def main():
                 "--disable-setuid-sandbox"
             ],
         )
+        
+        # 2. Формируем "человеческие" заголовки для Nginx
+        extra_headers = {
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+        }
+        
         context = await browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
             viewport={"width": 1440, "height": 900},
             locale="ru-RU",
+            extra_http_headers=extra_headers
         )
 
-        # ПРАВИЛЬНАЯ интеграция куков
+        # 3. Интегрируем куки
         if my_cookie_raw:
             try:
                 cookies_list = json.loads(my_cookie_raw)
@@ -150,17 +160,19 @@ async def main():
                     if 'sameSite' in c and c['sameSite'] not in ['Strict', 'Lax', 'None']:
                         del c['sameSite']
                 await context.add_cookies(cookies_list)
-                print("  -> Куки (JSON) успешно интегрированы в скрытый браузер!", flush=True)
+                print("  -> Куки (JSON) успешно интегрированы!", flush=True)
             except json.JSONDecodeError:
-                await context.set_extra_http_headers({"Cookie": my_cookie_raw})
-                print("  -> Куки (Raw String) добавлены в заголовки!", flush=True)
+                # Если сырая строка, добавляем напрямую, но УЖЕ без слова Cookie:
+                extra_headers["Cookie"] = my_cookie_raw
+                await context.set_extra_http_headers(extra_headers)
+                print("  -> Куки (Сырая строка) очищены и добавлены в заголовки!", flush=True)
             except Exception as e:
                 print(f"  ❌ Ошибка при добавлении куков: {e}", flush=True)
 
-        await context.add_init_script(
-            "Object.defineProperty(navigator,'webdriver',{get:()=>undefined});"
-        )
         page = await context.new_page()
+        
+        # 4. Активируем анти-детект режим (Stealth), чтобы скрыть бота от защиты сайта
+        await stealth_async(page)
 
         print("\n[1/2] Загружаем список команд...", flush=True)
         try:
@@ -176,9 +188,9 @@ async def main():
         try:
             await page.wait_for_selector("a[href*='/team/']", timeout=15000)
         except Exception:
-            print("  ⚠️ Селектор команд не появился по таймауту. Пробую сделать скролл...", flush=True)
+            print("  ⚠️ Селектор команд не появился. Пробую сделать скролл...", flush=True)
 
-        print("  -> Выполняю эмуляцию прокрутки для прогрузки JS-элементов...", flush=True)
+        print("  -> Выполняю эмуляцию прокрутки...", flush=True)
         await page.evaluate("""
             async () => {
                 await new Promise((resolve) => {
@@ -206,8 +218,8 @@ async def main():
             print("❌ Ссылок не обнаружено. Содержимое страницы (первые 1000 симв):", flush=True)
             content = await page.content()
             print(content[:1000], flush=True)
-            if "Cloudflare" in content or "Just a moment" in content or "403 Forbidden" in content:
-                print("🚨 Бот заблокирован защитой сайта в режиме headless!", flush=True)
+            if "403 Forbidden" in content or "Cloudflare" in content:
+                print("🚨 Бот заблокирован защитой сайта! (Скорее всего куки устарели или IP сервера забанен)", flush=True)
 
         seen  = {}
         teams = []
