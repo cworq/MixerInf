@@ -92,13 +92,10 @@ async def scrape_team(page, team):
             except: pass
     page.on("response", on_resp)
     try:
-        await page.goto(team["url"], wait_until="networkidle", timeout=35000)
-        # Extra wait for CI runners (slower than local machine)
-        await page.wait_for_timeout(4000)
+        await page.goto(team["url"], wait_until="networkidle", timeout=25000)
+        await page.wait_for_timeout(2000)
     except Exception as e:
         log(f"goto error: {e}")
-    # Give pending XHR/fetch calls a bit more time to complete
-    await page.wait_for_timeout(1500)
     page.remove_listener("response", on_resp)
 
     for body in fresh:
@@ -106,8 +103,6 @@ async def scrape_team(page, team):
         if players:
             log(f"API: {len(players)} players")
             return api_name or team["name"], players, team_info
-
-    # Try __NEXT_DATA__
     try:
         nd = await page.evaluate("""
             () => { const e = document.getElementById('__NEXT_DATA__');
@@ -118,33 +113,7 @@ async def scrape_team(page, team):
             if players:
                 return api_name or team["name"], players, team_info
     except: pass
-
-    # No data found - retry once with longer wait
-    log("no players found, retrying...")
-    await page.wait_for_timeout(5000)
-    fresh2 = []
-    async def on_resp2(resp):
-        ct = resp.headers.get("content-type", "")
-        if ("json" in ct and resp.status == 200
-                and "mixer-cup" in resp.url
-                and "yandex" not in resp.url):
-            try: fresh2.append(await resp.json())
-            except: pass
-    page.on("response", on_resp2)
-    try:
-        await page.goto(team["url"], wait_until="networkidle", timeout=35000)
-        await page.wait_for_timeout(5000)
-    except Exception as e:
-        log(f"retry goto error: {e}")
-    page.remove_listener("response", on_resp2)
-
-    for body in fresh2:
-        api_name, players, team_info = parse_team_api(body)
-        if players:
-            log(f"API (retry): {len(players)} players")
-            return api_name or team["name"], players, team_info
-
-    log("no players found after retry")
+    log("no players found")
     return team["name"], [], {}
 
 
@@ -154,10 +123,13 @@ async def main():
     all_teams = []
 
     async with async_playwright() as p:
-        # headless=True — без GUI, подходит для GitHub Actions
         browser = await p.chromium.launch(
             headless=True,
-            args=["--disable-blink-features=AutomationControlled"],
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox",
+                "--disable-setuid-sandbox"
+            ],
         )
         context = await browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
@@ -170,18 +142,62 @@ async def main():
         page = await context.new_page()
 
         print("\n[1/2] Загружаем список команд...", flush=True)
-        await page.goto("https://mixer-cup.gg/ru/active-tour",
-                        wait_until="networkidle", timeout=30000)
-        await page.wait_for_timeout(3000)
+        try:
+            response = await page.goto("https://mixer-cup.gg/ru/active-tour",
+                            wait_until="domcontentloaded", timeout=45000)
+            print(f"  -> Статус ответа сайта: {response.status if response else 'Нет ответа'}", flush=True)
+        except Exception as e:
+            print(f"❌ Не удалось загрузить главную страницу: {e}", flush=True)
+            await browser.close()
+            return
+
+        # Ждем исчезновения скелетонов и появления контейнера команд
+        print("  -> Ожидаю рендеринга карточек команд...", flush=True)
+        try:
+            # Ждем появления хотя бы одной ссылки на команду на странице
+            await page.wait_for_selector("a[href*='/team/']", timeout=15000)
+        except Exception:
+            print("  ⚠️ Селектор команд не появился по таймауту. Пробую сделать скролл...", flush=True)
+
+        # ХИТРЫЙ ТРЮК: Авто-скролл страницы вниз-вверх для ленивой загрузки (lazy-load)
+        print("  -> Выполняю эмуляцию прокрутки для прогрузки JS-элементов...", flush=True)
+        await page.evaluate("""
+            async () => {
+                await new Promise((resolve) => {
+                    let totalHeight = 0;
+                    let distance = 200;
+                    let timer = setInterval(() => {
+                        let scrollHeight = document.body.scrollHeight;
+                        window.scrollBy(0, distance);
+                        totalHeight += distance;
+                        if(totalHeight >= scrollHeight || totalHeight > 4000){
+                            clearInterval(timer);
+                            window.scrollTo(0, 0); // возвращаемся наверх
+                            resolve();
+                        }
+                    }, 100);
+                });
+            }
+        """)
+        await page.wait_for_timeout(2000)
 
         els = await page.query_selector_all("a[href*='/team/']")
         log(f"Найдено ссылок: {len(els)}")
+
+        # Если ссылок всё еще 0, выводим кусок HTML для диагностики в СI
+        if len(els) == 0:
+            print("❌ Ссылок не обнаружено. Содержимое страницы (первые 1000 симв):", flush=True)
+            content = await page.content()
+            print(content[:1000], flush=True)
+            if "Cloudflare" in content or "Just a moment" in content:
+                print("🚨 Бот заблокирован защитой Cloudflare в режиме headless!", flush=True)
 
         seen  = {}
         teams = []
         for el in els:
             href = (await el.get_attribute("href") or "").strip()
-            if "/ru/team/" not in href:
+            # Проверяем как относительные, так и абсолютные ссылки
+            if "/team/" not in href:
                 continue
             m = re.search(r'/team/([0-9a-f-]{36})', href)
             if not m:
@@ -194,7 +210,7 @@ async def main():
             teams.append({
                 "name":       text or href,
                 "clean_name": clean_team_name(text or href),
-                "url":        f"https://mixer-cup.gg{href}",
+                "url":        f"https://mixer-cup.gg{href}" if href.startswith('/') else href,
                 "uuid":       uuid,
                 "dom_order":  len(teams),
             })
@@ -209,34 +225,12 @@ async def main():
         for i, t in enumerate(teams, 1):
             print(f"  {i:2}. {t['clean_name']}", flush=True)
 
-        # Загружаем старые данные как fallback если парсинг вернул пустых игроков
-        existing_by_uuid = {}
-        if Path(OUTPUT_FILE).exists():
-            try:
-                old_json = json.loads(Path(OUTPUT_FILE).read_text(encoding="utf-8"))
-                old_teams = old_json.get("teams", []) if isinstance(old_json, dict) else old_json
-                existing_by_uuid = {t["uuid"]: t for t in old_teams if t.get("uuid")}
-                log(f"Fallback cache: {len(existing_by_uuid)} teams loaded")
-            except: pass
-
         print(f"\n[2/2] Парсим страницы команд...", flush=True)
         for i, team in enumerate(teams, 1):
             print(f"\n  [{i:2}/{len(teams)}] {team['clean_name']}", flush=True)
             api_name, players, team_info = await scrape_team(page, team)
             display_name = api_name if api_name else team["clean_name"]
-
-            # Если игроки не найдены — берём старые данные
-            if not players and team["uuid"] in existing_by_uuid:
-                cached = existing_by_uuid[team["uuid"]]
-                players = cached.get("players", [])
-                if not team_info.get("place"):
-                    team_info["place"]       = cached.get("place")
-                    team_info["games_won"]   = cached.get("games_won")
-                    team_info["games_lost"]  = cached.get("games_lost")
-                    team_info["games_total"] = cached.get("games_total")
-                log(f"Used cached data: {len(players)} players")
-
-            team_rating = sum(p["rating"] for p in players if p.get("rating")) or 0
+            team_rating  = sum(p["rating"] for p in players if p.get("rating")) or 0
 
             all_teams.append({
                 "name":        display_name,
@@ -253,18 +247,14 @@ async def main():
             log(f"Игроков: {len(players)}, рейтинг: {team_rating:,}")
             for pl in players:
                 log(f"  {pl['nickname'][:28]:28s}  {pl.get('steam_id') or '--'}")
-            await asyncio.sleep(0.5)
+            await asyncio.sleep(1.0) # Чуть увеличили задержку, чтобы не триггерить лимиты бэкенда
 
         await browser.close()
 
-    # Добавляем timestamp — всегда меняется, поэтому git всегда делает commit
-    import os
+    # Добавляем timestamp последнего обновления
     from datetime import datetime, timezone
-    now = datetime.now(timezone.utc)
     output = {
-        "updated_at": now.isoformat(),
-        "updated_ts": int(now.timestamp()),  # unix timestamp — гарантированно меняется
-        "run_number": os.environ.get("GITHUB_RUN_NUMBER", "local"),
+        "updated_at": datetime.now(timezone.utc).isoformat(),
         "teams": all_teams,
     }
 
@@ -277,4 +267,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(main()) 
