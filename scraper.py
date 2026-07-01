@@ -8,7 +8,6 @@ mixer-cup.gg Parser — GitHub Actions version (headless)
 import asyncio, json, re, os
 from pathlib import Path
 from playwright.async_api import async_playwright
-from playwright_stealth import stealth
 
 OUTPUT_FILE = "teams_data.json"
 
@@ -169,10 +168,11 @@ async def main():
             except Exception as e:
                 print(f"  ❌ Ошибка при добавлении куков: {e}", flush=True)
 
+        # Базовый антидетект
+        await context.add_init_script(
+            "Object.defineProperty(navigator,'webdriver',{get:()=>undefined});"
+        )
         page = await context.new_page()
-        
-        # 4. Активируем анти-детект режим (Stealth), чтобы скрыть бота от защиты сайта
-        await stealth(page)
 
         print("\n[1/2] Загружаем список команд...", flush=True)
         try:
@@ -230,67 +230,4 @@ async def main():
             m = re.search(r'/team/([0-9a-f-]{36})', href)
             if not m:
                 continue
-            uuid = m.group(1)
-            if uuid in seen:
-                continue
-            seen[uuid] = True
-            text = (await el.inner_text()).strip().replace("\n", " ")
-            teams.append({
-                "name":       text or href,
-                "clean_name": clean_team_name(text or href),
-                "url":        f"https://mixer-cup.gg{href}" if href.startswith('/') else href,
-                "uuid":       uuid,
-                "dom_order":  len(teams),
-            })
-
-        log(f"Уникальных команд: {len(teams)}")
-        if not teams:
-            print("Команды не найдены!", flush=True)
-            await browser.close()
-            return
-
-        print(f"\nНайдено {len(teams)} команд:", flush=True)
-        for i, t in enumerate(teams, 1):
-            print(f"  {i:2}. {t['clean_name']}", flush=True)
-
-        print(f"\n[2/2] Парсим страницы команд...", flush=True)
-        for i, team in enumerate(teams, 1):
-            print(f"\n  [{i:2}/{len(teams)}] {team['clean_name']}", flush=True)
-            api_name, players, team_info = await scrape_team(page, team)
-            display_name = api_name if api_name else team["clean_name"]
-            team_rating  = sum(p["rating"] for p in players if p.get("rating")) or 0
-
-            all_teams.append({
-                "name":        display_name,
-                "url":         team["url"],
-                "uuid":        team["uuid"],
-                "dom_order":   team["dom_order"],
-                "team_rating": team_rating,
-                "place":       team_info.get("place"),
-                "games_won":   team_info.get("games_won"),
-                "games_lost":  team_info.get("games_lost"),
-                "games_total": team_info.get("games_total"),
-                "players":     players,
-            })
-            log(f"Игроков: {len(players)}, рейтинг: {team_rating:,}")
-            for pl in players:
-                log(f"  {pl['nickname'][:28]:28s}  {pl.get('steam_id') or '--'}")
-            await asyncio.sleep(1.0)
-
-        await browser.close()
-
-    from datetime import datetime, timezone
-    output = {
-        "updated_at": datetime.now(timezone.utc).isoformat(),
-        "teams": all_teams,
-    }
-
-    wj(OUTPUT_FILE, output)
-    print(f"\nСохранено -> {OUTPUT_FILE}", flush=True)
-
-    total_p = sum(len(t["players"]) for t in all_teams)
-    total_s = sum(1 for t in all_teams for p in t["players"] if p.get("steam_id"))
-    print(f"\nГотово! Команд:{len(all_teams)}  Игроков:{total_p}  Steam ID:{total_s}", flush=True)
-
-if __name__ == "__main__":
-    asyncio.run(main())
+            uuid =
