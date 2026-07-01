@@ -8,7 +8,7 @@ mixer-cup.gg Parser — GitHub Actions version (headless)
 import asyncio, json, re, os
 from pathlib import Path
 from playwright.async_api import async_playwright
-from playwright_stealth import stealth_async
+from playwright_stealth import stealth
 
 OUTPUT_FILE = "teams_data.json"
 
@@ -172,7 +172,7 @@ async def main():
         page = await context.new_page()
         
         # 4. Активируем анти-детект режим (Stealth), чтобы скрыть бота от защиты сайта
-        await stealth_async(page)
+        await stealth(page)
 
         print("\n[1/2] Загружаем список команд...", flush=True)
         try:
