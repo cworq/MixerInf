@@ -7,7 +7,7 @@ mixer-cup.gg Parser — GitHub Actions version (headless)
 
 Запуск (локально или в CI): python scraper.py
 """
-
+import os
 import asyncio, json, re
 from pathlib import Path
 from playwright.async_api import async_playwright
@@ -122,6 +122,9 @@ async def main():
     print("=" * 50, flush=True)
     all_teams = []
 
+    # Читаем куки из секретов GitHub (или оставляем пустым, если запускаем локально без файла)
+    my_cookie = os.environ.get("MIXER_COOKIE", "")
+
     async with async_playwright() as p:
         browser = await p.chromium.launch(
             headless=True,
@@ -131,11 +134,17 @@ async def main():
                 "--disable-setuid-sandbox"
             ],
         )
+        
+        # Передаем наши куки прямо в заголовки браузера!
         context = await browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
             viewport={"width": 1440, "height": 900},
             locale="ru-RU",
+            extra_http_headers={
+                "Cookie": my_cookie
+            } if my_cookie else {}
         )
+        
         await context.add_init_script(
             "Object.defineProperty(navigator,'webdriver',{get:()=>undefined});"
         )
