@@ -7,8 +7,8 @@ mixer-cup.gg Parser — GitHub Actions version (headless)
 
 Запуск (локально или в CI): python scraper.py
 """
-import os
-import asyncio, json, re
+
+import asyncio, json, re, os
 from pathlib import Path
 from playwright.async_api import async_playwright
 
@@ -80,7 +80,6 @@ def parse_team_api(body):
         log(f"parse error: {e}")
         return None, [], {}
 
-
 async def scrape_team(page, team):
     fresh = []
     async def on_resp(resp):
@@ -116,14 +115,17 @@ async def scrape_team(page, team):
     log("no players found")
     return team["name"], [], {}
 
-
 async def main():
     print("Mixer-cup.gg Parser (headless / CI)", flush=True)
     print("=" * 50, flush=True)
     all_teams = []
 
-    # Читаем куки из секретов GitHub (или оставляем пустым, если запускаем локально без файла)
-    my_cookie = os.environ.get("MIXER_COOKIE", "")
+    # Читаем куки из секретов GitHub
+    my_cookie_raw = os.environ.get("MIXER_COOKIE", "")
+    if not my_cookie_raw:
+        print("⚠️ ВНИМАНИЕ: Секрет MIXER_COOKIE пустой! Проверь настройки GitHub Secrets.", flush=True)
+    else:
+        print("✅ Секрет MIXER_COOKIE найден, пытаюсь применить...", flush=True)
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(
@@ -134,17 +136,27 @@ async def main():
                 "--disable-setuid-sandbox"
             ],
         )
-        
-        # Передаем наши куки прямо в заголовки браузера!
         context = await browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
             viewport={"width": 1440, "height": 900},
             locale="ru-RU",
-            extra_http_headers={
-                "Cookie": my_cookie
-            } if my_cookie else {}
         )
-        
+
+        # ПРАВИЛЬНАЯ интеграция куков
+        if my_cookie_raw:
+            try:
+                cookies_list = json.loads(my_cookie_raw)
+                for c in cookies_list:
+                    if 'sameSite' in c and c['sameSite'] not in ['Strict', 'Lax', 'None']:
+                        del c['sameSite']
+                await context.add_cookies(cookies_list)
+                print("  -> Куки (JSON) успешно интегрированы в скрытый браузер!", flush=True)
+            except json.JSONDecodeError:
+                await context.set_extra_http_headers({"Cookie": my_cookie_raw})
+                print("  -> Куки (Raw String) добавлены в заголовки!", flush=True)
+            except Exception as e:
+                print(f"  ❌ Ошибка при добавлении куков: {e}", flush=True)
+
         await context.add_init_script(
             "Object.defineProperty(navigator,'webdriver',{get:()=>undefined});"
         )
@@ -160,15 +172,12 @@ async def main():
             await browser.close()
             return
 
-        # Ждем исчезновения скелетонов и появления контейнера команд
         print("  -> Ожидаю рендеринга карточек команд...", flush=True)
         try:
-            # Ждем появления хотя бы одной ссылки на команду на странице
             await page.wait_for_selector("a[href*='/team/']", timeout=15000)
         except Exception:
             print("  ⚠️ Селектор команд не появился по таймауту. Пробую сделать скролл...", flush=True)
 
-        # ХИТРЫЙ ТРЮК: Авто-скролл страницы вниз-вверх для ленивой загрузки (lazy-load)
         print("  -> Выполняю эмуляцию прокрутки для прогрузки JS-элементов...", flush=True)
         await page.evaluate("""
             async () => {
@@ -181,7 +190,7 @@ async def main():
                         totalHeight += distance;
                         if(totalHeight >= scrollHeight || totalHeight > 4000){
                             clearInterval(timer);
-                            window.scrollTo(0, 0); // возвращаемся наверх
+                            window.scrollTo(0, 0);
                             resolve();
                         }
                     }, 100);
@@ -193,19 +202,17 @@ async def main():
         els = await page.query_selector_all("a[href*='/team/']")
         log(f"Найдено ссылок: {len(els)}")
 
-        # Если ссылок всё еще 0, выводим кусок HTML для диагностики в СI
         if len(els) == 0:
             print("❌ Ссылок не обнаружено. Содержимое страницы (первые 1000 симв):", flush=True)
             content = await page.content()
             print(content[:1000], flush=True)
-            if "Cloudflare" in content or "Just a moment" in content:
-                print("🚨 Бот заблокирован защитой Cloudflare в режиме headless!", flush=True)
+            if "Cloudflare" in content or "Just a moment" in content or "403 Forbidden" in content:
+                print("🚨 Бот заблокирован защитой сайта в режиме headless!", flush=True)
 
         seen  = {}
         teams = []
         for el in els:
             href = (await el.get_attribute("href") or "").strip()
-            # Проверяем как относительные, так и абсолютные ссылки
             if "/team/" not in href:
                 continue
             m = re.search(r'/team/([0-9a-f-]{36})', href)
@@ -256,11 +263,10 @@ async def main():
             log(f"Игроков: {len(players)}, рейтинг: {team_rating:,}")
             for pl in players:
                 log(f"  {pl['nickname'][:28]:28s}  {pl.get('steam_id') or '--'}")
-            await asyncio.sleep(1.0) # Чуть увеличили задержку, чтобы не триггерить лимиты бэкенда
+            await asyncio.sleep(1.0)
 
         await browser.close()
 
-    # Добавляем timestamp последнего обновления
     from datetime import datetime, timezone
     output = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
@@ -274,6 +280,5 @@ async def main():
     total_s = sum(1 for t in all_teams for p in t["players"] if p.get("steam_id"))
     print(f"\nГотово! Команд:{len(all_teams)}  Игроков:{total_p}  Steam ID:{total_s}", flush=True)
 
-
 if __name__ == "__main__":
-    asyncio.run(main()) 
+    asyncio.run(main())
