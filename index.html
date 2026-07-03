@@ -3,7 +3,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mixer Cup — Teams</title>
-<link rel="icon" href="www.png">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -13,156 +12,193 @@
   --gold:#d4af37; --gold-soft:rgba(212,175,55,.12);
   --em:#1fae84; --em-d:#147a5c; --em-soft:rgba(31,174,132,.12);
   --gr:#3ecf8e; --red:#ef5f6b; --blue:#6aa0ff; --purple:#a78bfa;
+  --orange:#f97316;
 }
 * { box-sizing:border-box; margin:0; padding:0 }
 html { background:var(--bg); scroll-behavior:smooth }
-@media (prefers-reduced-motion:reduce) { * { animation:none !important; transition:none !important } }
 body { background:
         radial-gradient(900px 500px at 50% -200px, rgba(31,174,132,.06), transparent 70%),
         var(--bg);
        color:var(--tx); font-family:'Sora',sans-serif; min-height:100vh;
        -webkit-font-smoothing:antialiased }
 
-header { padding:26px 28px 18px; max-width:920px; margin:0 auto }
+/* ── Header ── */
+header { padding:26px 28px 18px; max-width:980px; margin:0 auto }
 .brand { display:flex; align-items:center; gap:12px }
-.logo { width:38px; height:38px; border-radius:10px; flex-shrink:0; object-fit:cover;
-        border:1px solid var(--em-d);
-        box-shadow:0 4px 14px rgba(31,174,132,.22) }
-h1 { font-size:21px; font-weight:700; letter-spacing:-.02em; line-height:1 }
+.logo  { width:38px; height:38px; border-radius:10px; flex-shrink:0; object-fit:cover;
+         border:1px solid var(--em-d); box-shadow:0 4px 14px rgba(31,174,132,.22) }
+h1   { font-size:21px; font-weight:700; letter-spacing:-.02em; line-height:1 }
 .sub { color:var(--mt); font-size:11px; margin-top:3px; letter-spacing:.02em }
 .gold-tx { color:var(--em) }
 
-.topbar { max-width:920px; margin:0 auto; display:flex; align-items:center;
-          gap:16px; flex-wrap:wrap; padding:12px 28px 0 }
-.stats { display:flex; align-items:center; gap:18px }
-.st  { display:flex; flex-direction:column; gap:1px }
-.sn  { font-size:17px; font-weight:700; color:var(--tx); font-family:'JetBrains Mono',monospace; line-height:1 }
-.sl2 { font-size:9.5px; text-transform:uppercase; letter-spacing:1.4px; color:var(--mt) }
-.controls { margin-left:auto; display:flex; gap:6px; align-items:center; flex-wrap:wrap }
+/* ── Topbar stats ── */
+.topbar { max-width:980px; margin:0 auto; padding:12px 28px 0;
+          display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap }
+
+.stats-row { display:flex; gap:14px; flex-wrap:wrap; flex:1 }
+
+.st  { display:flex; flex-direction:column; gap:1px;
+       background:var(--card); border:1px solid var(--brd-soft); border-radius:10px;
+       padding:10px 14px; min-width:80px }
+.sn  { font-size:16px; font-weight:700; color:var(--tx);
+       font-family:'JetBrains Mono',monospace; line-height:1 }
+.sl2 { font-size:9px; text-transform:uppercase; letter-spacing:1.4px;
+       color:var(--mt); margin-top:3px }
+.sn.gold   { color:var(--gold) }
+.sn.green  { color:var(--em) }
+.sn.orange { color:var(--orange) }
+
+/* ── Controls ── */
+.controls { display:flex; gap:6px; align-items:center; flex-wrap:wrap }
 input { background:var(--card); border:1px solid var(--brd); color:var(--tx);
         font-family:'Sora',sans-serif; font-size:13px; padding:8px 13px;
-        border-radius:9px; width:220px; outline:none; transition:border-color .2s, box-shadow .2s }
+        border-radius:9px; width:230px; outline:none;
+        transition:border-color .2s, box-shadow .2s }
 input::placeholder { color:var(--mt) }
 input:focus { border-color:var(--em-d); box-shadow:0 0 0 3px var(--em-soft) }
 .sbtn { background:var(--card); border:1px solid var(--brd); color:var(--mt);
-        font-family:'Sora',sans-serif; font-size:12px; font-weight:500; padding:8px 13px;
-        border-radius:9px; cursor:pointer; transition:all .25s ease; white-space:nowrap }
+        font-family:'Sora',sans-serif; font-size:12px; font-weight:500;
+        padding:8px 13px; border-radius:9px; cursor:pointer;
+        transition:all .25s ease; white-space:nowrap }
 .sbtn:hover { color:var(--tx); border-color:#33363f }
 .sbtn.active { background:var(--em-soft); border-color:rgba(31,174,132,.45); color:var(--em) }
 #updated { font-size:10px; color:var(--mt); margin-left:2px }
 
-.list { max-width:920px; margin:0 auto; padding:18px 28px 8px;
+/* ── Cards ── */
+.list { max-width:980px; margin:0 auto; padding:18px 28px 8px;
         display:flex; flex-direction:column; gap:8px }
 
 .card { background:var(--card); border:1px solid var(--brd-soft); border-radius:12px;
         overflow:hidden;
-        transition:border-color .3s ease, background .3s ease, opacity .35s ease, transform .35s ease;
+        transition:border-color .3s, background .3s;
         animation:cardIn .4s cubic-bezier(.22,.61,.36,1) both }
 .card:hover { border-color:var(--brd) }
-.card.open { border-color:rgba(31,174,132,.32); background:var(--card-h) }
-.card.hiding { opacity:0; transform:translateY(-6px) scale(.985) }
+.card.open  { border-color:rgba(31,174,132,.32); background:var(--card-h) }
 
-@keyframes cardIn { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:none } }
+@keyframes cardIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
 
-.ch { display:flex; align-items:center; gap:13px; padding:13px 16px; cursor:pointer;
-      user-select:none; transition:background .25s ease }
-.rank { width:30px; height:30px; border-radius:50%; flex-shrink:0;
+/* ── Card header ── */
+.ch { display:flex; align-items:center; gap:10px; padding:12px 16px;
+      cursor:pointer; user-select:none }
+
+.rank { width:28px; height:28px; border-radius:50%; flex-shrink:0;
         display:flex; align-items:center; justify-content:center;
-        font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700;
+        font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700;
         background:var(--em-soft); color:var(--em);
         border:1px solid rgba(31,174,132,.32) }
-.card:nth-child(1) .rank, .rank.r1 {
-        background:linear-gradient(140deg,var(--em),var(--em-d)); color:#04140f; border-color:transparent;
-        box-shadow:0 3px 10px rgba(31,174,132,.32) }
-.tn   { font-weight:600; font-size:14px; color:var(--tx); flex:1; min-width:0;
-        white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
-.wl   { font-family:'JetBrains Mono',monospace; font-size:11px; flex-shrink:0; letter-spacing:.02em }
-.w    { color:var(--gr) } .l { color:var(--red) }
-.trat { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--gold);
+.rank.r1 { background:linear-gradient(140deg,var(--em),var(--em-d));
+            color:#04140f; border-color:transparent;
+            box-shadow:0 3px 10px rgba(31,174,132,.32) }
+.rank.r2 { background:rgba(212,175,55,.15); color:var(--gold);
+            border-color:rgba(212,175,55,.35) }
+.rank.r3 { background:rgba(249,115,22,.12); color:var(--orange);
+            border-color:rgba(249,115,22,.35) }
+
+.tn  { font-weight:600; font-size:14px; flex:1; min-width:0;
+       white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+
+/* W/L блок */
+.wl-block { display:flex; gap:4px; align-items:center; flex-shrink:0 }
+.wbadge,.lbadge { font-family:'JetBrains Mono',monospace; font-size:10px;
+                  font-weight:600; padding:2px 7px; border-radius:5px }
+.wbadge { background:rgba(62,207,142,.12); color:var(--gr);
+           border:1px solid rgba(62,207,142,.28) }
+.lbadge { background:rgba(239,95,107,.1); color:var(--red);
+           border:1px solid rgba(239,95,107,.25) }
+
+/* Σ рейтинг + AVG */
+.team-meta { display:flex; gap:6px; flex-shrink:0; align-items:center }
+.trat { font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--gold);
         background:var(--gold-soft); border:1px solid rgba(212,175,55,.22);
-        padding:3px 9px; border-radius:20px; flex-shrink:0 }
+        padding:2px 8px; border-radius:20px }
+.tavg { font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--em);
+        background:var(--em-soft); border:1px solid rgba(31,174,132,.22);
+        padding:2px 8px; border-radius:20px }
+
 .chev { color:var(--mt); flex-shrink:0; display:flex;
-        transition:transform .4s cubic-bezier(.22,.61,.36,1), color .3s ease }
+        transition:transform .4s cubic-bezier(.22,.61,.36,1), color .3s }
 .card.open .chev { transform:rotate(180deg); color:var(--em) }
 
+/* ── Card body ── */
 .body { display:grid; grid-template-rows:0fr; opacity:0;
-        transition:grid-template-rows .4s cubic-bezier(.22,.61,.36,1), opacity .3s ease }
+        transition:grid-template-rows .4s cubic-bezier(.22,.61,.36,1), opacity .3s }
 .card.open .body { grid-template-rows:1fr; opacity:1 }
 .body-inner { overflow:hidden }
 
-table { width:100%; border-collapse:collapse; table-layout:auto }
-thead th { font-size:9.5px; text-transform:uppercase; letter-spacing:1.2px; color:var(--mt);
-           padding:8px 16px; text-align:left; border-top:1px solid var(--brd-soft);
-           border-bottom:1px solid var(--brd-soft); font-weight:600 }
+table { width:100%; border-collapse:collapse }
+thead th { font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--mt);
+           padding:7px 16px; text-align:left;
+           border-top:1px solid var(--brd-soft); border-bottom:1px solid var(--brd-soft);
+           font-weight:600 }
 thead th.r { text-align:right }
-.pr td { padding:9px 16px; border-bottom:1px solid var(--brd-soft); vertical-align:middle;
-         transition:background .25s ease }
+.pr td { padding:8px 16px; border-bottom:1px solid var(--brd-soft); vertical-align:middle }
 .pr:last-child td { border-bottom:none }
 .pr:hover td { background:rgba(31,174,132,.04) }
 .pnum { color:var(--mt); font-family:'JetBrains Mono',monospace; font-size:11px; width:18px }
-.nk  { font-weight:500; font-size:13px; color:var(--tx) }
-.sid { font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--blue); display:block }
-.no-sid { color:var(--mt); font-size:11px }
-.rat { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--gold);
-       text-align:right; white-space:nowrap; font-weight:500 }
-.plnks { display:flex; gap:6px; margin-top:5px; flex-wrap:wrap }
-.plnk  { display:inline-flex; align-items:center; gap:4px; font-size:10.5px;
-         text-decoration:none; padding:3px 9px; border-radius:6px; transition:all .2s;
-         border:1px solid; white-space:nowrap; font-weight:500 }
-.plnk.steam    { color:var(--blue); border-color:rgba(106,160,255,.28); background:rgba(106,160,255,.06) }
-.plnk.steam:hover { background:rgba(106,160,255,.15); border-color:rgba(106,160,255,.6) }
+.nk   { font-weight:500; font-size:13px }
+.sid  { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--blue); display:block; margin-top:2px }
+.no-sid { color:var(--mt); font-size:10px }
+.rat  { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--gold);
+        text-align:right; white-space:nowrap; font-weight:500 }
+
+.plnks { display:flex; gap:5px; margin-top:4px; flex-wrap:wrap }
+.plnk  { display:inline-flex; align-items:center; gap:3px; font-size:10px;
+         text-decoration:none; padding:2px 8px; border-radius:5px;
+         border:1px solid; white-space:nowrap; font-weight:500; transition:all .2s }
+.plnk.steam    { color:var(--blue);   border-color:rgba(106,160,255,.28); background:rgba(106,160,255,.06) }
+.plnk.steam:hover    { background:rgba(106,160,255,.15); border-color:rgba(106,160,255,.55) }
 .plnk.dotabuff { color:var(--purple); border-color:rgba(167,139,250,.28); background:rgba(167,139,250,.06) }
-.plnk.dotabuff:hover { background:rgba(167,139,250,.15); border-color:rgba(167,139,250,.6) }
-.site-link { color:var(--mt); text-decoration:none; font-size:11px; padding:6px 14px 16px;
-             display:inline-flex; align-items:center; gap:5px; transition:color .2s; font-weight:500 }
+.plnk.dotabuff:hover { background:rgba(167,139,250,.15); border-color:rgba(167,139,250,.55) }
+
+.site-link { color:var(--mt); text-decoration:none; font-size:11px;
+             padding:6px 14px 14px; display:inline-flex; align-items:center;
+             gap:5px; transition:color .2s; font-weight:500 }
 .site-link:hover { color:var(--em) }
 
+/* ── Captain badge ── */
+.cap-badge { font-size:9px; background:rgba(212,175,55,.12); color:var(--gold);
+             border:1px solid rgba(212,175,55,.28); border-radius:4px;
+             padding:1px 5px; margin-left:5px; vertical-align:middle }
+
+/* ── Misc ── */
 .hidden { display:none !important }
-.loading, .error { text-align:center; padding:60px 20px; color:var(--mt); font-size:14px }
+.loading,.error { text-align:center; padding:60px 20px; color:var(--mt); font-size:14px }
 .error { color:var(--red) }
 
-/* ---------- footer ---------- */
-footer { max-width:920px; margin:24px auto 0; padding:22px 28px 32px;
+footer { max-width:980px; margin:24px auto 0; padding:18px 28px 32px;
          border-top:1px solid var(--brd-soft); text-align:center }
-.discord { display:inline-flex; align-items:center; gap:10px; text-decoration:none;
-           background:var(--card); border:1px solid var(--brd); border-radius:11px;
-           padding:11px 18px; transition:all .2s }
-.discord:hover { border-color:var(--blue); background:rgba(106,160,255,.06) }
-.discord svg { color:#5865F2; flex-shrink:0 }
-.discord .dl { text-align:left; line-height:1.25 }
-.discord .dt { font-size:9.5px; text-transform:uppercase; letter-spacing:1.2px; color:var(--mt) }
-.discord .dn { font-size:14px; font-weight:600; color:var(--tx) }
-.f-link { display:block; margin-top:14px; color:var(--mt); text-decoration:none; font-size:11px }
+.f-link { color:var(--mt); text-decoration:none; font-size:11px }
 .f-link:hover { color:var(--em) }
 
-@media (max-width:600px) {
-  header, .topbar, .list, footer { padding-left:14px; padding-right:14px }
-  input { width:100%; flex:1 } .controls { margin-left:0; width:100% }
-  .trat { display:none }
+@media(max-width:600px){
+  header,.topbar,.list,footer{padding-left:14px;padding-right:14px}
+  input{width:100%;flex:1} .controls{width:100%}
+  .trat,.tavg{display:none}
+  .st{min-width:60px;padding:8px 10px}
 }
 </style>
 </head><body>
 
 <header>
   <div class="brand">
-    <img class="logo" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo_2026-06-20_02-46-46-XPYlSubbR58RDRV3yeuio8jA3lgT41.jpg" alt="Mixer Cup logo">
+    <img class="logo" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo_2026-06-20_02-46-46-XPYlSubbR58RDRV3yeuio8jA3lgT41.jpg" alt="logo">
     <div>
-      <h1>Mixer Cup <span class="gold-tx"> пока что не рабочий сайт мега впадлу фиксить</span></h1>
+      <h1>Mixer Cup <span class="gold-tx">— Dota 2</span></h1>
       <div class="sub">mixer-cup.gg · active tour<span id="updated"></span></div>
     </div>
   </div>
 </header>
 
 <div class="topbar">
-  <div class="stats">
-    <div class="st"><span class="sn" id="s-t">—</span><span class="sl2">Команд</span></div>
+  <div class="stats-row">
+    <div class="st"><span class="sn green" id="s-t">—</span><span class="sl2">Команд</span></div>
     <div class="st"><span class="sn" id="s-p">—</span><span class="sl2">Игроков</span></div>
     <div class="st"><span class="sn" id="s-i">—</span><span class="sl2">Steam ID</span></div>
+    <div class="st"><span class="sn gold" id="s-avg">—</span><span class="sl2">AVG турнира</span></div>
   </div>
   <div class="controls">
     <input type="text" id="q" placeholder="Поиск по нику, команде, Steam ID…" oninput="filter()">
-    <button class="sbtn active" id="btn-site"   onclick="setSort('site')">По сайту</button>
-    <button class="sbtn"        id="btn-rating" onclick="setSort('rating')">По рейтингу ↓</button>
+    <button class="sbtn active" id="btn-rating" onclick="setSort('rating')">По рейтингу ↓</button>
   </div>
 </div>
 
@@ -175,156 +211,148 @@ footer { max-width:920px; margin:24px auto 0; padding:22px 28px 32px;
 </footer>
 
 <script>
-let TEAMS = [];
-let sortMode = 'site';
-let lastHash = '';
+let TEAMS = [], sortMode = 'rating', lastHash = '';
 
-function fmt(n) { return n != null ? Number(n).toLocaleString('ru-RU') : '—' }
+function fmt(n){ return n!=null ? Number(n).toLocaleString('ru-RU') : '—' }
 
-function renderCard(t, rank) {
+function avgRating(players){
+  const rated = (players||[]).filter(p=>p.rating);
+  return rated.length ? Math.round(rated.reduce((s,p)=>s+p.rating,0)/rated.length) : null;
+}
+
+function renderCard(t, rank){
   const pl = t.players || [];
+  const avg = avgRating(pl);
+
   let rows = '';
-
-  pl.forEach((p, i) => {
-    const nick = (p.nickname || '—').replace(/</g, '&lt;');
-    const sid  = p.steam_id || '';
-    const rat  = p.rating != null ? fmt(p.rating) : '—';
-
+  const sorted = [...pl].sort((a,b)=>(b.rating||0)-(a.rating||0));
+  sorted.forEach((p,i)=>{
+    const nick = (p.nickname||'—').replace(/</g,'&lt;');
+    const sid  = p.steam_id||'';
+    const rat  = p.rating!=null ? fmt(p.rating) : '—';
     const sidCell = sid
       ? `<span class="sid">${sid}</span>`
       : '<span class="no-sid">нет данных</span>';
-
     const links = sid ? `
       <div class="plnks">
-        <a href="${p.steam_url}"    target="_blank" rel="noopener" class="plnk steam">Steam</a>
-        <a href="${p.dotabuff_url}" target="_blank" rel="noopener" class="plnk dotabuff">Dotabuff</a>
+        <a href="${p.steam_url}"     target="_blank" rel="noopener" class="plnk steam">↗ Steam</a>
+        <a href="${p.dotabuff_url}"  target="_blank" rel="noopener" class="plnk dotabuff">↗ Dotabuff</a>
       </div>` : '';
-
     rows += `<tr class="pr">
-      <td class="pnum">${i + 1}</td>
+      <td class="pnum">${i+1}</td>
       <td class="nk">${nick}</td>
       <td>${sidCell}${links}</td>
       <td class="rat">${rat}</td>
     </tr>`;
   });
 
-  if (!rows) {
-    rows = '<tr><td colspan="4" style="color:var(--mt);text-align:center;padding:14px;font-size:12px">Нет данных</td></tr>';
-  }
+  if(!rows) rows='<tr><td colspan="4" style="color:var(--mt);text-align:center;padding:14px;font-size:12px">Нет игроков</td></tr>';
 
-  const trat = t.team_rating
-    ? `<span class="trat">Σ ${fmt(t.team_rating)}</span>`
-    : '';
+  const wl = (t.games_won!=null && t.games_lost!=null)
+    ? `<div class="wl-block">
+         <span class="wbadge">${t.games_won}W</span>
+         <span class="lbadge">${t.games_lost}L</span>
+       </div>` : '';
 
-  const wl = (t.games_won != null && t.games_lost != null)
-    ? `<span class="wl"><span class="w">${t.games_won}W</span> <span class="l">${t.games_lost}L</span></span>`
-    : '';
+  const trat = t.team_rating ? `<span class="trat">Σ ${fmt(t.team_rating)}</span>` : '';
+  const tavg = avg ? `<span class="tavg">AVG ${fmt(avg)}</span>` : '';
 
-  const srch = [t.name, ...pl.map(p => (p.nickname||'') + (p.steam_id||''))].join(' ').toLowerCase();
+  const rankClass = rank===1?'r1':rank===2?'r2':rank===3?'r3':'';
+  const srch = [t.name,...pl.map(p=>(p.nickname||'')+(p.steam_id||''))].join(' ').toLowerCase();
 
   return `
 <div class="card" data-s="${srch}">
-  <div class="ch" onclick="toggleCard(this)">
-    <span class="rank ${rank === 1 ? 'r1' : ''}">${rank}</span>
-    <span class="tn">${t.name}</span>
+  <div class="ch" onclick="this.parentElement.classList.toggle('open')">
+    <span class="rank ${rankClass}">${rank}</span>
+    <span class="tn">${(t.name||'').replace(/</g,'&lt;')}</span>
     ${wl}
-    ${trat}
+    <div class="team-meta">${trat}${tavg}</div>
     <span class="chev">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </span>
   </div>
   <div class="body"><div class="body-inner">
     <table>
       <thead><tr>
-        <th>#</th>
-        <th>Ник</th>
-        <th>Steam ID / Ссылки</th>
-        <th class="r">Рейтинг</th>
+        <th>#</th><th>Ник</th><th>Steam ID / Ссылки</th><th class="r">Рейтинг</th>
       </tr></thead>
       <tbody>${rows}</tbody>
     </table>
-    <a href="${t.url}" target="_blank" rel="noopener" class="site-link">Открыть на mixer-cup ↗</a>
+    <a href="${t.url}" target="_blank" rel="noopener" class="site-link">Открыть на mixer-cup.gg ↗</a>
   </div></div>
 </div>`;
 }
 
-function toggleCard(headerEl) {
-  headerEl.parentElement.classList.toggle('open');
-}
-
-function go() {
+function go(){
   let data = [...TEAMS];
-
-  if (sortMode === 'site') data.sort((a,b) => a.dom_order - b.dom_order);
-  else                     data.sort((a,b) => (b.team_rating||0) - (a.team_rating||0));
+  if(sortMode==='site')        data.sort((a,b)=>(a.dom_order||0)-(b.dom_order||0));
+  else if(sortMode==='rating') data.sort((a,b)=>(b.team_rating||0)-(a.team_rating||0));
 
   const grid = document.getElementById('grid');
-  grid.innerHTML = data.map((t, i) => renderCard(t, i + 1)).join('');
-
-  // лёгкая каскадная анимация появления
-  grid.querySelectorAll('.card').forEach((c, i) => {
-    c.style.animationDelay = Math.min(i * 28, 320) + 'ms';
+  grid.innerHTML = data.map((t,i)=>renderCard(t,i+1)).join('');
+  grid.querySelectorAll('.card').forEach((c,i)=>{
+    c.style.animationDelay = Math.min(i*25,300)+'ms';
   });
-
-  filter(); 
+  filter();
 }
 
-function filter() {
+function filter(){
   const q = document.getElementById('q').value.toLowerCase().trim();
-  const grid = document.getElementById('grid');
-
-  grid.querySelectorAll('.card').forEach(c => {
+  document.querySelectorAll('.card').forEach(c=>{
     const match = !q || c.dataset.s.includes(q);
-    c.classList.toggle('hidden', !match);
-    if (match && q) c.classList.add('open');        // авто-раскрытие найденных
-    else if (!q) c.classList.remove('open');         // сброс при пустом поиске
+    c.classList.toggle('hidden',!match);
+    if(match&&q) c.classList.add('open');
+    else if(!q)  c.classList.remove('open');
   });
 }
 
-function setSort(m) {
-  if (m === sortMode) return;
-  sortMode = m;
-  document.querySelectorAll('.sbtn').forEach(b => b.classList.remove('active'));
-  document.getElementById('btn-' + m).classList.add('active');
+function setSort(m){
+  if(m===sortMode) return;
+  sortMode=m;
+  document.querySelectorAll('.sbtn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('btn-'+m).classList.add('active');
   go();
 }
 
-function formatUpdatedAt(iso) {
-  if (!iso) return '';
-  try {
-    const d = new Date(iso);
-    return ' · обновлено ' + d.toLocaleString('ru-RU', {
-      day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
-    });
-  } catch { return ''; }
+function updateStats(){
+  const allPlayers = TEAMS.flatMap(t=>t.players||[]);
+  // AVG турнира = среднее team_rating всех команд
+  const rated = TEAMS.filter(t=>t.team_rating);
+  const tourAvg = rated.length
+    ? Math.round(rated.reduce((s,t)=>s+t.team_rating,0)/rated.length) : null;
+
+  document.getElementById('s-t').textContent   = TEAMS.length;
+  document.getElementById('s-p').textContent   = allPlayers.length;
+  document.getElementById('s-i').textContent   = allPlayers.filter(p=>p.steam_id).length;
+  document.getElementById('s-avg').textContent = tourAvg ? fmt(tourAvg) : '—';
 }
 
-async function loadData() {
-  try {
-    const resp = await fetch('teams_data.json?t=' + Date.now());
-    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+function formatUpdatedAt(iso){
+  if(!iso) return '';
+  try{
+    const d=new Date(iso);
+    return ' · '+d.toLocaleString('ru-RU',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
+  }catch{return ''}
+}
+
+async function loadData(){
+  try{
+    const resp = await fetch('teams_data.json?t='+Date.now());
+    if(!resp.ok) throw new Error('HTTP '+resp.status);
     const json = await resp.json();
-
-    TEAMS = Array.isArray(json) ? json : (json.teams || []);
-    const updatedAt = Array.isArray(json) ? null : json.updated_at;
-
+    TEAMS = Array.isArray(json)?json:(json.teams||[]);
+    const updatedAt = Array.isArray(json)?null:json.updated_at;
     document.getElementById('updated').textContent = formatUpdatedAt(updatedAt);
-    document.getElementById('s-t').textContent = TEAMS.length;
-    document.getElementById('s-p').textContent = TEAMS.reduce((a,t)=>a+(t.players||[]).length, 0);
-    document.getElementById('s-i').textContent = TEAMS.reduce((a,t)=>a+(t.players||[]).filter(p=>p.steam_id).length, 0);
-
     const hash = JSON.stringify(TEAMS);
-    if (hash !== lastHash) {
-      lastHash = hash;
-      go();
-    }
-  } catch (e) {
-    document.getElementById('grid').innerHTML =
-      `<div class="error">Не удалось загрузить данные<br><small>${e.message}</small></div>`;
+    if(hash!==lastHash){ lastHash=hash; updateStats(); go(); }
+  }catch(e){
+    document.getElementById('grid').innerHTML=
+      `<div class="error">Не удалось загрузить данные<br><small>${e.message}</small><br><br>
+       <span style="font-size:11px;color:var(--mt)">Запусти <code>python parse_mixer.py</code> → <code>python -m http.server</code></span></div>`;
   }
 }
 
 loadData();
-setInterval(loadData, 5 * 60 * 1000);
+setInterval(loadData, 5*60*1000);
 </script>
 </body></html>

@@ -1,233 +1,231 @@
-#!/usr/bin/env python3
 """
-mixer-cup.gg Parser — GitHub Actions version (headless)
-- Парсит команды: названия, игроков, Steam ID, рейтинги, место в турнире
-- Сохраняет ТОЛЬКО teams_data.json
+parse_mixer.py  —  генерирует teams_data.json для mixer-cup.gg viewer
+pip install requests
+python parse_mixer.py
 """
 
-import asyncio, json, re, os
-from pathlib import Path
-from playwright.async_api import async_playwright
+import re, json, time, sys
+from datetime import datetime, timezone
+import requests
 
-OUTPUT_FILE = "teams_data.json"
+API_URL        = "https://api.mixer-cup.gg/"
+TOURNAMENT_ID  = 26          # число, не строка
+TEAM_PAGE_BASE = "https://mixer-cup.gg/ru/team/"
 
-def wj(path, data):
-    Path(path).write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+HEADERS = {
+    "Content-Type": "application/json",
+    "Accept": "*/*",
+    "Origin": "https://mixer-cup.gg",
+    "Referer": "https://mixer-cup.gg/",
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+}
 
-def clean_team_name(raw):
-    cleaned = re.sub(
-        r'^[A-Z]\s+G\s+\d+\s+W\s+\d+\s+L\s+\d+\s+\S+\s+[A-Z]\s*',
-        '', raw.strip()
-    )
-    return cleaned.strip() or raw.strip()
+# ─── GraphQL-запросы ──────────────────────────────────────────────────────────
+
+# Список команд (именно такой запрос делает сайт)
+Q_TEAMS = """
+query Teams($filters: TeamFilterInput!, $first: Int, $offset: Int, $sort: [TeamSortEnum]) {
+  teams(first: $first, offset: $offset, filters: $filters, sort: $sort) {
+    pageInfo {
+      total
+      totalFiltered
+    }
+    items {
+      id
+      name
+      number
+      place
+      stats {
+        totalWin
+        gamesLost
+        gamesWon
+        gamesTotal
+        upcomingGames
+      }
+      players {
+        id
+        nickname
+        rating
+        proName
+      }
+    }
+  }
+}
+"""
+
+# Детали команды — нужны для steamAvatar
+Q_TEAM = """
+query Team($id: UUID!) {
+  team(id: $id) {
+    id
+    name
+    number
+    place
+    players {
+      id
+      nickname
+      rating
+      leaderboardRank
+      steamAvatar
+      proName
+    }
+  }
+}
+"""
+
+# ─── API ──────────────────────────────────────────────────────────────────────
+
+def gql(operation, query, variables=None):
+    payload = {
+        "operationName": operation,
+        "query": query,
+        "variables": variables or {},
+    }
+    r = requests.post(API_URL, headers=HEADERS, json=payload, timeout=15)
+    r.raise_for_status()
+    data = r.json()
+    if "errors" in data:
+        raise ValueError(data["errors"])
+    return data.get("data", {})
+
+
+def fetch_all_teams():
+    """Постранично загружает все команды турнира."""
+    all_items = []
+    first  = 30
+    offset = 0
+
+    while True:
+        data = gql("Teams", Q_TEAMS, {
+            "filters": {"tournamentId": TOURNAMENT_ID},
+            "sort":    "NUMBER",
+            "first":   first,
+            "offset":  offset,
+        })
+        page  = data.get("teams", {})
+        items = page.get("items", [])
+        total = page.get("pageInfo", {}).get("totalFiltered", 0)
+
+        all_items.extend(items)
+        print(f"  Загружено: {len(all_items)} / {total}", end="\r")
+
+        if len(all_items) >= total or not items:
+            break
+        offset += first
+        time.sleep(0.2)
+
+    print()
+    return all_items
+
+
+def fetch_team_steam(team_id):
+    """Загружает steamAvatar для игроков команды."""
+    try:
+        data = gql("Team", Q_TEAM, {"id": team_id})
+        return {p["id"]: p for p in (data.get("team") or {}).get("players", [])}
+    except Exception as e:
+        print(f"    [!] Steam данные для {team_id}: {e}")
+        return {}
+
+
+# ─── Обработка ────────────────────────────────────────────────────────────────
 
 def steam_id_from_avatar(url):
-    m = re.search(r'/avatars/(7656119\d{10})\.', url or "")
+    if not url:
+        return None
+    m = re.search(r'/avatars/(\d{15,})', url)
     return m.group(1) if m else None
 
-def find_steam_id(text):
-    m = re.search(r'7656119\d{10}', str(text))
-    return m.group(0) if m else None
 
-def dotabuff_id(steam_id64):
-    try:
-        return str(int(steam_id64) - 76561197960265728)
-    except:
-        return None
+def build_team(raw, order):
+    team_id = raw["id"]
+    stats   = raw.get("stats") or {}
 
-def log(msg): print(f"  -> {msg}", flush=True)
+    # Сначала берём игроков из списочного запроса
+    players_brief = {p["id"]: p for p in (raw.get("players") or [])}
 
-def parse_team_api(body):
-    try:
-        team_obj = body.get("data", {}).get("team", {})
-        if not team_obj:
-            return None, [], {}
-        name  = team_obj.get("name", "")
-        stats = team_obj.get("stats", {}) or {}
-        team_info = {
-            "place":       team_obj.get("place"),
-            "games_won":   stats.get("gamesWon"),
-            "games_lost":  stats.get("gamesLost"),
-            "games_total": stats.get("gamesTotal"),
-        }
-        players = []
-        for p in team_obj.get("players", []):
-            if not isinstance(p, dict):
-                continue
-            nick   = p.get("nickname") or p.get("name") or "?"
-            rating = p.get("rating")
-            rank   = p.get("leaderboardRank")
-            avatar = p.get("steamAvatar") or ""
-            sid    = steam_id_from_avatar(avatar)
-            if not sid:
-                for v in p.values():
-                    sid = find_steam_id(v)
-                    if sid: break
-            db_id = dotabuff_id(sid) if sid else None
-            players.append({
-                "nickname":         nick,
-                "steam_id":         sid,
-                "steam_url":        f"https://steamcommunity.com/profiles/{sid}" if sid else "",
-                "dotabuff_url":     f"https://www.dotabuff.com/players/{db_id}/heroes" if db_id else "",
-                "rating":           int(rating) if rating is not None else None,
-                "leaderboard_rank": int(rank) if rank is not None else None,
-            })
-        return name, players[:5], team_info
-    except Exception as e:
-        log(f"parse error: {e}")
-        return None, [], {}
+    # Докачиваем steamAvatar через Team-запрос
+    players_full = fetch_team_steam(team_id)
+    time.sleep(0.25)
 
-async def scrape_team(page, team):
-    fresh = []
-    async def on_resp(resp):
-        ct = resp.headers.get("content-type", "")
-        if ("json" in ct and resp.status == 200
-                and "mixer-cup" in resp.url
-                and "yandex" not in resp.url):
-            try: fresh.append(await resp.json())
-            except: pass
-    page.on("response", on_resp)
-    try:
-        await page.goto(team["url"], wait_until="networkidle", timeout=25000)
-        await page.wait_for_timeout(2000)
-    except Exception as e:
-        log(f"goto error: {e}")
-    page.remove_listener("response", on_resp)
+    players = []
+    # Объединяем данные
+    all_ids = list(players_brief.keys()) or list(players_full.keys())
+    for pid in all_ids:
+        brief = players_brief.get(pid, {})
+        full  = players_full.get(pid, {})
+        merged = {**brief, **{k: v for k, v in full.items() if v is not None}}
 
-    for body in fresh:
-        api_name, players, team_info = parse_team_api(body)
-        if players:
-            log(f"API: {len(players)} players")
-            return api_name or team["name"], players, team_info
-    try:
-        nd = await page.evaluate("""
-            () => { const e = document.getElementById('__NEXT_DATA__');
-                    return e ? JSON.parse(e.textContent) : null; }
-        """)
-        if nd:
-            api_name, players, team_info = parse_team_api(nd)
-            if players:
-                return api_name or team["name"], players, team_info
-    except: pass
-    log("no players found")
-    return team["name"], [], {}
+        sid = steam_id_from_avatar(merged.get("steamAvatar"))
+        players.append({
+            "id":          pid,
+            "nickname":    merged.get("proName") or merged.get("nickname") or "—",
+            "rating":      merged.get("rating"),
+            "steam_id":    sid,
+            "steam_url":   f"https://steamcommunity.com/profiles/{sid}" if sid else None,
+            "dotabuff_url":f"https://www.dotabuff.com/players/{sid}"    if sid else None,
+            "leaderboard": merged.get("leaderboardRank"),
+        })
 
-async def main():
-    print("Mixer-cup.gg Parser (headless / CI)", flush=True)
-    print("=" * 50, flush=True)
-    all_teams = []
+    total_rating = sum(p["rating"] or 0 for p in players)
 
-    # 1. Считываем и жестко очищаем куки
-    my_cookie_raw = os.environ.get("MIXER_COOKIE", "").strip()
-    
-    if not my_cookie_raw:
-        print("⚠️ ВНИМАНИЕ: Секрет MIXER_COOKIE пустой! Проверь настройки GitHub Secrets.", flush=True)
-    else:
-        # Если случайно скопировал со словом "Cookie:" - скрипт сам это исправит
-        if my_cookie_raw.lower().startswith("cookie:"):
-            my_cookie_raw = re.sub(r'(?i)^cookie:\s*', '', my_cookie_raw)
-        print(f"✅ Секрет MIXER_COOKIE найден (начинается с: {my_cookie_raw[:10]}...). Применяю...", flush=True)
+    return {
+        "id":          team_id,
+        "name":        raw.get("name", "—"),
+        "number":      raw.get("number"),
+        "place":       raw.get("place"),
+        "games_won":   stats.get("gamesWon"),
+        "games_lost":  stats.get("gamesLost"),
+        "team_rating": total_rating,
+        "dom_order":   raw.get("number") or order,
+        "url":         TEAM_PAGE_BASE + team_id,
+        "players":     players,
+    }
 
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(
-            headless=True,
-            args=[
-                "--disable-blink-features=AutomationControlled",
-                "--no-sandbox",
-                "--disable-setuid-sandbox"
-            ],
-        )
-        
-        # 2. Формируем "человеческие" заголовки для Nginx
-        extra_headers = {
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-            "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
-        }
-        
-        context = await browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-            viewport={"width": 1440, "height": 900},
-            locale="ru-RU",
-            extra_http_headers=extra_headers
-        )
 
-        # 3. Интегрируем куки
-        if my_cookie_raw:
-            try:
-                cookies_list = json.loads(my_cookie_raw)
-                for c in cookies_list:
-                    if 'sameSite' in c and c['sameSite'] not in ['Strict', 'Lax', 'None']:
-                        del c['sameSite']
-                await context.add_cookies(cookies_list)
-                print("  -> Куки (JSON) успешно интегрированы!", flush=True)
-            except json.JSONDecodeError:
-                # Если сырая строка, добавляем напрямую, но УЖЕ без слова Cookie:
-                extra_headers["Cookie"] = my_cookie_raw
-                await context.set_extra_http_headers(extra_headers)
-                print("  -> Куки (Сырая строка) очищены и добавлены в заголовки!", flush=True)
-            except Exception as e:
-                print(f"  ❌ Ошибка при добавлении куков: {e}", flush=True)
+# ─── Main ─────────────────────────────────────────────────────────────────────
 
-        # Базовый антидетект
-        await context.add_init_script(
-            "Object.defineProperty(navigator,'webdriver',{get:()=>undefined});"
-        )
-        page = await context.new_page()
+def main():
+    print(f"[→] Загружаю команды турнира ID={TOURNAMENT_ID}...")
+    teams_raw = fetch_all_teams()
 
-        print("\n[1/2] Загружаем список команд...", flush=True)
-        try:
-            response = await page.goto("https://mixer-cup.gg/ru/active-tour",
-                            wait_until="domcontentloaded", timeout=45000)
-            print(f"  -> Статус ответа сайта: {response.status if response else 'Нет ответа'}", flush=True)
-        except Exception as e:
-            print(f"❌ Не удалось загрузить главную страницу: {e}", flush=True)
-            await browser.close()
-            return
+    if not teams_raw:
+        print("[!] Команды не найдены.")
+        sys.exit(1)
 
-        print("  -> Ожидаю рендеринга карточек команд...", flush=True)
-        try:
-            await page.wait_for_selector("a[href*='/team/']", timeout=15000)
-        except Exception:
-            print("  ⚠️ Селектор команд не появился. Пробую сделать скролл...", flush=True)
+    print(f"  Найдено команд: {len(teams_raw)}\n")
+    print("[→] Загружаю Steam данные для каждой команды...")
 
-        print("  -> Выполняю эмуляцию прокрутки...", flush=True)
-        await page.evaluate("""
-            async () => {
-                await new Promise((resolve) => {
-                    let totalHeight = 0;
-                    let distance = 200;
-                    let timer = setInterval(() => {
-                        let scrollHeight = document.body.scrollHeight;
-                        window.scrollBy(0, distance);
-                        totalHeight += distance;
-                        if(totalHeight >= scrollHeight || totalHeight > 4000){
-                            clearInterval(timer);
-                            window.scrollTo(0, 0);
-                            resolve();
-                        }
-                    }, 100);
-                });
-            }
-        """)
-        await page.wait_for_timeout(2000)
+    results = []
+    for i, raw in enumerate(teams_raw):
+        name = raw.get("name", "?")
+        print(f"  [{i+1:>2}/{len(teams_raw)}] {name}", end="  ", flush=True)
+        team = build_team(raw, i)
+        results.append(team)
+        sid_count = sum(1 for p in team["players"] if p["steam_id"])
+        print(f"→  {len(team['players'])} игроков  |  {sid_count} Steam ID  |  Σ {team['team_rating']:,}")
 
-        els = await page.query_selector_all("a[href*='/team/']")
-        log(f"Найдено ссылок: {len(els)}")
+    # Итог
+    total_p   = sum(len(t["players"]) for t in results)
+    total_sid = sum(sum(1 for p in t["players"] if p["steam_id"]) for t in results)
+    print(f"\n  Итого: {len(results)} команд · {total_p} игроков · {total_sid} Steam ID")
 
-        if len(els) == 0:
-            print("❌ Ссылок не обнаружено. Содержимое страницы (первые 1000 симв):", flush=True)
-            content = await page.content()
-            print(content[:1000], flush=True)
-            if "403 Forbidden" in content or "Cloudflare" in content:
-                print("🚨 Бот заблокирован защитой сайта! (Скорее всего куки устарели или IP сервера забанен)", flush=True)
+    output = {
+        "updated_at":     datetime.now(timezone.utc).isoformat(),
+        "tournament_id":  TOURNAMENT_ID,
+        "teams":          results,
+    }
 
-        seen  = {}
-        teams = []
-        for el in els:
-            href = (await el.get_attribute("href") or "").strip()
-            if "/team/" not in href:
-                continue
-            m = re.search(r'/team/([0-9a-f-]{36})', href)
-            if not m:
-                continue
-            uuid =
+    with open("teams_data.json", "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2, default=str)
+
+    print(f"\n✓ teams_data.json сохранён.")
+    print(f"  Запусти: python -m http.server  →  открой http://localhost:8000")
+
+
+if __name__ == "__main__":
+    main()

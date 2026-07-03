@@ -1,0 +1,28 @@
+name: Update teams data
+
+on:
+  workflow_dispatch:  # только ручной/внешний запуск
+
+jobs:
+  parse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Run parser
+        run: python parse_mixer.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add teams_data.json
+          git diff --cached --quiet || git commit -m "chore: update teams_data $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
