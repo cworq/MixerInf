@@ -1,7 +1,9 @@
 name: Update teams data
 
 on:
-  workflow_dispatch:  # только ручной/внешний запуск
+  workflow_dispatch:  # Оставляет возможность ручного запуска через сайт
+  repository_dispatch:
+    types: [update-data] # ВАЖНО: если в твоем запросе указан другой event_type, впиши его сюда вместо update-data
 
 jobs:
   parse:
