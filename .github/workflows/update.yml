@@ -17,7 +17,7 @@ jobs:
         run: pip install requests
 
       - name: Run parser
-        run: python parse_mixer.py
+        run: python scraper.py
 
       - name: Commit & push if changed
         run: |
