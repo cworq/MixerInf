@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T03:01:15.326632+00:00",
+  "updated_at": "2026-07-04T03:15:40.871999+00:00",
   "tournament_id": 26,
   "teams": [
     {
@@ -471,7 +471,7 @@
       "name": "Team TlakEEE",
       "number": 9,
       "place": null,
-      "games_won": 1,
+      "games_won": 2,
       "games_lost": 3,
       "team_rating": 42083.0,
       "dom_order": 9,
@@ -1126,12 +1126,12 @@
         },
         {
           "id": "f771d532-0646-4602-bac0-1be2da6343db",
-          "nickname": "lil 17th",
+          "nickname": "srw",
           "rating": 12000.0,
           "steam_id": "76561198087668631",
           "steam_url": "https://steamcommunity.com/profiles/76561198087668631",
           "dotabuff_url": "https://www.dotabuff.com/players/76561198087668631",
-          "leaderboard": 682
+          "leaderboard": 673
         },
         {
           "id": "8df2c2ce-32e0-45cb-b96d-f7ff439b5ace",
@@ -1285,7 +1285,7 @@
       "place": null,
       "games_won": 0,
       "games_lost": 4,
-      "team_rating": 40745.0,
+      "team_rating": 42157.0,
       "dom_order": 23,
       "url": "https://mixer-cup.gg/ru/team/f2b7f214-71df-4c75-b3b0-f9b7f2ea0d00",
       "players": [
@@ -1308,13 +1308,13 @@
           "leaderboard": 1100
         },
         {
-          "id": "8b3659ae-962b-43bf-9ec8-38cde2afa289",
-          "nickname": "творог💀",
-          "rating": 8600.0,
-          "steam_id": "76561198394229941",
-          "steam_url": "https://steamcommunity.com/profiles/76561198394229941",
-          "dotabuff_url": "https://www.dotabuff.com/players/76561198394229941",
-          "leaderboard": 5000
+          "id": "1d0eb72b-52b4-4949-8bf6-57c557f53631",
+          "nickname": "эм0цuu_хорошue",
+          "rating": 10012.0,
+          "steam_id": "76561198874721957",
+          "steam_url": "https://steamcommunity.com/profiles/76561198874721957",
+          "dotabuff_url": "https://www.dotabuff.com/players/76561198874721957",
+          "leaderboard": 2694
         },
         {
           "id": "27d783c5-f6f7-4508-98a8-f37f506b2af1",
@@ -1342,7 +1342,7 @@
       "number": 24,
       "place": null,
       "games_won": 3,
-      "games_lost": 1,
+      "games_lost": 2,
       "team_rating": 42956.0,
       "dom_order": 24,
       "url": "https://mixer-cup.gg/ru/team/925e8369-0b35-489b-bb0b-fa682686b3ee",
