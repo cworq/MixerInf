@@ -1,9 +1,7 @@
 name: Update teams data
 
 on:
-  workflow_dispatch:  # Оставляет возможность ручного запуска через сайт
-  repository_dispatch:
-    types: [run_scraper] # ВАЖНО: если в твоем запросе указан другой event_type, впиши его сюда вместо update-data
+  workflow_dispatch:
 
 jobs:
   parse:
@@ -19,12 +17,7 @@ jobs:
         run: pip install requests
 
       - name: Run parser
+        env:
+          GIST_ID: ${{ secrets.GIST_ID }}
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
         run: python scraper.py
-
-      - name: Commit & push if changed
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add teams_data.json
-          git diff --cached --quiet || git commit -m "chore: update teams_data $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push
