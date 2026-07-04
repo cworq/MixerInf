@@ -400,12 +400,36 @@ def main():
     completed  = [g for g in all_games if g.get("status") == "COMPLETE" and g.get("matchId")]
     print(f"  Всего игр: {len(all_games)}  |  Завершено: {len(completed)}")
 
-    # Загружаем кэш
+    # Загружаем кэш — сначала из Gist, потом из локального файла
     cache = {}
-    if os.path.exists(CACHE_FILE):
+    gist_id    = os.environ.get("GIST_ID", "").strip()
+    gist_token = os.environ.get("GIST_TOKEN", "").strip()
+    if gist_id and gist_token:
+        try:
+            import urllib.request as ur
+            req = ur.Request(
+                f"https://api.github.com/gists/{gist_id}",
+                headers={
+                    "Authorization": f"token {gist_token}",
+                    "Accept": "application/vnd.github.v3+json",
+                    "User-Agent": "mixer-cup-scraper",
+                }
+            )
+            with ur.urlopen(req) as resp:
+                gist_data = json.loads(resp.read())
+            if "matches_cache.json" in gist_data.get("files", {}):
+                raw_url = gist_data["files"]["matches_cache.json"]["raw_url"]
+                with ur.urlopen(raw_url) as resp:
+                    cache = json.loads(resp.read())
+                print(f"  Кэш из Gist: {len(cache)} матчей")
+            else:
+                print("  Кэш в Gist не найден — начинаем с нуля")
+        except Exception as e:
+            print(f"  [!] Не удалось загрузить кэш из Gist: {e}")
+    if not cache and os.path.exists(CACHE_FILE):
         try:
             cache = json.loads(open(CACHE_FILE, encoding="utf-8").read())
-            print(f"  Кэш: {len(cache)} матчей")
+            print(f"  Кэш локальный: {len(cache)} матчей")
         except:
             pass
 
@@ -435,6 +459,10 @@ def main():
     with open(CACHE_FILE, "w", encoding="utf-8") as f:
         json.dump(cache, f, ensure_ascii=False)
     print(f"\n  Кэш обновлён: {len(cache)} матчей (новых: {new_fetched})")
+    # Сохраняем кэш в Gist чтобы следующий запуск не качал заново
+    if new_fetched > 0:
+        cache_str = json.dumps(cache, ensure_ascii=False)
+        upload_to_gist("matches_cache.json", cache_str)
 
     # 4. Аналитика героев по игрокам
     print(f"\n[→] Считаю статистику героев...")
