@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T04:31:10.132629+00:00",
+  "updated_at": "2026-07-04T04:45:44.458743+00:00",
   "tournament_id": 26,
   "teams": [
     {
@@ -589,10 +589,19 @@
       "place": null,
       "games_won": 2,
       "games_lost": 2,
-      "team_rating": 41430.0,
+      "team_rating": 42614.0,
       "dom_order": 11,
       "url": "https://mixer-cup.gg/ru/team/1b653646-11c1-4371-8d0e-2df62411e874",
       "players": [
+        {
+          "id": "15b74f89-8ef2-42e2-a3b6-5edd0c520cb8",
+          "nickname": "gachi fighter",
+          "rating": 5684.0,
+          "steam_id": "76561198075549501",
+          "steam_url": "https://steamcommunity.com/profiles/76561198075549501",
+          "dotabuff_url": "https://www.dotabuff.com/players/76561198075549501",
+          "leaderboard": null
+        },
         {
           "id": "ab263d7b-9f5e-4b8b-a9cc-0f34f1900124",
           "nickname": "попа",
@@ -610,15 +619,6 @@
           "steam_url": "https://steamcommunity.com/profiles/76561198307711070",
           "dotabuff_url": "https://www.dotabuff.com/players/76561198307711070",
           "leaderboard": 741
-        },
-        {
-          "id": "649e9349-f66c-4114-8886-f43ab5a9ecc6",
-          "nickname": "Be kind",
-          "rating": 4500.0,
-          "steam_id": "76561199046755780",
-          "steam_url": "https://steamcommunity.com/profiles/76561199046755780",
-          "dotabuff_url": "https://www.dotabuff.com/players/76561199046755780",
-          "leaderboard": null
         },
         {
           "id": "5d662da0-c218-422d-8f1c-896c3ec1ee1c",
