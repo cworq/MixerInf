@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T05:45:46.646860+00:00",
+  "updated_at": "2026-07-04T06:01:13.694507+00:00",
   "tournament_id": 26,
   "teams": [
     {
@@ -647,7 +647,7 @@
       "place": null,
       "games_won": 3,
       "games_lost": 1,
-      "team_rating": 31870.0,
+      "team_rating": 43741.0,
       "dom_order": 12,
       "url": "https://mixer-cup.gg/ru/team/344b8573-cb46-4193-a9c8-abaf24c0a8eb",
       "players": [
@@ -686,6 +686,15 @@
           "steam_url": "https://steamcommunity.com/profiles/76561198272216001",
           "dotabuff_url": "https://www.dotabuff.com/players/76561198272216001",
           "leaderboard": 900
+        },
+        {
+          "id": "ecd669ba-617c-43dc-ab3f-425fb2b21a47",
+          "nickname": "Egoist",
+          "rating": 11871.0,
+          "steam_id": "76561198084366021",
+          "steam_url": "https://steamcommunity.com/profiles/76561198084366021",
+          "dotabuff_url": "https://www.dotabuff.com/players/76561198084366021",
+          "leaderboard": 1173
         }
       ]
     },
