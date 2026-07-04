@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T04:15:43.440206+00:00",
+  "updated_at": "2026-07-04T04:31:10.132629+00:00",
   "tournament_id": 26,
   "teams": [
     {
@@ -529,7 +529,7 @@
       "name": "Team tyzya01",
       "number": 10,
       "place": null,
-      "games_won": 1,
+      "games_won": 2,
       "games_lost": 3,
       "team_rating": 39444.0,
       "dom_order": 10,
@@ -1284,7 +1284,7 @@
       "number": 23,
       "place": null,
       "games_won": 0,
-      "games_lost": 4,
+      "games_lost": 5,
       "team_rating": 42157.0,
       "dom_order": 23,
       "url": "https://mixer-cup.gg/ru/team/f2b7f214-71df-4c75-b3b0-f9b7f2ea0d00",
