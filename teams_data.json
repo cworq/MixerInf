@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T06:45:42.863384+00:00",
+  "updated_at": "2026-07-04T07:01:12.620411+00:00",
   "tournament_id": 26,
   "teams": [
     {
@@ -645,7 +645,7 @@
       "name": "Team Hermoso Ángel",
       "number": 12,
       "place": null,
-      "games_won": 3,
+      "games_won": 4,
       "games_lost": 1,
       "team_rating": 43741.0,
       "dom_order": 12,
@@ -1168,7 +1168,7 @@
       "number": 21,
       "place": null,
       "games_won": 2,
-      "games_lost": 2,
+      "games_lost": 3,
       "team_rating": 45123.0,
       "dom_order": 21,
       "url": "https://mixer-cup.gg/ru/team/9752d3f2-68f9-425c-9c9a-8cda632ef7dd",
