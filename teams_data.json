@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T02:01:09.076631+00:00",
+  "updated_at": "2026-07-04T02:15:50.146375+00:00",
   "tournament_id": 26,
   "teams": [
     {
@@ -66,7 +66,7 @@
       "number": 2,
       "place": null,
       "games_won": 4,
-      "games_lost": 0,
+      "games_lost": 1,
       "team_rating": 44393.0,
       "dom_order": 2,
       "url": "https://mixer-cup.gg/ru/team/c8072475-5c16-4f7f-9e13-c1e9d151f4d5",
@@ -413,7 +413,7 @@
       "name": "Team MugiwaraUSH",
       "number": 8,
       "place": null,
-      "games_won": 3,
+      "games_won": 4,
       "games_lost": 1,
       "team_rating": 43393.0,
       "dom_order": 8,
