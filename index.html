@@ -5,176 +5,177 @@
 <title>Mixer Cup — Teams</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#0a0b0e; --sur:#101218; --card:#14161d; --card-h:#191c24;
-  --brd:#23262f; --brd-soft:#1b1e26;
-  --tx:#edeef2; --mt:#787f8c;
-  --gold:#d4af37; --gold-soft:rgba(212,175,55,.12);
-  --em:#1fae84; --em-d:#147a5c; --em-soft:rgba(31,174,132,.12);
-  --gr:#3ecf8e; --red:#ef5f6b; --blue:#6aa0ff; --purple:#a78bfa;
-  --orange:#f97316;
+:root{
+  --bg:#0a0b0e;--card:#14161d;--card-h:#191c24;
+  --brd:#23262f;--brd-soft:#1b1e26;
+  --tx:#edeef2;--mt:#787f8c;
+  --gold:#d4af37;--gold-soft:rgba(212,175,55,.12);
+  --em:#1fae84;--em-d:#147a5c;--em-soft:rgba(31,174,132,.12);
+  --gr:#3ecf8e;--red:#ef5f6b;--blue:#6aa0ff;--purple:#a78bfa;--orange:#f97316;
 }
-* { box-sizing:border-box; margin:0; padding:0 }
-html { background:var(--bg); scroll-behavior:smooth }
-body { background:
-        radial-gradient(900px 500px at 50% -200px, rgba(31,174,132,.06), transparent 70%),
-        var(--bg);
-       color:var(--tx); font-family:'Sora',sans-serif; min-height:100vh;
-       -webkit-font-smoothing:antialiased }
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);scroll-behavior:smooth}
+body{background:radial-gradient(900px 500px at 50% -200px,rgba(31,174,132,.06),transparent 70%),var(--bg);
+     color:var(--tx);font-family:'Sora',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
 
-/* ── Header ── */
-header { padding:26px 28px 18px; max-width:980px; margin:0 auto }
-.brand { display:flex; align-items:center; gap:12px }
-.logo  { width:38px; height:38px; border-radius:10px; flex-shrink:0; object-fit:cover;
-         border:1px solid var(--em-d); box-shadow:0 4px 14px rgba(31,174,132,.22) }
-h1   { font-size:21px; font-weight:700; letter-spacing:-.02em; line-height:1 }
-.sub { color:var(--mt); font-size:11px; margin-top:3px; letter-spacing:.02em }
-.gold-tx { color:var(--em) }
+header{padding:26px 28px 18px;max-width:1040px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:38px;height:38px;border-radius:10px;flex-shrink:0;object-fit:cover;
+      border:1px solid var(--em-d);box-shadow:0 4px 14px rgba(31,174,132,.22)}
+h1{font-size:21px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.sub{color:var(--mt);font-size:11px;margin-top:3px}
+.gold-tx{color:var(--em)}
 
-/* ── Topbar stats ── */
-.topbar { max-width:980px; margin:0 auto; padding:12px 28px 0;
-          display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap }
+.topbar{max-width:1040px;margin:0 auto;padding:12px 28px 0;
+        display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.stats-row{display:flex;gap:12px;flex-wrap:wrap;flex:1}
+.st{display:flex;flex-direction:column;gap:1px;background:var(--card);
+    border:1px solid var(--brd-soft);border-radius:10px;padding:10px 14px;min-width:80px}
+.sn{font-size:16px;font-weight:700;font-family:'JetBrains Mono',monospace;line-height:1}
+.sl2{font-size:9px;text-transform:uppercase;letter-spacing:1.4px;color:var(--mt);margin-top:3px}
+.sn.gold{color:var(--gold)}.sn.green{color:var(--em)}
 
-.stats-row { display:flex; gap:14px; flex-wrap:wrap; flex:1 }
+.controls{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+input{background:var(--card);border:1px solid var(--brd);color:var(--tx);
+      font-family:'Sora',sans-serif;font-size:13px;padding:8px 13px;
+      border-radius:9px;width:230px;outline:none;transition:border-color .2s,box-shadow .2s}
+input::placeholder{color:var(--mt)}
+input:focus{border-color:var(--em-d);box-shadow:0 0 0 3px var(--em-soft)}
+.sbtn{background:var(--card);border:1px solid var(--brd);color:var(--mt);
+      font-family:'Sora',sans-serif;font-size:12px;font-weight:500;padding:8px 13px;
+      border-radius:9px;cursor:pointer;transition:all .25s;white-space:nowrap}
+.sbtn:hover{color:var(--tx);border-color:#33363f}
+.sbtn.active{background:var(--em-soft);border-color:rgba(31,174,132,.45);color:var(--em)}
 
-.st  { display:flex; flex-direction:column; gap:1px;
-       background:var(--card); border:1px solid var(--brd-soft); border-radius:10px;
-       padding:10px 14px; min-width:80px }
-.sn  { font-size:16px; font-weight:700; color:var(--tx);
-       font-family:'JetBrains Mono',monospace; line-height:1 }
-.sl2 { font-size:9px; text-transform:uppercase; letter-spacing:1.4px;
-       color:var(--mt); margin-top:3px }
-.sn.gold   { color:var(--gold) }
-.sn.green  { color:var(--em) }
-.sn.orange { color:var(--orange) }
+.list{max-width:1040px;margin:0 auto;padding:18px 28px 40px;display:flex;flex-direction:column;gap:8px}
 
-/* ── Controls ── */
-.controls { display:flex; gap:6px; align-items:center; flex-wrap:wrap }
-input { background:var(--card); border:1px solid var(--brd); color:var(--tx);
-        font-family:'Sora',sans-serif; font-size:13px; padding:8px 13px;
-        border-radius:9px; width:230px; outline:none;
-        transition:border-color .2s, box-shadow .2s }
-input::placeholder { color:var(--mt) }
-input:focus { border-color:var(--em-d); box-shadow:0 0 0 3px var(--em-soft) }
-.sbtn { background:var(--card); border:1px solid var(--brd); color:var(--mt);
-        font-family:'Sora',sans-serif; font-size:12px; font-weight:500;
-        padding:8px 13px; border-radius:9px; cursor:pointer;
-        transition:all .25s ease; white-space:nowrap }
-.sbtn:hover { color:var(--tx); border-color:#33363f }
-.sbtn.active { background:var(--em-soft); border-color:rgba(31,174,132,.45); color:var(--em) }
-#updated { font-size:10px; color:var(--mt); margin-left:2px }
+/* ── Team card ── */
+.card{background:var(--card);border:1px solid var(--brd-soft);border-radius:12px;
+      overflow:hidden;animation:cardIn .4s cubic-bezier(.22,.61,.36,1) both}
+.card:hover{border-color:var(--brd)}
+.card.open{border-color:rgba(31,174,132,.32);background:var(--card-h)}
+@keyframes cardIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
-/* ── Cards ── */
-.list { max-width:980px; margin:0 auto; padding:18px 28px 8px;
-        display:flex; flex-direction:column; gap:8px }
+.ch{display:flex;align-items:center;gap:10px;padding:12px 16px;cursor:pointer;user-select:none}
+.rank{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;
+      justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;
+      background:var(--em-soft);color:var(--em);border:1px solid rgba(31,174,132,.32)}
+.rank.r1{background:linear-gradient(140deg,var(--em),var(--em-d));color:#04140f;border-color:transparent;box-shadow:0 3px 10px rgba(31,174,132,.32)}
+.rank.r2{background:rgba(212,175,55,.15);color:var(--gold);border-color:rgba(212,175,55,.35)}
+.rank.r3{background:rgba(249,115,22,.12);color:var(--orange);border-color:rgba(249,115,22,.35)}
+.tn{font-weight:600;font-size:14px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wl-block{display:flex;gap:4px;align-items:center;flex-shrink:0}
+.wbadge,.lbadge{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:2px 7px;border-radius:5px}
+.wbadge{background:rgba(62,207,142,.12);color:var(--gr);border:1px solid rgba(62,207,142,.28)}
+.lbadge{background:rgba(239,95,107,.1);color:var(--red);border:1px solid rgba(239,95,107,.25)}
+.team-meta{display:flex;gap:6px;flex-shrink:0;align-items:center}
+.trat{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--gold);
+      background:var(--gold-soft);border:1px solid rgba(212,175,55,.22);padding:2px 8px;border-radius:20px}
+.tavg{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--em);
+      background:var(--em-soft);border:1px solid rgba(31,174,132,.22);padding:2px 8px;border-radius:20px}
+.chev{color:var(--mt);flex-shrink:0;display:flex;transition:transform .4s cubic-bezier(.22,.61,.36,1),color .3s}
+.card.open .chev{transform:rotate(180deg);color:var(--em)}
 
-.card { background:var(--card); border:1px solid var(--brd-soft); border-radius:12px;
-        overflow:hidden;
-        transition:border-color .3s, background .3s;
-        animation:cardIn .4s cubic-bezier(.22,.61,.36,1) both }
-.card:hover { border-color:var(--brd) }
-.card.open  { border-color:rgba(31,174,132,.32); background:var(--card-h) }
+.body{display:grid;grid-template-rows:0fr;opacity:0;
+      transition:grid-template-rows .4s cubic-bezier(.22,.61,.36,1),opacity .3s}
+.card.open .body{grid-template-rows:1fr;opacity:1}
+.body-inner{overflow:hidden}
 
-@keyframes cardIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
+/* ── Tabs ── */
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--brd-soft);padding:0 16px}
+.tab{font-size:12px;font-weight:500;padding:10px 14px;cursor:pointer;color:var(--mt);
+     border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .2s;user-select:none}
+.tab:hover{color:var(--tx)}
+.tab.active{color:var(--em);border-bottom-color:var(--em)}
+.tab-panel{display:none;padding:0}
+.tab-panel.active{display:block}
 
-/* ── Card header ── */
-.ch { display:flex; align-items:center; gap:10px; padding:12px 16px;
-      cursor:pointer; user-select:none }
+/* ── Players tab ── */
+table{width:100%;border-collapse:collapse}
+thead th{font-size:9px;text-transform:uppercase;letter-spacing:1.2px;color:var(--mt);
+         padding:7px 16px;text-align:left;
+         border-top:1px solid var(--brd-soft);border-bottom:1px solid var(--brd-soft);font-weight:600}
+thead th.r{text-align:right}
+.pr td{padding:8px 16px;border-bottom:1px solid var(--brd-soft);vertical-align:middle}
+.pr:last-child td{border-bottom:none}
+.pr:hover td{background:rgba(31,174,132,.04)}
+.pnum{color:var(--mt);font-family:'JetBrains Mono',monospace;font-size:11px;width:18px}
+.nk{font-weight:500;font-size:13px}
+.sid{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--blue);display:block;margin-top:2px}
+.no-sid{color:var(--mt);font-size:10px}
+.rat{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);text-align:right;font-weight:500}
+.plnks{display:flex;gap:5px;margin-top:4px;flex-wrap:wrap}
+.plnk{display:inline-flex;align-items:center;gap:3px;font-size:10px;text-decoration:none;
+      padding:2px 8px;border-radius:5px;border:1px solid;white-space:nowrap;font-weight:500;transition:all .2s}
+.plnk.steam{color:var(--blue);border-color:rgba(106,160,255,.28);background:rgba(106,160,255,.06)}
+.plnk.steam:hover{background:rgba(106,160,255,.15);border-color:rgba(106,160,255,.55)}
+.plnk.dotabuff{color:var(--purple);border-color:rgba(167,139,250,.28);background:rgba(167,139,250,.06)}
+.plnk.dotabuff:hover{background:rgba(167,139,250,.15);border-color:rgba(167,139,250,.55)}
 
-.rank { width:28px; height:28px; border-radius:50%; flex-shrink:0;
-        display:flex; align-items:center; justify-content:center;
-        font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700;
-        background:var(--em-soft); color:var(--em);
-        border:1px solid rgba(31,174,132,.32) }
-.rank.r1 { background:linear-gradient(140deg,var(--em),var(--em-d));
-            color:#04140f; border-color:transparent;
-            box-shadow:0 3px 10px rgba(31,174,132,.32) }
-.rank.r2 { background:rgba(212,175,55,.15); color:var(--gold);
-            border-color:rgba(212,175,55,.35) }
-.rank.r3 { background:rgba(249,115,22,.12); color:var(--orange);
-            border-color:rgba(249,115,22,.35) }
+/* Hero pills under player */
+.hero-pills{display:flex;gap:4px;flex-wrap:wrap;margin-top:5px}
+.hpill{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 7px;
+       border-radius:5px;background:rgba(255,255,255,.04);border:1px solid var(--brd-soft);white-space:nowrap}
+.hpill img{width:20px;height:12px;border-radius:2px;object-fit:cover}
+.hpill .hw{font-family:'JetBrains Mono',monospace;font-size:9px}
+.hw.g{color:var(--gr)}.hw.r{color:var(--red)}.hw.y{color:var(--gold)}
 
-.tn  { font-weight:600; font-size:14px; flex:1; min-width:0;
-       white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+/* ── Matches tab ── */
+.match-list{display:flex;flex-direction:column;gap:6px;padding:12px 16px}
+.match-card{background:rgba(255,255,255,.02);border:1px solid var(--brd-soft);border-radius:10px;overflow:hidden}
+.match-head{display:flex;align-items:center;gap:10px;padding:10px 14px;cursor:pointer;user-select:none}
+.match-head:hover{background:rgba(31,174,132,.03)}
+.mteams{flex:1;font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px;min-width:0}
+.mwinner{color:var(--em)}
+.mloser{color:var(--mt)}
+.mvs{color:var(--mt);font-size:11px;flex-shrink:0}
+.mdur{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--mt);flex-shrink:0}
+.mlink{font-size:10px;color:var(--blue);text-decoration:none;flex-shrink:0}
+.mlink:hover{text-decoration:underline}
+.mchev{color:var(--mt);flex-shrink:0;transition:transform .3s}
+.match-card.open .mchev{transform:rotate(180deg)}
 
-/* W/L блок */
-.wl-block { display:flex; gap:4px; align-items:center; flex-shrink:0 }
-.wbadge,.lbadge { font-family:'JetBrains Mono',monospace; font-size:10px;
-                  font-weight:600; padding:2px 7px; border-radius:5px }
-.wbadge { background:rgba(62,207,142,.12); color:var(--gr);
-           border:1px solid rgba(62,207,142,.28) }
-.lbadge { background:rgba(239,95,107,.1); color:var(--red);
-           border:1px solid rgba(239,95,107,.25) }
+.match-body{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .35s,opacity .25s}
+.match-card.open .match-body{grid-template-rows:1fr;opacity:1}
+.match-body-inner{overflow:hidden;padding:0 14px 12px}
 
-/* Σ рейтинг + AVG */
-.team-meta { display:flex; gap:6px; flex-shrink:0; align-items:center }
-.trat { font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--gold);
-        background:var(--gold-soft); border:1px solid rgba(212,175,55,.22);
-        padding:2px 8px; border-radius:20px }
-.tavg { font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--em);
-        background:var(--em-soft); border:1px solid rgba(31,174,132,.22);
-        padding:2px 8px; border-radius:20px }
+/* picks/bans grid */
+.pb-section{margin-top:10px}
+.pb-label{font-size:9px;text-transform:uppercase;letter-spacing:1.2px;color:var(--mt);margin-bottom:6px;font-weight:600}
+.pb-grid{display:flex;gap:4px;flex-wrap:wrap}
+.pb-hero{display:flex;flex-direction:column;align-items:center;gap:2px;width:46px}
+.pb-hero img{width:46px;height:26px;border-radius:4px;object-fit:cover;border:1px solid var(--brd)}
+.pb-hero.ban img{filter:grayscale(1) opacity(.5);border-color:var(--red)}
+.pb-hero.pick-win img{border-color:var(--em)}
+.pb-hero.pick-loss img{border-color:var(--brd)}
+.pb-hname{font-size:8px;color:var(--mt);text-align:center;line-height:1.2;
+          max-width:46px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pb-team-label{font-size:9px;font-weight:600;margin-bottom:3px}
+.pb-team-label.t0{color:var(--blue)}.pb-team-label.t1{color:var(--red)}
 
-.chev { color:var(--mt); flex-shrink:0; display:flex;
-        transition:transform .4s cubic-bezier(.22,.61,.36,1), color .3s }
-.card.open .chev { transform:rotate(180deg); color:var(--em) }
+/* match players mini table */
+.mplayers{margin-top:10px;font-size:11px}
+.mplayers table{font-size:11px}
+.mplayers thead th{font-size:8px;padding:5px 10px}
+.mplayers .pr td{padding:5px 10px}
 
-/* ── Card body ── */
-.body { display:grid; grid-template-rows:0fr; opacity:0;
-        transition:grid-template-rows .4s cubic-bezier(.22,.61,.36,1), opacity .3s }
-.card.open .body { grid-template-rows:1fr; opacity:1 }
-.body-inner { overflow:hidden }
+.site-link{color:var(--mt);text-decoration:none;font-size:11px;padding:6px 14px 14px;
+           display:inline-flex;align-items:center;gap:5px;transition:color .2s;font-weight:500}
+.site-link:hover{color:var(--em)}
 
-table { width:100%; border-collapse:collapse }
-thead th { font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--mt);
-           padding:7px 16px; text-align:left;
-           border-top:1px solid var(--brd-soft); border-bottom:1px solid var(--brd-soft);
-           font-weight:600 }
-thead th.r { text-align:right }
-.pr td { padding:8px 16px; border-bottom:1px solid var(--brd-soft); vertical-align:middle }
-.pr:last-child td { border-bottom:none }
-.pr:hover td { background:rgba(31,174,132,.04) }
-.pnum { color:var(--mt); font-family:'JetBrains Mono',monospace; font-size:11px; width:18px }
-.nk   { font-weight:500; font-size:13px }
-.sid  { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--blue); display:block; margin-top:2px }
-.no-sid { color:var(--mt); font-size:10px }
-.rat  { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--gold);
-        text-align:right; white-space:nowrap; font-weight:500 }
+.hidden{display:none!important}
+.loading,.error{text-align:center;padding:60px 20px;color:var(--mt);font-size:14px}
+.error{color:var(--red)}
 
-.plnks { display:flex; gap:5px; margin-top:4px; flex-wrap:wrap }
-.plnk  { display:inline-flex; align-items:center; gap:3px; font-size:10px;
-         text-decoration:none; padding:2px 8px; border-radius:5px;
-         border:1px solid; white-space:nowrap; font-weight:500; transition:all .2s }
-.plnk.steam    { color:var(--blue);   border-color:rgba(106,160,255,.28); background:rgba(106,160,255,.06) }
-.plnk.steam:hover    { background:rgba(106,160,255,.15); border-color:rgba(106,160,255,.55) }
-.plnk.dotabuff { color:var(--purple); border-color:rgba(167,139,250,.28); background:rgba(167,139,250,.06) }
-.plnk.dotabuff:hover { background:rgba(167,139,250,.15); border-color:rgba(167,139,250,.55) }
-
-.site-link { color:var(--mt); text-decoration:none; font-size:11px;
-             padding:6px 14px 14px; display:inline-flex; align-items:center;
-             gap:5px; transition:color .2s; font-weight:500 }
-.site-link:hover { color:var(--em) }
-
-/* ── Captain badge ── */
-.cap-badge { font-size:9px; background:rgba(212,175,55,.12); color:var(--gold);
-             border:1px solid rgba(212,175,55,.28); border-radius:4px;
-             padding:1px 5px; margin-left:5px; vertical-align:middle }
-
-/* ── Misc ── */
-.hidden { display:none !important }
-.loading,.error { text-align:center; padding:60px 20px; color:var(--mt); font-size:14px }
-.error { color:var(--red) }
-
-footer { max-width:980px; margin:24px auto 0; padding:18px 28px 32px;
-         border-top:1px solid var(--brd-soft); text-align:center }
-.f-link { color:var(--mt); text-decoration:none; font-size:11px }
-.f-link:hover { color:var(--em) }
+footer{max-width:1040px;margin:24px auto 0;padding:18px 28px 32px;
+       border-top:1px solid var(--brd-soft);text-align:center}
+.f-link{color:var(--mt);text-decoration:none;font-size:11px}
+.f-link:hover{color:var(--em)}
 
 @media(max-width:600px){
   header,.topbar,.list,footer{padding-left:14px;padding-right:14px}
-  input{width:100%;flex:1} .controls{width:100%}
+  input{width:100%;flex:1}.controls{width:100%}
   .trat,.tavg{display:none}
-  .st{min-width:60px;padding:8px 10px}
 }
 </style>
 </head><body>
@@ -195,6 +196,7 @@ footer { max-width:980px; margin:24px auto 0; padding:18px 28px 32px;
     <div class="st"><span class="sn" id="s-p">—</span><span class="sl2">Игроков</span></div>
     <div class="st"><span class="sn" id="s-i">—</span><span class="sl2">Steam ID</span></div>
     <div class="st"><span class="sn gold" id="s-avg">—</span><span class="sl2">AVG турнира</span></div>
+    <div class="st"><span class="sn" id="s-m">—</span><span class="sl2">Матчей</span></div>
   </div>
   <div class="controls">
     <input type="text" id="q" placeholder="Поиск по нику, команде, Steam ID…" oninput="filter()">
@@ -211,63 +213,186 @@ footer { max-width:980px; margin:24px auto 0; padding:18px 28px 32px;
 </footer>
 
 <script>
-// Вставь сюда raw URL своего Gist:
-// https://gist.githubusercontent.com/ТЫ/GIST_ID/raw/teams_data.json
-window.GIST_URL = 'https://gist.githubusercontent.com/cworq/96e0e0994cc471537b5782038ee654fd/raw/teams_data.json';  // ← ЗАПОЛНИ
+window.GIST_URL = '';  // ← вставь raw URL Gist
+
 let TEAMS = [], sortMode = 'rating', lastHash = '';
 
+const HERO_CDN = slug =>
+  `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/${slug}.png`;
+
 function fmt(n){ return n!=null ? Number(n).toLocaleString('ru-RU') : '—' }
+function esc(s){ return (s||'').replace(/</g,'&lt;').replace(/>/g,'&gt;') }
+function wrColor(wr){ return wr>=60?'var(--gr)':wr>=50?'var(--gold)':'var(--red)' }
 
 function avgRating(players){
-  const rated = (players||[]).filter(p=>p.rating);
-  return rated.length ? Math.round(rated.reduce((s,p)=>s+p.rating,0)/rated.length) : null;
+  const r = (players||[]).filter(p=>p.rating);
+  return r.length ? Math.round(r.reduce((s,p)=>s+p.rating,0)/r.length) : null;
 }
 
-function renderCard(t, rank){
-  const pl = t.players || [];
-  const avg = avgRating(pl);
+// ── Hero pills ──
+function heroHtml(h, max=5){
+  const c = h.winrate>=60?'g':h.winrate>=50?'y':'r';
+  return `<span class="hpill" title="${esc(h.hero_name)} — ${h.picks} игр, ${h.winrate}% WR">
+    <img src="${HERO_CDN(h.hero_slug)}" onerror="this.style.display='none'" alt="">
+    <span class="hw ${c}">${h.winrate}%</span>
+  </span>`;
+}
 
-  let rows = '';
-  const sorted = [...pl].sort((a,b)=>(b.rating||0)-(a.rating||0));
-  sorted.forEach((p,i)=>{
-    const nick = (p.nickname||'—').replace(/</g,'&lt;');
-    const sid  = p.steam_id||'';
-    const rat  = p.rating!=null ? fmt(p.rating) : '—';
-    const sidCell = sid
-      ? `<span class="sid">${sid}</span>`
-      : '<span class="no-sid">нет данных</span>';
-    const links = sid ? `
-      <div class="plnks">
-        <a href="${p.steam_url}"     target="_blank" rel="noopener" class="plnk steam">↗ Steam</a>
-        <a href="${p.dotabuff_url}"  target="_blank" rel="noopener" class="plnk dotabuff">↗ Dotabuff</a>
-      </div>` : '';
-    rows += `<tr class="pr">
+// ── Picks/Bans block ──
+function pbHtml(entries, label, cssClass){
+  if(!entries||!entries.length) return '';
+  const t0 = entries.filter(e=>e.team===0);
+  const t1 = entries.filter(e=>e.team===1);
+  const side = (list, teamClass, teamLabel) =>
+    `<div>
+      <div class="pb-team-label ${teamClass}">${teamLabel}</div>
+      <div class="pb-grid">
+        ${list.map(e=>`
+          <div class="pb-hero ${cssClass}">
+            <img src="${HERO_CDN(e.hero_slug)}" onerror="this.src=''" alt="${esc(e.hero_name)}">
+            <span class="pb-hname">${esc(e.hero_name)}</span>
+          </div>`).join('')}
+      </div>
+    </div>`;
+  return `<div class="pb-section">
+    <div class="pb-label">${label}</div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap">
+      ${side(t0,'t0','Radiant')}
+      ${side(t1,'t1','Dire')}
+    </div>
+  </div>`;
+}
+
+// ── Match card ──
+function matchHtml(m, myTeamId){
+  const myTeam    = m.team1.id === myTeamId ? m.team1 : m.team2;
+  const oppTeam   = m.team1.id === myTeamId ? m.team2 : m.team1;
+  const won       = m.winner_id === myTeamId;
+  const resultTx  = m.winner_id ? (won ? '✓ Победа' : '✗ Поражение') : '—';
+  const resultCol = m.winner_id ? (won ? 'var(--gr)' : 'var(--red)') : 'var(--mt)';
+
+  // Игроки нашей команды в этом матче
+  const myPlayers = (m.players||[]).filter(p=>p.team_id===myTeamId);
+
+  const playerRows = myPlayers.map((p,i)=>`
+    <tr class="pr">
       <td class="pnum">${i+1}</td>
-      <td class="nk">${nick}</td>
-      <td>${sidCell}${links}</td>
-      <td class="rat">${rat}</td>
-    </tr>`;
-  });
+      <td class="nk">${esc(p.nickname)}</td>
+      <td>
+        <div style="display:flex;align-items:center;gap:6px">
+          <img src="${HERO_CDN(p.hero_slug)}" style="width:32px;height:18px;border-radius:3px;object-fit:cover" onerror="this.style.display='none'" alt="">
+          <span>${esc(p.hero_name)}</span>
+        </div>
+      </td>
+      <td style="font-family:'JetBrains Mono',monospace;font-size:11px;text-align:center;color:var(--gr)">${p.kills}</td>
+      <td style="font-family:'JetBrains Mono',monospace;font-size:11px;text-align:center;color:var(--red)">${p.deaths}</td>
+      <td style="font-family:'JetBrains Mono',monospace;font-size:11px;text-align:center;color:var(--blue)">${p.assists}</td>
+    </tr>`).join('');
 
-  if(!rows) rows='<tr><td colspan="4" style="color:var(--mt);text-align:center;padding:14px;font-size:12px">Нет игроков</td></tr>';
-
-  const wl = (t.games_won!=null && t.games_lost!=null)
-    ? `<div class="wl-block">
-         <span class="wbadge">${t.games_won}W</span>
-         <span class="lbadge">${t.games_lost}L</span>
-       </div>` : '';
-
-  const trat = t.team_rating ? `<span class="trat">Σ ${fmt(t.team_rating)}</span>` : '';
-  const tavg = avg ? `<span class="tavg">AVG ${fmt(avg)}</span>` : '';
-
-  const rankClass = rank===1?'r1':rank===2?'r2':rank===3?'r3':'';
-  const srch = [t.name,...pl.map(p=>(p.nickname||'')+(p.steam_id||''))].join(' ').toLowerCase();
+  const uid = `m-${m.match_id}`;
 
   return `
-<div class="card" data-s="${srch}">
-  <div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<div class="match-card" id="${uid}">
+  <div class="match-head" onclick="toggleMatch('${uid}')">
+    <div class="mteams">
+      <span style="color:${resultCol};font-weight:600">${resultTx}</span>
+      <span class="mvs">vs</span>
+      <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(oppTeam.name)}</span>
+    </div>
+    <span class="mdur">${m.duration||''}</span>
+    <a href="${m.opendota_url}" target="_blank" rel="noopener" class="mlink" onclick="event.stopPropagation()">OpenDota ↗</a>
+    <svg class="mchev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+  <div class="match-body"><div class="match-body-inner">
+    ${pbHtml(m.bans,  'Баны',  'ban')}
+    ${pbHtml(m.picks, 'Пики', 'pick-loss')}
+    ${myPlayers.length ? `
+    <div class="mplayers" style="margin-top:10px">
+      <div class="pb-label">Наши игроки</div>
+      <table>
+        <thead><tr>
+          <th>#</th><th>Ник</th><th>Герой</th>
+          <th class="r" style="text-align:center">K</th>
+          <th class="r" style="text-align:center">D</th>
+          <th class="r" style="text-align:center">A</th>
+        </tr></thead>
+        <tbody>${playerRows}</tbody>
+      </table>
+    </div>` : ''}
+  </div></div>
+</div>`;
+}
+
+function toggleMatch(uid){
+  const el = document.getElementById(uid);
+  if(el) el.classList.toggle('open');
+}
+
+// ── Team card ──
+function renderCard(t, rank){
+  const pl  = t.players || [];
+  const avg = avgRating(pl);
+  const rankClass = rank===1?'r1':rank===2?'r2':rank===3?'r3':'';
+
+  // Players tab
+  const playerRows = [...pl].sort((a,b)=>(b.rating||0)-(a.rating||0)).map((p,i)=>{
+    const sid   = p.steam_id||'';
+    const rat   = p.rating!=null ? fmt(p.rating) : '—';
+    const sidCell = sid ? `<span class="sid">${sid}</span>` : '<span class="no-sid">нет данных</span>';
+    const links = sid ? `<div class="plnks">
+      <a href="${p.steam_url}" target="_blank" rel="noopener" class="plnk steam">↗ Steam</a>
+      <a href="${p.dotabuff_url}" target="_blank" rel="noopener" class="plnk dotabuff">↗ Dotabuff</a>
+    </div>` : '';
+    const wrTx = p.total_games
+      ? `<span style="font-size:10px;color:${wrColor(p.overall_wr)};font-family:'JetBrains Mono',monospace">${p.overall_wr}% (${p.total_games}g)</span>`
+      : '';
+    // Hero text list
+    const heroLines = (p.heroes||[]).slice(0,5).map(h=>{
+      const c = h.winrate>=60?'var(--gr)':h.winrate>=50?'var(--gold)':'var(--red)';
+      return `<div style="display:flex;align-items:center;gap:6px;padding:3px 0;border-bottom:1px solid var(--brd-soft)">
+        <span style="font-size:12px;color:var(--tx);min-width:130px">${esc(h.hero_name)}</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:${c};min-width:42px">${h.winrate}%</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mt)">${h.picks}g</span>
+      </div>`;
+    }).join('');
+    // Ban suggestion: hero picked first (order 0 or 1) in 2+ matches
+    const fpHeroes = {};
+    (t.matches||[]).forEach(m=>{
+      (m.picks||[]).filter(pk=>pk.order<=1&&pk.team===(m.team1&&m.team1.id===t.id?0:1)).forEach(pk=>{
+        fpHeroes[pk.hero_name]=(fpHeroes[pk.hero_name]||0)+1;
+      });
+    });
+    const banTips = Object.entries(fpHeroes).filter(([,c])=>c>=2).map(([name,c])=>name);
+    return `<tr class="pr">
+      <td class="pnum">${i+1}</td>
+      <td class="nk">
+        <div style="font-weight:500">${esc(p.nickname)}</div>
+        ${wrTx ? `<div style="margin-top:2px">${wrTx}</div>` : ''}
+        ${heroLines ? `<div style="margin-top:6px;display:flex;flex-direction:column;border:1px solid var(--brd-soft);border-radius:6px;overflow:hidden">${heroLines}</div>` : ''}
+        ${sidCell}${links}
+      </td>
+      <td class="rat">${rat}</td>
+    </tr>`;
+  }).join('');
+
+  // Matches tab
+  const matches = (t.matches||[]).sort((a,b)=>new Date(b.start_time||0)-new Date(a.start_time||0));
+  const matchesHtml = matches.length
+    ? `<div class="match-list">${matches.map(m=>matchHtml(m, t.id)).join('')}</div>`
+    : `<div style="padding:20px 16px;color:var(--mt);font-size:12px;text-align:center">Матчей пока нет</div>`;
+
+  const wl = (t.games_won!=null && t.games_lost!=null)
+    ? `<div class="wl-block"><span class="wbadge">${t.games_won}W</span><span class="lbadge">${t.games_lost}L</span></div>` : '';
+  const trat = t.team_rating ? `<span class="trat">Σ ${fmt(t.team_rating)}</span>` : '';
+  const tavg = avg ? `<span class="tavg">AVG ${fmt(avg)}</span>` : '';
+  const srch = [t.name,...pl.map(p=>(p.nickname||'')+(p.steam_id||''))].join(' ').toLowerCase();
+  const cid  = `c-${t.id}`;
+
+  return `
+<div class="card" data-s="${srch}" id="${cid}">
+  <div class="ch" onclick="toggleCard('${cid}')">
     <span class="rank ${rankClass}">${rank}</span>
-    <span class="tn">${(t.name||'').replace(/</g,'&lt;')}</span>
+    <span class="tn">${esc(t.name)}</span>
     ${wl}
     <div class="team-meta">${trat}${tavg}</div>
     <span class="chev">
@@ -275,22 +400,57 @@ function renderCard(t, rank){
     </span>
   </div>
   <div class="body"><div class="body-inner">
-    <table>
-      <thead><tr>
-        <th>#</th><th>Ник</th><th>Steam ID / Ссылки</th><th class="r">Рейтинг</th>
-      </tr></thead>
-      <tbody>${rows}</tbody>
-    </table>
+    <div class="tabs" id="tabs-${cid}">
+      <div class="tab active" onclick="switchTab('${cid}','players')">Игроки (${pl.length})</div>
+      <div class="tab" onclick="switchTab('${cid}','matches')">Матчи (${matches.length})</div>
+    </div>
+    <div class="tab-panel active" id="${cid}-players">
+      <table>
+        <thead><tr><th>#</th><th>Ник / Герои</th><th class="r">Рейтинг</th></tr></thead>
+        <tbody>${playerRows||'<tr><td colspan="3" style="text-align:center;padding:14px;color:var(--mt);font-size:12px">Нет игроков</td></tr>'}</tbody>
+      </table>
+    </div>
+    <div class="tab-panel" id="${cid}-matches">
+      ${matchesHtml}
+    </div>
+    ${(()=>{
+      const fpHeroes={};
+      (t.matches||[]).forEach(m=>{
+        const mySlot=m.team1&&m.team1.id===t.id?0:1;
+        (m.picks||[]).filter(pk=>pk.order<=1&&pk.team===mySlot).forEach(pk=>{
+          fpHeroes[pk.hero_name]=(fpHeroes[pk.hero_name]||0)+1;
+        });
+      });
+      const tips=Object.entries(fpHeroes).filter(([,c])=>c>=2).map(([name,c])=>
+        `<span style="background:rgba(239,95,107,.1);border:1px solid rgba(239,95,107,.3);color:var(--red);
+               font-size:10px;padding:2px 8px;border-radius:5px;white-space:nowrap">${esc(name)} (${c}x FP)</span>`
+      ).join('');
+      return tips ? `<div style="padding:8px 16px 0;display:flex;flex-wrap:wrap;gap:4px;align-items:center">
+        <span style="font-size:10px;color:var(--mt);margin-right:4px">🚫 Рекомендуем банить:</span>${tips}
+      </div>` : '';
+    })()}
     <a href="${t.url}" target="_blank" rel="noopener" class="site-link">Открыть на mixer-cup.gg ↗</a>
   </div></div>
 </div>`;
 }
 
+function toggleCard(cid){
+  document.getElementById(cid)?.classList.toggle('open');
+}
+
+function switchTab(cid, tab){
+  const tabs = document.getElementById(`tabs-${cid}`);
+  if(!tabs) return;
+  tabs.querySelectorAll('.tab').forEach((t,i)=>{
+    t.classList.toggle('active', (i===0&&tab==='players')||(i===1&&tab==='matches'));
+  });
+  document.getElementById(`${cid}-players`)?.classList.toggle('active', tab==='players');
+  document.getElementById(`${cid}-matches`)?.classList.toggle('active', tab==='matches');
+}
+
 function go(){
   let data = [...TEAMS];
-  if(sortMode==='site')        data.sort((a,b)=>(a.dom_order||0)-(b.dom_order||0));
-  else if(sortMode==='rating') data.sort((a,b)=>(b.team_rating||0)-(a.team_rating||0));
-
+  if(sortMode==='rating') data.sort((a,b)=>(b.team_rating||0)-(a.team_rating||0));
   const grid = document.getElementById('grid');
   grid.innerHTML = data.map((t,i)=>renderCard(t,i+1)).join('');
   grid.querySelectorAll('.card').forEach((c,i)=>{
@@ -313,51 +473,44 @@ function setSort(m){
   if(m===sortMode) return;
   sortMode=m;
   document.querySelectorAll('.sbtn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('btn-'+m).classList.add('active');
+  document.getElementById('btn-'+m)?.classList.add('active');
   go();
 }
 
 function updateStats(){
-  const allPlayers = TEAMS.flatMap(t=>t.players||[]);
-  // AVG турнира = среднее team_rating всех команд
+  const allP = TEAMS.flatMap(t=>t.players||[]);
   const rated = TEAMS.filter(t=>t.team_rating);
-  const tourAvg = rated.length
-    ? Math.round(rated.reduce((s,t)=>s+t.team_rating,0)/rated.length) : null;
-
+  const tourAvg = rated.length ? Math.round(rated.reduce((s,t)=>s+t.team_rating,0)/rated.length) : null;
   document.getElementById('s-t').textContent   = TEAMS.length;
-  document.getElementById('s-p').textContent   = allPlayers.length;
-  document.getElementById('s-i').textContent   = allPlayers.filter(p=>p.steam_id).length;
+  document.getElementById('s-p').textContent   = allP.length;
+  document.getElementById('s-i').textContent   = allP.filter(p=>p.steam_id).length;
   document.getElementById('s-avg').textContent = tourAvg ? fmt(tourAvg) : '—';
+  document.getElementById('s-m').textContent   = Math.round(TEAMS.reduce((s,t)=>(t.matches||[]).length+s,0)/2);
 }
 
 function formatUpdatedAt(iso){
   if(!iso) return '';
-  try{
-    const d=new Date(iso);
-    return ' · '+d.toLocaleString('ru-RU',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
-  }catch{return ''}
+  try{const d=new Date(iso);return ' · '+d.toLocaleString('ru-RU',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});}catch{return ''}
 }
 
 async function loadData(){
   try{
-    // GIST_URL подставляется при деплое, либо fallback на локальный файл
-    const url = window.GIST_URL || 'teams_data.json';
-    const resp = await fetch(url+'?t='+Date.now());
+    const url  = window.GIST_URL || 'teams_data.json';
+    const resp = await fetch(url+(url.includes('?')?'&':'?')+'t='+Date.now());
     if(!resp.ok) throw new Error('HTTP '+resp.status);
     const json = await resp.json();
     TEAMS = Array.isArray(json)?json:(json.teams||[]);
-    const updatedAt = Array.isArray(json)?null:json.updated_at;
-    document.getElementById('updated').textContent = formatUpdatedAt(updatedAt);
+    document.getElementById('updated').textContent = formatUpdatedAt(json.updated_at);
     const hash = JSON.stringify(TEAMS);
-    if(hash!==lastHash){ lastHash=hash; updateStats(); go(); }
+    if(hash!==lastHash){lastHash=hash;updateStats();go();}
   }catch(e){
     document.getElementById('grid').innerHTML=
       `<div class="error">Не удалось загрузить данные<br><small>${e.message}</small><br><br>
-       <span style="font-size:11px;color:var(--mt)">Запусти <code>python parse_mixer.py</code> → <code>python -m http.server</code></span></div>`;
+       <span style="font-size:11px;color:var(--mt)">Запусти <code>python scraper.py</code> → <code>python -m http.server</code></span></div>`;
   }
 }
 
 loadData();
-setInterval(loadData, 5*60*1000);
+setInterval(loadData,5*60*1000);
 </script>
 </body></html>
