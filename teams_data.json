@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T07:01:12.620411+00:00",
+  "updated_at": "2026-07-04T07:15:43.068492+00:00",
   "tournament_id": 26,
   "teams": [
     {
@@ -705,10 +705,19 @@
       "place": null,
       "games_won": 1,
       "games_lost": 3,
-      "team_rating": 42864.0,
+      "team_rating": 42359.0,
       "dom_order": 13,
       "url": "https://mixer-cup.gg/ru/team/ff7e71c0-da8b-4664-8e50-f1d268561a1e",
       "players": [
+        {
+          "id": "433d3442-2d25-45ec-9961-ac4e7dc7dbed",
+          "nickname": "grind season",
+          "rating": 3447.0,
+          "steam_id": "76561199091341473",
+          "steam_url": "https://steamcommunity.com/profiles/76561199091341473",
+          "dotabuff_url": "https://www.dotabuff.com/players/76561199091341473",
+          "leaderboard": null
+        },
         {
           "id": "8b7597f8-22bd-45ac-8f50-b2c6da6b2023",
           "nickname": "MC ОТПУСК",
@@ -734,15 +743,6 @@
           "steam_id": "76561198970114604",
           "steam_url": "https://steamcommunity.com/profiles/76561198970114604",
           "dotabuff_url": "https://www.dotabuff.com/players/76561198970114604",
-          "leaderboard": null
-        },
-        {
-          "id": "e3f691d4-c7c3-45ec-939f-7310ff249292",
-          "nickname": "Torpeda",
-          "rating": 3952.0,
-          "steam_id": "76561198084463058",
-          "steam_url": "https://steamcommunity.com/profiles/76561198084463058",
-          "dotabuff_url": "https://www.dotabuff.com/players/76561198084463058",
           "leaderboard": null
         },
         {
