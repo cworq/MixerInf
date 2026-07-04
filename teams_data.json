@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T07:45:49.395654+00:00",
+  "updated_at": "2026-07-04T08:01:13.769928+00:00",
   "tournament_id": 26,
   "teams": [
     {
@@ -704,7 +704,7 @@
       "number": 13,
       "place": null,
       "games_won": 1,
-      "games_lost": 3,
+      "games_lost": 4,
       "team_rating": 42359.0,
       "dom_order": 13,
       "url": "https://mixer-cup.gg/ru/team/ff7e71c0-da8b-4664-8e50-f1d268561a1e",
@@ -1109,7 +1109,7 @@
       "name": "Team This_Gleb",
       "number": 20,
       "place": null,
-      "games_won": 2,
+      "games_won": 3,
       "games_lost": 2,
       "team_rating": 41914.0,
       "dom_order": 20,
