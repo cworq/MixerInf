@@ -211,7 +211,9 @@ footer { max-width:980px; margin:24px auto 0; padding:18px 28px 32px;
 </footer>
 
 <script>
-window.GIST_URL = 'https://gist.githubusercontent.com/cworq/96e0e0994cc471537b5782038ee654fd/raw/teams_data.json';
+// Вставь сюда raw URL своего Gist:
+// https://gist.githubusercontent.com/ТЫ/GIST_ID/raw/teams_data.json
+window.GIST_URL = 'https://gist.githubusercontent.com/cworq/96e0e0994cc471537b5782038ee654fd/raw/116a5fc3a51831ff5e9c29d3a6871f86bc2108a7/teams_data.json';  // ← ЗАПОЛНИ
 let TEAMS = [], sortMode = 'rating', lastHash = '';
 
 function fmt(n){ return n!=null ? Number(n).toLocaleString('ru-RU') : '—' }
@@ -338,7 +340,9 @@ function formatUpdatedAt(iso){
 
 async function loadData(){
   try{
-    const resp = await fetch('teams_data.json?t='+Date.now());
+    // GIST_URL подставляется при деплое, либо fallback на локальный файл
+    const url = window.GIST_URL || 'teams_data.json';
+    const resp = await fetch(url+'?t='+Date.now());
     if(!resp.ok) throw new Error('HTTP '+resp.status);
     const json = await resp.json();
     TEAMS = Array.isArray(json)?json:(json.teams||[]);
