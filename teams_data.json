@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T00:15:43.904499+00:00",
+  "updated_at": "2026-07-04T00:31:06.078432+00:00",
   "tournament_id": 26,
   "teams": [
     {
@@ -124,7 +124,7 @@
       "number": 3,
       "place": null,
       "games_won": 0,
-      "games_lost": 4,
+      "games_lost": 5,
       "team_rating": 41738.0,
       "dom_order": 3,
       "url": "https://mixer-cup.gg/ru/team/b8c40014-c084-409f-9e07-ba784c120316",
@@ -355,7 +355,7 @@
       "name": "Team Sokur PRIME",
       "number": 7,
       "place": null,
-      "games_won": 2,
+      "games_won": 3,
       "games_lost": 2,
       "team_rating": 41273.0,
       "dom_order": 7,
