@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T05:31:06.041800+00:00",
+  "updated_at": "2026-07-04T05:45:46.646860+00:00",
   "tournament_id": 26,
   "teams": [
     {
@@ -588,7 +588,7 @@
       "number": 11,
       "place": null,
       "games_won": 2,
-      "games_lost": 2,
+      "games_lost": 3,
       "team_rating": 42614.0,
       "dom_order": 11,
       "url": "https://mixer-cup.gg/ru/team/1b653646-11c1-4371-8d0e-2df62411e874",
@@ -647,19 +647,10 @@
       "place": null,
       "games_won": 3,
       "games_lost": 1,
-      "team_rating": 42623.0,
+      "team_rating": 31870.0,
       "dom_order": 12,
       "url": "https://mixer-cup.gg/ru/team/344b8573-cb46-4193-a9c8-abaf24c0a8eb",
       "players": [
-        {
-          "id": "8f447181-8317-447c-a2a2-1e5d939a8849",
-          "nickname": "melwis",
-          "rating": 10753.0,
-          "steam_id": "76561198897782500",
-          "steam_url": "https://steamcommunity.com/profiles/76561198897782500",
-          "dotabuff_url": "https://www.dotabuff.com/players/76561198897782500",
-          "leaderboard": 1984
-        },
         {
           "id": "9b767cac-7cb4-4057-9562-dd79848e912f",
           "nickname": "инсулинки",
@@ -1225,7 +1216,7 @@
       "name": "Team vls",
       "number": 22,
       "place": null,
-      "games_won": 3,
+      "games_won": 4,
       "games_lost": 1,
       "team_rating": 43225.0,
       "dom_order": 22,
