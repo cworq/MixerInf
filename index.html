@@ -381,6 +381,22 @@ function renderCard(t, rank){
     ? `<div class="match-list">${matches.map(m=>matchHtml(m, t.id)).join('')}</div>`
     : `<div style="padding:20px 16px;color:var(--mt);font-size:12px;text-align:center">Матчей пока нет</div>`;
 
+  // Ban suggestions — heroes picked first in 2+ matches
+  const fpCount={};
+  (t.matches||[]).forEach(m=>{
+    const mySlot=(m.team1&&m.team1.id===t.id)?0:1;
+    (m.picks||[]).filter(pk=>pk.order<=1&&pk.team===mySlot).forEach(pk=>{
+      fpCount[pk.hero_name]=(fpCount[pk.hero_name]||0)+1;
+    });
+  });
+  const banTips=Object.entries(fpCount).filter(([,c])=>c>=2)
+    .sort((a,b)=>b[1]-a[1])
+    .map(([name,c])=>`<span style="background:rgba(239,95,107,.1);border:1px solid rgba(239,95,107,.3);color:var(--red);font-size:10px;padding:2px 8px;border-radius:5px;white-space:nowrap">${esc(name)} (${c}x FP)</span>`)
+    .join('');
+  const banHtml = banTips
+    ? `<div style="padding:8px 16px 4px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:var(--mt);margin-right:4px">🚫 Рекомендуем банить:</span>${banTips}</div>`
+    : '';
+
   const wl = (t.games_won!=null && t.games_lost!=null)
     ? `<div class="wl-block"><span class="wbadge">${t.games_won}W</span><span class="lbadge">${t.games_lost}L</span></div>` : '';
   const trat = t.team_rating ? `<span class="trat">Σ ${fmt(t.team_rating)}</span>` : '';
@@ -413,22 +429,7 @@ function renderCard(t, rank){
     <div class="tab-panel" id="${cid}-matches">
       ${matchesHtml}
     </div>
-    ${(()=>{
-      const fpHeroes={};
-      (t.matches||[]).forEach(m=>{
-        const mySlot=m.team1&&m.team1.id===t.id?0:1;
-        (m.picks||[]).filter(pk=>pk.order<=1&&pk.team===mySlot).forEach(pk=>{
-          fpHeroes[pk.hero_name]=(fpHeroes[pk.hero_name]||0)+1;
-        });
-      });
-      const tips=Object.entries(fpHeroes).filter(([,c])=>c>=2).map(([name,c])=>
-        `<span style="background:rgba(239,95,107,.1);border:1px solid rgba(239,95,107,.3);color:var(--red);
-               font-size:10px;padding:2px 8px;border-radius:5px;white-space:nowrap">${esc(name)} (${c}x FP)</span>`
-      ).join('');
-      return tips ? `<div style="padding:8px 16px 0;display:flex;flex-wrap:wrap;gap:4px;align-items:center">
-        <span style="font-size:10px;color:var(--mt);margin-right:4px">🚫 Рекомендуем банить:</span>${tips}
-      </div>` : '';
-    })()}
+    ${banHtml}
     <a href="${t.url}" target="_blank" rel="noopener" class="site-link">Открыть на mixer-cup.gg ↗</a>
   </div></div>
 </div>`;
