@@ -289,7 +289,7 @@ function matchHtml(m, myTeamId){
       <td style="font-family:'JetBrains Mono',monospace;font-size:11px;text-align:center;color:var(--blue)">${p.assists}</td>
     </tr>`).join('');
 
-  const uid = `m-${t.id}-${m.match_id}`;
+  const uid = `m-${myTeamId}-${m.match_id}`;
 
   return `
 <div class="match-card" id="${uid}">
