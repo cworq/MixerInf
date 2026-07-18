@@ -490,7 +490,31 @@ async function loadData(){
     const resp = await fetch(url+(url.includes('?')?'&':'?')+'t='+Date.now());
     if(!resp.ok) throw new Error('HTTP '+resp.status);
     const json = await resp.json();
-    TEAMS = Array.isArray(json)?json:(json.teams||[]);
+    let teams = Array.isArray(json)?json:(json.teams||[]);
+    
+    // Загружаем историю игроков
+    let playerHistory = {};
+    try {
+      const histUrl = (window.GIST_URL||'').replace('teams_data.json', 'players_history.json') || 'players_history.json';
+      const histResp = await fetch(histUrl+(histUrl.includes('?')?'&':'?')+'t='+Date.now());
+      if(histResp.ok) playerHistory = await histResp.json();
+    } catch(e) {}
+    
+    // Берём только текущий турнир (27 или последний)
+    const currentTournament = 27;
+    TEAMS = teams.filter(t => t.tournament_id === currentTournament);
+    
+    // Прибиваем историю игроков
+    TEAMS.forEach(team => {
+      team.players.forEach(player => {
+        if(player.steam_id && playerHistory[player.steam_id]) {
+          const ph = playerHistory[player.steam_id];
+          player.heroes_all = ph.heroes_all || [];
+          player.total_games_all = ph.total_games_all || 0;
+          player.overall_wr_all = ph.overall_wr_all || 0;
+        }
+      });
+    });
     document.getElementById('updated').textContent = formatUpdatedAt(json.updated_at);
     const hash = JSON.stringify(TEAMS);
     if(hash!==lastHash){lastHash=hash;updateStats();go();}
