@@ -49,7 +49,6 @@ input:focus{border-color:var(--em-d);box-shadow:0 0 0 3px var(--em-soft)}
 
 .list{max-width:1040px;margin:0 auto;padding:18px 28px 40px;display:flex;flex-direction:column;gap:8px}
 
-/* ── Team card ── */
 .card{background:var(--card);border:1px solid var(--brd-soft);border-radius:12px;
       overflow:hidden;animation:cardIn .4s cubic-bezier(.22,.61,.36,1) both}
 .card:hover{border-color:var(--brd)}
@@ -81,7 +80,6 @@ input:focus{border-color:var(--em-d);box-shadow:0 0 0 3px var(--em-soft)}
 .card.open .body{grid-template-rows:1fr;opacity:1}
 .body-inner{overflow:hidden}
 
-/* ── Tabs ── */
 .tabs{display:flex;gap:0;border-bottom:1px solid var(--brd-soft);padding:0 16px}
 .tab{font-size:12px;font-weight:500;padding:10px 14px;cursor:pointer;color:var(--mt);
      border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .2s;user-select:none}
@@ -90,7 +88,6 @@ input:focus{border-color:var(--em-d);box-shadow:0 0 0 3px var(--em-soft)}
 .tab-panel{display:none;padding:0}
 .tab-panel.active{display:block}
 
-/* ── Players tab ── */
 table{width:100%;border-collapse:collapse}
 thead th{font-size:9px;text-transform:uppercase;letter-spacing:1.2px;color:var(--mt);
          padding:7px 16px;text-align:left;
@@ -112,15 +109,13 @@ thead th.r{text-align:right}
 .plnk.dotabuff{color:var(--purple);border-color:rgba(167,139,250,.28);background:rgba(167,139,250,.06)}
 .plnk.dotabuff:hover{background:rgba(167,139,250,.15);border-color:rgba(167,139,250,.55)}
 
-/* Hero pills under player */
-.hero-pills{display:flex;gap:4px;flex-wrap:wrap;margin-top:5px}
-.hpill{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 7px;
-       border-radius:5px;background:rgba(255,255,255,.04);border:1px solid var(--brd-soft);white-space:nowrap}
-.hpill img{width:20px;height:12px;border-radius:2px;object-fit:cover}
-.hpill .hw{font-family:'JetBrains Mono',monospace;font-size:9px}
-.hw.g{color:var(--gr)}.hw.r{color:var(--red)}.hw.y{color:var(--gold)}
+.hero-block{display:flex;flex-direction:column;border:1px solid var(--brd-soft);border-radius:6px;overflow:hidden;margin-top:6px}
+.hero-line{display:flex;align-items:center;gap:6px;padding:3px 0;border-bottom:1px solid var(--brd-soft)}
+.hero-line:last-child{border-bottom:none}
+.hero-name{font-size:12px;color:var(--tx);min-width:130px;padding:4px 8px}
+.hero-wr{font-family:'JetBrains Mono',monospace;font-size:11px;min-width:42px;padding:4px 8px}
+.hero-games{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mt);padding:4px 8px}
 
-/* ── Matches tab ── */
 .match-list{display:flex;flex-direction:column;gap:6px;padding:12px 16px}
 .match-card{background:rgba(255,255,255,.02);border:1px solid var(--brd-soft);border-radius:10px;overflow:hidden}
 .match-head{display:flex;align-items:center;gap:10px;padding:10px 14px;cursor:pointer;user-select:none}
@@ -139,16 +134,8 @@ thead th.r{text-align:right}
 .match-card.open .match-body{grid-template-rows:1fr;opacity:1}
 .match-body-inner{overflow:hidden;padding:0 14px 12px}
 
-/* picks/bans grid */
 .pb-section{margin-top:10px}
-.pb-label{font-size:9px;text-transform:uppercase;letter-spacing:1.2px;color:var(--mt);margin-bottom:6px;font-weight:600}
-.pb-grid{display:flex;gap:4px;flex-wrap:wrap}
-.pb-hero{display:flex;flex-direction:column;align-items:center;gap:2px;width:46px}
-.pb-hero img{width:46px;height:26px;border-radius:4px;object-fit:cover;border:1px solid var(--brd)}
-.pb-hero.ban img{filter:grayscale(1) opacity(.5);border-color:var(--red)}
-.pb-hero.pick-win img{border-color:var(--em)}
-.pb-hero.pick-loss img{border-color:var(--brd)}
-
+.pb-label{font-size:9px;text-transform:uppercase;letter-spacing:1.2px;color:var(--mt);margin-bottom:8px;font-weight:600}
 .pb-sequence{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
 .pb-item{position:relative;width:50px;height:28px}
 .pb-item img{width:100%;height:100%;border-radius:4px;object-fit:cover;border:2px solid}
@@ -156,12 +143,10 @@ thead th.r{text-align:right}
 .pb-item.pick img{border-color:var(--em)}
 .pb-order{position:absolute;top:2px;right:2px;background:rgba(0,0,0,.7);color:var(--gold);
           font-size:10px;font-weight:700;padding:1px 4px;border-radius:3px;font-family:'JetBrains Mono',monospace}
-.pb-hname{font-size:8px;color:var(--mt);text-align:center;line-height:1.2;
-          max-width:46px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
 .pb-team-label{font-size:9px;font-weight:600;margin-bottom:3px}
 .pb-team-label.t0{color:var(--blue)}.pb-team-label.t1{color:var(--red)}
 
-/* match players mini table */
 .mplayers{margin-top:10px;font-size:11px}
 .mplayers table{font-size:11px}
 .mplayers thead th{font-size:8px;padding:5px 10px}
@@ -237,40 +222,6 @@ function avgRating(players){
   return r.length ? Math.round(r.reduce((s,p)=>s+p.rating,0)/r.length) : null;
 }
 
-// ── Hero pills ──
-function heroHtml(h, max=5){
-  const c = h.winrate>=60?'g':h.winrate>=50?'y':'r';
-  return `<span class="hpill" title="${esc(h.hero_name)} — ${h.picks} игр, ${h.winrate}% WR">
-    <img src="${HERO_CDN(h.hero_slug)}" onerror="this.style.display='none'" alt="">
-    <span class="hw ${c}">${h.winrate}%</span>
-  </span>`;
-}
-
-// ── Picks/Bans block ──
-function pbHtml(entries, label, cssClass){
-  if(!entries||!entries.length) return '';
-  const t0 = entries.filter(e=>e.team===0);
-  const t1 = entries.filter(e=>e.team===1);
-  const side = (list, teamClass, teamLabel) =>
-    `<div>
-      <div class="pb-team-label ${teamClass}">${teamLabel}</div>
-      <div class="pb-grid">
-        ${list.map(e=>`
-          <div class="pb-hero ${cssClass}">
-            <img src="${HERO_CDN(e.hero_slug)}" onerror="this.src=''" alt="${esc(e.hero_name)}">
-            <span class="pb-hname">${esc(e.hero_name)}</span>
-          </div>`).join('')}
-      </div>
-    </div>`;
-  return `<div class="pb-section">
-    <div class="pb-label">${label}</div>
-    <div style="display:flex;gap:24px;flex-wrap:wrap">
-      ${side(t0,'t0','Radiant')}
-      ${side(t1,'t1','Dire')}
-    </div>
-  </div>`;
-}
-
 // ── Match card ──
 function matchHtml(m, myTeamId){
   const myTeam    = m.team1.id === myTeamId ? m.team1 : m.team2;
@@ -279,7 +230,6 @@ function matchHtml(m, myTeamId){
   const resultTx  = m.winner_id ? (won ? '✓ Победа' : '✗ Поражение') : '—';
   const resultCol = m.winner_id ? (won ? 'var(--gr)' : 'var(--red)') : 'var(--mt)';
 
-  // Игроки нашей команды в этом матче
   const myPlayers = (m.players||[]).filter(p=>p.team_id===myTeamId);
 
   const playerRows = myPlayers.map((p,i)=>`
@@ -299,6 +249,35 @@ function matchHtml(m, myTeamId){
 
   const uid = `m-${myTeamId}-${m.match_id}`;
 
+  const pb = m.all_picks_bans||[];
+  const rad = pb.filter(x=>x.team===0);
+  const dire = pb.filter(x=>x.team===1);
+  const pbHtml = `<div class="pb-section">
+    <div class="pb-label">Очередность банов и пиков</div>
+    <div style="display:flex;gap:20px;flex-wrap:wrap">
+      <div>
+        <div class="pb-team-label t0">Radiant</div>
+        <div class="pb-sequence">
+          ${rad.map((x,i)=>`
+            <div class="pb-item ${x.is_pick?'pick':'ban'}" title="${x.hero_name}">
+              <img src="${HERO_CDN(x.hero_slug)}" onerror="this.src=''" alt="">
+              <span class="pb-order">${i+1}</span>
+            </div>`).join('')}
+        </div>
+      </div>
+      <div>
+        <div class="pb-team-label t1">Dire</div>
+        <div class="pb-sequence">
+          ${dire.map((x,i)=>`
+            <div class="pb-item ${x.is_pick?'pick':'ban'}" title="${x.hero_name}">
+              <img src="${HERO_CDN(x.hero_slug)}" onerror="this.src=''" alt="">
+              <span class="pb-order">${i+1}</span>
+            </div>`).join('')}
+        </div>
+      </div>
+    </div>
+  </div>`;
+
   return `
 <div class="match-card" id="${uid}">
   <div class="match-head" onclick="toggleMatch('${uid}')">
@@ -312,38 +291,9 @@ function matchHtml(m, myTeamId){
     <svg class="mchev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
   <div class="match-body"><div class="match-body-inner">
-    ${(()=>{
-      const pb = m.all_picks_bans||[];
-      const rad = pb.filter(x=>x.team===0);
-      const dire = pb.filter(x=>x.team===1);
-      return `<div class="pb-section">
-        <div class="pb-label">Очередность банов и пиков</div>
-        <div style="display:flex;gap:20px">
-          <div>
-            <div class="pb-team-label t0">Radiant</div>
-            <div class="pb-sequence">
-              ${rad.map((x,i)=>`
-                <div class="pb-item ${x.is_pick?'pick':'ban'}" title="${x.hero_name}">
-                  <img src="${HERO_CDN(x.hero_slug)}" onerror="this.src=''" alt="">
-                  <span class="pb-order">${i+1}</span>
-                </div>`).join('')}
-            </div>
-          </div>
-          <div>
-            <div class="pb-team-label t1">Dire</div>
-            <div class="pb-sequence">
-              ${dire.map((x,i)=>`
-                <div class="pb-item ${x.is_pick?'pick':'ban'}" title="${x.hero_name}">
-                  <img src="${HERO_CDN(x.hero_slug)}" onerror="this.src=''" alt="">
-                  <span class="pb-order">${i+1}</span>
-                </div>`).join('')}
-            </div>
-          </div>
-        </div>
-      </div>`;
-    })()}
+    ${pbHtml}
     ${myPlayers.length ? `
-    <div class="mplayers" style="margin-top:10px">
+    <div class="mplayers">
       <div class="pb-label">Наши игроки</div>
       <table>
         <thead><tr>
@@ -379,32 +329,26 @@ function renderCard(t, rank){
       <a href="${p.steam_url}" target="_blank" rel="noopener" class="plnk steam">↗ Steam</a>
       <a href="${p.dotabuff_url}" target="_blank" rel="noopener" class="plnk dotabuff">↗ Dotabuff</a>
     </div>` : '';
-    const wrTx = p.total_games
-      ? `<span style="font-size:10px;color:${wrColor(p.overall_wr)};font-family:'JetBrains Mono',monospace">${p.overall_wr}% (${p.total_games}g)</span>`
-      : '';
-    // Hero text list
+    
     const heroLines = (p.heroes||[]).slice(0,5).map(h=>{
       const c = h.winrate>=60?'var(--gr)':h.winrate>=50?'var(--gold)':'var(--red)';
-      return `<div style="display:flex;align-items:center;gap:6px;padding:3px 0;border-bottom:1px solid var(--brd-soft)">
-        <span style="font-size:12px;color:var(--tx);min-width:130px">${esc(h.hero_name)}</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:${c};min-width:42px">${h.winrate}%</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mt)">${h.picks}g</span>
+      return `<div class="hero-line">
+        <span class="hero-name">${esc(h.hero_name)}</span>
+        <span class="hero-wr" style="color:${c}">${h.winrate}%</span>
+        <span class="hero-games">${h.picks}g</span>
       </div>`;
     }).join('');
-    // Ban suggestion: hero picked first (order 0 or 1) in 2+ matches
-    const fpHeroes = {};
-    (t.matches||[]).forEach(m=>{
-      (m.picks||[]).filter(pk=>pk.order<=1&&pk.team===(m.team1&&m.team1.id===t.id?0:1)).forEach(pk=>{
-        fpHeroes[pk.hero_name]=(fpHeroes[pk.hero_name]||0)+1;
-      });
-    });
-    const banTips = Object.entries(fpHeroes).filter(([,c])=>c>=2).map(([name,c])=>name);
+
+    const wrTx  = p.total_games
+      ? `<span style="font-size:10px;color:${wrColor(p.overall_wr)};font-family:'JetBrains Mono',monospace">${p.overall_wr}% (${p.total_games}g)</span>`
+      : '';
+
     return `<tr class="pr">
       <td class="pnum">${i+1}</td>
       <td class="nk">
-        <div style="font-weight:500">${esc(p.nickname)}</div>
+        ${esc(p.nickname)}
         ${wrTx ? `<div style="margin-top:2px">${wrTx}</div>` : ''}
-        ${heroLines ? `<div style="margin-top:6px;display:flex;flex-direction:column;border:1px solid var(--brd-soft);border-radius:6px;overflow:hidden">${heroLines}</div>` : ''}
+        ${heroLines ? `<div class="hero-block">${heroLines}</div>` : ''}
         ${sidCell}${links}
       </td>
       <td class="rat">${rat}</td>
@@ -417,21 +361,26 @@ function renderCard(t, rank){
     ? `<div class="match-list">${matches.map(m=>matchHtml(m, t.id)).join('')}</div>`
     : `<div style="padding:20px 16px;color:var(--mt);font-size:12px;text-align:center">Матчей пока нет</div>`;
 
-  // Ban suggestions — heroes picked first in 2+ matches
-  const fpCount={};
-  (t.matches||[]).forEach(m=>{
-    const mySlot=(m.team1&&m.team1.id===t.id)?0:1;
-    (m.picks||[]).filter(pk=>pk.order<=1&&pk.team===mySlot).forEach(pk=>{
-      fpCount[pk.hero_name]=(fpCount[pk.hero_name]||0)+1;
-    });
-  });
-  const banTips=Object.entries(fpCount).filter(([,c])=>c>=2)
-    .sort((a,b)=>b[1]-a[1])
-    .map(([name,c])=>`<span style="background:rgba(239,95,107,.1);border:1px solid rgba(239,95,107,.3);color:var(--red);font-size:10px;padding:2px 8px;border-radius:5px;white-space:nowrap">${esc(name)} (${c}x FP)</span>`)
-    .join('');
-  const banHtml = banTips
-    ? `<div style="padding:8px 16px 4px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:var(--mt);margin-right:4px">🚫 Рекомендуем банить:</span>${banTips}</div>`
-    : '';
+  // History tab
+  const historyHtml = p=>{
+    if(!p.heroes_all || !p.heroes_all.length) return '<div style="padding:12px 16px;color:var(--mt);font-size:12px">Нет истории</div>';
+    const rows = p.heroes_all.slice(0,10).map(h=>`<tr style="border-bottom:1px solid var(--brd-soft)">
+      <td style="padding:6px;font-size:12px">${esc(h.hero_name)}</td>
+      <td style="padding:6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px">${h.picks}</td>
+      <td style="padding:6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:${wrColor(h.winrate)};font-weight:600">${h.winrate}%</td>
+    </tr>`).join('');
+    return `<div style="padding:12px 16px">
+      <div style="font-size:11px;color:var(--mt);margin-bottom:8px">Всего игр: ${p.total_games_all||0} | Винрейт: ${p.overall_wr_all||0}%</div>
+      <table style="width:100%;border-collapse:collapse">
+        <thead><tr style="border-bottom:1px solid var(--brd-soft)">
+          <th style="padding:6px;text-align:left;font-size:10px">Герой</th>
+          <th style="padding:6px;text-align:center;font-size:10px">Игр</th>
+          <th style="padding:6px;text-align:center;font-size:10px">WR</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+  };
 
   const wl = (t.games_won!=null && t.games_lost!=null)
     ? `<div class="wl-block"><span class="wbadge">${t.games_won}W</span><span class="lbadge">${t.games_lost}L</span></div>` : '';
@@ -455,6 +404,7 @@ function renderCard(t, rank){
     <div class="tabs" id="tabs-${cid}">
       <div class="tab active" onclick="switchTab('${cid}','players')">Игроки (${pl.length})</div>
       <div class="tab" onclick="switchTab('${cid}','matches')">Матчи (${matches.length})</div>
+      <div class="tab" onclick="switchTab('${cid}','history')">История</div>
     </div>
     <div class="tab-panel active" id="${cid}-players">
       <table>
@@ -465,7 +415,9 @@ function renderCard(t, rank){
     <div class="tab-panel" id="${cid}-matches">
       ${matchesHtml}
     </div>
-    ${banHtml}
+    <div class="tab-panel" id="${cid}-history">
+      ${pl.map(p=>historyHtml(p)).join('')}
+    </div>
     <a href="${t.url}" target="_blank" rel="noopener" class="site-link">Открыть на mixer-cup.gg ↗</a>
   </div></div>
 </div>`;
@@ -479,10 +431,12 @@ function switchTab(cid, tab){
   const tabs = document.getElementById(`tabs-${cid}`);
   if(!tabs) return;
   tabs.querySelectorAll('.tab').forEach((t,i)=>{
-    t.classList.toggle('active', (i===0&&tab==='players')||(i===1&&tab==='matches'));
+    const active = (i===0&&tab==='players')||(i===1&&tab==='matches')||(i===2&&tab==='history');
+    t.classList.toggle('active', active);
   });
   document.getElementById(`${cid}-players`)?.classList.toggle('active', tab==='players');
   document.getElementById(`${cid}-matches`)?.classList.toggle('active', tab==='matches');
+  document.getElementById(`${cid}-history`)?.classList.toggle('active', tab==='history');
 }
 
 function go(){
