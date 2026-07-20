@@ -331,7 +331,7 @@ function renderCard(t, rank){
       <a href="${p.dotabuff_url}" target="_blank" rel="noopener" class="plnk dotabuff">↗ Dotabuff</a>
     </div>` : '';
     
-    const heroLines = (p.heroes||[]).slice(0,5).map(h=>{
+    const heroLines = (p.heroes_all||p.heroes||[]).slice(0,5).map(h=>{
       const c = h.winrate>=60?'var(--gr)':h.winrate>=50?'var(--gold)':'var(--red)';
       return `<div class="hero-line">
         <span class="hero-name">${esc(h.hero_name)}</span>
@@ -340,8 +340,10 @@ function renderCard(t, rank){
       </div>`;
     }).join('');
 
-    const wrTx  = p.total_games
-      ? `<span style="font-size:10px;color:${wrColor(p.overall_wr)};font-family:'JetBrains Mono',monospace">${p.overall_wr}% (${p.total_games}g)</span>`
+    const totalG = p.total_games_all || p.total_games || 0;
+    const totalWR = p.overall_wr_all || p.overall_wr || 0;
+    const wrTx  = totalG
+      ? `<span style="font-size:10px;color:${wrColor(totalWR)};font-family:'JetBrains Mono',monospace">${totalWR}% (${totalG}g all)</span>`
       : '';
 
     return `<tr class="pr">
