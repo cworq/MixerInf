@@ -268,24 +268,56 @@ def main():
     print("║  Mixer Cup Parser v2            ║")
     print("╚════════════════════════════════╝")
 
-    # Загрузка кэша и истории
+    # Загрузка кэша — сначала из Gist (для GitHub Actions), потом локально
     print("\n[→] Загружаю кэш...")
     cache = {}
-    if os.path.exists(CACHE_FILE):
+    gist_id    = os.environ.get("GIST_ID", "").strip()
+    gist_token = os.environ.get("GIST_TOKEN", "").strip()
+    
+    if gist_id and gist_token:
+        try:
+            req = urllib.request.Request(
+                f"https://api.github.com/gists/{gist_id}",
+                headers={"Authorization": f"token {gist_token}", "Accept": "application/vnd.github.v3+json", "User-Agent": "mixer-cup-scraper"}
+            )
+            with urllib.request.urlopen(req) as resp:
+                gist_data = json.loads(resp.read())
+            if "matches_cache.json" in gist_data.get("files", {}):
+                raw_url = gist_data["files"]["matches_cache.json"]["raw_url"]
+                with urllib.request.urlopen(raw_url) as resp:
+                    cache = json.loads(resp.read())
+                print(f"  Кэш из Gist: {len(cache)} матчей")
+            else:
+                print("  Кэш в Gist не найден")
+        except Exception as e:
+            print(f"  [!] Ошибка загрузки кэша из Gist: {e}")
+    
+    if not cache and os.path.exists(CACHE_FILE):
         try:
             cache = json.loads(open(CACHE_FILE).read())
-            print(f"  Кэш: {len(cache)} матчей")
+            print(f"  Кэш локальный: {len(cache)} матчей")
         except:
             print("  Кэш повреждён, начинаю с нуля")
-    else:
+    
+    if not cache:
         print("  Нет кэша, первый запуск")
 
     print("[→] Загружаю историю игроков...")
     history = {}
-    if os.path.exists(HISTORY_FILE):
+    if gist_id and gist_token:
+        try:
+            if "players_history.json" in gist_data.get("files", {}):
+                raw_url = gist_data["files"]["players_history.json"]["raw_url"]
+                with urllib.request.urlopen(raw_url) as resp:
+                    history = json.loads(resp.read())
+                print(f"  История из Gist: {len(history)} игроков")
+        except Exception as e:
+            print(f"  [!] Ошибка загрузки истории из Gist: {e}")
+    
+    if not history and os.path.exists(HISTORY_FILE):
         try:
             history = json.loads(open(HISTORY_FILE).read())
-            print(f"  История: {len(history)} игроков")
+            print(f"  История локальная: {len(history)} игроков")
         except:
             print("  История повреждена, начинаю с нуля")
     else:
@@ -371,11 +403,13 @@ def main():
         # Обновляем историю
         history = merge_history(history, s2p, all_matches, TOURNAMENT_ID)
 
-        # Привязываем матчи и героев
+        # Привязываем матчи и героев (без дублей)
         team_map = {t["id"]: t for t in teams_out}
+        seen_matches = defaultdict(set)
         for match in all_matches:
             for tid in [match["team1"]["id"], match["team2"]["id"]]:
-                if tid in team_map:
+                if tid in team_map and match["match_id"] not in seen_matches[tid]:
+                    seen_matches[tid].add(match["match_id"])
                     team_map[tid]["matches"].append(match)
 
         for team in teams_out:
