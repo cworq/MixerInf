@@ -274,6 +274,17 @@ def main():
     gist_id    = os.environ.get("GIST_ID", "").strip()
     gist_token = os.environ.get("GIST_TOKEN", "").strip()
     
+    if os.path.exists(CACHE_FILE):
+        try:
+            cache = json.loads(open(CACHE_FILE).read())
+            print(f"  Кэш: {len(cache)} матчей")
+        except:
+            print("  Кэш повреждён, начинаю с нуля")
+    else:
+        print("  Нет кэша, первый запуск")
+
+    print("[→] Загружаю историю игроков...")
+    history = {}
     if gist_id and gist_token:
         try:
             req = urllib.request.Request(
@@ -282,30 +293,6 @@ def main():
             )
             with urllib.request.urlopen(req) as resp:
                 gist_data = json.loads(resp.read())
-            if "matches_cache.json" in gist_data.get("files", {}):
-                raw_url = gist_data["files"]["matches_cache.json"]["raw_url"]
-                with urllib.request.urlopen(raw_url) as resp:
-                    cache = json.loads(resp.read())
-                print(f"  Кэш из Gist: {len(cache)} матчей")
-            else:
-                print("  Кэш в Gist не найден")
-        except Exception as e:
-            print(f"  [!] Ошибка загрузки кэша из Gist: {e}")
-    
-    if not cache and os.path.exists(CACHE_FILE):
-        try:
-            cache = json.loads(open(CACHE_FILE).read())
-            print(f"  Кэш локальный: {len(cache)} матчей")
-        except:
-            print("  Кэш повреждён, начинаю с нуля")
-    
-    if not cache:
-        print("  Нет кэша, первый запуск")
-
-    print("[→] Загружаю историю игроков...")
-    history = {}
-    if gist_id and gist_token:
-        try:
             if "players_history.json" in gist_data.get("files", {}):
                 raw_url = gist_data["files"]["players_history.json"]["raw_url"]
                 with urllib.request.urlopen(raw_url) as resp:
@@ -313,7 +300,7 @@ def main():
                 print(f"  История из Gist: {len(history)} игроков")
         except Exception as e:
             print(f"  [!] Ошибка загрузки истории из Gist: {e}")
-    
+
     if not history and os.path.exists(HISTORY_FILE):
         try:
             history = json.loads(open(HISTORY_FILE).read())
@@ -449,7 +436,7 @@ def main():
     print(f"  ✓ teams_data.json")
 
     print(f"\n[→] Загружаю в Gist...")
-    upload_gist("matches_cache.json", json.dumps(cache, ensure_ascii=False))
+    # кэш хранится локально через GitHub Actions cache
     upload_gist("players_history.json", json.dumps(history, ensure_ascii=False, indent=2, default=str))
     upload_gist("teams_data.json", json.dumps(output, ensure_ascii=False, indent=2, default=str))
 
