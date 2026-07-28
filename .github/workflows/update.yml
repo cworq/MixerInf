@@ -16,8 +16,22 @@ jobs:
       - name: Install deps
         run: pip install requests
 
-      - name: Run parser
+      - name: Restore cache from previous run
+        uses: actions/cache@v4
+        with:
+          path: matches_cache.json
+          key: matches-cache-${{ github.run_id }}
+          restore-keys: |
+            matches-cache-
+
+      - name: Run scraper
         env:
           GIST_ID: ${{ secrets.GIST_ID }}
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
         run: python scraper.py
+
+      - name: Save cache
+        uses: actions/cache@v4
+        with:
+          path: matches_cache.json
+          key: matches-cache-${{ github.run_id }}
