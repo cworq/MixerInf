@@ -367,33 +367,37 @@ def main():
         completed = [g for g in all_games if g.get("status") == "COMPLETE" and g.get("matchId")]
         print(f"  Всего: {len(all_games)}  |  Завершено: {len(completed)}")
 
-        print(f"[→] OpenDota ({len(completed)} матчей)...")
         all_matches = []
         new_fetched = 0
         is_finished = TOURNAMENT_ID in finished_tournaments
 
-        for i, game in enumerate(completed):
-            mid = str(game["matchId"])
-            
-            # Для завершённых турниров — только кэш, не дёргаем API
-            if is_finished and mid not in cache:
-                print(f"  [{i+1:>3}/{len(completed)}] {mid} (пропуск — турнир завершён)")
-                continue
-                
-            match_data, from_cache = fetch_opendota_match(mid, cache)
-            tag = "кэш" if from_cache else "API"
-            print(f"  [{i+1:>3}/{len(completed)}] {mid} ({tag})", end="  ", flush=True)
-            if not from_cache:
-                new_fetched += 1
-                time.sleep(1.1)
-            processed = process_match(game, match_data, heroes, s2p)
-            if processed:
-                all_matches.append(processed)
-                print(f"→  {len(processed['picks'])}pk")
-            else:
-                print("→  skip")
-
-        print(f"  Новых: {new_fetched}")
+        if is_finished:
+            # Завершённый турнир — только кэш, без цикла по API
+            print(f"[→] Турнир завершён, загружаю {len(completed)} матчей из кэша...")
+            for game in completed:
+                mid = str(game["matchId"])
+                if mid in cache:
+                    processed = process_match(game, cache[mid], heroes, s2p)
+                    if processed:
+                        all_matches.append(processed)
+            print(f"  Загружено из кэша: {len(all_matches)} матчей")
+        else:
+            print(f"[→] OpenDota ({len(completed)} матчей)...")
+            for i, game in enumerate(completed):
+                mid = str(game["matchId"])
+                match_data, from_cache = fetch_opendota_match(mid, cache)
+                tag = "кэш" if from_cache else "API"
+                print(f"  [{i+1:>3}/{len(completed)}] {mid} ({tag})", end="  ", flush=True)
+                if not from_cache:
+                    new_fetched += 1
+                    time.sleep(1.1)
+                processed = process_match(game, match_data, heroes, s2p)
+                if processed:
+                    all_matches.append(processed)
+                    print(f"→  {len(processed['picks'])}pk")
+                else:
+                    print("→  skip")
+            print(f"  Новых: {new_fetched}")
 
         # Обновляем историю
         history = merge_history(history, s2p, all_matches, TOURNAMENT_ID)
