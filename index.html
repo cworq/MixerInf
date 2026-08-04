@@ -231,17 +231,21 @@ function matchHtml(m, myTeamId){
   const resultTx  = m.winner_id ? (won ? '✓ Победа' : '✗ Поражение') : '—';
   const resultCol = m.winner_id ? (won ? 'var(--gr)' : 'var(--red)') : 'var(--mt)';
 
-  // Определяем наших игроков: сначала по team_id, если мало — берём по radiant/dire
-  let myPlayers = (m.players||[]).filter(p=>p.team_id===myTeamId);
-  if(myPlayers.length < 3) {
-    // Определяем нашу сторону по победителю
-    const myTeamIsTeam1 = m.team1 && m.team1.id === myTeamId;
-    const myTeamWon = m.winner_id === myTeamId;
-    // team1 обычно radiant если WIN1 означает radiant_win
-    const myIsRadiant = myTeamIsTeam1;
-    myPlayers = (m.players||[]).filter(p=>p.is_radiant === myIsRadiant);
-    if(myPlayers.length === 0) myPlayers = (m.players||[]).slice(0,5);
+  // Определяем нашу сторону по игрокам с совпадающим team_id
+  const allPlayers = m.players || [];
+  const knownMyPlayers = allPlayers.filter(p=>p.team_id===myTeamId);
+  let myIsRadiant = null;
+  if(knownMyPlayers.length > 0) {
+    // Определяем сторону по большинству известных игроков
+    const radCount = knownMyPlayers.filter(p=>p.is_radiant).length;
+    myIsRadiant = radCount >= knownMyPlayers.length / 2;
+  } else {
+    // Если никто не совпал — team1 считаем radiant
+    myIsRadiant = m.team1 && m.team1.id === myTeamId;
   }
+  // Берём ВСЕХ игроков с нашей стороны
+  let myPlayers = allPlayers.filter(p=>p.is_radiant === myIsRadiant);
+  if(myPlayers.length === 0) myPlayers = allPlayers.slice(0,5);
 
   const playerRows = myPlayers.map((p,i)=>`
     <tr class="pr">
