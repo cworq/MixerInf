@@ -516,8 +516,10 @@ async function loadData(){
     try {
       const histUrl = window.HISTORY_URL || 'players_history.json';
       const histResp = await fetch(histUrl+'?t='+Date.now());
-      if(histResp.ok) playerHistory = await histResp.json();
-      else console.warn('History not loaded:', histResp.status);
+      if(histResp.ok) {
+        playerHistory = await histResp.json();
+        window._playerHistory = playerHistory;
+      } else console.warn('History not loaded:', histResp.status);
     } catch(e) { console.warn('History error:', e); }
     
     // Берём только текущий турнир (27 или последний)
@@ -536,11 +538,19 @@ async function loadData(){
       });
     });
     document.getElementById('updated').textContent = formatUpdatedAt(json.updated_at);
-    // Build player lookup: steam_id -> nickname
+    // Build player lookup: steam_id -> nickname (из команд + из истории)
     PLAYER_MAP = {};
     TEAMS.forEach(t=>(t.players||[]).forEach(p=>{
-      if(p.steam_id && p.nickname) PLAYER_MAP[p.steam_id] = p.nickname;
+      if(p.steam_id && p.nickname && !p.nickname.startsWith('Steam:'))
+        PLAYER_MAP[p.steam_id] = p.nickname;
     }));
+    // Добавляем из истории
+    if(window._playerHistory) {
+      Object.values(window._playerHistory).forEach(ph=>{
+        if(ph.steam_id && ph.nickname && !ph.nickname.startsWith('Steam:'))
+          PLAYER_MAP[ph.steam_id] = ph.nickname;
+      });
+    }
     const hash = JSON.stringify(TEAMS);
     if(hash!==lastHash){lastHash=hash;updateStats();go();}
   }catch(e){
