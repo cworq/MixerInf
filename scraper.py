@@ -10,7 +10,7 @@ import requests
 
 API_URL        = "https://api.mixer-cup.gg/"
 OPENDOTA_URL   = "https://api.opendota.com/api"
-TOURNAMENT_IDS = [26, 27, 28]
+TOURNAMENT_IDS = [26, 27]
 TEAM_PAGE_BASE = "https://mixer-cup.gg/ru/team/"
 CACHE_FILE     = "matches_cache.json"
 HISTORY_FILE   = "players_history.json"
@@ -310,6 +310,7 @@ def main():
     else:
         print("  Нет истории")
 
+    finished_tournaments = {26, 27}  # завершённые турниры
     heroes = fetch_heroes()
     all_teams_out = []
 
@@ -369,7 +370,7 @@ def main():
         print(f"[→] OpenDota ({len(completed)} матчей)...")
         all_matches = []
         new_fetched = 0
-        is_finished = TOURNAMENT_ID in FINISHED_TOURNAMENTS
+        is_finished = TOURNAMENT_ID in finished_tournaments
 
         for i, game in enumerate(completed):
             mid = str(game["matchId"])
