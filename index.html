@@ -231,7 +231,17 @@ function matchHtml(m, myTeamId){
   const resultTx  = m.winner_id ? (won ? '✓ Победа' : '✗ Поражение') : '—';
   const resultCol = m.winner_id ? (won ? 'var(--gr)' : 'var(--red)') : 'var(--mt)';
 
-  const myPlayers = (m.players||[]).filter(p=>p.team_id===myTeamId);
+  // Определяем наших игроков: сначала по team_id, если мало — берём по radiant/dire
+  let myPlayers = (m.players||[]).filter(p=>p.team_id===myTeamId);
+  if(myPlayers.length < 3) {
+    // Определяем нашу сторону по победителю
+    const myTeamIsTeam1 = m.team1 && m.team1.id === myTeamId;
+    const myTeamWon = m.winner_id === myTeamId;
+    // team1 обычно radiant если WIN1 означает radiant_win
+    const myIsRadiant = myTeamIsTeam1;
+    myPlayers = (m.players||[]).filter(p=>p.is_radiant === myIsRadiant);
+    if(myPlayers.length === 0) myPlayers = (m.players||[]).slice(0,5);
+  }
 
   const playerRows = myPlayers.map((p,i)=>`
     <tr class="pr">
