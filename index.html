@@ -209,7 +209,7 @@ footer{max-width:1040px;margin:24px auto 0;padding:18px 28px 32px;
 window.GIST_URL = 'https://gist.githubusercontent.com/cworq/96e0e0994cc471537b5782038ee654fd/raw/teams_data.json';
 window.HISTORY_URL = 'https://gist.githubusercontent.com/cworq/96e0e0994cc471537b5782038ee654fd/raw/players_history.json';
 
-let TEAMS = [], sortMode = 'rating', lastHash = '';
+let TEAMS = [], PLAYER_MAP = {}, sortMode = 'rating', lastHash = '';
 
 const HERO_CDN = slug =>
   `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crops/${slug}.png`;
@@ -250,7 +250,7 @@ function matchHtml(m, myTeamId){
   const playerRows = myPlayers.map((p,i)=>`
     <tr class="pr">
       <td class="pnum">${i+1}</td>
-      <td class="nk">${esc(p.nickname)}</td>
+      <td class="nk">${esc(PLAYER_MAP[p.steam_id] || p.nickname)}</td>
       <td>
         <div style="display:flex;align-items:center;gap:6px">
           <img src="${HERO_CDN(p.hero_slug)}" style="width:32px;height:18px;border-radius:3px;object-fit:cover" onerror="this.style.display='none'" alt="">
@@ -381,13 +381,15 @@ function renderCard(t, rank){
   // History tab
   const historyHtml = p=>{
     if(!p.heroes_all || !p.heroes_all.length) return '<div style="padding:12px 16px;color:var(--mt);font-size:12px">Нет истории</div>';
+    const phNick = esc(p.nickname||'');
     const rows = p.heroes_all.slice(0,10).map(h=>`<tr style="border-bottom:1px solid var(--brd-soft)">
       <td style="padding:6px;font-size:12px">${esc(h.hero_name)}</td>
       <td style="padding:6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px">${h.picks}</td>
       <td style="padding:6px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:${wrColor(h.winrate)};font-weight:600">${h.winrate}%</td>
     </tr>`).join('');
-    return `<div style="padding:12px 16px">
-      <div style="font-size:11px;color:var(--mt);margin-bottom:8px">Всего игр: ${p.total_games_all||0} | Винрейт: ${p.overall_wr_all||0}%</div>
+    return `<div style="padding:12px 16px;border-bottom:1px solid var(--brd-soft)">
+      <div style="font-size:13px;font-weight:600;margin-bottom:4px">${phNick}</div>
+      <div style="font-size:11px;color:var(--mt);margin-bottom:8px">Всего игр: ${p.total_games_all||0} | Винрейт: <span style="color:${wrColor(p.overall_wr_all||0)}">${p.overall_wr_all||0}%</span></div>
       <table style="width:100%;border-collapse:collapse">
         <thead><tr style="border-bottom:1px solid var(--brd-soft)">
           <th style="padding:6px;text-align:left;font-size:10px">Герой</th>
@@ -534,6 +536,11 @@ async function loadData(){
       });
     });
     document.getElementById('updated').textContent = formatUpdatedAt(json.updated_at);
+    // Build player lookup: steam_id -> nickname
+    PLAYER_MAP = {};
+    TEAMS.forEach(t=>(t.players||[]).forEach(p=>{
+      if(p.steam_id && p.nickname) PLAYER_MAP[p.steam_id] = p.nickname;
+    }));
     const hash = JSON.stringify(TEAMS);
     if(hash!==lastHash){lastHash=hash;updateStats();go();}
   }catch(e){
