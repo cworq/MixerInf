@@ -369,9 +369,16 @@ def main():
         print(f"[→] OpenDota ({len(completed)} матчей)...")
         all_matches = []
         new_fetched = 0
+        is_finished = TOURNAMENT_ID in FINISHED_TOURNAMENTS
 
         for i, game in enumerate(completed):
             mid = str(game["matchId"])
+            
+            # Для завершённых турниров — только кэш, не дёргаем API
+            if is_finished and mid not in cache:
+                print(f"  [{i+1:>3}/{len(completed)}] {mid} (пропуск — турнир завершён)")
+                continue
+                
             match_data, from_cache = fetch_opendota_match(mid, cache)
             tag = "кэш" if from_cache else "API"
             print(f"  [{i+1:>3}/{len(completed)}] {mid} ({tag})", end="  ", flush=True)
