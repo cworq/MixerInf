@@ -10,7 +10,7 @@ import requests
 
 API_URL        = "https://api.mixer-cup.gg/"
 OPENDOTA_URL   = "https://api.opendota.com/api"
-TOURNAMENT_IDS = [26, 27, 28, 29]
+TOURNAMENT_IDS = [26, 27, 28, 29, 30]
 TEAM_PAGE_BASE = "https://mixer-cup.gg/ru/team/"
 CACHE_FILE     = "matches_cache.json"
 HISTORY_FILE   = "players_history.json"
