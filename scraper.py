@@ -144,7 +144,7 @@ def process_match(game, match_data, heroes, s2p):
     result = game.get("result", "")
     team1_id, team2_id = game["team1"]["id"], game["team2"]["id"]
     winner_id = team1_id if result == "WIN1" else (team2_id if result == "WIN2" else None)
-    
+
     players_out = []
     for p in (match_data.get("players") or []):
         acc_id = p.get("account_id")
@@ -273,7 +273,7 @@ def main():
     cache = {}
     gist_id    = os.environ.get("GIST_ID", "").strip()
     gist_token = os.environ.get("GIST_TOKEN", "").strip()
-    
+
     if os.path.exists(CACHE_FILE):
         try:
             cache = json.loads(open(CACHE_FILE).read())
@@ -427,7 +427,7 @@ def main():
 
         all_teams_out.extend(teams_out)
 
-    # Сохранение
+    # Сохранение локально (полные данные)
     print(f"\n[→] Сохраняю локально...")
     with open(CACHE_FILE, "w") as f:
         json.dump(cache, f)
@@ -445,12 +445,32 @@ def main():
     }
     with open("teams_data.json", "w") as f:
         json.dump(output, f, ensure_ascii=False, indent=2, default=str)
-    print(f"  ✓ teams_data.json")
+    print(f"  ✓ teams_data.json (полный, локально)")
 
+    # Загрузка в Gist — slim версия без матчей завершённых турниров
     print(f"\n[→] Загружаю в Gist...")
-    # кэш хранится локально через GitHub Actions cache
+
+    current_tournament = max(TOURNAMENT_IDS)
+    slim_teams = []
+    for t in all_teams_out:
+        if t["tournament_id"] == current_tournament:
+            # Текущий турнир — матчи оставляем полностью
+            slim_teams.append(t)
+        else:
+            # Завершённые турниры — матчи убираем, остальное сохраняем
+            t_copy = dict(t)
+            t_copy["matches"] = []
+            slim_teams.append(t_copy)
+
+    slim_output = {
+        "updated_at": output["updated_at"],
+        "tournaments": output["tournaments"],
+        "matches_done": output["matches_done"],
+        "teams": slim_teams,
+    }
+
     upload_gist("players_history.json", json.dumps(history, ensure_ascii=False, indent=2, default=str))
-    upload_gist("teams_data.json", json.dumps(output, ensure_ascii=False, indent=2, default=str))
+    upload_gist("teams_data.json", json.dumps(slim_output, ensure_ascii=False, indent=2, default=str))
 
     print("\n✓ Done!")
 
