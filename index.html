@@ -523,7 +523,7 @@ async function loadData(){
     } catch(e) { console.warn('History error:', e); }
     
     // Берём только текущий турнир (27 или последний)
-    const currentTournament = 33;
+    const currentTournament = 34;
     TEAMS = teams.filter(t => t.tournament_id === currentTournament);
     
     // Прибиваем историю игроков
